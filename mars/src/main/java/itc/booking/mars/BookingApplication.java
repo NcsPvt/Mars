@@ -961,7 +961,8 @@ public class BookingApplication extends Application {
                     classOfVehicles.remove(cov);
             }
         }
-        classOfVehicleAdaptor.notifyDataSetChanged();
+        if (classOfVehicleAdaptor != null)
+            classOfVehicleAdaptor.notifyDataSetChanged();
 
         return rowCount;
 
@@ -2422,6 +2423,8 @@ public class BookingApplication extends Application {
 
                                                 db.insert("Affiliates", null, values);
                                             }
+
+                                            BookingApplication.getVehicleClassesFromDB(callerContext, true, null);
                                         }
                                         if (JSONResp.has("Promotions")) {
                                             promotions.clear();

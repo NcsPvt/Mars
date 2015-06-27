@@ -989,30 +989,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     BookingApplication.nearByVehicles.clear();
                     drawNearByVehicles();
                     BookingApplication.getNearbyVehicles(pickAddress, dropAddress, false);
-                    if (isQuickBooking) {
-
-                        pickNow = true;
-                        trip_requested.vehTypeID = -1;
-                        trip_requested.vehTypeName = "Any";
-                        trip_requested.companyID = -1;
-                        trip_requested.companyName = "Any Company";
-                        trip_requested.classofserviceid = -1;
-                        trip_requested.tripType = "CURR";
-                        trip_requested.PaymentType = "1";
-                        trip_requested.CreditCardID = "0";
-                        trip_requested.signatureUrl = "";
-                        trip_requested.passengerCount = 1;
-                        trip_requested.childrenCount = 0;
-                        trip_requested.bagsCount = 0;
-
-                        tv_drop_address.setText(R.string.will_tell_driver);
-                        btn_drop_notes.setVisibility(View.GONE);
-                        cb_fav_drop.setVisibility(View.GONE);
-                        tv_selected_time.setText(R.string.Now);
-                        tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, trip_requested.companyName));
-
-                        goToStep(6, false);
-                    }
                 }
                 //mapFragment.animateCamera(CameraUpdateFactory.zoomBy((float) -7.0));
             } catch (Exception e) {
@@ -2240,6 +2216,31 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         if (BookingApplication.promotions.size() > 0 && ll_FairCashCredit.isShown())
                             tv_promo_available.setVisibility(View.VISIBLE);
 
+                        if (isQuickBooking) {
+
+                            pickNow = true;
+                            trip_requested.vehTypeID = -1;
+                            trip_requested.vehTypeName = "Any";
+                            trip_requested.companyID = -1;
+                            trip_requested.companyName = "Any Company";
+                            trip_requested.classofserviceid = -1;
+                            trip_requested.tripType = "CURR";
+                            trip_requested.PaymentType = "1";
+                            trip_requested.CreditCardID = "0";
+                            trip_requested.signatureUrl = "";
+                            trip_requested.passengerCount = 1;
+                            trip_requested.childrenCount = 0;
+                            trip_requested.bagsCount = 0;
+
+                            tv_drop_address.setText(R.string.will_tell_driver);
+                            btn_drop_notes.setVisibility(View.GONE);
+                            cb_fav_drop.setVisibility(View.GONE);
+                            tv_selected_time.setText(R.string.Now);
+                            tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, trip_requested.companyName));
+
+                            goToStep(6, false);
+                            break;
+                        }
                     } else {
                         BookingApplication.db.delete("Affiliates", null, null);
                         if (ll_drop_address.isShown() && !BookingApplication.syncRequired) {
