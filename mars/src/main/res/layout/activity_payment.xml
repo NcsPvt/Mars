@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_textured_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/paymentHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10sp"
+        android:background="@color/mars_yellow"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="@string/ChoosePaymentOption"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size15"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/mars_text_view_lightgray_noborder"
+        android:gravity="center"
+        android:onClick="SkipPaymentOptions"
+        android:padding="10sp"
+        android:text="@string/Skip"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size14"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/AddCard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnSkip"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/mars_text_view_lightgray_noborder"
+        android:onClick="addCard"
+        android:padding="10sp"
+        android:text="@string/AddCard"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size14"
+        android:textStyle="italic"
+        android:typeface="serif"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/list_cards"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/AddCard"
+        android:layout_below="@id/paymentHeader"
+        android:layout_marginLeft="3sp"
+        android:layout_marginRight="3sp"
+        android:divider="@color/transparent"
+        android:dividerHeight="3dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ll_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/translucent_dark"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size40"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/overlayText1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size10" />
+
+        <ScrollView
+            android:id="@+id/SCROLLER_ID"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/tv_overlay_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size8"
+                android:layout_marginRight="@dimen/size8"
+
+                android:text="@string/overlayText"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size10" />
+
+        </ScrollView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/size8"
+            android:layout_marginBottom="@dimen/size8"
+            android:onClick="overlayPressed"
+            android:text="@string/OK" />
+    </LinearLayout>
+</RelativeLayout>

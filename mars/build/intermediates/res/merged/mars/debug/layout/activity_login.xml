@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview_login"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_textured_gray"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo_login"
+            android:layout_width="fill_parent"
+            android:layout_height="157sp"
+            android:layout_margin="30sp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/launcher_icon" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0sp">
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <Spinner
+                android:id="@+id/prefered_language"
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="8.0"
+                android:entries="@array/languages"
+                android:gravity="center_vertical"
+                android:paddingLeft="10sp" />
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0sp">
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.9" />
+
+            <TextView
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:text="+"
+                android:textSize="@dimen/size15" />
+
+            <AutoCompleteTextView
+                android:id="@+id/country_code"
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="3sp"
+                android:layout_weight="2.0"
+                android:completionThreshold="1"
+                android:digits="0123456789"
+                android:dropDownWidth="240sp"
+                android:gravity="center"
+                android:hint="CC"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="3"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textSize="@dimen/size17" />
+
+            <View
+                android:layout_width="1.0sp"
+                android:layout_height="fill_parent" />
+
+            <AutoCompleteTextView
+                android:id="@+id/user_phone"
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5sp"
+                android:layout_weight="6.0"
+                android:completionThreshold="1"
+                android:digits="0123456789"
+                android:hint="@string/Phone_number"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="10.0sp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textSize="@dimen/size17" />
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/cb_showNumberToDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:padding="10sp"
+                android:text="@string/AllowNumberVisible"
+                android:textSize="@dimen/size9"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10sp"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0sp">
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <EditText
+                android:id="@+id/user_password"
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="8.0"
+                android:digits="0123456789"
+                android:hint="@string/password"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:padding="10.0sp"
+                android:singleLine="true"
+                android:textSize="@dimen/size17" />
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/forgotPasswordViews"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0sp">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <EditText
+                    android:id="@+id/confirm_new_password"
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:digits="0123456789"
+                    android:hint="@string/Repeat_New_password"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:padding="10.0sp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size17" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0sp">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <TextView
+                    android:id="@+id/tv_secret_question"
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:hint="@string/secret_question"
+                    android:padding="10.0sp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size17" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0sp">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <EditText
+                    android:id="@+id/secret_answer_recovery"
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:ems="10"
+                    android:hint="@string/secret_answer"
+                    android:padding="10.0sp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size17" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0sp">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <Button
+                    android:id="@+id/btn_Reset_Password"
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:onClick="ResetPassword"
+                    android:padding="10.0sp"
+                    android:singleLine="true"
+                    android:text="@string/SUBMIT"
+                    android:textSize="@dimen/size17" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/registerViews"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0sp">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <EditText
+                    android:id="@+id/confirm_password"
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:digits="0123456789"
+                    android:hint="@string/Repeat_password"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:padding="10.0sp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size17" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0sp">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <EditText
+                    android:id="@+id/fullname"
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:ems="10"
+                    android:hint="@string/Full_name"
+                    android:inputType="textCapWords"
+                    android:padding="10.0sp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size17" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0sp">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/email"
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:completionThreshold="1"
+                    android:ems="10"
+                    android:hint="@string/Email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@+id/secret_answer"
+                    android:padding="10.0sp"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size17" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0sp">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <Spinner
+                    android:id="@+id/secret_question"
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:entries="@array/questions"
+                    android:gravity="center_vertical"
+                    android:hint="@string/Email"
+                    android:paddingLeft="10sp" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0sp">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <EditText
+                    android:id="@+id/secret_answer"
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:ems="10"
+                    android:hint="@string/secret_answer"
+                    android:padding="10.0sp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size17" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20.0sp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <CheckBox
+                    android:id="@+id/cb_AgreeTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:gravity="right|center_vertical"
+                    android:paddingLeft="20sp"
+                    android:text="@string/AgreeTerms"
+                    android:textSize="@dimen/size9"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="0.0sp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/terms_of_use"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="ShowTerms"
+                android:singleLine="true"
+                android:text="@string/termsofuse"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/size12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0sp">
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <TextView
+                android:id="@+id/forgot_password"
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="8.0"
+                android:clickable="true"
+                android:gravity="right"
+                android:onClick="ForgotPassword"
+                android:padding="10.0sp"
+                android:singleLine="true"
+                android:text="@string/Forgot_Password"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/size12"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_register_signin_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0sp">
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <RelativeLayout
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/btn_Register"
+                    android:layout_width="160sp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:onClick="ITC_Register"
+                    android:text="@string/Register"
+                    android:textSize="@dimen/size12" />
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@+id/btn_Register"
+                    android:gravity="center"
+                    android:onClick="ITC_Login"
+                    android:text="@string/login_signin"
+                    android:textSize="@dimen/size12" />
+
+                <TextView
+                    android:id="@+id/lbl_or"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="144sp"
+                    android:background="@drawable/itc_or"
+                    android:gravity="center"
+                    android:text="@string/OR"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size8" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="80.0sp"
+            android:layout_weight="1.17" />
+    </LinearLayout>
+
+</ScrollView><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_login.xml -->

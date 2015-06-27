@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-sw600dp/dimens.xml -->
+    <eat-comment/>
+    <dimen name="offset_to_center_of_map">90.0dip</dimen>
+    <dimen name="promotions_baloon_margin">190.0dip</dimen>
+    <dimen name="size10">14.0sp</dimen>
+    <dimen name="size11">15.0sp</dimen>
+    <dimen name="size12">16.0sp</dimen>
+    <dimen name="size13">17.0sp</dimen>
+    <dimen name="size14">18.0sp</dimen>
+    <dimen name="size15">19.0sp</dimen>
+    <dimen name="size16">20.0sp</dimen>
+    <dimen name="size17">21.0sp</dimen>
+    <dimen name="size18">22.0sp</dimen>
+    <dimen name="size19">23.0sp</dimen>
+    <dimen name="size20">24.0sp</dimen>
+    <dimen name="size21">25.0sp</dimen>
+    <dimen name="size22">26.0sp</dimen>
+    <dimen name="size23">27.0sp</dimen>
+    <dimen name="size24">28.0sp</dimen>
+    <dimen name="size25">29.0sp</dimen>
+    <dimen name="size26">30.0sp</dimen>
+    <dimen name="size27">31.0sp</dimen>
+    <dimen name="size28">32.0sp</dimen>
+    <dimen name="size29">33.0sp</dimen>
+    <dimen name="size30">34.0sp</dimen>
+    <dimen name="size31">35.0sp</dimen>
+    <dimen name="size32">36.0sp</dimen>
+    <dimen name="size33">37.0sp</dimen>
+    <dimen name="size34">38.0sp</dimen>
+    <dimen name="size35">39.0sp</dimen>
+    <dimen name="size36">40.0sp</dimen>
+    <dimen name="size37">41.0sp</dimen>
+    <dimen name="size38">42.0sp</dimen>
+    <dimen name="size39">43.0sp</dimen>
+    <dimen name="size40">44.0sp</dimen>
+    <dimen name="size50">54.0sp</dimen>
+    <dimen name="size60">64.0sp</dimen>
+    <dimen name="size70">74.0sp</dimen>
+    <dimen name="size8">12.0sp</dimen>
+    <dimen name="size9">13.0sp</dimen>
+</resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_textured_gray"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginTop="15sp"
+            android:text="@string/SendFeedback"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/feedback_line"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/feedback_title"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/black" />
+
+        <RadioGroup
+            android:id="@+id/feeback_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feedback_line">
+
+            <RadioButton
+                android:id="@+id/feedback_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="5sp"
+                android:checked="true"
+                android:text="@string/SendFeedback"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/feedback_bug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="5sp"
+                android:text="@string/ReportBug"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/feedback_feature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="5sp"
+                android:text="@string/RequestFeature"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/feedback_message"
+            android:layout_width="fill_parent"
+            android:layout_height="120sp"
+            android:layout_below="@id/feeback_type"
+            android:layout_marginBottom="30sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:background="@color/lightgray"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:maxLength="300"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/feedback_buttonLayer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/feedback_message"
+            android:layout_marginBottom="15sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/feedback_cancelBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="60sp"
+                android:layout_marginBottom="15sp"
+                android:layout_marginRight="15sp"
+                android:layout_weight="1"
+                android:background="@drawable/button_yellow"
+                android:clickable="true"
+                android:onClick="cancel_feedback">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10sp"
+                    android:text="@string/Cancel"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/feedback_submitBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="60sp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:background="@drawable/button_yellow"
+                android:clickable="false"
+                android:onClick="submit_feedback">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10sp"
+                    android:text="@string/SUBMIT"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

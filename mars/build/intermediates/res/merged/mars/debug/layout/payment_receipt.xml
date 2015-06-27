@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="@drawable/iv_receiptpayment"
+        android:orientation="vertical"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="@dimen/padding_tripreciept_mid_top">
+
+        <LinearLayout
+            android:id="@+id/llRecieptLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recipt_in_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/size50"
+            android:paddingRight="@dimen/size50">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/trip_receipt_"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/size21"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/receipt_distance_margin_top"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="Booking ID"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16" />
+
+                <TextView
+                    android:id="@+id/tvBookingID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:gravity="right"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/separator_color_new"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/receipt_distance_margin_top"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="Distance"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16" />
+
+                <TextView
+                    android:id="@+id/tvDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:gravity="right"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/receipt_waiting_margin_top"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="@string/Time"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16" />
+
+                <TextView
+                    android:id="@+id/tv_travel_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:gravity="right"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/receipt_waiting_margin_top"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="Fare"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16" />
+
+                <TextView
+                    android:id="@+id/tvFare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:gravity="right"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/receipt_waiting_margin_top"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="Discount"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16" />
+
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:gravity="right"
+                    android:textColor="@color/greyscale_6"
+                    android:textSize="@dimen/size16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="@dimen/receipt_separator_margin_top"
+                android:background="@color/separator_color_new"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/receipt_total_charge_margin_top"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvChargeTitle"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="Total Fare"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:gravity="right"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivMail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="-3.0dip"
+        android:background="@drawable/btn_payment_email_click"
+        android:visibility="gone" />
+
+</LinearLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/payment_receipt.xml -->

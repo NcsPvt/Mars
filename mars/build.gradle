@@ -1,0 +1,188 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        mars_sign_config {
+            storeFile file('D:/Workspace_Android/Mars/mars/keystore_mars')
+            storePassword 'a1b2c3d4'
+            keyAlias 'mars'
+            keyPassword 'a1b2c3d4'
+        }
+
+        mytaxi_sign_config {
+            storeFile file('D:/Workspace_Android/Mars/mars/keystore_mytaxi')
+            storePassword 'a1b2c3d4'
+            keyAlias 'mytaxi'
+            keyPassword 'a1b2c3d4'
+        }
+    }
+
+    compileSdkVersion 21
+    buildToolsVersion '22.0.0'
+
+    defaultConfig {
+        applicationId "itcurves.mars"
+        manifestPlaceholders = [applicationLabel: "@String/app_name"]
+        resValue "string", "project_id", "823421440208"
+        resValue "string", "google_maps_api_key", "AIzaSyBRV_DCJrNN8l65dL8KfsRh0n8KGbWRZRo"
+        resValue "string", "google_places_key", "AIzaSyARrZJY169UzIHNsYiKhj7MgalzyesqnO0"
+        minSdkVersion 11
+        targetSdkVersion 21
+        versionCode 37
+        versionName '1.0.37'
+        signingConfig signingConfigs.mars_sign_config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.mars_sign_config
+            debuggable false
+        }
+    }
+    dexOptions {
+        incremental false
+    }
+
+    productFlavors {
+        checkerkc {
+            applicationId 'itcurves.mars.checkerkc'
+            manifestPlaceholders = [applicationLabel: "Checker KC"]
+            resValue "string", "project_id", "972738789782"
+            resValue "string", "google_maps_api_key", "AIzaSyCRwx7JH_WN9S4kUU0V67p9dpQLqbvr_aw"
+            resValue "string", "google_places_key", "AIzaSyDpt82zjmjL1bQo6ZU_-qm3a753aFElvW8"
+        }
+        chtaxi {
+            applicationId 'itcurves.mars.chtaxi'
+            manifestPlaceholders = [applicationLabel: "Link"]
+            resValue "string", "project_id", "1096598408697"
+            resValue "string", "google_maps_api_key", "AIzaSyAySexsn3dZGVMJTvLSNJd8oqP-PIb2a8A"
+            resValue "string", "google_places_key", "AIzaSyB_lEN8ttCVqMwDCu-NwvP1xQcfnKTx0FM"
+        }
+        e2taxi {
+            applicationId 'itcurves.mars.e2taxi'
+            manifestPlaceholders = [applicationLabel: "E2Taxi"]
+        }
+        executive2000 {
+            applicationId 'itcurves.mars.executive2000'
+            manifestPlaceholders = [applicationLabel: "Executive 2000"]
+        }
+        harrisburgcitycab {
+            applicationId 'itcurves.mars.harrisburgcitycab'
+            manifestPlaceholders = [applicationLabel: "Harrisburg City Cab"]
+        }
+        mars {
+            applicationId 'itcurves.mars'
+            manifestPlaceholders = [applicationLabel: "Mars"]
+            resValue "string", "project_id", "823421440208"
+            resValue "string", "google_maps_api_key", "AIzaSyBRV_DCJrNN8l65dL8KfsRh0n8KGbWRZRo"
+            resValue "string", "google_places_key", "AIzaSyARrZJY169UzIHNsYiKhj7MgalzyesqnO0"
+        }
+        memphis {
+            applicationId 'itcurves.mars.memphis'
+            manifestPlaceholders = [applicationLabel: "Yellow Cab of Memphis"]
+            resValue "string", "project_id", "11495017170"
+            resValue "string", "google_maps_api_key", "AIzaSyAnMNIpMPFJm9SoTTVy_ccWheUSSYfYmjU"
+            resValue "string", "google_places_key", "AIzaSyAvLFIIyYeY6faxsSx3FwcYTZ6EB74QZng"
+        }
+        mytaxi {
+            applicationId 'itcurves.bookingapp.mytaxi'
+            signingConfig signingConfigs.mytaxi_sign_config
+            manifestPlaceholders = [applicationLabel: "MyTaxi Saudia"]
+            resValue "string", "project_id", "224746818401"
+            resValue "string", "google_maps_api_key", "AIzaSyC-_k4o7Ekg7OrQ5iQ4WCGvY5gEO6qPz0w"
+            resValue "string", "google_places_key", "AIzaSyC7ZctFEbKkyKMMPI7_JOKehLjNhQrEueI"
+        }
+        regency {
+            applicationId 'itcurves.mars.regency'
+            manifestPlaceholders = [applicationLabel: "Regency Taxi"]
+            resValue "string", "project_id", "358447426299"
+            resValue "string", "google_maps_api_key", "AIzaSyBFe_aqMNQBSmfYuchTX8ciUgWUIsaOvGU"
+            resValue "string", "google_places_key", "AIzaSyBAHLKH6_OaP3W1KGYoyget4bwq-MTKX3U"
+        }
+        springscab {
+            applicationId 'itcurves.mars.springscab'
+            manifestPlaceholders = [applicationLabel: "Springs Cab"]
+            resValue "string", "project_id", "50943042645"
+            resValue "string", "google_maps_api_key", "AIzaSyB29Mq5m79Hs14emhfqZGZNjqkD-vs7zE0"
+            resValue "string", "google_places_key", "AIzaSyAAiiAfTALog2obuKvwCk7bSJ8yF-7eyAo"
+        }
+        supreme {
+            applicationId 'itcurves.mars.supreme'
+            manifestPlaceholders = [applicationLabel: "Supreme Shuttle"]
+            resValue "string", "project_id", "235462475187"
+            resValue "string", "google_maps_api_key", "AIzaSyB9Hdyw60a8goFeklS7x0vhdwSKNyBS6fk"
+            resValue "string", "google_places_key", "AIzaSyCrqJgAqYYJvxo5vsK2A9fvB5XGoVfJ16E"
+        }
+        uniontaxi {
+            applicationId 'itcurves.mars.uniontaxi'
+            manifestPlaceholders = [applicationLabel: "Union Taxi"]
+            resValue "string", "project_id", "21668608608"
+            resValue "string", "google_maps_api_key", "AIzaSyCJI8Jx-m8s-P27Pzsot4XeKY_wJDPChnY"
+            resValue "string", "google_places_key", "AIzaSyAg3E7zDnMJ1SaaB8d-IlqJI_5oCAOEpMA"
+        }
+        unitedtaxiburbank {
+            applicationId 'itcurves.mars.unitedtaxiburbank'
+            manifestPlaceholders = [applicationLabel: "United Taxi Burbank"]
+            resValue "string", "project_id", "914332811228"
+            resValue "string", "google_maps_api_key", "AIzaSyA7HUflMFTQBeGBLEh1VpZs6w-5xnZnpOU"
+            resValue "string", "google_places_key", "AIzaSyAvrFdGirwxoRmt9JGhrDf-K0s0d6R5eWc"
+        }
+        unitedtaxiculvercity {
+            applicationId 'itcurves.mars.unitedtaxiculvercity'
+            manifestPlaceholders = [applicationLabel: "United Taxi Culver City"]
+        }
+        washingtonflyer {
+            applicationId 'itcurves.mars.washingtonflyer'
+            manifestPlaceholders = [applicationLabel: "Washington Flyer"]
+            resValue "string", "project_id", "898040281985"
+            resValue "string", "google_maps_api_key", "AIzaSyB9g3-Yg8s3KO_UHVCZ1_7WklCxK0dooGg"
+            resValue "string", "google_places_key", "AIzaSyBgn3DkXTi9wdM6T4oRY5lokZqV6T_UG3s"
+        }
+        yccleveland {
+            applicationId 'itcurves.mars.yccleveland'
+            manifestPlaceholders = [applicationLabel: "Yellow Cab Cleveland"]
+            resValue "string", "project_id", "38004743001"
+            resValue "string", "google_maps_api_key", "AIzaSyDCOFujJnkUkr3FyCfSQye6lQUv6cDGb3Q"
+            resValue "string", "google_places_key", "AIzaSyCvL3ocQiKHtQQmv-g4ovQ29mz6_apIy4c"
+        }
+        ycfrederick {
+            applicationId 'itcurves.mars.ycfrederick'
+            manifestPlaceholders = [applicationLabel: "Yellow Cab Frederick"]
+        }
+        ycindy {
+            applicationId 'itcurves.mars.ycindy'
+            manifestPlaceholders = [applicationLabel: "Yellow Cab"]
+        }
+        ycpwc {
+            applicationId 'itcurves.mars.ycpwc'
+            manifestPlaceholders = [applicationLabel: "Yellow Cab of PWC"]
+            resValue "string", "project_id", "222606857598"
+            resValue "string", "google_maps_api_key", "AIzaSyAq8BN-YfcBu2mp__y_dUqnx4LF_HDngwc"
+            resValue "string", "google_places_key", "AIzaSyBSfTVdXiAm0vkfga3W5W8DkuQRZJLk0x0"
+        }
+        ycsacramento {
+            applicationId 'itcurves.mars.ycsacramento'
+            manifestPlaceholders = [applicationLabel: "Yellow Cab of Sacramento"]
+        }
+        ycventura {
+            applicationId 'itcurves.mars.ycventura'
+            manifestPlaceholders = [applicationLabel: "Yellow Cab of Ventura"]
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:22.2.0'
+    compile 'com.google.android.gms:play-services:7.5.0'
+    compile files('libs/activation.jar')
+    compile files('libs/additionnal.jar')
+    compile files('libs/httpmime-4.2.3.jar')
+    compile files('libs/libGoogleAnalyticsServices.jar')
+    compile files('libs/libphonenumber-5.9.jar')
+    compile files('libs/mail.jar')
+}

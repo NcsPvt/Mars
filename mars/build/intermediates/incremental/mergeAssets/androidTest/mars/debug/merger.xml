@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\Workspace_Android\Mars\mars\src\androidTest\assets"/></dataSet><dataSet config="mars"><source path="D:\Workspace_Android\Mars\mars\src\androidTestMars\assets"/></dataSet></merger>

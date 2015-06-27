@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="questions">
+        <item>Click here to select secret question</item>
+        <item>Name of your favorite car ?</item>
+        <item>Name of your best childhood friend ?</item>
+        <item>Who was your date on prom night ?</item>
+        <item>What is your oldest cousin\'s name ?</item>
+        <item>Who is your all time favorite band ?</item>
+        <item>What is your all time favorite song ?</item>
+        <item>What is the name of your first childhood crush ?</item>
+        <item>What is the name of your favorite book ?</item>
+        <item>What is the name of your favorite movie ?</item>
+        <item>What was your first pet\'s name ?</item>
+    </string-array>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>العربية</item>
+    </string-array>
+    <string-array name="country_codes">
+        <item>1 (American Samoa)</item>
+        <item>1 (Anguilla)</item>
+        <item>1 (Antigua and Barbuda)</item>
+        <item>1 (Bahamas)</item>
+        <item>1 (Barbados)</item>
+        <item>1 (Bermuda)</item>
+        <item>1 (British Virgin Islands)</item>
+        <item>1 (Canada)</item>
+        <item>1 (Cayman Islands)</item>
+        <item>1 (Dominica)</item>
+        <item>1 (Grenada)</item>
+        <item>1 (Guam)</item>
+        <item>1 (Jamaica)</item>
+        <item>1 (Montserrat)</item>
+        <item>1 (Northern Mariana Islands)</item>
+        <item>1 (Puerto Rico)</item>
+        <item>1 (Dominican Republic)</item>
+        <item>1 (Saint Kitts and Nevis)</item>
+        <item>1 (Saint Lucia)</item>
+        <item>1 (Sint Maarten)</item>
+        <item>1 (St. Vincent &#38; Grenadines)</item>
+        <item>1 (Trinidad and Tobago)</item>
+        <item>1 (Turks and Caicos Islands)</item>
+        <item>1 (U.S. Virgin Islands)</item>
+        <item>1 (United States)</item>
+        <item>7 (Kazakhstan)</item>
+        <item>7 (Russia)</item>
+        <item>20 (Egypt)</item>
+        <item>27 (South Africa)</item>
+        <item>30 (Greece)</item>
+        <item>31 (Netherlands)</item>
+        <item>32 (Belgium)</item>
+        <item>33 (France)</item>
+        <item>34 (Spain)</item>
+        <item>36 (Hungary)</item>
+        <item>39 (Italy)</item>
+        <item>40 (Romania)</item>
+        <item>41 (Switzerland)</item>
+        <item>43 (Austria)</item>
+        <item>44 (Guernsey)</item>
+        <item>44 (Isle of Man)</item>
+        <item>44 (Jersey)</item>
+        <item>44 (United Kingdom)</item>
+        <item>45 (Denmark)</item>
+        <item>46 (Sweden)</item>
+        <item>47 (Norway)</item>
+        <item>47 (Svalbard and Jan Mayen)</item>
+        <item>48 (Poland)</item>
+        <item>49 (Germany)</item>
+        <item>51 (Peru)</item>
+        <item>52 (Mexico)</item>
+        <item>53 (Cuba)</item>
+        <item>54 (Argentina)</item>
+        <item>55 (Brazil)</item>
+        <item>56 (Chile)</item>
+        <item>57 (Colombia)</item>
+        <item>58 (Venezuela)</item>
+        <item>60 (Malaysia)</item>
+        <item>61 (Australia)</item>
+        <item>61 (Christmas Island)</item>
+        <item>61 (Cocos (Keeling) Islands)</item>
+        <item>62 (Indonesia)</item>
+        <item>63 (Philippines)</item>
+        <item>64 (New Zealand)</item>
+        <item>65 (Singapore)</item>
+        <item>66 (Thailand)</item>
+        <item>81 (Japan)</item>
+        <item>82 (South Korea)</item>
+        <item>84 (Vietnam)</item>
+        <item>86 (China)</item>
+        <item>90 (Turkey)</item>
+        <item>91 (India)</item>
+        <item>92 (Pakistan)</item>
+        <item>93 (Afghanistan)</item>
+        <item>94 (Sri Lanka)</item>
+        <item>95 (Myanmar (Burma))</item>
+        <item>98 (Iran)</item>
+        <item>211 (South Sudan)</item>
+        <item>212 (Morocco)</item>
+        <item>213 (Algeria)</item>
+        <item>216 (Tunisia)</item>
+        <item>218 (Libya)</item>
+        <item>220 (Gambia)</item>
+        <item>221 (Senegal)</item>
+        <item>222 (Mauritania)</item>
+        <item>223 (Mali)</item>
+        <item>224 (Guinea)</item>
+        <item>225 (Côte d’Ivoire)</item>
+        <item>226 (Burkina Faso)</item>
+        <item>227 (Niger)</item>
+        <item>228 (Togo)</item>
+        <item>229 (Benin)</item>
+        <item>230 (Mauritius)</item>
+        <item>231 (Liberia)</item>
+        <item>232 (Sierra Leone)</item>
+        <item>233 (Ghana)</item>
+        <item>234 (Nigeria)</item>
+        <item>235 (Chad)</item>
+        <item>236 (Central African Republic)</item>
+        <item>237 (Cameroon)</item>
+        <item>238 (Cape Verde)</item>
+        <item>239 (São Tomé and Príncipe)</item>
+        <item>240 (Equatorial Guinea)</item>
+        <item>241 (Gabon)</item>
+        <item>242 (Congo - Brazzaville)</item>
+        <item>243 (Congo - Kinshasa)</item>
+        <item>244 (Angola)</item>
+        <item>245 (Guinea-Bissau)</item>
+        <item>246 (British Indian Ocean Territor)</item>
+        <item>247 (Ascension Island)</item>
+        <item>248 (Seychelles)</item>
+        <item>249 (Sudan)</item>
+        <item>250 (Rwanda)</item>
+        <item>251 (Ethiopia)</item>
+        <item>252 (Somalia)</item>
+        <item>253 (Djibouti)</item>
+        <item>254 (Kenya)</item>
+        <item>255 (Tanzania)</item>
+        <item>256 (Uganda)</item>
+        <item>257 (Burundi)</item>
+        <item>258 (Mozambique)</item>
+        <item>260 (Zambia)</item>
+        <item>261 (Madagascar)</item>
+        <item>262 (Réunion)</item>
+        <item>262 (Mayotte)</item>
+        <item>263 (Zimbabwe)</item>
+        <item>264 (Namibia)</item>
+        <item>265 (Malawi)</item>
+        <item>266 (Lesotho)</item>
+        <item>267 (Botswana)</item>
+        <item>268 (Swaziland)</item>
+        <item>269 (Comoros)</item>
+        <item>290 (Saint Helena)</item>
+        <item>291 (Eritrea)</item>
+        <item>297 (Aruba)</item>
+        <item>298 (Faroe Islands)</item>
+        <item>299 (Greenland)</item>
+        <item>350 (Gibraltar)</item>
+        <item>351 (Portugal)</item>
+        <item>352 (Luxembourg)</item>
+        <item>353 (Ireland)</item>
+        <item>354 (Iceland)</item>
+        <item>355 (Albania)</item>
+        <item>356 (Malta)</item>
+        <item>357 (Cyprus)</item>
+        <item>358 (Åland Islands)</item>
+        <item>358 (Finland)</item>
+        <item>359 (Bulgaria)</item>
+        <item>370 (Lithuania)</item>
+        <item>371 (Latvia)</item>
+        <item>372 (Estonia)</item>
+        <item>373 (Moldova)</item>
+        <item>374 (Armenia)</item>
+        <item>375 (Belarus)</item>
+        <item>376 (Andorra)</item>
+        <item>377 (Monaco)</item>
+        <item>378 (San Marino)</item>
+        <item>379 (Vatican City)</item>
+        <item>380 (Ukraine)</item>
+        <item>381 (Serbia)</item>
+        <item>382 (Montenegro)</item>
+        <item>385 (Croatia)</item>
+        <item>386 (Slovenia)</item>
+        <item>387 (Bosnia and Herzegovina)</item>
+        <item>389 (Macedonia)</item>
+        <item>420 (Czech Republic)</item>
+        <item>421 (Slovakia)</item>
+        <item>423 (Liechtenstein)</item>
+        <item>500 (Falkland Islands)</item>
+        <item>501 (Belize)</item>
+        <item>502 (Guatemala)</item>
+        <item>503 (El Salvador)</item>
+        <item>504 (Honduras)</item>
+        <item>505 (Nicaragua)</item>
+        <item>506 (Costa Rica)</item>
+        <item>507 (Panama)</item>
+        <item>508 (Saint Pierre and Miquelon)</item>
+        <item>509 (Haiti)</item>
+        <item>590 (Guadeloupe)</item>
+        <item>590 (Saint Barthélemy)</item>
+        <item>590 (Saint Martin)</item>
+        <item>591 (Bolivia)</item>
+        <item>592 (Guyana)</item>
+        <item>593 (Ecuador)</item>
+        <item>594 (French Guiana)</item>
+        <item>595 (Paraguay)</item>
+        <item>596 (Martinique)</item>
+        <item>597 (Suriname)</item>
+        <item>598 (Uruguay)</item>
+        <item>599 (Caribbean Netherlands)</item>
+        <item>599 (Curaçao)</item>
+        <item>670 (Timor-Leste)</item>
+        <item>672 (Norfolk Island)</item>
+        <item>673 (Brunei)</item>
+        <item>674 (Nauru)</item>
+        <item>675 (Papua New Guinea)</item>
+        <item>676 (Tonga)</item>
+        <item>677 (Solomon Islands)</item>
+        <item>678 (Vanuatu)</item>
+        <item>679 (Fiji)</item>
+        <item>680 (Palau)</item>
+        <item>681 (Wallis and Futuna)</item>
+        <item>682 (Cook Islands)</item>
+        <item>683 (Niue)</item>
+        <item>685 (Samoa)</item>
+        <item>686 (Kiribati)</item>
+        <item>687 (New Caledonia)</item>
+        <item>688 (Tuvalu)</item>
+        <item>689 (French Polynesia)</item>
+        <item>690 (Tokelau)</item>
+        <item>691 (Micronesia)</item>
+        <item>692 (Marshall Islands)</item>
+        <item>850 (North Korea)</item>
+        <item>852 (Hong Kong SAR China)</item>
+        <item>853 (Macau SAR China)</item>
+        <item>855 (Cambodia)</item>
+        <item>856 (Laos)</item>
+        <item>880 (Bangladesh)</item>
+        <item>886 (Taiwan)</item>
+        <item>960 (Maldives)</item>
+        <item>961 (Lebanon)</item>
+        <item>962 (Jordan)</item>
+        <item>963 (Syria)</item>
+        <item>964 (Iraq)</item>
+        <item>965 (Kuwait)</item>
+        <item>966 (Saudi Arabia)</item>
+        <item>967 (Yemen)</item>
+        <item>968 (Oman)</item>
+        <item>970 (Palestinian Territories)</item>
+        <item>971 (United Arab Emirates)</item>
+        <item>972 (Israel)</item>
+        <item>973 (Bahrain)</item>
+        <item>974 (Qatar)</item>
+        <item>975 (Bhutan)</item>
+        <item>976 (Mongolia)</item>
+        <item>977 (Nepal)</item>
+        <item>992 (Tajikistan)</item>
+        <item>993 (Turkmenistan)</item>
+        <item>994 (Azerbaijan)</item>
+        <item>995 (Georgia)</item>
+        <item>996 (Kyrgyzstan)</item>
+        <item>998 (Uzbekistan)</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_textured_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/No_booked_rides"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size15"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+    <ListView
+        android:id="@+id/list_booked"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        android:divider="@color/black"
+        android:overScrollMode="never"
+        android:scrollbars="none"></ListView>
+</RelativeLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_trips.xml -->

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="MarsGreen" parent="@style/_MarsGreen" />
+
+    <style name="_MarsGreen" parent="android:Theme.Holo.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:editTextBackground">@drawable/marsgreen_edit_text_holo_light</item>
+        <item name="android:textColorHighlight">#9999cc00</item>
+        <item name="android:textSelectHandleLeft">@drawable/marsgreen_text_select_handle_left</item>
+        <item name="android:textSelectHandleRight">@drawable/marsgreen_text_select_handle_right
+        </item>
+        <item name="android:textSelectHandle">@drawable/marsgreen_text_select_handle_middle</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsGreen</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/marsgreen_btn_check_holo_light
+        </item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/marsgreen_btn_radio_holo_light
+        </item>
+        <item name="android:buttonStyle">@style/ButtonMarsGreen</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonMarsGreen</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsGreen</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsGreen</item>
+        <item name="android:seekBarStyle">@style/SeekBarMarsGreen</item>
+        <item name="android:buttonStyleToggle">@style/ToggleMarsGreen</item>
+        <item name="android:listChoiceBackgroundIndicator">
+            @drawable/marsgreen_list_selector_holo_light
+        </item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/marsgreen_activated_background_holo_light
+        </item>
+        <item name="android:fastScrollThumbDrawable">@drawable/marsgreen_fastscroll_thumb_holo
+        </item>
+
+    </style>
+
+</resources>

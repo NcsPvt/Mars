@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_textured_gray">
+
+    <TextView
+        android:id="@+id/tv_searchHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/mars_yellow"
+        android:gravity="center"
+        android:text="@string/PickupLocation"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size22"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <RelativeLayout
+        android:id="@+id/rl_address_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_searchHeader">
+
+        <EditText
+            android:id="@+id/et_address_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/mars_text_view_lightgray_noborder"
+            android:ems="10"
+            android:hint="Search"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords|textNoSuggestions"
+            android:padding="10.0dp"
+            android:selectAllOnFocus="true"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/white"
+            android:typeface="sans" />
+
+        <ProgressBar
+            android:id="@+id/search_progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/et_address_search"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/et_address_search"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cb_SearchAroundGlobe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_address_search"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:onClick="expandSearch"
+        android:paddingLeft="7sp"
+        android:text="@string/SearchAroundGlobe"
+        android:textSize="@dimen/size9"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/logo_google"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/powered_by_google" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/logo_google"
+        android:layout_below="@id/cb_SearchAroundGlobe">
+
+        <LinearLayout
+            android:id="@+id/rl_recent_favorite"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_recent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="7sp"
+                android:paddingLeft="10sp"
+                android:text="@string/TripHistory"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/mars_yellow"
+                android:textSize="@dimen/size16"
+                android:typeface="sans" />
+
+            <View
+                android:id="@+id/line_recent"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/mars_yellow" />
+
+            <ListView
+                android:id="@+id/lv_recents"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/dark_gray"
+                android:dividerHeight="0.5dp" />
+
+            <TextView
+                android:id="@+id/tv_favorites"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingBottom="7sp"
+                android:paddingLeft="10sp"
+                android:paddingTop="7sp"
+                android:text="@string/saved_locations"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/mars_yellow"
+                android:textSize="@dimen/size16"
+                android:typeface="sans" />
+
+            <View
+                android:id="@+id/line_favorites"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/mars_yellow" />
+
+            <ListView
+                android:id="@+id/lv_favorites"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/dark_gray"
+                android:dividerHeight="0.5dp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_suggestions"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/dark_gray"
+            android:dividerHeight="0.5dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_search_address.xml -->

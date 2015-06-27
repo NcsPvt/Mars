@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/build/generated/res/resValues/androidTest/mars/debug/values/generated.xml -->
+    <eat-comment/>
+    <string name="google_maps_api_key">AIzaSyBRV_DCJrNN8l65dL8KfsRh0n8KGbWRZRo</string>
+    <string name="google_places_key">AIzaSyARrZJY169UzIHNsYiKhj7MgalzyesqnO0</string>
+    <string name="project_id">823421440208</string>
+</resources>

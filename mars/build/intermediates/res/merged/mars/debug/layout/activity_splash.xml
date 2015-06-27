@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_textured_gray"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_splash_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_textured_gray"></ImageView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="7sp"
+            android:background="@drawable/button_translucent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp">
+
+            <ImageView
+                android:id="@+id/iv_company_logo"
+                android:layout_width="130dp"
+                android:layout_height="31dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="1dp"
+                android:src="@drawable/launcher_icon"></ImageView>
+
+            <ImageView
+                android:id="@+id/iv_menu_splash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@color/mars_red"
+                android:onClick="showMenuView"
+                android:padding="-1dp"
+                android:src="@drawable/menu"></ImageView>
+
+            <TextView
+                android:id="@+id/tv_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/mars_text_view_red"
+                android:clickable="true"
+                android:onClick="showHelpView"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/Help_Mark"
+                android:textColor="@color/mars_red"
+                android:textSize="@dimen/size10"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="16" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/size31"
+            android:layout_marginRight="@dimen/size31"
+            android:layout_weight="9">
+
+            <ImageView
+                android:id="@+id/iv_main_logo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/size11"
+                android:src="@drawable/launcher_icon"></ImageView>
+
+            <LinearLayout
+                android:id="@+id/ll_quick_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_quick_booking"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="21"
+                    android:gravity="center"
+                    android:onClick="showMainScreen"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_quick_booking"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_red"
+                        android:gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/quick_booking"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3"
+                        android:textColor="@color/black"
+                        android:text="@string/standard_sedan"
+                        android:textSize="@dimen/size10" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="36" />
+
+                <LinearLayout
+                    android:id="@+id/ll_detail_booking"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="21"
+                    android:gravity="center"
+                    android:onClick="showMainScreen"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_detail_booking"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/button_red"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/detailed_booking"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size16"
+                        android:textStyle="bold" />
+<!--
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/NowLater"
+                        android:textSize="@dimen/size14"
+                        android:textStyle="bold" />
+
+-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3"
+                        android:text="@string/special_sedan"
+                        android:textSize="@dimen/size10" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_now_later"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_now_booking"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/size31"
+                    android:layout_marginRight="@dimen/size31"
+                    android:layout_weight="21"
+
+                    android:gravity="center"
+                    android:onClick="startNowLaterTrip"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_now_booking"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/button_red"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Now"
+                        android:textSize="@dimen/size16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:layout_weight="3"
+                        android:textSize="@dimen/size10" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="41" />
+
+                <LinearLayout
+                    android:id="@+id/ll_later_booking"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/size31"
+                    android:layout_marginRight="@dimen/size31"
+                    android:layout_weight="21"
+                    android:gravity="center"
+                    android:onClick="startNowLaterTrip"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_later_booking"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/button_red"
+                        android:text="@string/Later"
+                        android:textSize="@dimen/size16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:textSize="@dimen/size10" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/promotion_message"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="12"
+            android:gravity="center"
+            android:text="@string/about_text"
+            android:textSize="@dimen/size12" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_menu"
+        layout="@layout/activity_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_history"
+        layout="@layout/activity_trips"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+</FrameLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_splash.xml -->

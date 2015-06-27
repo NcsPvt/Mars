@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_textured_gray"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_main_ppv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_pageHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:background="@color/mars_red"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="PPV"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size14"
+                android:textStyle="italic"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_Available_Bal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_pageHeader"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mars_text_view_red"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/no_promo_available"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Available Balance:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size15"
+                android:textStyle="italic"
+                android:typeface="serif" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_ppv_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_textured_gray"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl_main_ppv"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_Charge_From_Voucer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voucherChargingHeader"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:id="@+id/voucher_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:hint="Voucher Number"
+                android:inputType="number"
+                android:maxLength="14"
+                android:padding="10.0sp"
+                android:singleLine="true"
+                android:textSize="@dimen/size17"
+                android:layout_margin="@dimen/size10"
+                />
+            <Button
+                android:id="@+id/btn_ppv_chargeFromVoucher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Charge Account"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/size10"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_below="@+id/voucher_number"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:padding="5dp"
+                android:onClick="chargeByVoucher"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/creditChargingHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_Charge_From_Voucer"
+            android:background="@color/mars_red"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Charge from Credit Card"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size13"
+            android:textStyle="italic"
+            android:typeface="serif"
+            android:layout_marginTop="@dimen/size10"/>
+
+        <EditText
+            android:id="@+id/topup_Amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:hint="Topup Amount"
+            android:inputType="number"
+            android:maxLength="14"
+            android:padding="10.0sp"
+            android:singleLine="true"
+            android:textSize="@dimen/size17"
+            android:layout_margin="@dimen/size10"
+            android:layout_below="@+id/creditChargingHeader"
+            />
+
+        <Button
+            android:id="@+id/btn_ppv_chargeFromCC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topup_Amount"
+            android:text="Charge Account"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/size10"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:padding="5dp"
+            android:onClick="chargeByCC"
+
+            />
+
+        <TextView
+            android:id="@+id/voucherChargingHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mars_red"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Charge from Voucher"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size13"
+            android:textStyle="italic"
+            android:typeface="serif"
+            android:layout_marginTop="@dimen/size10"/>
+
+    </RelativeLayout>
+</RelativeLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_ppv.xml -->

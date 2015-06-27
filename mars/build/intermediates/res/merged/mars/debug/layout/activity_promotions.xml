@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_textured_gray"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_main_promotions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_textured_gray"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_pageHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:background="@color/mars_red"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/Promotions_Available"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size14"
+                android:textStyle="italic"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="@color/translucent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="showMyPromos"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/MyPromos"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size12"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/no_promo_available"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_pageHeader"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/No_Promotions_Available"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size15"
+            android:textStyle="italic"
+            android:typeface="serif" />
+
+        <ListView
+            android:id="@+id/list_promos"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+            android:layout_below="@id/ll_pageHeader"
+            android:divider="@color/transparent"
+            android:dividerHeight="3dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_promotion_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_textured_gray"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_company_logo"
+            android:layout_width="130dp"
+            android:layout_height="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="1dp"
+            android:src="@drawable/launcher_icon" />
+
+        <RelativeLayout
+            android:id="@+id/rl_Selected_Promo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_company_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mars_text_view_red"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/lbl_Code"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="3dp"
+                android:text="@string/Code" />
+
+            <Button
+                android:id="@+id/btn_promo_bookTrip"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/lbl_Code"
+                android:text="@string/Book_Trip"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_selected_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/lbl_Code"
+                android:layout_alignBottom="@id/lbl_Code"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/lbl_Code"
+                android:layout_toLeftOf="@id/btn_promo_bookTrip"
+                android:gravity="left"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/lbl_promo_terms"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/btn_promo_bookTrip"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/terms_of_use" />
+
+            <TextView
+                android:id="@+id/lbl_Balance"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_Code"
+                android:gravity="left"
+                android:padding="3dp"
+                android:text="@string/balance" />
+
+            <TextView
+                android:id="@+id/tv_selected_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/lbl_Balance"
+                android:layout_alignBottom="@id/lbl_Balance"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/lbl_Balance"
+                android:layout_toLeftOf="@id/btn_promo_bookTrip"
+                android:gravity="left"
+                android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/lbl_Per_Trip"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_Balance"
+                android:gravity="left"
+                android:padding="3dp"
+                android:text="@string/perTrip" />
+
+            <TextView
+                android:id="@+id/tv_selected_perTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/lbl_Per_Trip"
+                android:layout_alignBottom="@id/lbl_Per_Trip"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/lbl_Per_Trip"
+                android:layout_toLeftOf="@id/lbl_promo_terms"
+                android:gravity="left"
+                android:padding="3dp"
+                android:textSize="@dimen/size8"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/promosReadyHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_Selected_Promo"
+            android:background="@color/mars_red"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/promos_ready"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size15"
+            android:textStyle="italic"
+            android:typeface="serif" />
+
+        <LinearLayout
+            android:id="@+id/ll_promosReadySubHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/promosReadyHeader"
+            android:background="@color/lightgray">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/promo_type" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/PromotionCode" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.1"
+                android:gravity="center"
+                android:text="@string/promo_balance" />
+            <!--
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.2"
+                            android:gravity="center"
+                            android:text="@string/per_trip"/>
+
+            -->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/expiry" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_no_promos_available"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_promosReadySubHeader"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/No_Promotions_Available"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size15"
+            android:textStyle="italic"
+            android:typeface="serif" />
+
+        <ListView
+            android:id="@+id/list_affiliates_promo"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:divider="@color/transparent"
+            android:dividerHeight="3dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/inviteesHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/list_affiliates_promo"
+            android:background="@color/mars_red"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/gotCreditFromFriends"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size14"
+            android:textStyle="italic"
+            android:typeface="serif" />
+
+        <LinearLayout
+            android:id="@+id/ll_RewardPoints"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/inviteesHeader"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/rewardPoints"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Points" />
+
+            <TextView
+                android:id="@+id/totalTrips"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/ExpiryPoints" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rewardsHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_RewardPoints"
+            android:background="@color/mars_red"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/rewardLoyaltyPoints"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size15"
+            android:textStyle="italic"
+            android:typeface="serif" />
+
+        <ListView
+            android:id="@+id/list_ready_promos"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rewardsHeader"
+            android:layout_below="@id/ll_promosReadySubHeader"
+            android:divider="@color/transparent"
+            android:dividerHeight="3dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</RelativeLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_promotions.xml -->

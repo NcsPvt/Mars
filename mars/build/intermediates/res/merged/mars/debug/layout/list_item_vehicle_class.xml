@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/button_white"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/iv_class_image"
+        android:layout_width="107dip"
+        android:layout_height="40dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/sedan_white" />
+
+    <ImageButton
+        android:id="@+id/btn_fare_details"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:layout_marginTop="5dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/iv_class_image"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/add" />
+
+    <TextView
+        android:id="@+id/tv_fare_details"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignTop="@id/btn_fare_details"
+        android:layout_toRightOf="@id/btn_fare_details"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:text="@string/fairDetails"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/size8" />
+
+    <RelativeLayout
+        android:id="@+id/rl_class_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/iv_class_image"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_vehicle_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="Economy Taxi"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/size16"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/availability_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size12"
+            android:layout_below="@id/tv_vehicle_class"
+            android:layout_marginRight="2.0sp"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="@string/availability"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/size10"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+        <RatingBar
+            android:id="@+id/availability_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size12"
+            android:layout_toRightOf="@id/availability_lbl"
+            android:maxHeight="@dimen/size12"
+            android:max="9"
+            android:numStars="9"
+            android:rating="7"
+            android:isIndicator="true"
+            android:progressDrawable="@drawable/gold_ratingbar"
+            android:layout_below="@id/tv_vehicle_class"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/availability_bar"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="@string/approxFare"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/size8"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp">
+
+                <TextView
+                    android:id="@+id/tv_class_rate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="SR 0.0"
+                    android:textSize="@dimen/size12"
+                    android:textStyle="bold"
+                    android:typeface="sans"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_dropoff_required"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:background="@color/white"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="@string/dropoff_required"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/size8"
+                    android:typeface="normal"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_vehicle_company_spinners"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/rl_class_info"
+        android:visibility="visible">
+
+        <Spinner
+            android:id="@+id/spinner_vehicles"
+            android:layout_width="0.0sp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="10sp" />
+
+        <Spinner
+            android:id="@+id/spinner_affiliates"
+            android:layout_width="0.0sp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingLeft="10sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_proceed_booking"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ll_vehicle_company_spinners"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/proceed"
+        android:textSize="@dimen/size10" />
+</RelativeLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/list_item_vehicle_class.xml -->

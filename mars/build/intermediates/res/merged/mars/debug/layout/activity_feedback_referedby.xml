@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_textured_gray"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginTop="15sp"
+            android:text="@string/WhereYouHeard"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size18" />
+
+        <TextView
+            android:id="@+id/feedback_line"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/feedback_title"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/black" />
+
+        <RadioGroup
+            android:id="@+id/feeback_type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feedback_line">
+
+            <RadioButton
+                android:id="@+id/feedback_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="5sp"
+                android:checked="true"
+                android:text="@string/ReferedByFriend"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/feedback_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="5sp"
+                android:text="@string/ReferedByCompany"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/feedback_driver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="5sp"
+                android:text="@string/ReferedByDriver"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:id="@+id/layout_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feeback_type"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/et_drivernumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/lightgray"
+                android:gravity="top"
+                android:hint="@string/drivernumber"
+                android:inputType="phone"
+                android:maxLength="30"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size15"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_mobilenumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/lightgray"
+                android:gravity="top"
+                android:hint="@string/mobileNumber"
+                android:inputType="phone"
+                android:maxLength="30"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size15"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/et_companywebsite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/lightgray"
+                android:gravity="top"
+                android:hint="@string/companyWebsite"
+                android:inputType="text"
+                android:maxLength="100"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size15"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/feedback_message"
+            android:layout_width="fill_parent"
+            android:layout_height="120sp"
+            android:layout_below="@id/layout_editText"
+            android:layout_marginBottom="30sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:background="@color/lightgray"
+            android:gravity="top"
+            android:hint="Provide additional comments here..."
+            android:inputType="textMultiLine"
+            android:maxLength="300"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/feedback_buttonLayer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/feedback_message"
+            android:layout_marginBottom="15sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/feedback_cancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="60sp"
+                android:layout_marginRight="15sp"
+                android:layout_weight="1"
+                android:onClick="cancel_feedback"
+                android:text="@string/Skip"
+                android:textSize="@dimen/size18"></Button>
+
+            <Button
+                android:id="@+id/feedback_submitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="60sp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:onClick="submit_feedback"
+                android:text="@string/SUBMIT"
+                android:textSize="@dimen/size18"></Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_feedback_referedby.xml -->

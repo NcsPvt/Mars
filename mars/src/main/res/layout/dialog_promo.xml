@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mars_text_view_red"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_promo_code"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/promo_dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:text="@string/PromotionCode"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size18"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/promo_code"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mars_text_view_lightgray"
+                android:hint="@string/EnterPromoCode"
+                android:padding="10dp"
+                android:textSize="@dimen/size14" />
+
+            <Button
+                android:id="@+id/btn_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/choose" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/gray" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tip_dialog_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:text="@string/AddTip"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size18"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RadioGroup
+                    android:id="@+id/radio_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tip_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="15%"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size14" />
+
+                    <RadioButton
+                        android:id="@+id/tip_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tip_15"
+                        android:gravity="bottom"
+                        android:text="20%"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size14" />
+
+                    <RadioButton
+                        android:id="@+id/tip_25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tip_20"
+                        android:gravity="bottom"
+                        android:text="25%"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size14" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/flat_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/mars_text_view_lightgray"
+                    android:digits="0123456789."
+                    android:gravity="center"
+                    android:hint="@string/FlatTip"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:padding="10dp"
+                    android:textSize="@dimen/size14" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_promos"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:visibility="gone"></ListView>
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/btnSAVE"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/OK"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size16" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/btnCANCEL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/Cancel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size16" />
+    </LinearLayout>
+
+</LinearLayout>

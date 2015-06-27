@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="promotions_baloon_margin">170.0dip</dimen>
+    <dimen name="offset_to_center_of_map">70.0dip</dimen>
+
+    <dimen name="tab_host_default_height">90dp</dimen>
+    <dimen name="receipt_btn_margin_top">5.0dip</dimen>
+    <dimen name="receipt_padding_top">10.0dip</dimen>
+    <dimen name="receipt_distance_margin_top">10.0dip</dimen>
+    <dimen name="receipt_waiting_margin_top">3.0dip</dimen>
+    <dimen name="receipt_separator_margin_top">10.0dip</dimen>
+    <dimen name="receipt_total_charge_margin_top">5.0dip</dimen>
+    <dimen name="receipt_rate_margin_top">10.0dip</dimen>
+    <dimen name="padding_tripreciept_mid_top">40.0dip</dimen>
+    <dimen name="receipt_top">13.0dip</dimen>
+    <dimen name="receipt_bottom">13.0dip</dimen>
+    <dimen name="trip_receipt_margin_top">16.0dip</dimen>
+    <dimen name="trip_receipt_padding_bottom">16.0dip</dimen>
+
+</resources>

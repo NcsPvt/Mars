@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_textured_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_Button_Bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/mars_text_view_yellow"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".35"
+            android:background="@drawable/mars_left_btn_selector"
+            android:gravity="center"
+            android:onClick="cancel_signature"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/iconcancel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Cancel"
+                android:textSize="@dimen/size14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".35"
+            android:background="@drawable/mars_center_btn_selector"
+            android:gravity="center"
+            android:onClick="clear_canvas"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/clean" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Clear"
+                android:textSize="@dimen/size14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_book_trip"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".35"
+            android:background="@drawable/mars_right_btn_selector"
+            android:gravity="center"
+            android:onClick="book_trip"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icondone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Book_Trip"
+                android:textSize="@dimen/size14" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLength="30"
+        android:padding="5dp"
+        android:text="Please sign below ..."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:id="@+id/rl_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/signature_border_yellow"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/userNotes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/userNotes"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/fairEstimate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="@string/fairEstimate"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/timeStamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_signature.xml -->

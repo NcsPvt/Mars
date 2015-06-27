@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <nine-patch android:src="@drawable/dedede" android:dither="true" />
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip android:clipOrientation="horizontal">
+            <nine-patch android:src="@drawable/greyscale" android:dither="true" />
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip android:clipOrientation="horizontal">
+            <nine-patch android:src="@drawable/ratingbarprogress" android:dither="true" />
+        </clip>
+    </item>
+</layer-list><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/drawable/gold_ratingbar.xml -->

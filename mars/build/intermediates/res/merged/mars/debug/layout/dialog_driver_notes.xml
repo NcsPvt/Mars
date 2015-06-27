@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mars_text_view_lightgray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/driver_notes_dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/AddNotes"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size18"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <EditText
+        android:id="@+id/et_driver_notes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/mars_text_view_white_noborder"
+        android:minLines="3"
+        android:padding="10dp"
+        android:textSize="@dimen/size14" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/btnSAVE"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/Save"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size16" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/btnCANCEL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/Cancel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size16" />
+
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/dialog_driver_notes.xml -->

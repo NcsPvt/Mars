@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-ar/arrays.xml -->
+    <eat-comment/>
+    <string-array name="country_codes">
+        <item>1  (American Samoa)</item>
+        <item>1  (Anguilla)</item>
+        <item>1  (Antigua and Barbuda)</item>
+        <item>1  (Bahamas)</item>
+        <item>1  (Barbados)</item>
+        <item>1  (Bermuda)</item>
+        <item>1  (British Virgin Islands)</item>
+        <item>1  (Canada)</item>
+        <item>1  (Cayman Islands)</item>
+        <item>1  (Dominica)</item>
+        <item>1  (Grenada)</item>
+        <item>1  (Guam)</item>
+        <item>1  (Jamaica)</item>
+        <item>1  (Montserrat)</item>
+        <item>1  (Northern Mariana Islands)</item>
+        <item>1  (Puerto Rico)</item>
+        <item>1  (Dominican Republic)</item>
+        <item>1  (Saint Kitts and Nevis)</item>
+        <item>1  (Saint Lucia)</item>
+        <item>1  (Sint Maarten)</item>
+        <item>1  (St. Vincent &amp; Grenadines)</item>
+        <item>1  (Trinidad and Tobago)</item>
+        <item>1  (Turks and Caicos Islands)</item>
+        <item>1  (U.S. Virgin Islands)</item>
+        <item>1  (United States)</item>
+        <item>7  (Kazakhstan)</item>
+        <item>7  (Russia)</item>
+        <item>20 (Egypt)</item>
+        <item>27 (South Africa)</item>
+        <item>30 (Greece)</item>
+        <item>31 (Netherlands)</item>
+        <item>32 (Belgium)</item>
+        <item>33 (France)</item>
+        <item>34 (Spain)</item>
+        <item>36 (Hungary)</item>
+        <item>39 (Italy)</item>
+        <item>40 (Romania)</item>
+        <item>41 (Switzerland)</item>
+        <item>43 (Austria)</item>
+        <item>44 (Guernsey)</item>
+        <item>44 (Isle of Man)</item>
+        <item>44 (Jersey)</item>
+        <item>44 (United Kingdom)</item>
+        <item>45 (Denmark)</item>
+        <item>46 (Sweden)</item>
+        <item>47 (Norway)</item>
+        <item>47 (Svalbard and Jan Mayen)</item>
+        <item>48 (Poland)</item>
+        <item>49 (Germany)</item>
+        <item>51 (Peru)</item>
+        <item>52 (Mexico)</item>
+        <item>53 (Cuba)</item>
+        <item>54 (Argentina)</item>
+        <item>55 (Brazil)</item>
+        <item>56 (Chile)</item>
+        <item>57 (Colombia)</item>
+        <item>58 (Venezuela)</item>
+        <item>60 (Malaysia)</item>
+        <item>61 (Australia)</item>
+        <item>61 (Christmas Island)</item>
+        <item>61 (Cocos (Keeling) Islands)</item>
+        <item>62 (Indonesia)</item>
+        <item>63 (Philippines)</item>
+        <item>64 (New Zealand)</item>
+        <item>65 (Singapore)</item>
+        <item>66 (Thailand)</item>
+        <item>81 (Japan)</item>
+        <item>82 (South Korea)</item>
+        <item>84 (Vietnam)</item>
+        <item>86 (China)</item>
+        <item>90 (Turkey)</item>
+        <item>91 (India)</item>
+        <item>92 (Pakistan)</item>
+        <item>93 (Afghanistan)</item>
+        <item>94 (Sri Lanka)</item>
+        <item>95 (Myanmar (Burma))</item>
+        <item>98 (Iran)</item>
+        <item>211 (South Sudan)</item>
+        <item>212 (Morocco)</item>
+        <item>213 (Algeria)</item>
+        <item>216 (Tunisia)</item>
+        <item>218 (Libya)</item>
+        <item>220 (Gambia)</item>
+        <item>221 (Senegal)</item>
+        <item>222 (Mauritania)</item>
+        <item>223 (Mali)</item>
+        <item>224 (Guinea)</item>
+        <item>225 (Côte d’Ivoire)</item>
+        <item>226 (Burkina Faso)</item>
+        <item>227 (Niger)</item>
+        <item>228 (Togo)</item>
+        <item>229 (Benin)</item>
+        <item>230 (Mauritius)</item>
+        <item>231 (Liberia)</item>
+        <item>232 (Sierra Leone)</item>
+        <item>233 (Ghana)</item>
+        <item>234 (Nigeria)</item>
+        <item>235 (Chad)</item>
+        <item>236 (Central African Republic)</item>
+        <item>237 (Cameroon)</item>
+        <item>238 (Cape Verde)</item>
+        <item>239 (São Tomé and Príncipe)</item>
+        <item>240 (Equatorial Guinea)</item>
+        <item>241 (Gabon)</item>
+        <item>242 (Congo - Brazzaville)</item>
+        <item>243 (Congo - Kinshasa)</item>
+        <item>244 (Angola)</item>
+        <item>245 (Guinea-Bissau)</item>
+        <item>246 (British Indian Ocean Territor)</item>
+        <item>247 (Ascension Island)</item>
+        <item>248 (Seychelles)</item>
+        <item>249 (Sudan)</item>
+        <item>250 (Rwanda)</item>
+        <item>251 (Ethiopia)</item>
+        <item>252 (Somalia)</item>
+        <item>253 (Djibouti)</item>
+        <item>254 (Kenya)</item>
+        <item>255 (Tanzania)</item>
+        <item>256 (Uganda)</item>
+        <item>257 (Burundi)</item>
+        <item>258 (Mozambique)</item>
+        <item>260 (Zambia)</item>
+        <item>261 (Madagascar)</item>
+        <item>262 (Réunion)</item>
+        <item>262 (Mayotte)</item>
+        <item>263 (Zimbabwe)</item>
+        <item>264 (Namibia)</item>
+        <item>265 (Malawi)</item>
+        <item>266 (Lesotho)</item>
+        <item>267 (Botswana)</item>
+        <item>268 (Swaziland)</item>
+        <item>269 (Comoros)</item>
+        <item>290 (Saint Helena)</item>
+        <item>291 (Eritrea)</item>
+        <item>297 (Aruba)</item>
+        <item>298 (Faroe Islands)</item>
+        <item>299 (Greenland)</item>
+        <item>350 (Gibraltar)</item>
+        <item>351 (Portugal)</item>
+        <item>352 (Luxembourg)</item>
+        <item>353 (Ireland)</item>
+        <item>354 (Iceland)</item>
+        <item>355 (Albania)</item>
+        <item>356 (Malta)</item>
+        <item>357 (Cyprus)</item>
+        <item>358 (Åland Islands)</item>
+        <item>358 (Finland)</item>
+        <item>359 (Bulgaria)</item>
+        <item>370 (Lithuania)</item>
+        <item>371 (Latvia)</item>
+        <item>372 (Estonia)</item>
+        <item>373 (Moldova)</item>
+        <item>374 (Armenia)</item>
+        <item>375 (Belarus)</item>
+        <item>376 (Andorra)</item>
+        <item>377 (Monaco)</item>
+        <item>378 (San Marino)</item>
+        <item>379 (Vatican City)</item>
+        <item>380 (Ukraine)</item>
+        <item>381 (Serbia)</item>
+        <item>382 (Montenegro)</item>
+        <item>385 (Croatia)</item>
+        <item>386 (Slovenia)</item>
+        <item>387 (Bosnia and Herzegovina)</item>
+        <item>389 (Macedonia)</item>
+        <item>420 (Czech Republic)</item>
+        <item>421 (Slovakia)</item>
+        <item>423 (Liechtenstein)</item>
+        <item>500 (Falkland Islands)</item>
+        <item>501 (Belize)</item>
+        <item>502 (Guatemala)</item>
+        <item>503 (El Salvador)</item>
+        <item>504 (Honduras)</item>
+        <item>505 (Nicaragua)</item>
+        <item>506 (Costa Rica)</item>
+        <item>507 (Panama)</item>
+        <item>508 (Saint Pierre and Miquelon)</item>
+        <item>509 (Haiti)</item>
+        <item>590 (Guadeloupe)</item>
+        <item>590 (Saint Barthélemy)</item>
+        <item>590 (Saint Martin)</item>
+        <item>591 (Bolivia)</item>
+        <item>592 (Guyana)</item>
+        <item>593 (Ecuador)</item>
+        <item>594 (French Guiana)</item>
+        <item>595 (Paraguay)</item>
+        <item>596 (Martinique)</item>
+        <item>597 (Suriname)</item>
+        <item>598 (Uruguay)</item>
+        <item>599 (Caribbean Netherlands)</item>
+        <item>599 (Curaçao)</item>
+        <item>670 (Timor-Leste)</item>
+        <item>672 (Norfolk Island)</item>
+        <item>673 (Brunei)</item>
+        <item>674 (Nauru)</item>
+        <item>675 (Papua New Guinea)</item>
+        <item>676 (Tonga)</item>
+        <item>677 (Solomon Islands)</item>
+        <item>678 (Vanuatu)</item>
+        <item>679 (Fiji)</item>
+        <item>680 (Palau)</item>
+        <item>681 (Wallis and Futuna)</item>
+        <item>682 (Cook Islands)</item>
+        <item>683 (Niue)</item>
+        <item>685 (Samoa)</item>
+        <item>686 (Kiribati)</item>
+        <item>687 (New Caledonia)</item>
+        <item>688 (Tuvalu)</item>
+        <item>689 (French Polynesia)</item>
+        <item>690 (Tokelau)</item>
+        <item>691 (Micronesia)</item>
+        <item>692 (Marshall Islands)</item>
+        <item>850 (North Korea)</item>
+        <item>852 (Hong Kong SAR China)</item>
+        <item>853 (Macau SAR China)</item>
+        <item>855 (Cambodia)</item>
+        <item>856 (Laos)</item>
+        <item>880 (Bangladesh)</item>
+        <item>886 (Taiwan)</item>
+        <item>960 (Maldives)</item>
+        <item>961 (Lebanon)</item>
+        <item>962 (Jordan)</item>
+        <item>963 (Syria)</item>
+        <item>964 (Iraq)</item>
+        <item>965 (Kuwait)</item>
+        <item>966 (Saudi Arabia)</item>
+        <item>967 (Yemen)</item>
+        <item>968 (Oman)</item>
+        <item>970 (Palestinian Territories)</item>
+        <item>971 (United Arab Emirates)</item>
+        <item>972 (Israel)</item>
+        <item>973 (Bahrain)</item>
+        <item>974 (Qatar)</item>
+        <item>975 (Bhutan)</item>
+        <item>976 (Mongolia)</item>
+        <item>977 (Nepal)</item>
+        <item>992 (Tajikistan)</item>
+        <item>993 (Turkmenistan)</item>
+        <item>994 (Azerbaijan)</item>
+        <item>995 (Georgia)</item>
+        <item>996 (Kyrgyzstan)</item>
+        <item>998 (Uzbekistan)</item>
+    </string-array>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>عربي</item>
+    </string-array>
+    <string-array name="questions">
+        <item>انقر هنا لاختيار السؤال السري</item>
+        <item>اسم صديق الطفولة المفضل لديك</item>
+        <item>اكلتك المفضلة</item>
+        <item>الطعام المفضل لديك؟</item>
+        <item>الذي كان تاريخك ليلة حفلة موسيقية؟</item>
+        <item>ما هو اسم ابن عمك الأكبر؟</item>
+        <item>من هو كل ما تبذلونه من الوقت الفرقة المفضلة لديك؟</item>
+        <item>ما هو كل ما تبذلونه من الوقت الأغنية المفضلة لديك؟</item>
+        <item>ما هو اسم سحق الطفولة الأولى؟</item>
+        <item>ما هو اسم الكتاب المفضل لديك؟</item>
+        <item>ما هو اسم الفيلم المفضل لديك؟</item>
+        <item>ما هو الاسم الأول المفضل لديك؟</item>
+    </string-array>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-ar/strings.xml -->
+    <eat-comment/>
+    <string name="AcceptTerms">يرجى قراءة وقبول شروط الاستخدام</string>
+    <string name="AddCard">أضف بطاقة</string>
+    <string name="AddDriverNotes">+ اترك ملاحظة</string>
+    <string name="AddNotes">اترك%sملاحظ</string>
+    <string name="AddTip">إضافة تلميح من فضلك</string>
+    <string name="Add_favorite">إضافة المفضلة</string>
+    <string name="Address_Name">اسم العنوان</string>
+    <string name="Adults">الكبار</string>
+    <string name="AgreeTerms">قراءت واوافق على الشروط والأحكام</string>
+    <string name="AllowNumberVisible">أرغب بإخفاء رقمي عن السائق</string>
+    <string name="Arabic">العربية</string>
+    <string name="Bags">أكياس</string>
+    <string name="Book_Trip">سجل الرحلة</string>
+    <string name="Booking_Id">حجز رقم</string>
+    <string name="Booking_Status">تفاصيل الرحلة</string>
+    <string name="Booking_Success">تم حجز رحلتك بنجاح \r ن تأكيد لا.:%s</string>
+    <string name="Call">اتصل</string>
+    <string name="Call_driver">اتصل بالسائق</string>
+    <string name="Cancel">إلغاء</string>
+    <string name="Cancel_ride">إلغاء الحجز</string>
+    <string name="Children">الأطفال</string>
+    <string name="ChoosePaymentOption">اختار طريقة الدفع</string>
+    <string name="Choose_Destination">اختيار الوجهة</string>
+    <string name="Choose_Pickup">اختيار لاقط</string>
+    <string name="Cleanliness">النظافة</string>
+    <string name="Clear">محو</string>
+    <string name="Code">الرمز:</string>
+    <string name="Comments">تعليق</string>
+    <string name="CompanyWeb">www.itcurves.us</string>
+    <string name="Completed">الانتهاء</string>
+    <string name="ConfimYourRide">الرجاء التأكد من رحلتك</string>
+    <string name="Confirm">أكد</string>
+    <string name="Confirm_Cancel">هل أنت متأكدة من إلغاء هذا الحجز؟</string>
+    <string name="Confirm_Delete">هل أنت متأكدة من هذا الحذف؟</string>
+    <string name="ContactSupport">Contact Support</string>
+    <string name="ContactingDriver">الاتصال السائق.</string>
+    <string name="Done">منته</string>
+    <string name="DropLocation">عنوان نهاية الرحلة</string>
+    <string name="ETA">وقت وصول السائق المتوقع: %s</string>
+    <string name="ETD">ETD: %s</string>
+    <string name="Email">البريد الإلكتروني</string>
+    <string name="EndingIn">ينتهي في %s</string>
+    <string name="English">English</string>
+    <string name="EnterPromoCode">أدخل الرمز الترويجي هنا</string>
+    <string name="Enter_Your">أدخل بريدك %s</string>
+    <string name="Etiquettes">التعامل</string>
+    <string name="Exclusive">مشاهدة المركبات من هذه الشركة فقط</string>
+    <string name="ExclusiveRide">حصري ركوب</string>
+    <string name="Exit_Application">التطبيق الخروج؟</string>
+    <string name="ExpiryPoints">Expiry: %s</string>
+    <string name="Finding_Cab">جاري البحث عن سائق</string>
+    <string name="FlatTip">شقة تلميح</string>
+    <string name="Forgot_Password">نسيت الرقم السري</string>
+    <string name="Full_name">الأسم بالكامل</string>
+    <string name="GetMeTaxi">اطلب التاكسي</string>
+    <string name="Hail">حائل</string>
+    <string name="Hailing_cab">مشيدا تاكسي</string>
+    <string name="Help">مساعدة</string>
+    <string name="Help_Mark">\?\nمساعدة</string>
+    <string name="Info">معلومات</string>
+    <string name="Initial_Charges">الرسوم الأولية: %s</string>
+    <string name="InvalidAdultsCount">البالغين أقل من 1 غير مسموح به.</string>
+    <string name="InviteFriend">أهلا بكم،\n
+أنا استخدم تطبيق %s للحجز\n
+تستطيع حجز أي نوع سيارة (تاكسي ابيض /سيارة خاصة ) من أي مكان و أي وقت\n
+تسطيع تحميل تطبيق من متجر بلاي ومتجر أبل ومتجر وندوز\n
+أنصحك بتجريب هذا التطبيق لما يحتويه من مميزات أمنية  خاصة جدا: \n
+۱۔ نستطيع السيدات الحجز دون اظهار ارقامهم\n
+۲۔ تتم مراقبة المركبات وتعقبها من اجل الأمن والسلام\n
+۳۔ يتم ابلاغك عند وصول السيارة كما يمكنك تعقب السيارة سوا عن طريق الهاتف الذكي أو الانترنت\n
+    </string>
+    <string name="Language">اللغة:</string>
+    <string name="Later">لاحقا</string>
+    <string name="LaterBookingMsg">نحن سيتم حجز رحلتك مع شركة الخدمات ركوب المتاحة.</string>
+    <string name="MyAddresses">عنواني</string>
+    <string name="MyPromos">ترقيتي</string>
+    <string name="MyTrips">معلومات رحلاتي</string>
+    <string name="NearbyPlaces">الأماكن القريبة ...</string>
+    <string name="Network_Error">خطأ شبكة \ n الرجاء حاول مرة أخرى</string>
+    <string name="New_password">إنشاء 4 أرقام كلمة السر</string>
+    <string name="No">لا</string>
+    <string name="NoCreditCard">عدم وجود بطاقة الائتمان على ملف</string>
+    <string name="NoServiceProvider">لا موفر الخدمات التي تقدم %s الحجز</string>
+    <string name="No_Help_Available">لا توجد مساعده متوفرة على هذا الموضوع.</string>
+    <string name="No_Internet_Connectivity">متعذرة الإنترنت</string>
+    <string name="No_Promotions_Available">لا ترقيات متاحة</string>
+    <string name="No_booked_rides">لا يوجد رحلات محجوزة</string>
+    <string name="No_driver_assigned">لم يكن هناك تعيين سائق</string>
+    <string name="No_driver_available">لا يوجد برنامج تشغيل متوفرة، هل ترغب في أن تكون في طابور الانتظار المدرجة؟</string>
+    <string name="No_favorites">لا المفضلة</string>
+    <string name="No_nearbyvehicle_available">لا السيارة القريبة المتاحة.</string>
+    <string name="No_vehicle_available">لا مركبة متوفرة، هل ترغب في أن تكون في طابور الانتظار المدرجة؟</string>
+    <string name="Now">الآن</string>
+    <string name="NowBookingMsg">سنقوم بحث عن سائق متاح لرحلتك.</string>
+    <string name="NowLater">الان او لاحقا</string>
+    <string name="OK">موافق</string>
+    <string name="OR">أو</string>
+    <string name="OurFleet">اسطولنا</string>
+    <string name="Our_Fleet"><u>اسطولنا</u></string>
+    <string name="Our_Rates"><u>اسعارنا</u></string>
+    <string name="PassengerInfo">أدخل معلومات الركاب</string>
+    <string name="PayInCab">سأدفع نقدا للسائق</string>
+    <string name="PayWithVoucher">لايوجد بطاقة أئتمانية بملفك</string>
+    <string name="PayingByVoucher">Paying by Customer Account</string>
+    <string name="PayingInCab">دفع في الكابينة</string>
+    <string name="PaymentTypeNotSupported">%s غير معتمد من قبل الشركة الكابينة مختارة</string>
+    <string name="PaymentTypeNotSupportedByApp">%s غير مدعوم</string>
+    <string name="Payment_Options">خيارات الدفع</string>
+    <string name="Paywith">وسوف تدفع مع %s</string>
+    <string name="Phone_number">رقم الهاتف</string>
+    <string name="Pick_up_date">تاريخ التقاط:</string>
+    <string name="Pick_up_time">اختيار الوقت:</string>
+    <string name="PickupLocation">عنوان بداية الرحلة</string>
+    <string name="Points">Points: %s</string>
+    <string name="PreferredCompany">الشركة المفضلة:</string>
+    <string name="PrepaidAccount">حساب الدفع المسبق</string>
+    <string name="Price_Chart">جدول التكاليف</string>
+    <string name="PromotionCode">كود الترويج</string>
+    <string name="Promotions_Available">الترقيات المتاحة!</string>
+    <string name="ProvideAddressName">يرجى تقديم اسم العنوان</string>
+    <string name="ProvideDrivernumber">يرجى تقديم رقم سائق</string>
+    <string name="ProvideFeedback">من فضلك ادخل ملاحظاتك</string>
+    <string name="Rate_ride">ركوب معدل</string>
+    <string name="ReferedByCompany">من الانترنت</string>
+    <string name="ReferedByDriver">تم توصيته من محركات بحث اخرى</string>
+    <string name="ReferedByFriend">من صديق</string>
+    <string name="Register">التسجيل</string>
+    <string name="RegisterAgain">تسجيل مرة أخرى</string>
+    <string name="Remove">نزع</string>
+    <string name="RemoveFavourite">إزالة من المفضلة</string>
+    <string name="Repeat_New_password">إعادة تأكيد الرقم السري</string>
+    <string name="Repeat_password">تكرار كلمة المرور</string>
+    <string name="ReportBug">الابلاغ عن مشكلة</string>
+    <string name="Report_problem">تقرير مشكلة</string>
+    <string name="RequestFeature">رؤيتكم للتطوير في المستقبل</string>
+    <string name="Restart_Phone">يرجى إعادة هذا الهاتف</string>
+    <string name="SUBMIT">ارسال</string>
+    <string name="Satellite">قمر إصطناعي</string>
+    <string name="Save">حفظ</string>
+    <string name="SaveFavourite">حفظ العنوان كما المفضلة</string>
+    <string name="Search">البحث</string>
+    <string name="SearchAroundGlobe">توسيع نطاق البحث في جميع أنحاء العالم</string>
+    <string name="SendEmailUsing">Send email using #8230;</string>
+    <string name="SendFeedback">ارسل الملاحظات</string>
+    <string name="Service_Quality">جودة الخدمة</string>
+    <string name="Share">شارك</string>
+    <string name="ShareExperience">شارك تجربتك معنا</string>
+    <string name="Sign_in">توقيع في</string>
+    <string name="Sign_out">تسجيل الخروج</string>
+    <string name="Sign_up">الاشتراك</string>
+    <string name="Signed_in_as">وقعت في ما يلي:</string>
+    <string name="Signing_in_ppp">Signing in#8230;</string>
+    <string name="Skip">تخطى</string>
+    <string name="SoftwareUpdate">تحديث البرامج.</string>
+    <string name="Spanish">Spanish</string>
+    <string name="Street_Address">عنوان الشارع</string>
+    <string name="TaxiOnTime">الوصول بالوقت المحدد</string>
+    <string name="Time">Time</string>
+    <string name="TripHistory">معلومات الرحلات</string>
+    <string name="UnderFive">* أقل من 3 سنوات</string>
+    <string name="Unknown_Error">خطأ غير معروف \ n الرجاء المحاولة لاحقا</string>
+    <string name="WhereYouHeard">كيف سمعت عن هذا التطبيق؟</string>
+    <string name="Yes">نعم</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values-ar/values.xml -->
+    <eat-comment/>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"التنقل إلى الشاشة الرئيسية"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s، %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s، %2$s، %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"التنقل إلى أعلى"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"خيارات إضافية"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"تم"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"عرض الكل"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"اختيار تطبيق"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"محو طلب البحث"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"طلب البحث"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"بحث"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"إرسال طلب البحث"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"البحث الصوتي"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"مشاركة مع"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"‏مشاركة مع %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"تصغير"</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-ar/strings.xml -->
+    <eat-comment/>
+    <string name="about">حول</string>
+    <string name="about_text">اهلا بك في ماي تاكسي نتشرف بخدمتكم ونوفر لكم اي سيارة \n .. اي وقت .. اي مكان .. مع الراحة والامان والخصوصية التامة</string>
+    <string name="about_us"><u>حول</u></string>
+    <string name="address">: عنوان</string>
+    <string name="airport_drop_note">For airport dropoff %s hours advance pickup required.</string>
+    <string name="app_name">ماي تاكسي السعودية</string>
+    <string name="approxFare">Approx. Fare</string>
+    <string name="availability">التوفر:</string>
+    <string name="back">السابق</string>
+    <string name="balance">الرصيد:</string>
+    <string name="cabfrom">%1$s من %2$s</string>
+    <string name="capacity">القدرة:</string>
+    <string name="choose">اختار</string>
+    <string name="chooseVehicleType">اضغط هنا لتحديد المركبات / نوع الخدمة</string>
+    <string name="choose_greater_time">يرجى اختيار وقت أكبر من الوقت الحالي</string>
+    <string name="choose_lesser_time">يرجى اختيار التاريخ / الوقت في موعد لا يتجاوز 2 يوم</string>
+    <string name="clientservice_success_post_driversignup">حساب تم إنشاؤه بنجاح</string>
+    <string name="coming_soon">قريبا!</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values-ar/common_strings.xml -->
+    <eat-comment/>
+    <string msgid="6428604800157361567" name="common_android_wear_notification_needs_update_text">"‏يحتاج <ns1:g id="APP_NAME">%1$s</ns1:g> إلى تحديث لتطبيق Android Wear."</string>
+    <string msgid="2453027084525739603" name="common_android_wear_update_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم تحدِّث تطبيق Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"‏تحديث Android Wear"</string>
+    <string msgid="6534628256897874213" name="common_google_play_services_api_unavailable_text">"‏يتطلب <ns1:g id="APP_NAME">%1$s</ns1:g> خدمة أو أكثر من خدمات Google Play غير المتاحة حاليًا. الرجاء الاتصال بمطوّر البرامج للحصول على المساعدة."</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"‏تمكين خدمات Google Play"</string>
+    <string msgid="4896236883690196080" name="common_google_play_services_enable_text">"‏لن يعمل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم يتم تمكين خدمات Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"‏تمكين خدمات Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"تم الطلب عن طريق <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"‏الحصول على خدمات Google Play"</string>
+    <string msgid="8836325110837822534" name="common_google_play_services_install_text_phone">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play، والتي لا تتوفر في هاتفك."</string>
+    <string msgid="542176290824754127" name="common_google_play_services_install_text_tablet">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play، والتي لا تتوفر في جهازك اللوحي."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"‏الحصول على خدمات Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"الحساب الذي تمّ تحديده غير موجود على الجهاز. يُرجى اختيار حساب آخر."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"حساب غير صالح"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"‏يتطلب أحد التطبيقات تمكين خدمات Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"‏يتطلب الاتصال بخدمات Google Play وجود اتصال بيانات."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"خطأ في الشبكة"</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"‏يتطلب أحد التطبيقات تحديث خدمات Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"‏خطأ في خدمات Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"حدث خطأ أثناء تسجيل الدخول إلى الحساب المحدد. الرجاء اختيار حساب مختلف."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"أخفق تسجيل الدخول"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"‏حدثت مشكلة غير معروفة في خدمات Google Play."</string>
+    <string msgid="7682982632307307938" name="common_google_play_services_unsupported_text">"‏يعتمد <ns1:g id="APP_NAME">%1$s</ns1:g> على خدمات Google Play التي لا تتوافق مع جهازك. يمكنك الاتصال بالمصنِّع للحصول على مساعدة."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"‏خدمات Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"تحديث"</string>
+    <string msgid="5709479369299147668" name="common_google_play_services_update_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم يتم تحديث خدمات Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"‏تحديث خدمات Google Play"</string>
+    <string msgid="2201289642219771610" name="common_google_play_services_updating_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play التي يتم تحديثها حاليًا."</string>
+    <string msgid="815008177440683245" name="common_google_play_services_updating_title">"‏يتم الآن تحديث خدمات Google Play."</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"فتح على الهاتف"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"تسجيل الدخول"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"‏تسجيل الدخول باستخدام Google"</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-ar/strings.xml -->
+    <eat-comment/>
+    <string name="companyWebsite">Availability:</string>
+    <string name="contact_backoffice">يرجى الاتصال ادارية</string>
+    <string name="continue_to_track_cab">مواصلة تتبع سيارة أجرة</string>
+    <string name="cost">كلفة: %s تقريبا</string>
+    <string name="creditCards">معلومات البطاقة الأتمانية</string>
+    <string name="current_trip">الرحلة الحالية</string>
+    <string name="detailed_booking">تفاصيل الطلب</string>
+    <string name="distance">مسافة</string>
+    <string name="driver">السائق:</string>
+    <string name="drivernumber">عدد سائق:</string>
+    <string name="driverwaiting">السائق ينتظر خارج</string>
+    <string name="drop">Dropoff</string>
+    <string name="dropme">حيث يجب علينا إسقاط قبالة لكم ؟ (اختياري )</string>
+    <string name="dropoff_required">Drop-off Required</string>
+    <string name="enable_gps_text">يرجى تمكين القمر الصناعي&amp; واي فاي لتحديد المواقع في إعدادات الجهاز</string>
+    <string name="enable_gps_title">تمكين نظام تحديد المواقع</string>
+    <string name="enable_wifi_text">بدوره على ما يلي لتحسين موقعك\nWifi</string>
+    <string name="enable_wifigps_text">بدوره على ما يلي لتحسين موقعك\nWifi GPS</string>
+    <string name="enable_wifigps_title">تحسين موقعك</string>
+    <string name="experience">%s سنوات</string>
+    <string name="expiry">الأنتهاء</string>
+    <string name="fairDetails">تفاصيل أجرة</string>
+    <string name="fairEstimate">تقدير النظيف:</string>
+    <string name="feedback">ردود الفعل</string>
+    <string name="general">عام</string>
+    <string name="gettingFairEstimate">الحصول على تقديرات عادلة ...</string>
+    <string name="getting_address">الحصول على عنوان</string>
+    <string name="getting_nearby_places">الحصول على الأماكن القريبة ...</string>
+    <string name="gotCreditFromFriends">حصلت على الرصيد عن طريق اضافة صديق</string>
+    <string name="imready">وأنا على استعداد في</string>
+    <string name="imreadynow">أنا جاهز الأن</string>
+    <string name="invalid_email_address">عنوان البريد الإلكتروني غير صحيح</string>
+    <string name="invalid_firstname_length">الاسم الأول قصيرة جدا</string>
+    <string name="invalid_password_length">كلمة قصيرة جدا</string>
+    <string name="invalid_password_match">لا تتطابق كلمات المرور</string>
+    <string name="invalid_phone_number">رقم الهاتف غير صالح</string>
+    <string name="invalid_response">استجابة s٪ غير صالحة</string>
+    <string name="invalid_tip_amount">صالح Tip المكونات \ n الرجاء أدخل في شكل 00.00</string>
+    <string name="job_dispatched">جاري ارسال المعلومات للسائق ! السائق في الطريق اليك</string>
+    <string name="job_status_canceled">ألغيت</string>
+    <string name="job_status_closed">مغلق</string>
+    <string name="location_on_map">الموقع على الخريطة</string>
+    <string name="login_signin">الدخول</string>
+    <string name="map_location">  (صحافة-للانتقال إلى موقعك الحالي)</string>
+    <string name="menu">قائمة</string>
+    <string name="mobileNumber">Mobile Number :</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values-ar/values.xml -->
+    <eat-comment/>
+    <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"إرسال"</string>
+    <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"جارٍ البحث عن الأجهزة…"</string>
+    <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"الاتصال بجهاز"</string>
+    <string msgid="109793632378378069" name="mr_media_route_controller_disconnect">"قطع الاتصال"</string>
+    <string msgid="8315773974194466049" name="mr_media_route_controller_pause">"إيقاف مؤقت"</string>
+    <string msgid="5214423499524760404" name="mr_media_route_controller_play">"تشغيل"</string>
+    <string msgid="379358765881274425" name="mr_media_route_controller_settings_description">"إعدادات المسار"</string>
+    <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"إيقاف الإرسال"</string>
+    <string msgid="5441529851481176817" name="mr_system_route_name">"النظام"</string>
+    <string msgid="7498112907524977311" name="mr_user_route_category_name">"الأجهزة"</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-ar/strings.xml -->
+    <eat-comment/>
+    <string name="nearestcab">أقرب سيارة أجرة</string>
+    <string name="next">تالي</string>
+    <string name="other_info">معلومات أخرى</string>
+    <string name="overlayText">> %1$s متعاقدة مع البنوك لإجراء عمليات الدفع بواسطة بطاقات الائتمان.\n • التسجيل يتم عبر بوابة بنك مؤمنة\n • التسجيل والعمليات تتفق مع ( PCI DSS ) معايير  الأمن في صناعة بطاقات الدفع\n • سجل معلومات العميل يتم تخزنها بشكل آمن في البنك\n • قاعدة معلومات بوابة الدفع مؤمنة ، وبيانات البطاقة لايتم الإحتفاظ بها في %1$s.\n • قيمة الرحلة يمكن دفعها نقدا حتى ولو لم يتم تسجيل بطاقة الائتمان ، الدفع ببطاقة الائتمان أختياري.\n • دفع قيمة الرحلات بواسطة بطاقة الائتمان يتم فقط لو كانت البطاقة مسجلة.\n •التسجيل متاح في اي وقت من خلال الدخول الى خيار بطاقة الائتمان الموجود في قائمة تطبيق %1$s</string>
+    <string name="overlayText1">• لو ترغب بالدفع نقدا فقط لرحلتك – الرجاء الضغط على تجاهل.\n • لو ترغب بالدفع بواسطة بطاقة الائتمان – الرجاء تسجيل بطاقتك الائتمانية بواسطة الضغط على تسجيل بطاقة الائتمان.\n •</string>
+    <string name="password">إدخال 4 أرقام كلمة السر</string>
+    <string name="perTrip">الرحلة:</string>
+    <string name="per_trip">الرحلة</string>
+    <string name="per_unit_Charges">الرسوم بعدئذ:</string>
+    <string name="pick_later">الحجزلاحقا</string>
+    <string name="pick_now">الحجز الان</string>
+    <string name="pickedup">تمت الرحلة</string>
+    <string name="pickme">حدد عنوان بداية الرحلة</string>
+    <string name="pickup">امسك</string>
+    <string name="please_wait">يرجى الانتظار!</string>
+    <string name="proceed"><![CDATA[Proceed >]]></string>
+    <string name="profile">الصفحة الشخصية</string>
+    <string name="promo_balance">رصيد الترقية</string>
+    <string name="promo_type">النوع</string>
+    <string name="promos_ready">ترقيتك جاهزة للاستخدام</string>
+    <string name="promotions">العروض</string>
+    <string name="provideCompanyWebsite">Please Provide Mobile Number</string>
+    <string name="provideMobileNumber">يرجى تقديم رقم الجوال</string>
+    <string name="query_c">الاستعلام:</string>
+    <string name="quick_booking">حجز سريع</string>
+    <string name="rewardLoyaltyPoints">المكافئات الخاصة بك والنقاط</string>
+    <string name="saved_locations">المفضلة</string>
+    <string name="secret_answer">إجابة السؤال السري</string>
+    <string name="secret_question">أضغط هنا لاختيار السؤال السري</string>
+    <string name="select_destination">حدد الوجهة</string>
+    <string name="select_pickup_point">حدد نقطة تحميل الراكب</string>
+    <string name="sendme">ارسل إلي</string>
+    <string name="settings">إعدادات</string>
+    <string name="showNumber">السماح لعدد تكون مرئية للسائق لشرح</string>
+    <string name="special_sedan">سيارات التاكسي البيضاء وسيارات الاجرة الخاصة للحجز الحالي والحجز اللاحق</string>
+    <string name="standard_sedan">فقط سيارات الاجرة البيضاء للأرسال الفوري</string>
+    <string name="start_maps">نوصي لبدء تطبيق خرائط جوجل لتحسين دقة الموقع الخاص بك. هل ترغب في الاستمرار؟</string>
+    <string name="status">الوضع:</string>
+    <string name="terms_of_use"><u>شروط الأستخدام</u></string>
+    <string name="termsofuse">الشروط والأحكام</string>
+    <string name="track">تعقب التاكسي</string>
+    <string name="trip">رحلة</string>
+    <string name="unknown_address">غير معروف العنوان، حاول مرة أخرى</string>
+    <string name="userNotes">لتأكيد رحلتك، بطاقة الخاص بك وسوف تكون مرحلة ما قبل أذن المبلغ المقدر سيتم فرض \ n تسجيلات بطاقة المبلغ الفعلي في نهاية رحلتك.</string>
+    <string name="userid">UserID</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="vehicle">السيارة:</string>
+    <string name="verify_sms">تحقق من</string>
+    <string name="verify_sms_failed">فشل التحقق من SMS</string>
+    <string name="verify_sms_manual">الرجاء إدخال رمز التحقق من 6 أرقام يدويا.</string>
+    <string name="verify_sms_manual_header">التحقق اليدوي</string>
+    <string name="verify_sms_manual_header_2">%s تم ارسال رسالة لك من</string>
+    <string name="verify_sms_part_1">في انتظار الكشف عن تلقائيا رسالة نصية قصيرة أرسلت ل</string>
+    <string name="verify_sms_part_2">"يرجى التأكد من أن يكون لديك خطة عمل SMS.\n\n\nالجلوس والاسترخاء. سنقوم بإعلامك عندما ننتهي التحقق"</string>
+    <string name="version">التطبيق الإصدار: %s</string>
+    <string name="will_tell_driver">سوف اقول سائق ...</string>
+    <string name="yourfare">%s التكلفة تقريبا</string>
+</resources>

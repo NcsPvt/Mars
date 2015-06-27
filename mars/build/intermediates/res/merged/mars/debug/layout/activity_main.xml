@@ -1,0 +1,955 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    map:mapType="normal">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background_textured_gray"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/app_action_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/button_translucent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <ImageView
+                android:id="@+id/iv_company_logo"
+                android:layout_width="130dp"
+                android:layout_height="@dimen/size31"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="1dp"
+                android:src="@drawable/launcher_icon"></ImageView>
+
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@color/mars_yellow"
+                android:onClick="showMenuView"
+                android:padding="-1dp"
+                android:src="@drawable/menu"></ImageView>
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv_menu"
+                android:background="@color/mars_yellow"
+                android:onClick="showHomeScreen"
+                android:src="@drawable/home"></ImageView>
+
+            <TextView
+                android:id="@+id/tv_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_menu"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/iv_menu"
+                android:layout_centerVertical="true"
+                android:background="@drawable/mars_text_view_yellow"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="showHelpView"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/Help_Mark"
+                android:textColor="@color/mars_yellow"
+                android:textSize="@dimen/size10"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/trip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <View
+                android:id="@+id/parent_center"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/offset_to_center_of_map"
+                android:background="@android:color/transparent" />
+
+            <ImageView
+                android:id="@+id/imageFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/parent_center"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pupin"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/pick_address_spacer"
+                android:layout_width="45sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ll_vehicle_company_fare"
+                android:layout_marginTop="5sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_selected_pick_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_toLeftOf="@+id/pick_address_spacer"
+                android:background="@drawable/mars_text_view_gray_yellow"
+                android:onClick="Back_Clicked"
+                android:orientation="vertical"
+                android:padding="5sp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/PickupLocation"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size14"
+                        android:textStyle="bold"></TextView>
+
+                    <Button
+                        android:id="@+id/btn_pick_notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/button_gray"
+                        android:onClick="AddDriverNotes"
+                        android:text="@string/AddDriverNotes"
+                        android:textSize="@dimen/size8" />
+
+                    <CheckBox
+                        android:id="@+id/fav_pick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:button="@drawable/selector_favorite_checkbox"
+                        android:onClick="addRemoveFavrite" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_pick_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="3dp"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size10"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_selected_drop_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_selected_pick_address"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/mars_text_view_gray_yellow"
+                android:onClick="Back_Clicked"
+                android:orientation="vertical"
+                android:padding="5sp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/DropLocation"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size14"
+                        android:textStyle="bold"></TextView>
+
+                    <Button
+                        android:id="@+id/btn_drop_notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/button_gray"
+                        android:onClick="AddDriverNotes"
+                        android:text="@string/AddDriverNotes"
+                        android:textSize="@dimen/size8" />
+
+                    <CheckBox
+                        android:id="@+id/fav_drop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:button="@drawable/selector_favorite_checkbox"
+                        android:onClick="addRemoveFavrite" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_drop_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="3dp"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size10"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_address_pointer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/parent_center"
+                android:layout_marginBottom="@dimen/size10"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:background="@drawable/mars_text_view_yellow"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/cancel_drop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/mars_right_btn_selector"
+                    android:onClick="cancelDrop"
+                    android:padding="5sp"
+                    android:src="@drawable/iconcancel"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/cancel_drop"
+                    android:background="@drawable/mars_right_btn_selector"
+                    android:onClick="searchAddress"
+                    android:padding="5sp"
+                    android:src="@drawable/search"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/cancel_drop_seperator"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/search"
+                    android:layout_alignTop="@id/search"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_toLeftOf="@id/cancel_drop"
+                    android:background="@color/gray"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/search"
+                    android:layout_alignTop="@id/search"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_toLeftOf="@id/search"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_pick_drop"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/search"
+                    android:layout_alignTop="@id/search"
+                    android:layout_toLeftOf="@id/search"
+                    android:background="@drawable/mars_left_btn_selector"
+                    android:onClick="PickSelected"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_pick_drop"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/pickme"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size9"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/getting_address"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size8"
+                        android:typeface="serif"></TextView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_selected_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_selected_drop_address"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/mars_text_view_gray_yellow"
+                android:onClick="showNowLater"
+                android:orientation="vertical"
+                android:padding="5sp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/imready"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size14"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_selected_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size10"
+                    android:typeface="serif"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_selected_cab"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_selected_time"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/mars_text_view_gray_yellow"
+                android:onClick="ShowSendNearest"
+                android:orientation="vertical"
+                android:padding="5sp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/sendme"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size14"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_selected_cab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/nearestcab"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size10"
+                    android:typeface="serif"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_FairCashCredit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_selected_cab"
+                android:layout_marginTop="-2dp"
+                android:background="@drawable/mars_text_view_yellow"
+                android:orientation="vertical"
+                android:padding="5sp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_fare_estimate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/yourfare"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/size12"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_mile_estimate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/size10"
+                            android:typeface="serif"></TextView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/mars_center_btn_selector"
+                        android:onClick="showPromoDialog"
+                        android:padding="-1dp"
+                        android:src="@drawable/menu"></ImageView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <EditText
+                    android:id="@+id/et_pickup_person_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="left"
+                    android:hint="Name of  person / Food / Packge"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size10"
+                    android:typeface="serif"
+                    android:visibility="gone"></EditText>
+
+                <EditText
+                    android:id="@+id/et_callback_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="left"
+                    android:hint="Callback number"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size10"
+                    android:typeface="serif"
+                    android:visibility="gone"></EditText>
+
+                <EditText
+                    android:id="@+id/et_driver_notes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="left"
+                    android:hint="@string/AddDriverNotes"
+                    android:onClick="AddDriverNotes"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size10"
+                    android:typeface="serif"></EditText>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/ll_payWith"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/mars_left_btn_selector"
+                        android:onClick="confirm_Payment"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_payWith"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/Paywith"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/size14"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_endingWih"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="left"
+                            android:singleLine="true"
+                            android:text="@string/EndingIn"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/size10"
+                            android:typeface="serif"></TextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_chooseCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/mars_center_btn_selector"
+                        android:onClick="confirm_Payment"
+                        android:padding="-1dp"
+                        android:src="@drawable/menu"></ImageView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tv_payWithVoucher"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mars_center_btn_selector"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="confirm_Payment"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/PayWithVoucher"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size14"
+                    android:textStyle="bold"></TextView>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tv_payInCash"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mars_center_btn_selector"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="confirm_Payment"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/PayInCab"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size14"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_promo_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_marginTop="@dimen/promotions_baloon_margin"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/size10"
+                android:paddingRight="@dimen/size10"
+                android:paddingTop="5dp"
+                android:paddingBottom="@dimen/size10"
+                android:text="Promotions\nAvailable"
+                android:background="@drawable/info_balloon"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_cancelConfirm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:onClick="showHelpView"
+                    android:text="@string/Cancel" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:onClick="confirmBooking"
+                    android:text="@string/GetMeTaxi" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom_views"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ll_cancelConfirm"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_nearby_places"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dark_gray"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/iconupdown"
+                    android:onClick="showHideBottomViews"
+                    android:padding="3dp"
+                    android:text="@string/NearbyPlaces"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/ll_getting_nearby_progress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_nearby_places"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dip"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="10dp"
+                        android:text="@string/getting_nearby_places"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size15"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_nearby_places"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:indeterminate="true"
+                        android:indeterminateDrawable="@drawable/my_progress_indeterminate" />
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lv_nearby_places"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/tv_nearby_places"
+                    android:background="@color/white"
+                    android:scrollbars="none"
+                    android:visibility="gone">
+
+                </ListView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_Now_Later"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_selected_drop_address"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="5sp"
+                android:background="@drawable/mars_text_view_yellow"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/picklater"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/mars_right_btn_selector"
+                    android:onClick="picklater"
+                    android:paddingBottom="3sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:paddingTop="3sp"
+                    android:src="@drawable/time_clock" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/picklater"
+                    android:layout_alignTop="@id/picklater"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="3sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_toLeftOf="@id/picklater"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/picklater"
+                    android:background="@drawable/mars_left_btn_selector"
+                    android:onClick="picknow"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/imreadynow"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size14"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_ready_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size10"
+                        android:typeface="serif"></TextView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_send_nearest"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_selected_time"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="5sp"
+                android:background="@drawable/mars_text_view_yellow"
+                android:paddingRight="8sp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_chooseCab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/mars_center_btn_selector"
+                    android:onClick="ShowVehicleSelection"
+                    android:padding="-1dp"
+                    android:src="@drawable/menu" />
+
+                <View
+                    android:id="@+id/nearestcab_seperator"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/iv_chooseCab"
+                    android:layout_alignTop="@id/iv_chooseCab"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="3sp"
+                    android:layout_toLeftOf="@id/iv_chooseCab"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/ll_nearest_cab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/nearestcab_seperator"
+                    android:background="@drawable/mars_left_btn_selector"
+                    android:onClick="ShowVehicleSelection"
+                    android:orientation="vertical"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:id="@+id/tv_sendme"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/sendme"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size14"
+                        android:textStyle="bold"
+                        android:visibility="visible"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_nearestcab"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="left|center"
+                        android:lines="1"
+                        android:text="@string/nearestcab"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size10"
+                        android:typeface="serif"></TextView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_vehicle_company_fare"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/lightgray"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/tv_no_vehicle_available"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/No_nearbyvehicle_available"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size15"
+                    android:textStyle="italic"
+                    android:typeface="serif" />
+
+                <ListView
+                    android:id="@+id/list_vehicle_classes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightgray"
+                    android:divider="@color/lightgray"
+                    android:dividerHeight="3dp"
+                    android:overScrollMode="never"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:scrollbars="none"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/timer_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_yellow"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10sp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_weight="1"
+                    android:padding="20sp"
+                    android:text="@string/Finding_Cab"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size21"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_timer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size40"
+                    android:textStyle="bold"
+                    android:typeface="serif"></TextView>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/vehicle_balloon"
+                layout="@layout/vehicle_ballon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/parent_center"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/layout_later"
+                layout="@layout/activity_when"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/overlay_trip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/trip_overlay"
+                android:clickable="true"
+                android:onClick="tripOverlayClick"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/menu"
+        layout="@layout/activity_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/history"
+        layout="@layout/activity_trips"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+</FrameLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_main.xml -->

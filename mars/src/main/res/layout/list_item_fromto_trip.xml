@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_fromto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20.0dp"
+    android:background="@drawable/historyfromto">
+
+    <ImageView
+        android:id="@+id/iv_time_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2.0dp"
+        android:layout_marginTop="5.0dp"
+        android:src="@drawable/time_clock" />
+
+    <LinearLayout
+        android:id="@+id/ll_time_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dp"
+        android:layout_toRightOf="@id/iv_time_clock"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="Small Text"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/size10"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center"
+            android:text="Small Text"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/size10"
+            android:textStyle="bold"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_booking_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ll_time_date"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Booking_Id"
+        android:textColor="#ff000000"
+        android:textSize="@dimen/size10"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/tv_bookingID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_booking_lbl"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Booking_Id"
+        android:textColor="#ff000000"
+        android:textSize="@dimen/size10"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <ImageView
+        android:id="@+id/iv_status_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ll_time_date"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/ll_time_date"
+        android:gravity="center"
+        android:paddingRight="3dp"
+        android:src="@drawable/icondone" />
+
+    <ImageView
+        android:id="@+id/iv_pick_pointer"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/ll_time_date"
+        android:layout_marginLeft="3.0dp"
+        android:layout_marginRight="3.0dp"
+        android:layout_marginTop="9.0dp"
+        android:src="@drawable/pupin" />
+
+    <ImageView
+        android:id="@+id/iv_drop_pointer"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/iv_pick_pointer"
+        android:layout_marginLeft="3.0dp"
+        android:layout_marginRight="3.0dp"
+        android:layout_marginTop="9.0dp"
+        android:src="@drawable/dopin" />
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_pick_pointer"
+        android:layout_alignTop="@id/iv_pick_pointer"
+        android:layout_toRightOf="@id/iv_pick_pointer"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="#ff000000"
+        android:textSize="@dimen/size10"
+        android:textStyle="bold"
+        android:typeface="sans" />
+    <!--android:layout_toLeftOf="@+id/iv_choose_from"-->
+
+    <TextView
+        android:id="@+id/tv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_drop_pointer"
+        android:layout_alignTop="@id/iv_drop_pointer"
+        android:layout_toRightOf="@id/iv_drop_pointer"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="#ff000000"
+        android:textSize="@dimen/size10"
+        android:textStyle="bold"
+        android:typeface="sans" />
+    <!--android:layout_toLeftOf="@+id/iv_choose_to"-->
+
+    <!--
+        <ImageButton
+            android:id="@id/iv_choose_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_from"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_from"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/choose1" />
+
+        <ImageButton
+            android:id="@id/iv_choose_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_to"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_to"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/choose1" />
+    -->
+
+</RelativeLayout>

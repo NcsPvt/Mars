@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vehTypeText"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:text="Sedan"
+    android:textColor="@color/black"
+    android:textSize="@dimen/size12"
+    android:textStyle="bold" />
+<!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/list_item_vehicles.xml -->

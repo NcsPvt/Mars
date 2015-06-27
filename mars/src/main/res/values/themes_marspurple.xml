@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="MarsPurple" parent="@style/_MarsPurple" />
+
+    <style name="_MarsPurple" parent="android:Theme.Holo.Light">
+
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:editTextBackground">@drawable/marspurple_edit_text_holo_light</item>
+        <item name="android:textColorHighlight">#99aa66cc</item>
+        <item name="android:textSelectHandleLeft">@drawable/marspurple_text_select_handle_left
+        </item>
+        <item name="android:textSelectHandleRight">@drawable/marspurple_text_select_handle_right
+        </item>
+        <item name="android:textSelectHandle">@drawable/marspurple_text_select_handle_middle</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsPurple</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/marspurple_btn_check_holo_light
+        </item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/marspurple_btn_radio_holo_light
+        </item>
+        <item name="android:buttonStyle">@style/ButtonMarsPurple</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonMarsPurple</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsPurple</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsPurple</item>
+        <item name="android:seekBarStyle">@style/SeekBarMarsPurple</item>
+        <item name="android:listChoiceBackgroundIndicator">
+            @drawable/marspurple_list_selector_holo_light
+        </item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/marspurple_activated_background_holo_light
+        </item>
+        <item name="android:fastScrollThumbDrawable">@drawable/marspurple_fastscroll_thumb_holo
+        </item>
+
+    </style>
+
+</resources>

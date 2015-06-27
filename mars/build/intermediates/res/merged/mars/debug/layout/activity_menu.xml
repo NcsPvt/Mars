@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/menu_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:background="@color/mars_yellow"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="@string/menu"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size14"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:id="@+id/menu_row_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_header"
+            android:layout_margin="15dp"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="showProfileScreen"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/profile"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/profile"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="showFavorites"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/icon_favorite"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/MyAddresses"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="showTripsView"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_history"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/MyTrips"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_row_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_row_1"
+            android:layout_margin="15dp"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="ShowPriceList"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/pricechart_image"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/Price_Chart"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="ShowFleet"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/fleet"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/OurFleet"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="ShowPaymentOptions"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/creditcard"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/creditCards"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_row_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_row_2"
+            android:layout_margin="15dp"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="share_App"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/share"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/Share"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="feedBack"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/feedback"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/feedback"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="showPromotions"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/promotions"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/promotions"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_row_4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_row_3"
+            android:layout_margin="15dp"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="ShowTerms"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/terms"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/termsofuse"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="showHelpView"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/help"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/Help"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="ShowPPV"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/creditcard"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/PrepaidAccount"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_row_5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_row_4"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="performLogout"
+                android:orientation="vertical"
+                >
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/exit"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/Sign_out"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/mars_menu_button"
+                android:gravity="center_horizontal"
+                android:onClick="about_Us"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:src="@drawable/aboutus"></ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/about"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size10"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_app_version"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:longClickable="true"
+            android:layout_below="@id/menu_row_5"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/version"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size10" />
+    </RelativeLayout>
+</ScrollView><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_menu.xml -->

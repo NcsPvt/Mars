@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|center_horizontal"
+    android:layout_marginBottom="11dp"
+    android:background="@drawable/mess"
+    android:baselineAligned="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/driver_info"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1.0"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:minWidth="80.0dp">
+
+            <ImageView
+                android:id="@+id/img_driver"
+                android:layout_width="100.0dp"
+                android:layout_height="100.0dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_driver" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_driver"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    style="@style/customratingBar"
+                    android:layout_width="80.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:minWidth="80.0dp"
+                    android:numStars="5"
+                    android:progress="0"
+                    android:rating="3.5"
+                    android:stepSize="0.1" />
+
+                <TextView
+                    android:id="@+id/txt_total_ratings"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1,000"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size12"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_driver_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Muhammad Samama"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size14" />
+
+            <TextView
+                android:id="@+id/txt_company_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="IT Curves"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size12" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="3.0dp">
+
+                <Button
+                    android:id="@+id/btn_hail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/button_green"
+                    android:text="@string/Hail"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size18"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/button_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_veh_make"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1.0"
+                        android:singleLine="true"
+                        android:text="Make"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size14" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/txt_veh_plate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1.0"
+                        android:singleLine="true"
+                        android:text="Plate No"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/vehicle_rate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:drawableLeft="@drawable/bucks"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Initial Charges: \nSubsequent charges: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/size8"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_marginTop="5.0sp"
+            android:onClick="closeVehicleMarker"
+            android:src="@drawable/iconcancel"
+            android:visibility="visible"></ImageView>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/vehicle_baloon_contact_info"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dp"
+        android:layout_marginBottom="5.0sp"
+        android:layout_weight="3"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/selected_veh_logo"
+            android:layout_width="70dp"
+            android:layout_height="@dimen/size23"
+            android:layout_centerInParent="true"
+            android:src="@drawable/launcher_icon"></ImageView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/selected_veh_logo"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ratesLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/Our_Rates"
+                android:textColor="@color/blue_regency"
+                android:textSize="@dimen/size10" />
+
+            <TextView
+                android:id="@+id/fleetLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/Our_Fleet"
+                android:textColor="@color/blue_regency"
+                android:textSize="@dimen/size10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/selected_veh_logo"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/aboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/about_us"
+                android:textColor="@color/blue_regency"
+                android:textSize="@dimen/size10" />
+
+            <TextView
+                android:id="@+id/termsLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/terms_of_use"
+                android:textColor="@color/blue_regency"
+                android:textSize="@dimen/size10" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

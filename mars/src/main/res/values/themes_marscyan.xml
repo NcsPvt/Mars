@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="MarsCyan" parent="@style/_MarsCyan" />
+
+    <style name="_MarsCyan" parent="android:Theme.Holo.Light">
+
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:editTextBackground">@drawable/marscyan_edit_text_holo_light</item>
+        <item name="android:textColorHighlight">#9900aff0</item>
+        <item name="android:textSelectHandleLeft">@drawable/marscyan_text_select_handle_left</item>
+        <item name="android:textSelectHandleRight">@drawable/marscyan_text_select_handle_right
+        </item>
+        <item name="android:textSelectHandle">@drawable/marscyan_text_select_handle_middle</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsCyan</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/marscyan_btn_check_holo_light
+        </item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/marscyan_btn_radio_holo_light
+        </item>
+        <item name="android:buttonStyle">@style/ButtonMarsCyan</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonMarsCyan</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsCyan</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsCyan</item>
+        <item name="android:seekBarStyle">@style/SeekBarMarsCyan</item>
+        <item name="android:listChoiceBackgroundIndicator">
+            @drawable/marscyan_list_selector_holo_light
+        </item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/marscyan_activated_background_holo_light
+        </item>
+        <item name="android:fastScrollThumbDrawable">@drawable/marscyan_fastscroll_thumb_holo</item>
+
+    </style>
+
+</resources>

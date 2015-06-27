@@ -1,0 +1,31 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme">
+        <item name="android:buttonStyle">@style/ButtonMarsYellow</item>
+    </style>
+
+    <style name="goldRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxHeight">40.0dip</item>
+        <item name="android:progressDrawable">@drawable/gold_ratingbar</item>
+        <item name="android:minHeight">10.0dip</item>
+    </style>
+
+    <style name="customratingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/full_rating_star</item>
+        <item name="android:minHeight">15.0dip</item>
+    </style>
+
+    <style name="TextGrayDivider">
+        <item name="android:textSize">@dimen/size14</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/mars_cyan</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/list_section_divider_holo_custom</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8.0dip</item>
+        <item name="android:layout_marginRight">8.0dip</item>
+    </style>
+
+</resources>

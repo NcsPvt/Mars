@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_promo"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_white"
+    android:padding="5sp">
+
+    <ImageView
+        android:id="@+id/promo_company_logo"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginLeft="5sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/my_progress_indeterminate" />
+
+
+    <ImageView
+        android:id="@+id/btn_avail_promo"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5sp"
+        android:src="@drawable/invite"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/promo_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="5sp"
+        android:layout_toLeftOf="@id/btn_avail_promo"
+        android:layout_toRightOf="@id/promo_company_logo"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size10"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+</RelativeLayout>

@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-es/arrays.xml -->
+    <eat-comment/>
+    <string-array name="country_codes">
+        <item>1  (American Samoa)</item>
+        <item>1  (Anguilla)</item>
+        <item>1  (Antigua and Barbuda)</item>
+        <item>1  (Bahamas)</item>
+        <item>1  (Barbados)</item>
+        <item>1  (Bermuda)</item>
+        <item>1  (British Virgin Islands)</item>
+        <item>1  (Canada)</item>
+        <item>1  (Cayman Islands)</item>
+        <item>1  (Dominica)</item>
+        <item>1  (Grenada)</item>
+        <item>1  (Guam)</item>
+        <item>1  (Jamaica)</item>
+        <item>1  (Montserrat)</item>
+        <item>1  (Northern Mariana Islands)</item>
+        <item>1  (Puerto Rico)</item>
+        <item>1  (Dominican Republic)</item>
+        <item>1  (Saint Kitts and Nevis)</item>
+        <item>1  (Saint Lucia)</item>
+        <item>1  (Sint Maarten)</item>
+        <item>1  (St. Vincent &amp; Grenadines)</item>
+        <item>1  (Trinidad and Tobago)</item>
+        <item>1  (Turks and Caicos Islands)</item>
+        <item>1  (U.S. Virgin Islands)</item>
+        <item>1  (United States)</item>
+        <item>7  (Kazakhstan)</item>
+        <item>7  (Russia)</item>
+        <item>20 (Egypt)</item>
+        <item>27 (South Africa)</item>
+        <item>30 (Greece)</item>
+        <item>31 (Netherlands)</item>
+        <item>32 (Belgium)</item>
+        <item>33 (France)</item>
+        <item>34 (Spain)</item>
+        <item>36 (Hungary)</item>
+        <item>39 (Italy)</item>
+        <item>40 (Romania)</item>
+        <item>41 (Switzerland)</item>
+        <item>43 (Austria)</item>
+        <item>44 (Guernsey)</item>
+        <item>44 (Isle of Man)</item>
+        <item>44 (Jersey)</item>
+        <item>44 (United Kingdom)</item>
+        <item>45 (Denmark)</item>
+        <item>46 (Sweden)</item>
+        <item>47 (Norway)</item>
+        <item>47 (Svalbard and Jan Mayen)</item>
+        <item>48 (Poland)</item>
+        <item>49 (Germany)</item>
+        <item>51 (Peru)</item>
+        <item>52 (Mexico)</item>
+        <item>53 (Cuba)</item>
+        <item>54 (Argentina)</item>
+        <item>55 (Brazil)</item>
+        <item>56 (Chile)</item>
+        <item>57 (Colombia)</item>
+        <item>58 (Venezuela)</item>
+        <item>60 (Malaysia)</item>
+        <item>61 (Australia)</item>
+        <item>61 (Christmas Island)</item>
+        <item>61 (Cocos (Keeling) Islands)</item>
+        <item>62 (Indonesia)</item>
+        <item>63 (Philippines)</item>
+        <item>64 (New Zealand)</item>
+        <item>65 (Singapore)</item>
+        <item>66 (Thailand)</item>
+        <item>81 (Japan)</item>
+        <item>82 (South Korea)</item>
+        <item>84 (Vietnam)</item>
+        <item>86 (China)</item>
+        <item>90 (Turkey)</item>
+        <item>91 (India)</item>
+        <item>92 (Pakistan)</item>
+        <item>93 (Afghanistan)</item>
+        <item>94 (Sri Lanka)</item>
+        <item>95 (Myanmar (Burma))</item>
+        <item>98 (Iran)</item>
+        <item>211 (South Sudan)</item>
+        <item>212 (Morocco)</item>
+        <item>213 (Algeria)</item>
+        <item>216 (Tunisia)</item>
+        <item>218 (Libya)</item>
+        <item>220 (Gambia)</item>
+        <item>221 (Senegal)</item>
+        <item>222 (Mauritania)</item>
+        <item>223 (Mali)</item>
+        <item>224 (Guinea)</item>
+        <item>225 (Côte d’Ivoire)</item>
+        <item>226 (Burkina Faso)</item>
+        <item>227 (Niger)</item>
+        <item>228 (Togo)</item>
+        <item>229 (Benin)</item>
+        <item>230 (Mauritius)</item>
+        <item>231 (Liberia)</item>
+        <item>232 (Sierra Leone)</item>
+        <item>233 (Ghana)</item>
+        <item>234 (Nigeria)</item>
+        <item>235 (Chad)</item>
+        <item>236 (Central African Republic)</item>
+        <item>237 (Cameroon)</item>
+        <item>238 (Cape Verde)</item>
+        <item>239 (São Tomé and Príncipe)</item>
+        <item>240 (Equatorial Guinea)</item>
+        <item>241 (Gabon)</item>
+        <item>242 (Congo - Brazzaville)</item>
+        <item>243 (Congo - Kinshasa)</item>
+        <item>244 (Angola)</item>
+        <item>245 (Guinea-Bissau)</item>
+        <item>246 (British Indian Ocean Territor)</item>
+        <item>247 (Ascension Island)</item>
+        <item>248 (Seychelles)</item>
+        <item>249 (Sudan)</item>
+        <item>250 (Rwanda)</item>
+        <item>251 (Ethiopia)</item>
+        <item>252 (Somalia)</item>
+        <item>253 (Djibouti)</item>
+        <item>254 (Kenya)</item>
+        <item>255 (Tanzania)</item>
+        <item>256 (Uganda)</item>
+        <item>257 (Burundi)</item>
+        <item>258 (Mozambique)</item>
+        <item>260 (Zambia)</item>
+        <item>261 (Madagascar)</item>
+        <item>262 (Réunion)</item>
+        <item>262 (Mayotte)</item>
+        <item>263 (Zimbabwe)</item>
+        <item>264 (Namibia)</item>
+        <item>265 (Malawi)</item>
+        <item>266 (Lesotho)</item>
+        <item>267 (Botswana)</item>
+        <item>268 (Swaziland)</item>
+        <item>269 (Comoros)</item>
+        <item>290 (Saint Helena)</item>
+        <item>291 (Eritrea)</item>
+        <item>297 (Aruba)</item>
+        <item>298 (Faroe Islands)</item>
+        <item>299 (Greenland)</item>
+        <item>350 (Gibraltar)</item>
+        <item>351 (Portugal)</item>
+        <item>352 (Luxembourg)</item>
+        <item>353 (Ireland)</item>
+        <item>354 (Iceland)</item>
+        <item>355 (Albania)</item>
+        <item>356 (Malta)</item>
+        <item>357 (Cyprus)</item>
+        <item>358 (Åland Islands)</item>
+        <item>358 (Finland)</item>
+        <item>359 (Bulgaria)</item>
+        <item>370 (Lithuania)</item>
+        <item>371 (Latvia)</item>
+        <item>372 (Estonia)</item>
+        <item>373 (Moldova)</item>
+        <item>374 (Armenia)</item>
+        <item>375 (Belarus)</item>
+        <item>376 (Andorra)</item>
+        <item>377 (Monaco)</item>
+        <item>378 (San Marino)</item>
+        <item>379 (Vatican City)</item>
+        <item>380 (Ukraine)</item>
+        <item>381 (Serbia)</item>
+        <item>382 (Montenegro)</item>
+        <item>385 (Croatia)</item>
+        <item>386 (Slovenia)</item>
+        <item>387 (Bosnia and Herzegovina)</item>
+        <item>389 (Macedonia)</item>
+        <item>420 (Czech Republic)</item>
+        <item>421 (Slovakia)</item>
+        <item>423 (Liechtenstein)</item>
+        <item>500 (Falkland Islands)</item>
+        <item>501 (Belize)</item>
+        <item>502 (Guatemala)</item>
+        <item>503 (El Salvador)</item>
+        <item>504 (Honduras)</item>
+        <item>505 (Nicaragua)</item>
+        <item>506 (Costa Rica)</item>
+        <item>507 (Panama)</item>
+        <item>508 (Saint Pierre and Miquelon)</item>
+        <item>509 (Haiti)</item>
+        <item>590 (Guadeloupe)</item>
+        <item>590 (Saint Barthélemy)</item>
+        <item>590 (Saint Martin)</item>
+        <item>591 (Bolivia)</item>
+        <item>592 (Guyana)</item>
+        <item>593 (Ecuador)</item>
+        <item>594 (French Guiana)</item>
+        <item>595 (Paraguay)</item>
+        <item>596 (Martinique)</item>
+        <item>597 (Suriname)</item>
+        <item>598 (Uruguay)</item>
+        <item>599 (Caribbean Netherlands)</item>
+        <item>599 (Curaçao)</item>
+        <item>670 (Timor-Leste)</item>
+        <item>672 (Norfolk Island)</item>
+        <item>673 (Brunei)</item>
+        <item>674 (Nauru)</item>
+        <item>675 (Papua New Guinea)</item>
+        <item>676 (Tonga)</item>
+        <item>677 (Solomon Islands)</item>
+        <item>678 (Vanuatu)</item>
+        <item>679 (Fiji)</item>
+        <item>680 (Palau)</item>
+        <item>681 (Wallis and Futuna)</item>
+        <item>682 (Cook Islands)</item>
+        <item>683 (Niue)</item>
+        <item>685 (Samoa)</item>
+        <item>686 (Kiribati)</item>
+        <item>687 (New Caledonia)</item>
+        <item>688 (Tuvalu)</item>
+        <item>689 (French Polynesia)</item>
+        <item>690 (Tokelau)</item>
+        <item>691 (Micronesia)</item>
+        <item>692 (Marshall Islands)</item>
+        <item>850 (North Korea)</item>
+        <item>852 (Hong Kong SAR China)</item>
+        <item>853 (Macau SAR China)</item>
+        <item>855 (Cambodia)</item>
+        <item>856 (Laos)</item>
+        <item>880 (Bangladesh)</item>
+        <item>886 (Taiwan)</item>
+        <item>960 (Maldives)</item>
+        <item>961 (Lebanon)</item>
+        <item>962 (Jordan)</item>
+        <item>963 (Syria)</item>
+        <item>964 (Iraq)</item>
+        <item>965 (Kuwait)</item>
+        <item>966 (Saudi Arabia)</item>
+        <item>967 (Yemen)</item>
+        <item>968 (Oman)</item>
+        <item>970 (Palestinian Territories)</item>
+        <item>971 (United Arab Emirates)</item>
+        <item>972 (Israel)</item>
+        <item>973 (Bahrain)</item>
+        <item>974 (Qatar)</item>
+        <item>975 (Bhutan)</item>
+        <item>976 (Mongolia)</item>
+        <item>977 (Nepal)</item>
+        <item>992 (Tajikistan)</item>
+        <item>993 (Turkmenistan)</item>
+        <item>994 (Azerbaijan)</item>
+        <item>995 (Georgia)</item>
+        <item>996 (Kyrgyzstan)</item>
+        <item>998 (Uzbekistan)</item>
+    </string-array>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>العربية</item>
+    </string-array>
+    <string-array name="questions">
+        <item>Haga clic aquí para seleccionar la pregunta secreta</item>
+        <item>Nombre de tu coche favorito?</item>
+        <item>Nombre de tu mejor amigo de la infancia?</item>
+        <item>Su comida favorita?</item>
+        <item>¿Quién fue su fecha de la noche del baile?</item>
+        <item>Cuál es el nombre de su primo más grande?</item>
+        <item>¿Quién es tu banda favorita todo el tiempo?</item>
+        <item>¿Cuál es tu canción favorita de todos los tiempos?</item>
+        <item>¿Cuál es el nombre de su primer amor de la infancia?</item>
+        <item>¿Cuál es el nombre de su libro favorito?</item>
+        <item>¿Cuál es el nombre de tu película favorita?</item>
+        <item>¿Cuál era el nombre de su primera mascota?</item>
+    </string-array>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-es/strings.xml -->
+    <eat-comment/>
+    <string name="AcceptTerms">Please Accept Terms of Use</string>
+    <string name="AddCard">Añadir tarjeta</string>
+    <string name="AddDriverNotes">+ Add Notes</string>
+    <string name="AddNotes">Add %s Notes</string>
+    <string name="AddTip">Add Tip Please</string>
+    <string name="Add_favorite">Add Favorite</string>
+    <string name="Address_Name">Address Name</string>
+    <string name="Adults">Adults</string>
+    <string name="AgreeTerms">I have read and agree with Terms of Use</string>
+    <string name="AllowNumberVisible"> Permitir que su número sea visible para que el conductor lo contacte</string>
+    <string name="Arabic">العربية</string>
+    <string name="Bags">Bags</string>
+    <string name="Book_Trip">Book Trip</string>
+    <string name="Booking_Id">identificación de la reserva</string>
+    <string name="Booking_Status">Situacion de la reserva</string>
+    <string name="Booking_Success">Su reservación fue exitosa.\n Numero de Confirmación No: %s</string>
+    <string name="Call">Llamada</string>
+    <string name="Call_driver">Llamar Conductor/Chofer</string>
+    <string name="Cancel">Cancelar</string>
+    <string name="Cancel_ride">CANCELAR RESERVACION</string>
+    <string name="Children">Children</string>
+    <string name="ChoosePaymentOption">Choose Payment Option</string>
+    <string name="Choose_Destination">Eecoger el Lugar de Destino</string>
+    <string name="Choose_Pickup">Eecoger Lugar Para Ser Recogido</string>
+    <string name="Cleanliness">Limpieza</string>
+    <string name="Clear">Claro</string>
+    <string name="Code">Code:</string>
+    <string name="Comments">Comentarios</string>
+    <string name="CompanyWeb">www.itcurves.us</string>
+    <string name="Completed">COMPLETO</string>
+    <string name="ConfimYourRide">Por favor, confirme su paseo</string>
+    <string name="Confirm">confirmar</string>
+    <string name="Confirm_Cancel"> USTED ESTA A PUNTO DE CANCELAR SU RESERVACION. ESTA SEGURO?</string>
+    <string name="Confirm_Delete">USTED ESTA SEGURO DE ESTA ELIMINACION ?</string>
+    <string name="ContactSupport">Contact Support</string>
+    <string name="ContactingDriver">Contacting driver.</string>
+    <string name="Done">Done</string>
+    <string name="DropLocation">Dropoff Address</string>
+    <string name="ETA">ETA: %s</string>
+    <string name="ETD">ETD: %s</string>
+    <string name="Email">CORREO ELECTRONICO</string>
+    <string name="EndingIn">Ending in %s</string>
+    <string name="English">English</string>
+    <string name="EnterPromoCode">Enter Promo Code Here</string>
+    <string name="Enter_Your">Introduzca su %s</string>
+    <string name="Etiquettes">Etiquetas</string>
+    <string name="Exclusive">Show Vehicles from this company Only</string>
+    <string name="ExclusiveRide">Exclusive Ride</string>
+    <string name="Exit_Application">SALIR DE LA APLICACION ?</string>
+    <string name="ExpiryPoints">Expiry: %s</string>
+    <string name="Finding_Cab">BUSCANDO POR EL TAXI</string>
+    <string name="FlatTip">Flat Tip</string>
+    <string name="Forgot_Password">¿Olvidó su PIN?</string>
+    <string name="Full_name">Nombre Completo</string>
+    <string name="GetMeTaxi">Sácame de taxi</string>
+    <string name="Hail">Hail</string>
+    <string name="Hailing_cab">Hailing Cab</string>
+    <string name="Help">Tutorial</string>
+    <string name="Help_Mark">    \?\nAYUDA</string>
+    <string name="Info">INFORMACION</string>
+    <string name="Initial_Charges">Cargos Iniciales: %s</string>
+    <string name="InvalidAdultsCount">Adults less than 1 not allowed.</string>
+    <string name="InviteFriend">Hola,\nEstoy utilizando la aplicacion de Marte para hacer mis reservaciones.\n time Tu puedes reservar el tipo de transporte que tu desees (desde limosinas blancas hasta autos especiales) desde cualquier punto del país, a la hora que tu desees.\nTú puedes descargar la aplicación de Tienda de Aplicaciones de Google, la tienda de Apple y Windows .\nTe recomiendo que pruebes la aplicación, ya que provee algunas características especiales de seguridad  también:\n1. Damas/señoritas pueden realizar una reservación sin exponer su número de teléfono celular.\n2. El vehiculo es monitoreado y rastreado ~ proveendo su seguridad y cuidado personal.\n3.Usted será  notificado cuando el taxi llega al lugar en el que tienes que ser recogido y usted puede monitorear cuando el taxi llegara en tu teléfono inteligente o el sitio de internet .</string>
+    <string name="Language">Language:</string>
+    <string name="Later">DESPUES</string>
+    <string name="LaterBookingMsg">Nos volveremos a reservar su viaje con una compañía de servicio de viaje disponibles.</string>
+    <string name="MyAddresses">Mis Direcciones</string>
+    <string name="MyPromos">Mi\nPromos</string>
+    <string name="MyTrips">Mis Viajes</string>
+    <string name="NearbyPlaces">Lugares cercanos ...</string>
+    <string name="Network_Error">Error de red\npor favor inténtalo nuevamente</string>
+    <string name="New_password">Crear contraseña de 4 dígitos</string>
+    <string name="No">No</string>
+    <string name="NoCreditCard">No credit card on file</string>
+    <string name="NoServiceProvider">No Proveedor de servicios Ofreciendo %s Reservas</string>
+    <string name="No_Help_Available">No hay ayuda disponible sobre este tema.</string>
+    <string name="No_Internet_Connectivity">No conexión de internet</string>
+    <string name="No_Promotions_Available">No hay promociones disponibles</string>
+    <string name="No_booked_rides">No hay viajes reservados</string>
+    <string name="No_driver_assigned">NINGUN CONDUCTOR/CHOFER FUE ASIGNADO</string>
+    <string name="No_driver_available"> NO HAY NINGUN CONDUCTOR DISPONIBLE, DESEARIA SER AGREGADO EN LA LISTA DE ESPERA?</string>
+    <string name="No_favorites">Usted no tiene favoritos</string>
+    <string name="No_nearbyvehicle_available">No nearby vehicle available.</string>
+    <string name="No_vehicle_available"> NO HAY NINGUN VEHICULO DISPONIBLE, DESEARIA SER AGREGADO EN LA LISTA DE ESPERA?</string>
+    <string name="Now">AHORA</string>
+    <string name="NowBookingMsg">Vamos a buscar un controlador disponible para su paseo.</string>
+    <string name="NowLater">Ahora o más tarde</string>
+    <string name="OK">Bueno</string>
+    <string name="OR">OR</string>
+    <string name="OurFleet">Our Fleet</string>
+    <string name="Our_Fleet"><u>Our Fleet</u></string>
+    <string name="Our_Rates"><u>Our Rates</u></string>
+    <string name="PassengerInfo">Ingrese la información de pasajeros</string>
+    <string name="PayInCab">Voy a pagar en efectivo</string>
+    <string name="PayWithVoucher">Voy a pagar por cuenta del cliente</string>
+    <string name="PayingByVoucher">El pago con vales</string>
+    <string name="PayingInCab">Pagar en la cabina</string>
+    <string name="PaymentTypeNotSupported">%s is not supported by selected Cab Company</string>
+    <string name="PaymentTypeNotSupportedByApp">%s no soportado</string>
+    <string name="Payment_Options">Opciones De Pago</string>
+    <string name="Paywith">Voy a pagar por %s</string>
+    <string name="Phone_number">NUMERO DE TELEFONO</string>
+    <string name="Pick_up_date">DIA DEL VIAJE:</string>
+    <string name="Pick_up_time">Hora Recoger:</string>
+    <string name="PickupLocation">Recoger Dirección</string>
+    <string name="Points">Puntos: %s</string>
+    <string name="PreferredCompany">Preferred Company: </string>
+    <string name="PrepaidAccount">Prepaid Account</string>
+    <string name="Price_Chart">Grafico de Precios</string>
+    <string name="PromotionCode">Código</string>
+    <string name="Promotions_Available">Promociones disponible!</string>
+    <string name="ProvideAddressName">Por favor Proporcionar Dirección Nombre</string>
+    <string name="ProvideDrivernumber">Please Provide Driver Number</string>
+    <string name="ProvideFeedback">Por favor, escriba su opinion</string>
+    <string name="Rate_ride">Precio del Viaje</string>
+    <string name="ReferedByCompany">Company\'s Website</string>
+    <string name="ReferedByDriver">Recomendado por el conductor</string>
+    <string name="ReferedByFriend">Desde un amigo</string>
+    <string name="Register">REGISTRAR</string>
+    <string name="RegisterAgain">REGISTRARSE DE NUEVO</string>
+    <string name="Remove">Quitar</string>
+    <string name="RemoveFavourite">Remover De Favoritos</string>
+    <string name="Repeat_New_password">REPETIR NUEVAMENTE LA CONTRASEÑA NUEVA</string>
+    <string name="Repeat_password">REPETIR LA CONTRASEÑA</string>
+    <string name="ReportBug">Reportar /informar de un error</string>
+    <string name="Report_problem">REPORTAR PROBLEMA</string>
+    <string name="RequestFeature">Request a new feature</string>
+    <string name="Restart_Phone">POR FAVOR REINICIAR SU TELEFONO</string>
+    <string name="SUBMIT">Enviar</string>
+    <string name="Satellite">Satellite</string>
+    <string name="Save">Guardar</string>
+    <string name="SaveFavourite">Save Address as Favourite</string>
+    <string name="Search">búsqueda</string>
+    <string name="SearchAroundGlobe">Expand My Search Around The Globe . . .</string>
+    <string name="SendEmailUsing">Send email using #8230;</string>
+    <string name="SendFeedback">Enviar opinion</string>
+    <string name="Service_Quality">Calidad del Servivio</string>
+    <string name="Share">distribuir</string>
+    <string name="ShareExperience">COMPARTIR SU EXPERIENCIA</string>
+    <string name="Sign_in">Registrarse</string>
+    <string name="Sign_out">Desconectarse</string>
+    <string name="Sign_up">Contratar</string>
+    <string name="Signed_in_as">registrado como</string>
+    <string name="Signing_in_ppp">ABRIR SESION#8230;</string>
+    <string name="Skip">Skip</string>
+    <string name="SoftwareUpdate">Software Update.</string>
+    <string name="Spanish">Spanish</string>
+    <string name="Street_Address">Street Address</string>
+    <string name="TaxiOnTime">Taxi a tiempo</string>
+    <string name="Time">Time</string>
+    <string name="TripHistory">Direcciones recientes</string>
+    <string name="UnderFive">* de 3 años</string>
+    <string name="Unknown_Error">Error desconocido\npor favor intente más tarde</string>
+    <string name="WhereYouHeard">¿Cómo se enteró de esta aplicación?</string>
+    <string name="Yes">Si</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values-es/values.xml -->
+    <eat-comment/>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Ir a la pantalla de inicio"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Desplazarse hacia arriba"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Más opciones"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Listo"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Ver todo"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Seleccionar una aplicación"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Borrar consulta"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Consulta"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Buscar"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Enviar consulta"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Búsqueda por voz"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartir con"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartir con %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Contraer"</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-es/strings.xml -->
+    <eat-comment/>
+    <string name="about"><u>Acerca de Nosotros</u></string>
+    <string name="about_text"> Marte es un proyecto único que está siendo implementado al Mercado en Estados Unidos de América por primera vez.\n\n La Solución de Envío de reservaciones de Marte es específicamente desarrollada para el mercado Americano. El sistema de comunicación es fácil de manejar/utilizar..\n\n Algunas características especiales de Marte son :\n1.Privacidad del número personal de teléfono del cliente.\nEl cliente tiene la opción de llamar al conductor/chofer  y el conductor/chofer puede llamar al cliente mediante el sistema central de Marte con facilidad y conveniencia/comodidad sin exponer el número de teléfono del cliente .\n2. Servicio comprensivo y ayuda/soporte del sistema.\n Reservaciones del tipo de transporte que el cliente desee\nSe realiza reservaciones con 2 días de anticipación o reservaciones inmediatas.\n\nMars\nTel (Ayuda) : (301) – 208 – 2222\nCorreo Electronico : info@itcurves.net</string>
+    <string name="about_us"><u>Sobre Nosotros</u></string>
+    <string name="address">DIRECCION:</string>
+    <string name="airport_drop_note">For airport dropoff %s hours advance pickup required.</string>
+    <string name="app_name">Mars</string>
+    <string name="approxFare">Approx. Fare</string>
+    <string name="availability">Availability:</string>
+    <string name="back">VOLVER ATRAS</string>
+    <string name="balance">Balance:</string>
+    <string name="cabfrom">%1$s from %2$s</string>
+    <string name="capacity">capacidad:</string>
+    <string name="choose">elegir</string>
+    <string name="chooseVehicleType">Toque aquí para seleccionar Vehículo / Tipo de servicio</string>
+    <string name="choose_greater_time"> Por Favor escoger un día-hora mayor a la hora actual</string>
+    <string name="choose_lesser_time">  Por Favor escoger día-hora no más tarde de 2 días</string>
+    <string name="clientservice_success_post_driversignup">Cuenta creada exitosamente</string>
+    <string name="coming_soon">PRÓXIMAMENTE!</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values-es/common_strings.xml -->
+    <eat-comment/>
+    <string msgid="6428604800157361567" name="common_android_wear_notification_needs_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> necesita que la aplicación Android Wear se actualice."</string>
+    <string msgid="2453027084525739603" name="common_android_wear_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no se ejecutará hasta que no actualices la aplicación Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Actualizar Android Wear"</string>
+    <string msgid="6534628256897874213" name="common_google_play_services_api_unavailable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> necesita uno o varios servicios de Google Play que no están disponibles en este momento. Ponte en contacto con el desarrollador para obtener ayuda."</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Habilitar servicios de Google Play"</string>
+    <string msgid="4896236883690196080" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no funcionará hasta que no habilites los servicios de Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Habilitar servicios de Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Solicitada por <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Descargar servicios de Google Play"</string>
+    <string msgid="8836325110837822534" name="common_google_play_services_install_text_phone">"<ns1:g id="APP_NAME">%1$s</ns1:g> no se ejecutará si los servicios de Google Play no están instalados en tu teléfono."</string>
+    <string msgid="542176290824754127" name="common_google_play_services_install_text_tablet">"<ns1:g id="APP_NAME">%1$s</ns1:g> no se ejecutará si los servicios de Google Play no están instalados en tu tablet."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Descargar servicios de Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"La cuenta especificada no existe en este dispositivo. Selecciona otra cuenta."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Cuenta no válida"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Una aplicación requiere que se habiliten los servicios de Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Se necesita una conexión de datos para establecer conexión con los servicios de Google Play."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Error de red"</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Una aplicación requiere una actualización de servicios de Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Error de servicios de Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Error al iniciar sesión en la cuenta especificada. Selecciona otra cuenta."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Error al iniciar sesión"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Error desconocido relacionado con los servicios de Google Play"</string>
+    <string msgid="7682982632307307938" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> se basa en los servicios de Google Play, pero no son compatibles con tu dispositivo. Ponte en contacto con el fabricante para obtener asistencia."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Servicios de Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Actualizar"</string>
+    <string msgid="5709479369299147668" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no se ejecutará hasta que no actualices los servicios de Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Actualizar servicios de Google Play"</string>
+    <string msgid="2201289642219771610" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> no se ejecutará hasta que finalice la actualización en curso de los servicios de Google Play."</string>
+    <string msgid="815008177440683245" name="common_google_play_services_updating_title">"Actualización servicios Play en curso"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Abrir en teléfono"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Iniciar sesión"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Iniciar sesión con Google"</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-es/strings.xml -->
+    <eat-comment/>
+    <string name="companyWebsite">Company Website :</string>
+    <string name="contact_backoffice">POR FAVOR LLAMAR AL NUMERO DEL SERVICIO AL CLIENTE</string>
+    <string name="continue_to_track_cab">Desea continuar rastreando al cab</string>
+    <string name="cost">Costo: %s (approx)</string>
+    <string name="creditCards">Credit Cards</string>
+    <string name="current_trip">Viaje Actual</string>
+    <string name="detailed_booking">Detailed Booking</string>
+    <string name="distance">Distancia</string>
+    <string name="driver">Chofer:</string>
+    <string name="drivernumber">Chofer No :</string>
+    <string name="driverwaiting">Chofer está esperando afuera</string>
+    <string name="drop">Soltar</string>
+    <string name="dropme">¿Dónde debemos te deja ? (opcional )</string>
+    <string name="dropoff_required">Drop-off Required</string>
+    <string name="enable_gps_text">Por Favor habilitar el satelite&amp; Wifi GPS en la congiguracion del dispositivo</string>
+    <string name="enable_gps_title">Habilitar GPS</string>
+    <string name="enable_wifi_text"> Encender Wifi para mejorar su ubicacion\nWifi  </string>
+    <string name="enable_wifigps_text">Encender lo siguiente para mejorar su ubicación \nWifi GPS</string>
+    <string name="enable_wifigps_title">Mejorar su ubicación</string>
+    <string name="experience">%s Yrs</string>
+    <string name="expiry">Expiry</string>
+    <string name="fairDetails">Detalles Fare</string>
+    <string name="fairEstimate">Fair Estimate:<u> %s </u></string>
+    <string name="feedback">Realimentación</string>
+    <string name="general">General</string>
+    <string name="gettingFairEstimate">Conseguir Estimación Feria ...</string>
+    <string name="getting_address">OBTENIENDO LA DIRECCION</string>
+    <string name="getting_nearby_places">Llegar Lugares cercanos ...</string>
+    <string name="gotCreditFromFriends">You got credit from your following friends</string>
+    <string name="imready">I\'m ready at</string>
+    <string name="imreadynow">I\'m ready now.</string>
+    <string name="invalid_email_address">Dirección de correo invalida</string>
+    <string name="invalid_firstname_length">Primer Nombre Corto</string>
+    <string name="invalid_password_length">Por favor, introduzca el PIN 4 dígitos</string>
+    <string name="invalid_password_match">PIN no coinciden</string>
+    <string name="invalid_phone_number">Numero de Teléfono Invalido</string>
+    <string name="invalid_response">Invalid %s Response</string>
+    <string name="invalid_tip_amount">Invalid Tip Amount\nPlease Enter in the format 00.00</string>
+    <string name="job_dispatched">TRABAJO ASIGNADO A EL CONDUCTOR\n EL TAXI ESTA EN CAMINO A RECOGERLO,GRACIAS !</string>
+    <string name="job_status_canceled">CANCELADO</string>
+    <string name="job_status_closed">CERRADO</string>
+    <string name="location_on_map">Ubicación en el mapa</string>
+    <string name="login_signin">REGISTRARSE</string>
+    <string name="map_location">  (Press-to move to your current location)</string>
+    <string name="menu">menú</string>
+    <string name="mobileNumber">Mobile Number :</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values-es/values.xml -->
+    <eat-comment/>
+    <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Enviar contenido"</string>
+    <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"Buscando dispositivos…"</string>
+    <string msgid="7106830097177242655" name="mr_media_route_chooser_title">"Conectar a dispositivo"</string>
+    <string msgid="109793632378378069" name="mr_media_route_controller_disconnect">"Desconectar"</string>
+    <string msgid="8315773974194466049" name="mr_media_route_controller_pause">"Pausa"</string>
+    <string msgid="5214423499524760404" name="mr_media_route_controller_play">"Reproducir"</string>
+    <string msgid="379358765881274425" name="mr_media_route_controller_settings_description">"Ajustes de ruta"</string>
+    <string msgid="5398645111664294430" name="mr_media_route_controller_stop">"Dejar de enviar contenido"</string>
+    <string msgid="5441529851481176817" name="mr_system_route_name">"Sistema"</string>
+    <string msgid="7498112907524977311" name="mr_user_route_category_name">"Dispositivos"</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-es/strings.xml -->
+    <eat-comment/>
+    <string name="nearestcab">the nearest cab</string>
+    <string name="next">SIGUIENTE</string>
+    <string name="other_info">Otra Informacion</string>
+    <string name="overlayText">\no	“%1$s” deals with Local Bank for Credit Card Processing. \n\no	Registration is via secured bank Gateway \n\no	Registration and Transactions Conforms to the “PCI DSS"(Payment Card Industry Data Security Standards) \n\no	Record of Customer Information is Stored securely in the Bank \n\no	Payment Gateway Secured database. Card Details not retained in %1$s records. \n\no	Payments for trips could be made by Cash even if Credit Card is registered. Payment by Credit Card optional. \n\no	Payment by Credit Card for trips could be made only if the Credit Card is registered. \n\no	Registration could be carried out anytime by accessing the Credit Card Option in the Application Menu Page.</string>
+    <string name="overlayText1">•\tIf you wish to pay by Cash Only for your trips, Please press SKIP. \\n•\tIf you wish to Pay By Credit Card ~ Please register Your Credit Card by Clicking on Add Card Button.</string>
+    <string name="password">Introduzca la contraseña de 4 dígitos</string>
+    <string name="perTrip">Per Trip:</string>
+    <string name="per_trip">Per Trip</string>
+    <string name="per_unit_Charges">Cargos Posteriores: </string>
+    <string name="pick_later">Regoger mas Tarde</string>
+    <string name="pick_now">Regoger Ahora</string>
+    <string name="pickedup">RECOGIDO</string>
+    <string name="pickme">¿Dónde debemos a recogerlo ?(Seleccionar a continuación)</string>
+    <string name="pickup">Recoger</string>
+    <string name="please_wait">Por Favor Espere!</string>
+    <string name="proceed"><![CDATA[Proceed >]]></string>
+    <string name="profile">PERFIL</string>
+    <string name="promo_balance">Equilibrio Promo</string>
+    <string name="promo_type">tipo</string>
+    <string name="promos_ready">Sus promociones listos para su uso</string>
+    <string name="promotions">Promociones</string>
+    <string name="provideCompanyWebsite">Please Provide Company Website</string>
+    <string name="provideMobileNumber">Please Provide Mobile Number</string>
+    <string name="query_c">PREGUNTA:</string>
+    <string name="quick_booking">Quick Booking</string>
+    <string name="rewardLoyaltyPoints">Your rewards and loyalty points</string>
+    <string name="saved_locations">Favoritos</string>
+    <string name="secret_answer"> Proveer su respuesta secreta</string>
+    <string name="secret_question">Respuesta Secreta</string>
+    <string name="select_destination">Seleccionar Destino</string>
+    <string name="select_pickup_point">Seleccionar Punto Del Que Quiere Ser Recogido</string>
+    <string name="sendme">Send me</string>
+    <string name="settings">Ajustes</string>
+    <string name="showNumber"> Desea que su número de teléfono sea visible para que el conductor lo contacte</string>
+    <string name="special_sedan">La elección de la ubicación, el tiempo y los servicios</string>
+    <string name="standard_sedan">Aquí mismo, en este momento, el coche más cercana</string>
+    <string name="start_maps"> Nosotros le reconmendamos empezar la aplicación del Mapa de Google para mejorar precisión de su ubicación \n Desea continuar? </string>
+    <string name="status">Estado:</string>
+    <string name="terms_of_use"><u>Condiciones de uso</u></string>
+    <string name="termsofuse"><u>Términos oe Uso</u></string>
+    <string name="track">LOCALIZACION DEL VEHICULO</string>
+    <string name="trip">Viaje</string>
+    <string name="unknown_address"> DIRECCION DESCONOCIDA, POR FAVOR INTENTE UNA VEZ MAS.</string>
+    <string name="userNotes">To confirm your trip, your card will be pre-authorized the estimated amount.\nYour card will be charged the actual amount at the end of your trip.</string>
+    <string name="userid">UserID</string>
+    <string name="username">NOMBRE DE USUARIO</string>
+    <string name="vehicle">vehiculo:</string>
+    <string name="verify_sms">Verificando</string>
+    <string name="verify_sms_failed">Fallo en la verificación de SMS.</string>
+    <string name="verify_sms_manual"> Por favor,ingrese los 6 dígitos del código de verificación manualmente.</string>
+    <string name="verify_sms_manual_header">VERIFICACION MANUAL</string>
+    <string name="verify_sms_manual_header_2">%s fue enviado el código de verificación a </string>
+    <string name="verify_sms_part_1"> Esperando por SMS de verificación en el numero de telefono: </string>
+    <string name="verify_sms_part_2">" Por favor asegúrese que su plan de mensajes trabaje .\n\n\n. Tome Asiento y relájese. Nosotros le notificaremos cuando terminemos de verificar."</string>
+    <string name="version">App Version: %s</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values-es/wallet_strings.xml -->
+    <eat-comment/>
+    <string name="wallet_buy_button_place_holder">Comprar con Google</string>
+    <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-es/strings.xml -->
+    <eat-comment/>
+    <string name="will_tell_driver">Dirá conductor ...</string>
+    <string name="yourfare">Su estimación de tarifa es %s</string>
+</resources>

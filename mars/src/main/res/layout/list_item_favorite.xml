@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <CheckBox
+        android:id="@+id/cb_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/selector_favorite_checkbox"
+        android:checked="false"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/tv_fav_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/cb_fav"
+        android:text="@string/saved_locations"
+        android:textSize="@dimen/size12"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_fav_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_fav_header"
+        android:layout_toLeftOf="@id/cb_fav"
+        android:text="@string/address"
+        android:textSize="@dimen/size10" />
+
+</RelativeLayout>

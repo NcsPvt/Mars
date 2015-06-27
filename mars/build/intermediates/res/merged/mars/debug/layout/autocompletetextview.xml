@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searctext"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lightgray"
+    android:gravity="left|center_vertical"
+    android:padding="10dp"
+    android:text="testing"
+    android:textColor="@color/black"
+    android:textSize="@dimen/size20" />
+<!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/autocompletetextview.xml -->

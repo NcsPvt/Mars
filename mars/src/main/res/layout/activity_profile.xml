@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_textured_gray"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8.0dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8.0"
+                android:background="@drawable/button_white"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="3.0dp">
+
+                <TextView
+                    android:id="@+id/lbl_profile_ph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="@dimen/size12"
+                    android:text="@string/Phone_number"
+                    android:textColor="@color/blue_regency"
+                    android:textSize="@dimen/size11"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profile_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/lbl_profile_ph"
+                    android:text="+1 (555) 555-5555"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_below="@id/lbl_profile_ph"
+                    android:layout_alignLeft="@id/lbl_profile_ph"
+                    android:layout_alignRight="@id/lbl_profile_ph"
+                    android:text="@string/userid"
+                    android:textColor="@color/blue_regency"
+                    android:textSize="@dimen/size11"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profile_marsid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_phone_number"
+                    android:layout_alignLeft="@id/profile_phone_number"
+                    android:layout_alignRight="@id/profile_phone_number"
+                    android:text="user00001234"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size12"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/profile_showNumberToDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingLeft="10dp"
+                android:text="@string/showNumber"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size10"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0sp">
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <TextView
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="3.0"
+                android:gravity="center_vertical"
+                android:text="@string/Language"
+                android:textSize="@dimen/size14" />
+
+            <Spinner
+                android:id="@+id/prefered_language"
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="3.0"
+                android:entries="@array/languages"
+                android:gravity="center"
+                android:paddingLeft="3sp" />
+
+            <ImageView
+                android:id="@+id/iv_multilingual"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:src="@drawable/multilingual" />
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0sp">
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <EditText
+                android:id="@+id/profile_fullname"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="8.0"
+                android:ems="10"
+                android:hint="@string/Full_name"
+                android:padding="10.0sp"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="20.0dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0sp">
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <EditText
+                android:id="@+id/profile_user_password"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="6.0"
+                android:digits="0123456789"
+                android:hint="@string/password"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:padding="10.0sp"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/iv_changePassword"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:src="@drawable/change_password" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newPasswordViews"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0sp">
+
+                <View
+                    android:layout_width="0.0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <EditText
+                    android:id="@+id/profile_new_password"
+                    android:layout_width="0.0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:digits="0123456789"
+                    android:hint="@string/New_password"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:padding="10.0sp"
+                    android:singleLine="true" />
+
+                <View
+                    android:layout_width="0.0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20.0dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0sp">
+
+                <View
+                    android:layout_width="0.0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+
+                <EditText
+                    android:id="@+id/profile_confirm_new_password"
+                    android:layout_width="0.0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8.0"
+                    android:digits="0123456789"
+                    android:hint="@string/Repeat_New_password"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:padding="10.0sp"
+                    android:singleLine="true" />
+
+                <View
+                    android:layout_width="0.0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="20.0dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0sp">
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <AutoCompleteTextView
+                android:id="@+id/profile_email"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="8.0"
+                android:completionThreshold="1"
+                android:ems="10"
+                android:hint="@string/Email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:padding="10.0sp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="20.0dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0sp">
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <Spinner
+                android:id="@+id/profile_secret_question"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="8.0"
+                android:entries="@array/questions"
+                android:gravity="center_vertical"
+                android:paddingLeft="3sp" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="20.0dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0sp">
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <EditText
+                android:id="@+id/profile_secret_answer"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="8.0"
+                android:ems="10"
+                android:hint="@string/secret_answer"
+                android:padding="10.0sp"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:id="@+id/preferredCompanyRow"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0sp"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <TextView
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="3.0"
+                android:gravity="center"
+                android:text="@string/PreferredCompany"
+                android:textSize="@dimen/size14" />
+
+            <Spinner
+                android:id="@+id/prefered_company"
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="5.0"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="3sp" />
+
+            <View
+                android:layout_width="0.0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <CheckBox
+                android:id="@+id/isExclusive"
+                android:layout_width="wrap_content"
+                android:layout_height="30.0dp"
+                android:checked="false"
+                android:paddingLeft="10dp"
+                android:text="@string/Exclusive"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size10"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="20.0dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40.0sp">
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <Button
+                android:id="@+id/btn_Register"
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5sp"
+                android:layout_weight="2"
+                android:onClick="ITC_SaveProfile"
+                android:text="@string/Save"
+                android:textSize="@dimen/size12"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="0.0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="150.0sp"
+            android:layout_weight="1.17" />
+    </LinearLayout>
+
+</ScrollView>

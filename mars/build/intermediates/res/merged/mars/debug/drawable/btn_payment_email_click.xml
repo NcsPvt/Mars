@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/btn_payment_email_h" />
+    <item android:drawable="@drawable/btn_payment_email" />
+</selector><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/drawable/btn_payment_email_click.xml -->
