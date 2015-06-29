@@ -360,7 +360,7 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
                 if (!fileCache.readOpenedFile().equalsIgnoreCase(BookingApplication.phoneNumber))
                     BookingApplication.showReferedbyScreen(ActivityLogin.this);
                 else if (BookingApplication.ccProfiles.isEmpty())
-                    BookingApplication.showPaymentOptions(getResources().getString(R.string.Skip), "", "", ActivityLogin.this, CODES.NONE, true);
+                    BookingApplication.showPaymentOptions(getResources().getString(R.string.Skip), "", "", false, ActivityLogin.this, CODES.NONE, true);
                 else
                     BookingApplication.showSplashScreen(ActivityLogin.this);
                 break;

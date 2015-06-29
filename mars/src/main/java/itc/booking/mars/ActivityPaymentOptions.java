@@ -32,6 +32,7 @@ import itcurves.mars.R;
 public class ActivityPaymentOptions extends Activity implements CallbackResponseListener {
 
     private LinearLayout overlayLayout;
+    private boolean fromTripScreen;
 
     public class CreditCardAdapter extends ArrayAdapter<CreditCardProfile> {
 
@@ -173,7 +174,7 @@ public class ActivityPaymentOptions extends Activity implements CallbackResponse
                                 resultIntent.putExtras(paymentOption);
                                 setResult(CODES.CC_ID_REQUIRED, resultIntent);
                                 ActivityPaymentOptions.this.finish();
-                            } else
+                            } else if (fromTripScreen)
                                 Toast.makeText(ActivityPaymentOptions.this, R.string.Choose_Destination, Toast.LENGTH_LONG).show();
                         } catch (NumberFormatException e) {
                             Toast.makeText(ActivityPaymentOptions.this, R.string.Choose_Destination, Toast.LENGTH_LONG).show();
@@ -211,8 +212,12 @@ public class ActivityPaymentOptions extends Activity implements CallbackResponse
 
         overlayLayout = (LinearLayout) findViewById(R.id.ll_overlay);
         extras = getIntent().getExtras();
-        fareEstimate = extras.getString("fareEstimate");
+        if (extras.getString("fareEstimate").equalsIgnoreCase(""))
+            fareEstimate = "0";
+        else
+            fareEstimate = extras.getString("fareEstimate");
         currencySymbol = extras.getString("currencySymbol");
+        fromTripScreen = extras.getBoolean("fromTripScreen");
 
         Button btnSkip = (Button) findViewById(R.id.btnSkip);
         if (extras.getString("SkipBtnLabel").length() > 0)

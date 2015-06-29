@@ -64,7 +64,7 @@ public class ActivityReferedby extends Activity {
     /*--------------------------------------------------- cancel_feedback ----------------------------------------------------------------------------------*/
     public void cancel_feedback(View v) {
         if (BookingApplication.ccProfiles.isEmpty())
-            BookingApplication.showPaymentOptions(getResources().getString(R.string.Skip), "", "", ActivityReferedby.this, CODES.NONE, true);
+            BookingApplication.showPaymentOptions(getResources().getString(R.string.Skip), "", "", false, ActivityReferedby.this, CODES.NONE, true);
         else
             BookingApplication.showSplashScreen(ActivityReferedby.this);
     }

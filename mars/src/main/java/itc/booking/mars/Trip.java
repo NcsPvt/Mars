@@ -78,7 +78,7 @@ public class Trip {
         classofserviceid = -1;
         PaymentType = "1";
         CreditCardID = "";
-        state = "NONE";
+        state = "";
         PUcity = "";
         PUZip = "";
         PUstate = "";

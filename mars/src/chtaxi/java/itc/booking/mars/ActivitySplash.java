@@ -251,7 +251,7 @@ public class ActivitySplash extends Activity implements CallbackResponseListener
                         if (regid.isEmpty())
                             BookingApplication.registerGCMInBackground(getResources().getString(R.string.project_id));
 
-                        Log.d("PushMsgsToken", regid );
+                        Log.d("PushMsgsToken", regid);
 
                         if (BookingApplication.bHandshakeSuccess)
                             try {
@@ -317,7 +317,7 @@ public class ActivitySplash extends Activity implements CallbackResponseListener
                                 if (input.available() > 0)
                                     input.close();
                                 else if (readLen <= 0) {
-                                    Log.e("Analytics","clientId file seems empty.");
+                                    Log.e("Analytics", "clientId file seems empty.");
                                     input.close();
                                 } else {
                                     uri = new String(bytes, 0, readLen);
@@ -326,9 +326,9 @@ public class ActivitySplash extends Activity implements CallbackResponseListener
                                     input.close();
                                 }
                             } catch (FileNotFoundException e) {
-                                Log.e("Analytics","file not found");
+                                Log.e("Analytics", "file not found");
                             } catch (IOException e) {
-                                Log.e("Analytics","Error reading gaClientId file.");
+                                Log.e("Analytics", "Error reading gaClientId file.");
                             }
 
                             Toast.makeText(ActivitySplash.this, BookingApplication.appID, Toast.LENGTH_SHORT).show();

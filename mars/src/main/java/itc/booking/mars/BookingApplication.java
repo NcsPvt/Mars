@@ -557,7 +557,7 @@ public class BookingApplication extends Application {
     }
 
     /*-----------------------------------------------------showPaymentOptions-----------------------------------------------------------------------------*/
-    public static void showPaymentOptions(String skipButtonLabel, String fareEstimate, String currencySymbol, Activity callingActivity, int requestCode, Boolean killParent) {
+    public static void showPaymentOptions(String skipButtonLabel, String fareEstimate, String currencySymbol, boolean fromTripScreen, Activity callingActivity, int requestCode, Boolean killParent) {
         Intent activityIntent = new Intent(callingActivity, ActivityPaymentOptions.class);
 
         Bundle bndle = new Bundle();
@@ -565,6 +565,7 @@ public class BookingApplication extends Application {
         bndle.putString("fareEstimate", fareEstimate);
         bndle.putString("currencySymbol", currencySymbol);
         bndle.putInt("requestCode", requestCode);
+        bndle.putBoolean("fromTripScreen", fromTripScreen);
         activityIntent.putExtras(bndle);
         if (killParent) {
             activityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -774,13 +775,13 @@ public class BookingApplication extends Application {
     }
 
     /*---------------------------------------------------AddC2DHistoryInOutLoad-----------------------------------------------------------------------------*/
-    public static void AddC2DHistoryInOutLoad(CallbackResponseListener addC2DListener) {
+    public static void AddC2DHistoryInOutLoad(CallbackResponseListener addC2DListener, String confirmationNum) {
 
         currentCallbackListener = addC2DListener;
 
         MultipartEntity outEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE, "~~~", Charset.forName("UTF-8"));
         try {
-            outEntity.addPart("tripid", new StringBody(appVersion, Charset.forName("UTF-8")));
+            outEntity.addPart("tripid", new StringBody(confirmationNum, Charset.forName("UTF-8")));
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }

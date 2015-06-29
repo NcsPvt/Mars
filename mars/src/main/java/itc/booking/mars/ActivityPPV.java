@@ -75,7 +75,7 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
     public void chargeByCC(View v) {
         if (topUpAmount.getText().toString().length() > 0) {
             topUPAmt = topUpAmount.getText().toString();
-            BookingApplication.showPaymentOptions("", "-1", "", ActivityPPV.this, BookingApplication.CODES.CC_ID_REQUIRED, false);
+            BookingApplication.showPaymentOptions("", "-1", "", false, ActivityPPV.this, BookingApplication.CODES.CC_ID_REQUIRED, false);
 
         } else {
             topUpAmount.setError("Enter Valid Amount");

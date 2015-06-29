@@ -134,7 +134,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
     private boolean addressFound = false;
     private boolean pressed = false;
     private Timer requestStatustimer = new Timer();
-
     /*----------------------------------------------------- onCreate -------------------------------------------------------------------------------*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -443,7 +442,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
     /*-------------------------------------------------ShowPaymentOptions--------------------------------------------------------------------------------------*/
     public void ShowPaymentOptions(View view) {
-        BookingApplication.showPaymentOptions("", "", "", ActivityMain.this, CODES.NONE, false);
+        BookingApplication.showPaymentOptions("", "", "", false, ActivityMain.this, CODES.NONE, false);
     }
 
     /*-----------------------------------------------------about_Us--------------------------------------------------------------------------------------*/
@@ -677,7 +676,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 if (Integer.toString(trip_requested.supportedPaymentType).contains("2")) {
                     if (dropAddress != null) {
                         trip_requested.CreditCardID = "0";
-                        BookingApplication.showPaymentOptions("", trip_requested.estimatedCost, rates != null ? rates[3] : "", ActivityMain.this, CODES.PAYMENT_OPTION_ACTIVITY, false);
+                        BookingApplication.showPaymentOptions("", trip_requested.estimatedCost, rates != null ? rates[3] : "", true, ActivityMain.this, CODES.PAYMENT_OPTION_ACTIVITY, false);
                     } else
                         BookingApplication.showCustomToast(R.string.Choose_Destination, "", false);
                 } else
@@ -701,7 +700,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                             //BookingApplication.makeReservation(trip_requested, ActivityMain.this, false);
                         } else {
                             trip_requested.CreditCardID = "0";
-                            BookingApplication.showPaymentOptions("", trip_requested.estimatedCost, rates != null ? rates[3] : "", ActivityMain.this, CODES.PAYMENT_OPTION_ACTIVITY, false);
+                            BookingApplication.showPaymentOptions("", trip_requested.estimatedCost, rates != null ? rates[3] : "", true, ActivityMain.this, CODES.PAYMENT_OPTION_ACTIVITY, false);
                         }
                     else
                         BookingApplication.showCustomToast(R.string.Choose_Destination, "", false);
@@ -988,6 +987,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     }
                     BookingApplication.nearByVehicles.clear();
                     drawNearByVehicles();
+                    BookingApplication.showCustomProgress(ActivityMain.this, "", false);
                     BookingApplication.getNearbyVehicles(pickAddress, dropAddress, false);
                 }
                 //mapFragment.animateCamera(CameraUpdateFactory.zoomBy((float) -7.0));

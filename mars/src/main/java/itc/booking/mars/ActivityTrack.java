@@ -232,6 +232,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
 
+                                BookingApplication.AddC2DHistoryInOutLoad(ActivityTrack.this, iServiceID);
 
                                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                                 callIntent.setData(Uri.parse("tel:" + currVehicle.driverPhone));
@@ -560,6 +561,9 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
+                        BookingApplication.AddC2DHistoryInOutLoad(ActivityTrack.this, iServiceID);
+
                         Intent callIntent = new Intent(Intent.ACTION_CALL);
                         callIntent.setData(Uri.parse("tel:" + driverPhone));
                         startActivity(callIntent);

@@ -28,8 +28,8 @@ android {
         resValue "string", "google_places_key", "AIzaSyARrZJY169UzIHNsYiKhj7MgalzyesqnO0"
         minSdkVersion 11
         targetSdkVersion 21
-        versionCode 37
-        versionName '1.0.37'
+        versionCode 38
+        versionName '1.0.38'
         signingConfig signingConfigs.mars_sign_config
     }
     buildTypes {
@@ -54,7 +54,7 @@ android {
         }
         chtaxi {
             applicationId 'itcurves.mars.chtaxi'
-            manifestPlaceholders = [applicationLabel: "Link"]
+            manifestPlaceholders = [applicationLabel: "C&H Taxi"]
             resValue "string", "project_id", "1096598408697"
             resValue "string", "google_maps_api_key", "AIzaSyAySexsn3dZGVMJTvLSNJd8oqP-PIb2a8A"
             resValue "string", "google_places_key", "AIzaSyB_lEN8ttCVqMwDCu-NwvP1xQcfnKTx0FM"

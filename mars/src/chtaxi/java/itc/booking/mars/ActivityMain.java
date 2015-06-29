@@ -988,31 +988,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     }
                     BookingApplication.nearByVehicles.clear();
                     drawNearByVehicles();
+                    BookingApplication.showCustomProgress(ActivityMain.this, "", false);
                     BookingApplication.getNearbyVehicles(pickAddress, dropAddress, false);
-                    if (isQuickBooking) {
-
-                        pickNow = true;
-                        trip_requested.vehTypeID = -1;
-                        trip_requested.vehTypeName = "Any";
-                        trip_requested.companyID = -1;
-                        trip_requested.companyName = "Any Company";
-                        trip_requested.classofserviceid = -1;
-                        trip_requested.tripType = "CURR";
-                        trip_requested.PaymentType = "1";
-                        trip_requested.CreditCardID = "0";
-                        trip_requested.signatureUrl = "";
-                        trip_requested.passengerCount = 1;
-                        trip_requested.childrenCount = 0;
-                        trip_requested.bagsCount = 0;
-
-                        tv_drop_address.setText(R.string.will_tell_driver);
-                        btn_drop_notes.setVisibility(View.GONE);
-                        cb_fav_drop.setVisibility(View.GONE);
-                        tv_selected_time.setText(R.string.Now);
-                        tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, trip_requested.companyName));
-
-                        goToStep(6, false);
-                    }
                 }
                 //mapFragment.animateCamera(CameraUpdateFactory.zoomBy((float) -7.0));
             } catch (Exception e) {
@@ -1929,7 +1906,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     ll_FairCashCredit.startAnimation(rightInAnim);
                     ll_FairCashCredit.setVisibility(View.VISIBLE);
 
-                    if(BookingApplication.promotions.size()>0)
+                    if (BookingApplication.promotions.size() > 0)
                         tv_promo_available.setVisibility(View.VISIBLE);
                 }
 
@@ -1980,8 +1957,9 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     ll_FairCashCredit.startAnimation(rightInAnim);
                     ll_FairCashCredit.setVisibility(View.VISIBLE);
 
-                    if(BookingApplication.promotions.size()>0)
-                        tv_promo_available.setVisibility(View.VISIBLE);                }
+                    if (BookingApplication.promotions.size() > 0)
+                        tv_promo_available.setVisibility(View.VISIBLE);
+                }
 
                 BookingApplication.getFareInfo(trip_requested, ActivityMain.this);
 
@@ -2236,9 +2214,34 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                             drawNearByVehicles();
                         }
 
-                        if(BookingApplication.promotions.size()>0 && ll_FairCashCredit.isShown())
+                        if (BookingApplication.promotions.size() > 0 && ll_FairCashCredit.isShown())
                             tv_promo_available.setVisibility(View.VISIBLE);
 
+                        if (isQuickBooking) {
+
+                            pickNow = true;
+                            trip_requested.vehTypeID = -1;
+                            trip_requested.vehTypeName = "Any";
+                            trip_requested.companyID = -1;
+                            trip_requested.companyName = "Any Company";
+                            trip_requested.classofserviceid = 1;
+                            trip_requested.tripType = "CURR";
+                            trip_requested.PaymentType = "1";
+                            trip_requested.CreditCardID = "0";
+                            trip_requested.signatureUrl = "";
+                            trip_requested.passengerCount = 1;
+                            trip_requested.childrenCount = 0;
+                            trip_requested.bagsCount = 0;
+
+                            tv_drop_address.setText(R.string.will_tell_driver);
+                            btn_drop_notes.setVisibility(View.GONE);
+                            cb_fav_drop.setVisibility(View.GONE);
+                            tv_selected_time.setText(R.string.Now);
+                            tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, trip_requested.companyName));
+
+                            goToStep(6, false);
+                            break;
+                        }
                     } else {
                         BookingApplication.db.delete("Affiliates", null, null);
                         if (ll_drop_address.isShown() && !BookingApplication.syncRequired) {
@@ -2567,64 +2570,64 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         protected void onPostExecute(ArrayList<LatLng> directionPoint) {
             super.onPostExecute(directionPoint);
             if (trip_requested != null)
-            try {
+                try {
 
-                if (path != null) {
-                    path.remove();
-                    path = null;
-                }
-                if (directionPoint.size() > 0) {
-                    PolylineOptions rectLine = new PolylineOptions().width(14).color(Color.argb(255, 114, 208, 251));
+                    if (path != null) {
+                        path.remove();
+                        path = null;
+                    }
+                    if (directionPoint.size() > 0) {
+                        PolylineOptions rectLine = new PolylineOptions().width(14).color(Color.argb(255, 114, 208, 251));
 
-                    for (int i = 0; i < directionPoint.size(); i++) {
-                        rectLine.add(directionPoint.get(i));
-                        //boundsBuilder.include(directionPoint.get(i));
+                        for (int i = 0; i < directionPoint.size(); i++) {
+                            rectLine.add(directionPoint.get(i));
+                            //boundsBuilder.include(directionPoint.get(i));
+                        }
+
+                        path = mapFragment.addPolyline(rectLine);
+
+                        //mapFragment.animateCamera(CameraUpdateFactory.newLatLngBounds(boundsBuilder.build(), 130));
+                        mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 13));
                     }
 
-                    path = mapFragment.addPolyline(rectLine);
+                    if (selecting_pickup || dragging_pickup) {
+                        selecting_pickup = false;
+                        dragging_pickup = false;
+                    }
 
-                    //mapFragment.animateCamera(CameraUpdateFactory.newLatLngBounds(boundsBuilder.build(), 130));
-                    mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 13));
-                }
+                    //if (trip_requested == null)
+                    //trip_requested = new Trip(pickMarker.getPosition().latitude, pickMarker.getPosition().longitude, tv_pick_address.getText().toString(), -1, -1);
 
-                if (selecting_pickup || dragging_pickup) {
-                    selecting_pickup = false;
-                    dragging_pickup = false;
-                }
+                    if (routeDoc != null) {
 
-                //if (trip_requested == null)
-                //trip_requested = new Trip(pickMarker.getPosition().latitude, pickMarker.getPosition().longitude, tv_pick_address.getText().toString(), -1, -1);
+                        trip_requested.estimatedDistance = mapDirections.getDistanceValue(routeDoc);
+                        trip_requested.estimatedDuration = Integer.toString(mapDirections.getDurationValue(routeDoc));
+                        trip_requested.distanceUnit = mapDirections.getDistanceText(routeDoc).contains("km") ? "km" : "mi";
+                        tv_mile_estimate.setText(getResources().getString(R.string.distance) + ": " + mapDirections.getDistanceText(routeDoc));
+                    }
 
-                if (routeDoc != null) {
+                } catch (Exception e) {
+                    Toast.makeText(ActivityMain.this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
 
-                    trip_requested.estimatedDistance = mapDirections.getDistanceValue(routeDoc);
-                    trip_requested.estimatedDuration = Integer.toString(mapDirections.getDurationValue(routeDoc));
-                    trip_requested.distanceUnit = mapDirections.getDistanceText(routeDoc).contains("km") ? "km" : "mi";
-                    tv_mile_estimate.setText(getResources().getString(R.string.distance) + ": " + mapDirections.getDistanceText(routeDoc));
-                }
+                    if (BookingApplication.customProgressDialog != null)
+                        while (BookingApplication.customProgressDialog.isShowing())
+                            BookingApplication.customProgressDialog.dismiss();
+                } finally {
 
-            } catch (Exception e) {
-                Toast.makeText(ActivityMain.this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                    if (selecting_pickup || dragging_pickup) {
+                        selecting_pickup = false;
+                        dragging_pickup = false;
+                    }
 
-                if (BookingApplication.customProgressDialog != null)
-                    while (BookingApplication.customProgressDialog.isShowing())
-                        BookingApplication.customProgressDialog.dismiss();
-            } finally {
-
-                if (selecting_pickup || dragging_pickup) {
-                    selecting_pickup = false;
-                    dragging_pickup = false;
-                }
-
-                if (BookingApplication.customProgressDialog != null)
-                    while (BookingApplication.customProgressDialog.isShowing())
-                        BookingApplication.customProgressDialog.dismiss();
+                    if (BookingApplication.customProgressDialog != null)
+                        while (BookingApplication.customProgressDialog.isShowing())
+                            BookingApplication.customProgressDialog.dismiss();
 
                     if (trip_requested.companyID > 0)
                         goToStep(5, false);
                     else
                         goToStep(3, false);
-            }
+                }
         }
 
         @Override

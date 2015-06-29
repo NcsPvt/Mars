@@ -184,7 +184,7 @@ public class ActivityVerifyNumber extends Activity implements CallbackResponseLi
                     if (!fileCache.readOpenedFile().equalsIgnoreCase(BookingApplication.phoneNumber))
                         BookingApplication.showReferedbyScreen(ActivityVerifyNumber.this);
                     else if (BookingApplication.ccProfiles.isEmpty())
-                        BookingApplication.showPaymentOptions(getResources().getString(R.string.Skip), "", "", ActivityVerifyNumber.this, CODES.NONE, true);
+                        BookingApplication.showPaymentOptions(getResources().getString(R.string.Skip), "", "", false, ActivityVerifyNumber.this, CODES.NONE, true);
                     else
                         BookingApplication.showSplashScreen(ActivityVerifyNumber.this);
                 }
