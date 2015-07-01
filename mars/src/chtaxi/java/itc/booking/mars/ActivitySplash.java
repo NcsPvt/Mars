@@ -565,7 +565,7 @@ public class ActivitySplash extends Activity implements CallbackResponseListener
 
     /*-------------------------------------------------ShowPaymentOptions--------------------------------------------------------------------------------------*/
     public void ShowPaymentOptions(View view) {
-        BookingApplication.showPaymentOptions("", "", "", ActivitySplash.this, CODES.NONE, false);
+        BookingApplication.showPaymentOptions("", "", "", false, ActivitySplash.this, CODES.NONE, false);
     }
 
     /*--------------------------------------------------ShowPPV--------------------------------------------------------------------------------------*/

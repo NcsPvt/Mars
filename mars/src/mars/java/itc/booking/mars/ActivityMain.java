@@ -293,6 +293,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         geocoder = new Geocoder(ActivityMain.this);
         mapDirections = new GMapV2Direction();
 
+        //Toast.makeText(MainActivity.this, BookingApplication.displayDensityName(), Toast.LENGTH_SHORT).show();
+
     }
 
     /*------------------------------------------------------ onStart -------------------------------------------------------------------------------------*/
@@ -403,6 +405,11 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             menu.setVisibility(View.GONE);
         getCurrentRides(3000);
         history.setVisibility(View.VISIBLE);
+    }
+
+    /*--------------------------------------------- closeVehicleMarker ---------------------------------------------------------------------------------*/
+    public void closeVehicleMarker(View v) {
+        vehicle_balloon.setVisibility(View.GONE);
     }
 
     /*---------------------------------------------- showHelpView -------------------------------------------------------------------------------------*/
@@ -1387,7 +1394,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         myFav.country = address.getCountryCode();
 
         if (BookingApplication.favorites.contains(myFav)) {
-            //BookingApplication.db.delete("Favorites", "favId=?", new String[] { Integer.toString(currFav.favId) });
             BookingApplication.removeFavorite(BookingApplication.favorites.get(BookingApplication.favorites.indexOf(myFav)), ActivityMain.this);
             BookingApplication.favorites.remove(myFav);
         } else
@@ -1400,11 +1406,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             addRemoveFavorite(tv_pick_address.getText().toString(), pickAddress, null, v.getId());
         else if (v.getId() == R.id.fav_drop && dropMarker != null)
             addRemoveFavorite(tv_drop_address.getText().toString(), dropAddress, null, v.getId());
-    }
-
-    /*------------------------------------------------- addRemoveFavorite ---------------------------------------------------------------------------------*/
-    public void closeVehicleMarker(View v) {
-        vehicle_balloon.setVisibility(View.GONE);
     }
 
     /*------------------------------------------------ showHideBottomViews ---------------------------------------------------------------------------------*/
@@ -1922,12 +1923,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         tv_endingWih.setText(getResources().getString(R.string.NoCreditCard));
                     }
                 }
-
-                //if (!ll_cancelConfirm.isShown()) {
-                //Animation slideInBottom = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_bottom);
-                //ll_cancelConfirm.startAnimation(slideInBottom);
-                //ll_cancelConfirm.setVisibility(View.VISIBLE);
-                //}
             }
         }
         if (step < 6) {
@@ -2498,7 +2493,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             lastLocationMarker.remove();
         if (auto_zoom) {
             mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(loc.getLatitude(), loc.getLongitude()), 18));
-            tv_address.setText(BookingApplication.currentAddress.getAddressLine(0) + BookingApplication.currentAddress.getLocality() == null ? "" : ", " + BookingApplication.currentAddress.getLocality());
+            tv_address.setText((BookingApplication.currentAddress.getAddressLine(0) + BookingApplication.currentAddress.getLocality()).trim().startsWith("null") ? "" : ", " + BookingApplication.currentAddress.getLocality());
             auto_zoom = false;
         }
     }

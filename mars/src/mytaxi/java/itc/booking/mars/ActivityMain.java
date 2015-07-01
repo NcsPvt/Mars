@@ -100,7 +100,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
     private Polyline path;
     private LatLngBounds.Builder boundsBuilder;
     private LinearLayout ll_bottom_views, vehicle_balloon, ll_FairCashCredit, ll_cancelConfirm, overlayTrip, timer_view, layout_later, ll_pick_address, ll_drop_address, ll_selected_time, ll_selected_cab, ll_getting_nearby_progress;
-    private RelativeLayout ll_pn_pl, rl_send_nearest, history;
+    private RelativeLayout ll_pn_pl, rl_send_nearest, history, app_action_bar;
     private ScrollView menu;
     private View cancel_drop_seperator;
     private RelativeLayout rl_vehicle_company_fare;
@@ -111,7 +111,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
     private GoogleApiClient.OnConnectionFailedListener connectionFailedListener;
     private LocationManager locationManager;
     private Location lastLocation;
-    private TextView tv_app_version, tv_timer, tv_pick_drop, tv_address, tv_address_title, tv_pick_address, tv_drop_address, tv_sendme, tv_nearestcab, tv_selectedcab, tv_fare_estimate, tv_mile_estimate, menu_header, tv_refresh, tv_airport_note, tv_skip, tv_payWithVoucher;
+    private TextView tv_app_version, tv_promo_available, tv_timer, tv_pick_drop, tv_address, tv_address_title, tv_pick_address, tv_drop_address, tv_sendme, tv_nearestcab, tv_selectedcab, tv_fare_estimate, tv_mile_estimate, menu_header, tv_refresh, tv_airport_note, tv_skip, tv_payWithVoucher;
     private Button cb_fav_pick, cb_fav_drop;
     private TextView tv_selected_time, tv_payWith, tv_endingWih;
     private EditText et_pickup_person_name, et_callback_number, et_driver_notes;
@@ -151,6 +151,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
         setContentView(R.layout.activity_main);
 
+        app_action_bar = (RelativeLayout) findViewById(R.id.app_action_bar);
         rl_send_nearest = (RelativeLayout) findViewById(R.id.rl_send_nearest);
         rl_send_nearest.setBackgroundResource(BookingApplication.textView_Background);
         ll_cancelConfirm = (LinearLayout) findViewById(R.id.ll_cancelConfirm);
@@ -222,6 +223,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         tv_drop_address = (TextView) findViewById(R.id.tv_drop_address);
         tv_selectedcab = (TextView) findViewById(R.id.tv_selected_cab);
         tv_timer = (TextView) findViewById(R.id.tv_timer);
+        tv_promo_available = (TextView) findViewById(R.id.tv_promo_available);
         tv_payWith = (TextView) findViewById(R.id.tv_payWith);
         tv_endingWih = (TextView) findViewById(R.id.tv_endingWih);
         tv_airport_note = (TextView) findViewById(R.id.tv_airport_note);
@@ -283,6 +285,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     BookingApplication.showCustomToast(R.string.common_google_play_services_notification_ticker, connectionResult.toString(), true);
             }
         };
+
         googleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(LocationServices.API)
                 .addConnectionCallbacks(connectionCallbacks)
@@ -689,7 +692,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         trip_requested.CreditCardID = "0";
                         BookingApplication.showPaymentOptions("", trip_requested.estimatedCost, rates != null ? rates[3] : "", true, ActivityMain.this, CODES.PAYMENT_OPTION_ACTIVITY, false);
                     } else
-                        Toast.makeText(ActivityMain.this, R.string.Choose_Destination, Toast.LENGTH_LONG).show();
+                        BookingApplication.showCustomToast(R.string.Choose_Destination, "", false);
                 } else
                     Toast.makeText(ActivityMain.this, getResources().getString(R.string.PaymentTypeNotSupported, "Credit Card"), Toast.LENGTH_LONG).show();
             } else if (v.getId() == R.id.ll_payWith) {
@@ -714,7 +717,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                             BookingApplication.showPaymentOptions("", trip_requested.estimatedCost, rates != null ? rates[3] : "", true, ActivityMain.this, CODES.PAYMENT_OPTION_ACTIVITY, false);
                         }
                     else
-                        Toast.makeText(ActivityMain.this, R.string.Choose_Destination, Toast.LENGTH_LONG).show();
+                        BookingApplication.showCustomToast(R.string.Choose_Destination, "", false);
 
                 } else
                     Toast.makeText(ActivityMain.this, getResources().getString(R.string.PaymentTypeNotSupported, "Credit Card"), Toast.LENGTH_LONG).show();
@@ -809,7 +812,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
     /*--------------------------------------------- cancelDrop -------------------------------------------------------------------------------------*/
     public void cancelDrop(View v) {
 
-        if (BookingApplication.getAffiliatesIDFromDB(ActivityMain.this).size() > 0) {
             tv_drop_address.setText(R.string.will_tell_driver);
             btn_drop_notes.setVisibility(View.GONE);
             cb_fav_drop.setVisibility(View.GONE);
@@ -819,11 +821,14 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 path.remove();
                 dropMarker.remove();
                 mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 18));
+                path = null;
             }
             dropMarker = null;
             dropMarkerOptions = null;
             selecting_drop = false;
+            dropAddress = null;
 
+        if (BookingApplication.getAffiliatesIDFromDB(ActivityMain.this).size() > 0) {
             if (isQuickBooking)
                 goToStep(6, false);
             else if (trip_requested.companyID > 0)
@@ -832,6 +837,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 picknow(null);
             else if (BookingApplication.trip_type.equalsIgnoreCase("FUT"))
                 picklater(null);
+        }
         }
     }
 
@@ -852,6 +858,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 Animation outRightAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_right);
                 ll_FairCashCredit.startAnimation(outRightAnim);
                 ll_FairCashCredit.setVisibility(View.GONE);
+                tv_promo_available.setVisibility(View.GONE);
             }
             if (ll_selected_cab.isShown()) {
                 Animation outAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_right);
@@ -880,6 +887,12 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             }
 
             if (v.getId() == R.id.ll_selected_pick_address) {
+
+                if (ll_pick_address.isShown()) {
+                    Animation outRightAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_right);
+                    ll_pick_address.startAnimation(outRightAnim);
+                    ll_pick_address.setVisibility(View.GONE);
+                }
                 pointer.setVisibility(View.VISIBLE);
                 pointer.setImageResource(R.drawable.pupin);
                 SpannableString ss1=  new SpannableString(getResources().getString(R.string.pickme));
@@ -1002,8 +1015,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     //pick_address_spacer.setVisibility(View.GONE);
                     ll_bottom_views.setVisibility(View.GONE);
                     selecting_drop = false;
-                    if (dropMarkerOptions != null)
-                        (new DrawPathTask()).execute(pickMarkerOptions, dropMarkerOptions);
+                    (new DrawPathTask()).execute(pickMarkerOptions, dropMarkerOptions);
                 } else {
                     if (selecting_drop) {
                         pointer.setImageResource(R.drawable.dopin);
@@ -1016,6 +1028,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     }
                     BookingApplication.nearByVehicles.clear();
                     drawNearByVehicles();
+                    BookingApplication.showCustomProgress(ActivityMain.this, "", false);
                     BookingApplication.getNearbyVehicles(pickAddress, dropAddress, false);
                     if (isQuickBooking) {
 
@@ -1112,6 +1125,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 Toast.makeText(ActivityMain.this, getResources().getString(R.string.unknown_address) + "\n" + e.getMessage(), Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
+
+        BookingApplication.syncRequired = false;
     }
 
     /*--------------------------------------------- searchAddress ---------------------------------------------------------------------------------------*/
@@ -1225,9 +1240,10 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             mapFragment.setMyLocationEnabled(true);
 
             mapFragment.setPadding(0, BookingApplication.screenHeight / 12, 0, (int)(BookingApplication.screenHeight / 2.5) + 10);
-            int pointerY = mapFragment.getProjection().toScreenLocation(mapFragment.getCameraPosition().target).y - pointer.getHeight();
-            pointer.setY(pointerY);
-            vehicle_balloon.setY(pointerY - pointer.getHeight() / 2);
+            int cameraY = mapFragment.getProjection().toScreenLocation(mapFragment.getCameraPosition().target).y;
+            pointer.setY(cameraY - pointer.getHeight());
+            rl_address_pointer.setY(cameraY - pointer.getHeight() - pointer.getHeight() / 2);
+            vehicle_balloon.setY(cameraY - vehicle_balloon.getHeight());
 
             mapFragment.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
                 @Override
@@ -1240,13 +1256,15 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 @Override
                 public void onCameraChange(final CameraPosition position) {
                     try {
+
+                        int cameraY = mapFragment.getProjection().toScreenLocation(mapFragment.getCameraPosition().target).y;
+                        pointer.setY(cameraY - pointer.getHeight());
+                        rl_address_pointer.setY(cameraY - pointer.getHeight() - pointer.getHeight() / 2);
+                        vehicle_balloon.setY(cameraY - vehicle_balloon.getHeight() + app_action_bar.getHeight());
+
                         if (selecting_pickup || selecting_drop) {
 
                             BookingApplication.currentLatLong = position.target;
-
-                            int pointerY = mapFragment.getProjection().toScreenLocation(mapFragment.getCameraPosition().target).y - pointer.getHeight();
-                            pointer.setY(pointerY);
-                            vehicle_balloon.setY(pointerY - pointer.getHeight() / 2);
 
                             ll_bottom_views.setVisibility(View.GONE);
                             tv_address.setText(R.string.getting_address);
@@ -1870,6 +1888,9 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         Animation rightInAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_right);
                         ll_FairCashCredit.startAnimation(rightInAnim);
                         ll_FairCashCredit.setVisibility(View.VISIBLE);
+
+                    if (BookingApplication.promotions.size() > 0)
+                        tv_promo_available.setVisibility(View.VISIBLE);
                     }
                 }
                 if (!ll_cancelConfirm.isShown()) {
@@ -1904,6 +1925,9 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     Animation rightInAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_right);
                     ll_FairCashCredit.startAnimation(rightInAnim);
                     ll_FairCashCredit.setVisibility(View.VISIBLE);
+
+                    if (BookingApplication.promotions.size() > 0)
+                        tv_promo_available.setVisibility(View.VISIBLE);
                 }
 
                 BookingApplication.getFareInfo(trip_requested, ActivityMain.this);
@@ -1924,6 +1948,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 Animation outRightAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_right);
                 ll_FairCashCredit.startAnimation(outRightAnim);
                 ll_FairCashCredit.setVisibility(View.GONE);
+                tv_promo_available.setVisibility(View.GONE);
             }
             if (ll_selected_cab.isShown()) {
                 Animation outAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_right);
@@ -2157,12 +2182,12 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     } else {
                         BookingApplication.db.delete("Affiliates", null, null);
                         if (ll_drop_address.isShown() && !BookingApplication.syncRequired) {
-                            showCustomDialog(CODES.BOOKING_FAILED, R.string.Booking_Status, jsonResponse.getString("ReasonPhrase"), 0, false);
                             ClearMap();
+                            showCustomDialog(CODES.BOOKING_FAILED, R.string.Booking_Status, jsonResponse.getString("ReasonPhrase"), 0, false);
                         }
                     }
 
-                    if ((ll_selected_time.getVisibility() != View.VISIBLE) || BookingApplication.syncRequired)
+                    if (!ll_selected_time.isShown() || BookingApplication.syncRequired)
                         getNearbyVehicles(7 * 1000);
                 }
                 break;
@@ -2184,6 +2209,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                                 Animation outRightAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_right);
                                 ll_FairCashCredit.startAnimation(outRightAnim);
                                 ll_FairCashCredit.setVisibility(View.GONE);
+                                tv_promo_available.setVisibility(View.GONE);
                             }
                             if(trip_requested.tripType.equalsIgnoreCase("FUT"))
                                 startRequestStatusPolling(5);
@@ -2307,6 +2333,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         et_callback_number.setVisibility(View.GONE);
         ll_cancelConfirm.setVisibility(View.GONE);
         ll_FairCashCredit.setVisibility(View.GONE);
+        tv_promo_available.setVisibility(View.GONE);
         ll_selected_cab.setVisibility(View.GONE);
         ll_selected_time.setVisibility(View.GONE);
         ll_drop_address.setVisibility(View.GONE);
@@ -2388,8 +2415,11 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 else
                     timer_view.setVisibility(View.GONE);
 
-                if (tv_selected_time.isShown())
+                if (tv_selected_time.isShown()) {
                     ll_FairCashCredit.setVisibility(View.VISIBLE);
+                    if (BookingApplication.promotions.size() > 0)
+                        tv_promo_available.setVisibility(View.VISIBLE);
+                }
             }
         };
         mCountDownTimer.start();
@@ -2475,6 +2505,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         @Override
         protected void onPostExecute(ArrayList<LatLng> directionPoint) {
             super.onPostExecute(directionPoint);
+            if (trip_requested != null)
             try {
 
                 if (path != null) {
@@ -2528,7 +2559,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     while (BookingApplication.customProgressDialog.isShowing())
                         BookingApplication.customProgressDialog.dismiss();
 
-                if (trip_requested != null && trip_requested.companyID > 0)
+                    if (trip_requested.companyID > 0)
                     goToStep(5, false);
                 else if (BookingApplication.trip_type.equalsIgnoreCase("CURR"))
                     picknow(null);
