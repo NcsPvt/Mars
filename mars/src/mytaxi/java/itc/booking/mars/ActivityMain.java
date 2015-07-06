@@ -69,6 +69,7 @@ import org.w3c.dom.Document;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Timer;
@@ -113,7 +114,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
     private Location lastLocation;
     private TextView tv_app_version, tv_promo_available, tv_timer, tv_pick_drop, tv_address, tv_address_title, tv_pick_address, tv_drop_address, tv_sendme, tv_nearestcab, tv_selectedcab, tv_fare_estimate, tv_mile_estimate, menu_header, tv_refresh, tv_airport_note, tv_skip, tv_payWithVoucher;
     private Button cb_fav_pick, cb_fav_drop;
-    private TextView tv_selected_time, tv_payWith, tv_endingWih;
+    private TextView tv_selected_time_title, tv_selected_time, tv_payWith, tv_endingWih;
     private EditText et_pickup_person_name, et_callback_number, et_driver_notes;
     private ImageView pointer, iv_menu, iv_home, iv_company_logo;
     //private ImageButton cancel_drop;
@@ -233,6 +234,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
 
         tv_selected_time = (TextView) findViewById(R.id.tv_selected_time);
+        tv_selected_time_title = (TextView) findViewById(R.id.tv_selected_time_title);
         timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
         datePicker1 = (DatePicker) findViewById(R.id.datePicker1);
         et_pickup_person_name = (EditText) findViewById(R.id.et_pickup_person_name);
@@ -282,7 +284,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         connectionFailedListener = new GoogleApiClient.OnConnectionFailedListener() {
             @Override
             public void onConnectionFailed(ConnectionResult connectionResult) {
-                    BookingApplication.showCustomToast(R.string.common_google_play_services_notification_ticker, connectionResult.toString(), true);
+                BookingApplication.showCustomToast(R.string.common_google_play_services_notification_ticker, connectionResult.toString(), true);
             }
         };
 
@@ -346,8 +348,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         BookingApplication.isMinimized = false;
         BookingApplication.callerContext = ActivityMain.this;
         BookingApplication.currentCallbackListener = ActivityMain.this;
-        if (history.isShown())
-            history.setVisibility(View.GONE);
+        history.setVisibility(View.GONE);
     }
 
     /*------------------------------------------------- onBackPressed --------------------------------------------------------------------------------------*/
@@ -375,23 +376,23 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             showNotesDialog(R.string.Cancel, R.id.btn_pick_notes);
         else if (v.getId() == R.id.btn_drop_notes)
             showNotesDialog(R.string.Cancel, R.id.btn_drop_notes);
-        else {
-            if (rl_vehicle_company_fare.isShown()) {
-                Animation outAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_top);
-                rl_vehicle_company_fare.startAnimation(outAnim);
-                rl_vehicle_company_fare.setVisibility(View.GONE);
-            }
-            if (!et_callback_number.isShown()) {
-                Animation inTopAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_top);
-                et_callback_number.startAnimation(inTopAnim);
-                et_callback_number.setVisibility(View.VISIBLE);
-            }
-            if (!et_pickup_person_name.isShown()) {
-                Animation inTopAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_top);
-                et_pickup_person_name.startAnimation(inTopAnim);
-                et_pickup_person_name.setVisibility(View.VISIBLE);
-            }
-        }
+//        else {
+//            if (rl_vehicle_company_fare.isShown()) {
+//                Animation outAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_top);
+//                rl_vehicle_company_fare.startAnimation(outAnim);
+//                rl_vehicle_company_fare.setVisibility(View.GONE);
+//            }
+//            if (!et_callback_number.isShown()) {
+//                Animation inTopAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_top);
+//                et_callback_number.startAnimation(inTopAnim);
+//                et_callback_number.setVisibility(View.VISIBLE);
+//            }
+//            if (!et_pickup_person_name.isShown()) {
+//                Animation inTopAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_top);
+//                et_pickup_person_name.startAnimation(inTopAnim);
+//                et_pickup_person_name.setVisibility(View.VISIBLE);
+//            }
+//        }
     }
 
     /*---------------------------------------------- showFavorites -------------------------------------------------------------------------------------*/
@@ -534,6 +535,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
         BookingApplication.getVehicleClassesFromDB(this, pickNow, classOfVehicleAdaptor);
 
+        tv_selected_time_title.setText(R.string.imready);
         tv_selected_time.setText(R.string.Now);
         tv_nearestcab.setText(R.string.nearestcab);
         tv_nearestcab.setLines(1);
@@ -604,7 +606,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 //                goToStep(5, false);
 //            }
 //        } else {
-            goToStep(4, true);
+        goToStep(4, true);
 //        }
     }
 
@@ -637,6 +639,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
                 //BookingApplication.getVehicleClassesFromDB(this, pickNow, classOfVehicleAdaptor);
 
+                tv_selected_time_title.setText(R.string.imreadyat);
                 tv_selected_time.setText(BookingApplication.formatDateTime(chosenDateTime, "h:mm a 'on' EEEE"));
                 goToStep(4, false);
 
@@ -734,7 +737,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         startActivity(intent);
                     }
                     else
-                    goToStep(6, false);
+                        goToStep(6, false);
                 } else
                     Toast.makeText(ActivityMain.this, getResources().getString(R.string.PaymentTypeNotSupported, getResources().getString(R.string.PayingByVoucher)), Toast.LENGTH_LONG).show();
             } else if (v.getId() == R.id.tv_payInCash)
@@ -798,6 +801,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 ll_drop_address.setVisibility(View.VISIBLE);
             }
 
+            tv_selected_time_title.setText(R.string.imready);
             tv_selected_time.setText(R.string.Now);
             tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, BookingApplication.getAffiliateNameFromDB(this, currVehicle.iAffiliateID)));
 
@@ -812,21 +816,21 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
     /*--------------------------------------------- cancelDrop -------------------------------------------------------------------------------------*/
     public void cancelDrop(View v) {
 
-            tv_drop_address.setText(R.string.will_tell_driver);
-            btn_drop_notes.setVisibility(View.GONE);
-            cb_fav_drop.setVisibility(View.GONE);
-            trip_requested.estimatedDistance = 0;
-            trip_requested.estimatedDuration = "0";
-            if (path != null) {
-                path.remove();
-                dropMarker.remove();
-                mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 18));
-                path = null;
-            }
-            dropMarker = null;
-            dropMarkerOptions = null;
-            selecting_drop = false;
-            dropAddress = null;
+        tv_drop_address.setText(R.string.will_tell_driver);
+        btn_drop_notes.setVisibility(View.GONE);
+        cb_fav_drop.setVisibility(View.GONE);
+        trip_requested.estimatedDistance = 0;
+        trip_requested.estimatedDuration = "0";
+        if (path != null) {
+            path.remove();
+            dropMarker.remove();
+            mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 18));
+            path = null;
+        }
+        dropMarker = null;
+        dropMarkerOptions = null;
+        selecting_drop = false;
+        dropAddress = null;
 
         if (BookingApplication.getAffiliatesIDFromDB(ActivityMain.this).size() > 0) {
             if (isQuickBooking)
@@ -837,7 +841,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 picknow(null);
             else if (BookingApplication.trip_type.equalsIgnoreCase("FUT"))
                 picklater(null);
-        }
         }
     }
 
@@ -1242,7 +1245,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             mapFragment.setPadding(0, BookingApplication.screenHeight / 12, 0, (int)(BookingApplication.screenHeight / 2.5) + 10);
             int cameraY = mapFragment.getProjection().toScreenLocation(mapFragment.getCameraPosition().target).y;
             pointer.setY(cameraY - pointer.getHeight());
-            rl_address_pointer.setY(cameraY - pointer.getHeight() - pointer.getHeight() / 2);
             vehicle_balloon.setY(cameraY - vehicle_balloon.getHeight());
 
             mapFragment.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
@@ -1259,7 +1261,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
                         int cameraY = mapFragment.getProjection().toScreenLocation(mapFragment.getCameraPosition().target).y;
                         pointer.setY(cameraY - pointer.getHeight());
-                        rl_address_pointer.setY(cameraY - pointer.getHeight() - pointer.getHeight() / 2);
                         vehicle_balloon.setY(cameraY - vehicle_balloon.getHeight() + app_action_bar.getHeight());
 
                         if (selecting_pickup || selecting_drop) {
@@ -1669,7 +1670,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             public void onClick(View v) {
                 trip_requested.promoCode = promoCode.getText().toString();
                 if (tip.getText().length() > 0)
-                        trip_requested.tip = tip.getText().toString();
+                    trip_requested.tip = tip.getText().toString();
                 else if (rg.getCheckedRadioButtonId() == R.id.tip_15)
                     trip_requested.tip = "15%";
                 else if (rg.getCheckedRadioButtonId() == R.id.tip_20)
@@ -1889,8 +1890,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         ll_FairCashCredit.startAnimation(rightInAnim);
                         ll_FairCashCredit.setVisibility(View.VISIBLE);
 
-                    if (BookingApplication.promotions.size() > 0)
-                        tv_promo_available.setVisibility(View.VISIBLE);
+                        if (BookingApplication.promotions.size() > 0)
+                            tv_promo_available.setVisibility(View.VISIBLE);
                     }
                 }
                 if (!ll_cancelConfirm.isShown()) {
@@ -1974,9 +1975,9 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 if (BookingApplication.classOfVehicles.size() > 0) {
 
 
-                        tv_nearestcab.setText(R.string.chooseVehicleType);
-                        tv_nearestcab.setLines(2);
-                        tv_sendme.setVisibility(View.GONE);
+                    tv_nearestcab.setText(R.string.chooseVehicleType);
+                    tv_nearestcab.setLines(2);
+                    tv_sendme.setVisibility(View.GONE);
 
                     if (!rl_send_nearest.isShown()) {
                         Animation rightInAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_right);
@@ -2004,7 +2005,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     ll_pn_pl.startAnimation(rightInAnim);
                     ll_pn_pl.setVisibility(View.VISIBLE);
                 }
-        }
+            }
         }
     }//gotoStepNumber
 
@@ -2109,6 +2110,14 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     case CODES.PPV_RESPONSE: {
                         break;
                     }
+                    case CODES.SIGNATURE_REQUIRED: {
+                        BookingApplication.cancelTrip(trip_requested.ConfirmNumber, dialogText, trip_requested.iServiceID, trip_requested.tripType, ActivityMain.this);
+                        break;
+                    }
+                    case CODES.PAYMENT_OPTION_ACTIVITY: {
+                        BookingApplication.cancelTrip(trip_requested.ConfirmNumber, dialogText, trip_requested.iServiceID, trip_requested.tripType, ActivityMain.this);
+                        break;
+                    }
                     case CODES.EXIT: {
                         BookingApplication.exitAPP();
                     }
@@ -2201,6 +2210,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         trip_requested.state = "ACCEPTED";
                         BookingApplication.recentTrips.add(trip_requested);
                         BookingApplication.unPerformedTripsCount++;
+                        Collections.sort(BookingApplication.recentTrips);
                         trips_adapter.notifyDataSetChanged();
                         if (jsonResponse.getInt("waitCountDown") == 0)
                             showCustomDialog(CODES.RESERVATION_SUCCESS, R.string.Booking_Status, getResources().getString(R.string.Booking_Success, jsonResponse.getString("confirmationNo")), 0, false);
@@ -2243,18 +2253,14 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                             mCountDownTimer.cancel();
                             mCountDownTimer.onFinish();
                             BookingApplication.showSignatureScreen(jsonResponse.getString("fareEstimate"), ActivityMain.this);
-                            BookingApplication.showCustomToast(0, jsonResponse.getString("responseMessage"), false);
+                            showCustomDialog(CODES.PAYMENT_OPTION_ACTIVITY, R.string.Booking_Status, jsonResponse.getString("responseMessage"), 0, false);
                             break;
 
                         case CODES.PAYMENT_OPTION_ACTIVITY:
                             trip_requested.isPaymentDeclined = true;
                             mCountDownTimer.cancel();
                             mCountDownTimer.onFinish();
-                            ll_pick_address.setVisibility(View.INVISIBLE);
-                            ll_drop_address.setVisibility(View.INVISIBLE);
-                            ll_selected_time.setVisibility(View.INVISIBLE);
-                            ll_selected_cab.setVisibility(View.INVISIBLE);
-                            BookingApplication.showCustomToast(0, jsonResponse.getString("responseMessage"), true);
+                            showCustomDialog(CODES.PAYMENT_OPTION_ACTIVITY, R.string.Booking_Status, jsonResponse.getString("responseMessage"), 0, false);
                             break;
 
                         case CODES.BOOKING_FAILED:
@@ -2272,7 +2278,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     startRequestStatusPolling(BookingApplication.userInfoPrefs.getInt("waitTimer", 15));
                     break;
                 case APIs.GeoCoderResponse:
-                   // ll_bottom_views.setVisibility(View.VISIBLE);
+                    // ll_bottom_views.setVisibility(View.VISIBLE);
                     String address = getResources().getString(R.string.unknown_address);
                     if (addressListReturned != null)
                         try {
@@ -2506,66 +2512,66 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         protected void onPostExecute(ArrayList<LatLng> directionPoint) {
             super.onPostExecute(directionPoint);
             if (trip_requested != null)
-            try {
+                try {
 
-                if (path != null) {
-                    path.remove();
-                    path = null;
-                }
-                if (directionPoint.size() > 0) {
-                    PolylineOptions rectLine = new PolylineOptions().width(14).color(Color.argb(255, 114, 208, 251));
+                    if (path != null) {
+                        path.remove();
+                        path = null;
+                    }
+                    if (directionPoint.size() > 0) {
+                        PolylineOptions rectLine = new PolylineOptions().width(14).color(Color.argb(255, 114, 208, 251));
 
-                    for (int i = 0; i < directionPoint.size(); i++) {
-                        rectLine.add(directionPoint.get(i));
-                        //boundsBuilder.include(directionPoint.get(i));
+                        for (int i = 0; i < directionPoint.size(); i++) {
+                            rectLine.add(directionPoint.get(i));
+                            //boundsBuilder.include(directionPoint.get(i));
+                        }
+
+                        path = mapFragment.addPolyline(rectLine);
+
+                        //mapFragment.animateCamera(CameraUpdateFactory.newLatLngBounds(boundsBuilder.build(), 130));
+                        mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 13));
                     }
 
-                    path = mapFragment.addPolyline(rectLine);
+                    if (selecting_pickup || dragging_pickup) {
+                        selecting_pickup = false;
+                        dragging_pickup = false;
+                    }
 
-                    //mapFragment.animateCamera(CameraUpdateFactory.newLatLngBounds(boundsBuilder.build(), 130));
-                    mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 13));
-                }
+                    //if (trip_requested == null)
+                    //trip_requested = new Trip(pickMarker.getPosition().latitude, pickMarker.getPosition().longitude, tv_pick_address.getText().toString(), -1, -1);
 
-                if (selecting_pickup || dragging_pickup) {
-                    selecting_pickup = false;
-                    dragging_pickup = false;
-                }
+                    if (routeDoc != null) {
 
-                //if (trip_requested == null)
-                //trip_requested = new Trip(pickMarker.getPosition().latitude, pickMarker.getPosition().longitude, tv_pick_address.getText().toString(), -1, -1);
+                        trip_requested.estimatedDistance = mapDirections.getDistanceValue(routeDoc);
+                        trip_requested.estimatedDuration = Integer.toString(mapDirections.getDurationValue(routeDoc));
+                        trip_requested.distanceUnit = mapDirections.getDistanceText(routeDoc).contains("km") ? "km" : "mi";
+                        tv_mile_estimate.setText(getResources().getString(R.string.distance) + ": " + mapDirections.getDistanceText(routeDoc));
+                    }
 
-                if (routeDoc != null) {
+                } catch (Exception e) {
+                    Toast.makeText(ActivityMain.this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
 
-                    trip_requested.estimatedDistance = mapDirections.getDistanceValue(routeDoc);
-                    trip_requested.estimatedDuration = Integer.toString(mapDirections.getDurationValue(routeDoc));
-                    trip_requested.distanceUnit = mapDirections.getDistanceText(routeDoc).contains("km") ? "km" : "mi";
-                    tv_mile_estimate.setText(getResources().getString(R.string.distance) + ": " + mapDirections.getDistanceText(routeDoc));
-                }
+                    if (BookingApplication.customProgressDialog != null)
+                        while (BookingApplication.customProgressDialog.isShowing())
+                            BookingApplication.customProgressDialog.dismiss();
+                } finally {
 
-            } catch (Exception e) {
-                Toast.makeText(ActivityMain.this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                    if (selecting_pickup || dragging_pickup) {
+                        selecting_pickup = false;
+                        dragging_pickup = false;
+                    }
 
-                if (BookingApplication.customProgressDialog != null)
-                    while (BookingApplication.customProgressDialog.isShowing())
-                        BookingApplication.customProgressDialog.dismiss();
-            } finally {
-
-                if (selecting_pickup || dragging_pickup) {
-                    selecting_pickup = false;
-                    dragging_pickup = false;
-                }
-
-                if (BookingApplication.customProgressDialog != null)
-                    while (BookingApplication.customProgressDialog.isShowing())
-                        BookingApplication.customProgressDialog.dismiss();
+                    if (BookingApplication.customProgressDialog != null)
+                        while (BookingApplication.customProgressDialog.isShowing())
+                            BookingApplication.customProgressDialog.dismiss();
 
                     if (trip_requested.companyID > 0)
-                    goToStep(5, false);
-                else if (BookingApplication.trip_type.equalsIgnoreCase("CURR"))
-                    picknow(null);
-                else if (BookingApplication.trip_type.equalsIgnoreCase("FUT"))
-                    picklater(null);
-            }
+                        goToStep(5, false);
+                    else if (BookingApplication.trip_type.equalsIgnoreCase("CURR"))
+                        picknow(null);
+                    else if (BookingApplication.trip_type.equalsIgnoreCase("FUT"))
+                        picklater(null);
+                }
         }
 
         @Override
@@ -2880,41 +2886,41 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     currClassOfVehicle.getAffiliatesFromDB(ActivityMain.this, "", pickNow, affAdaptor);
                     if (currClassOfVehicle.affiliates.size() > 0) {
-                    try {
-                        rates = BookingApplication.getRatesFromDB(ActivityMain.this, currClassOfVehicle.vehicles.get(position), spinner_affiliates.getSelectedItem().toString(), currClassOfVehicle.className);
-                        if (rates != null) {
-                            //InitialFare, CostPerUnit, VehRateUnit, CurrencyUnit, ADU, AddPassengerCost
-                            if (trip_requested.estimatedDistance > 0) {
-                                if (trip_requested.distanceUnit.equals("km"))
+                        try {
+                            rates = BookingApplication.getRatesFromDB(ActivityMain.this, currClassOfVehicle.vehicles.get(position), spinner_affiliates.getSelectedItem().toString(), currClassOfVehicle.className);
+                            if (rates != null) {
+                                //InitialFare, CostPerUnit, VehRateUnit, CurrencyUnit, ADU, AddPassengerCost
+                                if (trip_requested.estimatedDistance > 0) {
+                                    if (trip_requested.distanceUnit.equals("km"))
                                         classRate.setText(rates[3] + " " + BookingApplication.df.format(Double.parseDouble(rates[0]) + Double.parseDouble(rates[1]) * trip_requested.estimatedDistance / 1000 / Double.parseDouble(rates[4])));
-                                else
+                                    else
                                         classRate.setText(rates[3] + " " + BookingApplication.df.format(Double.parseDouble(rates[0]) + Double.parseDouble(rates[1]) * trip_requested.estimatedDistance / 1609.34 / Double.parseDouble(rates[4])));
+                                }
                             }
-                        }
-                    } catch (Exception e) {
+                        } catch (Exception e) {
                             BookingApplication.showCustomToast(0, e.getLocalizedMessage(), true);
                             classRate.setText("N/A");
-                    }
-                    trip_requested.companyName = spinner_affiliates.getSelectedItem().toString();
-                    trip_requested.companyID = BookingApplication.getAffiliateIDFromDB(ActivityMain.this, trip_requested.companyName);
-                    trip_requested.supportedPaymentType = BookingApplication.getAffiliatePaymentType(ActivityMain.this, trip_requested.companyName);
-                    trip_requested.vehTypeName = currClassOfVehicle.vehicles.get(position);
-                    trip_requested.vehTypeID = BookingApplication.getVehicleIDFromDB(ActivityMain.this, trip_requested.vehTypeName);
-                    trip_requested.vehNo = "-1";
-
-                    tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, trip_requested.companyName));
-
-                    if (isInitialized)
-                        if (BookingApplication.isPassengerCountReq(ActivityMain.this, trip_requested.companyID))
-                            showPassengerDialog(null);
-                        else {
-                            trip_requested.passengerCount = 1;
-                            trip_requested.childrenCount = 0;
-                            trip_requested.bagsCount = 0;
-                            //BookingApplication.getFareInfo(trip_requested, ActivityMain.this);
                         }
-                    else
-                        isInitialized = true;
+                        trip_requested.companyName = spinner_affiliates.getSelectedItem().toString();
+                        trip_requested.companyID = BookingApplication.getAffiliateIDFromDB(ActivityMain.this, trip_requested.companyName);
+                        trip_requested.supportedPaymentType = BookingApplication.getAffiliatePaymentType(ActivityMain.this, trip_requested.companyName);
+                        trip_requested.vehTypeName = currClassOfVehicle.vehicles.get(position);
+                        trip_requested.vehTypeID = BookingApplication.getVehicleIDFromDB(ActivityMain.this, trip_requested.vehTypeName);
+                        trip_requested.vehNo = "-1";
+
+                        tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, trip_requested.companyName));
+
+                        if (isInitialized)
+                            if (BookingApplication.isPassengerCountReq(ActivityMain.this, trip_requested.companyID))
+                                showPassengerDialog(null);
+                            else {
+                                trip_requested.passengerCount = 1;
+                                trip_requested.childrenCount = 0;
+                                trip_requested.bagsCount = 0;
+                                //BookingApplication.getFareInfo(trip_requested, ActivityMain.this);
+                            }
+                        else
+                            isInitialized = true;
                     }
 
                 }
@@ -2931,23 +2937,23 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (currClassOfVehicle.affiliates.size() > 0) {
-                    currClassOfVehicle.getVehiclesFromDB(ActivityMain.this, currClassOfVehicle.affiliates.get(position), pickNow, vehAdaptor);
+                        currClassOfVehicle.getVehiclesFromDB(ActivityMain.this, currClassOfVehicle.affiliates.get(position), pickNow, vehAdaptor);
 
-                    try {
-                        rates = BookingApplication.getRatesFromDB(ActivityMain.this, currClassOfVehicle.vehicles.get(spinner_vehicles.getSelectedItemPosition()), currClassOfVehicle.affiliates.get(position), currClassOfVehicle.className);
-                        if (rates != null) {
-                            //InitialFare, CostPerUnit, VehRateUnit, CurrencyUnit, ADU, AddPassengerCost
-                            if (trip_requested.estimatedDistance > 0) {
-                                if (trip_requested.distanceUnit.equals("km"))
+                        try {
+                            rates = BookingApplication.getRatesFromDB(ActivityMain.this, currClassOfVehicle.vehicles.get(spinner_vehicles.getSelectedItemPosition()), currClassOfVehicle.affiliates.get(position), currClassOfVehicle.className);
+                            if (rates != null) {
+                                //InitialFare, CostPerUnit, VehRateUnit, CurrencyUnit, ADU, AddPassengerCost
+                                if (trip_requested.estimatedDistance > 0) {
+                                    if (trip_requested.distanceUnit.equals("km"))
                                         classRate.setText(rates[3] + " " + BookingApplication.df.format(Double.parseDouble(rates[0]) + Double.parseDouble(rates[1]) * trip_requested.estimatedDistance / 1000 / Double.parseDouble(rates[4])));
-                                else
+                                    else
                                         classRate.setText(rates[3] + " " + BookingApplication.df.format(Double.parseDouble(rates[0]) + Double.parseDouble(rates[1]) * trip_requested.estimatedDistance / 1609.34 / Double.parseDouble(rates[4])));
+                                }
                             }
-                        }
-                    } catch (Exception e) {
+                        } catch (Exception e) {
                             BookingApplication.showCustomToast(0, e.getLocalizedMessage(), true);
                             classRate.setText("N/A");
-                    }
+                        }
                     }
                 }
 
@@ -2962,27 +2968,27 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 @Override
                 public void onClick(View v) {
                     if (currClassOfVehicle.affiliates.size() > 0) {
-                    trip_requested.classofserviceid = currClassOfVehicle.classID;
-                    trip_requested.companyName = spinner_affiliates.getSelectedItem().toString();
-                    trip_requested.companyID = BookingApplication.getAffiliateIDFromDB(ActivityMain.this, trip_requested.companyName);
-                    trip_requested.supportedPaymentType = BookingApplication.getAffiliatePaymentType(ActivityMain.this, trip_requested.companyName);
-                    trip_requested.vehTypeName = spinner_vehicles.getSelectedItem().toString();
-                    trip_requested.vehTypeID = BookingApplication.getVehicleIDFromDB(ActivityMain.this, trip_requested.vehTypeName);
-                    trip_requested.vehNo = "-1";
+                        trip_requested.classofserviceid = currClassOfVehicle.classID;
+                        trip_requested.companyName = spinner_affiliates.getSelectedItem().toString();
+                        trip_requested.companyID = BookingApplication.getAffiliateIDFromDB(ActivityMain.this, trip_requested.companyName);
+                        trip_requested.supportedPaymentType = BookingApplication.getAffiliatePaymentType(ActivityMain.this, trip_requested.companyName);
+                        trip_requested.vehTypeName = spinner_vehicles.getSelectedItem().toString();
+                        trip_requested.vehTypeID = BookingApplication.getVehicleIDFromDB(ActivityMain.this, trip_requested.vehTypeName);
+                        trip_requested.vehNo = "-1";
 
-                    tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, trip_requested.companyName));
+                        tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, trip_requested.companyName));
 
-                    if (BookingApplication.isPassengerCountReq(ActivityMain.this, trip_requested.companyID))
-                        showPassengerDialog(null);
-                    else {
-                        trip_requested.passengerCount = 1;
-                        trip_requested.childrenCount = 0;
-                        trip_requested.bagsCount = 0;
-                        //BookingApplication.getFareInfo(trip_requested, ActivityMain.this);
+                        if (BookingApplication.isPassengerCountReq(ActivityMain.this, trip_requested.companyID))
+                            showPassengerDialog(null);
+                        else {
+                            trip_requested.passengerCount = 1;
+                            trip_requested.childrenCount = 0;
+                            trip_requested.bagsCount = 0;
+                            //BookingApplication.getFareInfo(trip_requested, ActivityMain.this);
+                        }
+
+                        goToStep(5, false);
                     }
-
-                    goToStep(5, false);
-                }
                 }
             });
             return row;

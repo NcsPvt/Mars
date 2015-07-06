@@ -25,8 +25,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import itc.booking.mars.BookingApplication.APIs;
-
 public class JSONhandler {
 
     private static InputStream is = null;
@@ -60,12 +58,12 @@ public class JSONhandler {
         return bin;
     }
 
-    public static JSONObject getJSONfromURL(MultipartEntity... params) throws ClientProtocolException, IOException, JSONException {
+    public static JSONObject getJSONfromURL(String apiUrl, MultipartEntity... params) throws ClientProtocolException, IOException, JSONException {
         MultipartEntity outEntity = params[0];
         HttpParams httpParameters = new BasicHttpParams();
         HttpConnectionParams.setSoTimeout(httpParameters, 30000);
         HttpClient httpClient = new DefaultHttpClient(httpParameters);
-        HttpPost httpPost = new HttpPost(APIs.GetURIFor(BookingApplication.apiCalled));
+        HttpPost httpPost = new HttpPost(apiUrl);
 
         outEntity.addPart("AppID", new StringBody(BookingApplication.appID));
         outEntity.addPart("UserID", new StringBody(BookingApplication.userInfoPrefs.getString("UserID", "")));

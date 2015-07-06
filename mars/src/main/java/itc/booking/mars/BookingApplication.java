@@ -21,6 +21,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -45,8 +46,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.i18n.phonenumbers.NumberParseException;
@@ -77,7 +82,8 @@ import java.util.concurrent.TimeoutException;
 import itc.downloader.image.ImageLoader;
 import itcurves.mars.R;
 
-public class BookingApplication extends Application {
+public class BookingApplication extends Application implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+
 
     public class Campaign {
         public String CampaignName;
@@ -142,7 +148,6 @@ public class BookingApplication extends Application {
     public static boolean bShowNearbyPlaces = false;
     public static boolean bHandshakeSuccess = false;
     public static ImageLoader imagedownloader;
-    public static int apiCalled = -1;
     public static String SupportedPaymentMethod = "1";
     public static int MaxLaterHours = 48;
     public static int theme_color = R.color.mars_red;
@@ -179,6 +184,12 @@ public class BookingApplication extends Application {
 
     static InstanceID gcm;
     private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+
+    private GoogleApiClient mGoogleApiClient;
+    private LocationRequest mLocationRequest;
+    private Location mCurrentLocation;
+    Geocoder geocoder;
+
 
     /*-------------------------------------------------------------- isDialerAvailable -------------------------------------------------------------------------------------*/
     public static boolean isDialerAvailable(Context context) {
@@ -666,7 +677,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("bsendsms", new StringBody(Boolean.toString(bsendsms), Charset.forName("UTF-8")));
 
             ITCWebService loginTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.LOGIN;
+            loginTask.apiCalled = APIs.LOGIN;
             loginTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -699,7 +710,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("SecretAnswer", new StringBody(secretAnswer, Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.REGISTER;
+            registerTask.apiCalled = APIs.REGISTER;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -728,7 +739,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("bshowtodriver", new StringBody(showNumberToDriver, Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.UPDATEPROFILE;
+            registerTask.apiCalled = APIs.UPDATEPROFILE;
             registerTask.execute(outEntity);
 
         } catch (UnsupportedEncodingException e) {
@@ -750,7 +761,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("longitude", new StringBody(Double.toString(currentAddress.hasLongitude() ? currentAddress.getLongitude() : 0), Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.FETCHPROFILE;
+            registerTask.apiCalled = APIs.FETCHPROFILE;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -770,7 +781,7 @@ public class BookingApplication extends Application {
         }
 
         ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-        BookingApplication.apiCalled = APIs.HANDSHAKE;
+        registerTask.apiCalled = APIs.HANDSHAKE;
         registerTask.execute(outEntity);
     }
 
@@ -787,7 +798,7 @@ public class BookingApplication extends Application {
         }
 
         ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-        BookingApplication.apiCalled = APIs.ADDC2D;
+        registerTask.apiCalled = APIs.ADDC2D;
         registerTask.execute(outEntity);
     }
 
@@ -805,7 +816,7 @@ public class BookingApplication extends Application {
         }
 
         ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-        BookingApplication.apiCalled = APIs.AvailPromotion;
+        registerTask.apiCalled = APIs.AvailPromotion;
         registerTask.execute(outEntity);
     }
 
@@ -822,7 +833,7 @@ public class BookingApplication extends Application {
         }
 
         ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-        BookingApplication.apiCalled = APIs.RegisterForPushMessages;
+        registerTask.apiCalled = APIs.RegisterForPushMessages;
         registerTask.execute(outEntity);
     }
 
@@ -839,7 +850,7 @@ public class BookingApplication extends Application {
         }
 
         ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-        BookingApplication.apiCalled = APIs.GETUSERPROMOTIONDETAIL;
+        registerTask.apiCalled = APIs.GETUSERPROMOTIONDETAIL;
         registerTask.execute(outEntity);
     }
 
@@ -855,7 +866,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("ridetype", new StringBody(rideType, Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.GETCUSTOMERRIDES;
+            registerTask.apiCalled = APIs.GETCUSTOMERRIDES;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -876,7 +887,7 @@ public class BookingApplication extends Application {
         }
 
         ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-        BookingApplication.apiCalled = APIs.PREACTIVATE;
+        registerTask.apiCalled = APIs.PREACTIVATE;
         registerTask.execute(outEntity);
 
     }
@@ -897,7 +908,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("phonenumber", new StringBody(phoneNumber, Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.POSTACTIVATE;
+            registerTask.apiCalled = APIs.POSTACTIVATE;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1144,9 +1155,6 @@ public class BookingApplication extends Application {
     /*----------------------------------------------------------makeReservation()----------------------------------------------------------------------------*/
     public static void makeReservation(Trip p, CallbackResponseListener bookingResponseListener, Boolean bPutOnWall) {
 
-        if (p.isPaymentDeclined)
-            updatePaymentInfo(p, bookingResponseListener);
-        else {
             currentCallbackListener = bookingResponseListener;
 
             MultipartEntity outEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE, "~~~", Charset.forName("UTF-8"));
@@ -1207,12 +1215,11 @@ public class BookingApplication extends Application {
                 }
 
                 ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-                BookingApplication.apiCalled = APIs.MAKERESERVATION;
+                registerTask.apiCalled = APIs.MAKERESERVATION;
                 registerTask.execute(outEntity);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
-        }
     }
 
     /*----------------------------------------------------------updatePaymentInfo()----------------------------------------------------------------------------*/
@@ -1244,7 +1251,7 @@ public class BookingApplication extends Application {
             }
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.UPDATEPAYMENTINFO;
+            registerTask.apiCalled = APIs.UPDATEPAYMENTINFO;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1274,7 +1281,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("signature", new StringBody(encodedImage));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.SIGNATUREUPLOAD;
+            registerTask.apiCalled = APIs.SIGNATUREUPLOAD;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1292,7 +1299,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("bLastCall", new StringBody(Boolean.toString(isLastCall), Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.GETREQUESTSTATUS;
+            registerTask.apiCalled = APIs.GETREQUESTSTATUS;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1310,7 +1317,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("isapproved", new StringBody(Boolean.toString(isapproved), Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.SendNoShowResponse;
+            registerTask.apiCalled = APIs.SendNoShowResponse;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1328,7 +1335,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("bwallrequest", new StringBody(putOnWall.toString(), Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.PUTTRIPONWALL;
+            registerTask.apiCalled = APIs.PUTTRIPONWALL;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1351,7 +1358,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("longitude", new StringBody(Double.toString(myFav.latlong.longitude), Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.ADDUPDATEFAVORITE;
+            registerTask.apiCalled = APIs.ADDUPDATEFAVORITE;
 
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
@@ -1369,7 +1376,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("id", new StringBody(Integer.toString(myFav.favId), Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.REMOVEFAVORITE;
+            registerTask.apiCalled = APIs.REMOVEFAVORITE;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1390,7 +1397,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("requesttype", new StringBody(requesttype, Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.CANCELTRIP;
+            registerTask.apiCalled = APIs.CANCELTRIP;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1497,7 +1504,7 @@ public class BookingApplication extends Application {
     public static void getFavorites() {
         MultipartEntity outEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE, "~~~", Charset.forName("UTF-8"));
         ITCWebService favoriteTask = (new BookingApplication()).new ITCWebService();
-        BookingApplication.apiCalled = APIs.GETFAVORITES;
+        favoriteTask.apiCalled = APIs.GETFAVORITES;
         favoriteTask.execute(outEntity);
     }
 
@@ -1508,7 +1515,7 @@ public class BookingApplication extends Application {
 
         MultipartEntity outEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE, "~~~", Charset.forName("UTF-8"));
         ITCWebService getTask = (new BookingApplication()).new ITCWebService();
-        BookingApplication.apiCalled = APIs.GETCCPROFILES;
+        getTask.apiCalled = APIs.GETCCPROFILES;
         getTask.execute(outEntity);
     }
 
@@ -1519,7 +1526,7 @@ public class BookingApplication extends Application {
 
         MultipartEntity outEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE, "~~~", Charset.forName("UTF-8"));
         ITCWebService sessionTask = (new BookingApplication()).new ITCWebService();
-        BookingApplication.apiCalled = APIs.CREATECCSESSION;
+        sessionTask.apiCalled = APIs.CREATECCSESSION;
         sessionTask.execute(outEntity);
     }
 
@@ -1535,7 +1542,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("sessionid", new StringBody(sessionid, Charset.forName("UTF-8")));
 
             ITCWebService checkTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.CHECKCCSESSION;
+            checkTask.apiCalled = APIs.CHECKCCSESSION;
             checkTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1553,7 +1560,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("uniqueid", new StringBody(uniqueID, Charset.forName("UTF-8")));
 
             ITCWebService removeTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.REMOVECCPROFILE;
+            removeTask.apiCalled = APIs.REMOVECCPROFILE;
             removeTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1598,7 +1605,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("classofserviceid", new StringBody(Integer.toString(p.classofserviceid), Charset.forName("UTF-8")));
 
             ITCWebService removeTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.GETFAREINFO;
+            removeTask.apiCalled = APIs.GETFAREINFO;
             removeTask.execute(outEntity);
 
         } catch (UnsupportedEncodingException e) {
@@ -1619,7 +1626,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("comments", new StringBody(comments, Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.SUBMITRATING;
+            registerTask.apiCalled = APIs.SUBMITRATING;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1637,7 +1644,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("phonenumber", new StringBody(phNo, Charset.forName("UTF-8")));
 
             ITCWebService forgotTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.FORGOTPASSWORD;
+            forgotTask.apiCalled = APIs.FORGOTPASSWORD;
             forgotTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1657,7 +1664,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("newpassword", new StringBody(newPassword, Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.RESETPASSWORD;
+            registerTask.apiCalled = APIs.RESETPASSWORD;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1693,7 +1700,7 @@ public class BookingApplication extends Application {
                 }
 
                 ITCWebService getVehiclesTask = (new BookingApplication()).new ITCWebService();
-                BookingApplication.apiCalled = APIs.GETNEARBYVEHICLES;
+                getVehiclesTask.apiCalled = APIs.GETNEARBYVEHICLES;
                 getVehiclesTask.execute(outEntity);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -1716,7 +1723,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("companyid", new StringBody(companyId, Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.TOPUPBALANCE;
+            registerTask.apiCalled = APIs.TOPUPBALANCE;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1737,7 +1744,7 @@ public class BookingApplication extends Application {
             outEntity.addPart("amount", new StringBody(amount, Charset.forName("UTF-8")));
 
             ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
-            BookingApplication.apiCalled = APIs.TOPUPBALANCEBYCC;
+            registerTask.apiCalled = APIs.TOPUPBALANCEBYCC;
             registerTask.execute(outEntity);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1915,6 +1922,13 @@ public class BookingApplication extends Application {
             //states.put("Wisconsin", "WI");
             //states.put("Wyoming", "WY");
             //states.put("Yukon Territory", "YT");
+            if (isGooglePlayServicesAvailable()) {
+                buildGoogleApiClient();
+            }
+
+            mGoogleApiClient.connect();
+
+            geocoder = new Geocoder(this, Locale.US);
 
         } catch (Exception e) {
             showCustomToast(0, e.getLocalizedMessage(), true);
@@ -2291,13 +2305,14 @@ public class BookingApplication extends Application {
 
         private JSONObject tempObj, response;
         private JSONArray jsonArray;
+        public int apiCalled = 0;
 
         @Override
         protected JSONObject doInBackground(MultipartEntity... params) throws NullPointerException {
 
             try {
                 if (isNetworkConnected)
-                    return JSONhandler.getJSONfromURL(params);
+                    return JSONhandler.getJSONfromURL(APIs.GetURIFor(apiCalled), params[0]);
                 else {
                     response = new JSONObject();
                     try {
@@ -2745,7 +2760,8 @@ public class BookingApplication extends Application {
                                 break;
                             case APIs.CANCELTRIP:
                                 if (!JSONResp.has("Fault")) {
-                                    showCustomToast(0, JSONResp.getString("responseMessage"), false);
+                                    if (JSONResp.getString("responseMessage").length() > 0)
+                                        showCustomToast(0, JSONResp.getString("responseMessage"), false);
                                     currentCallbackListener.callbackResponseReceived(APIs.CANCELTRIP, JSONResp, null, true);
                                 }
                                 break;
@@ -2831,4 +2847,72 @@ public class BookingApplication extends Application {
 
     }// AsyncTask ITCWebService
 
+
+    @Override
+    public void onConnected(Bundle bundle) {
+
+        if (mCurrentLocation == null)
+            mCurrentLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+
+        LocationServices.FusedLocationApi.requestLocationUpdates(
+                mGoogleApiClient, mLocationRequest, this);
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+        // The connection to Google Play services was lost for some reason. We call connect() to
+        // attempt to re-establish the connection.
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+
+        mCurrentLocation = location;
+
+        try {
+
+            currentAddress = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1).get(0);
+            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+
+        } catch (Exception exception) {
+            Log.e("Geocoder", exception.getLocalizedMessage());
+        }
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        if (connectionResult.hasResolution())
+            mGoogleApiClient.connect();
+    }
+
+    protected void createLocationRequest() {
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(10000);
+        mLocationRequest.setFastestInterval(5000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+    }
+
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+        createLocationRequest();
+
+    }
+
+    private boolean isGooglePlayServicesAvailable() {
+        int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+        if (ConnectionResult.SUCCESS == status) {
+            return true;
+        } else {
+            GooglePlayServicesUtil.getErrorDialog(status, callerContext, 0).show();
+            return false;
+        }
+    }
 }

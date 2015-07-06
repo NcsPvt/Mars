@@ -18,10 +18,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:background="@drawable/button_translucent"
+            android:paddingBottom="3dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp">
+            android:paddingTop="3dp">
 
             <ImageView
                 android:id="@+id/iv_company_logo"
@@ -344,10 +344,11 @@
                 android:visibility="gone">
 
                 <TextView
+                    android:id="@+id/tv_selected_time_title"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:text="@string/imready"
+                    android:text="@string/imreadyat"
                     android:textColor="@color/white"
                     android:textSize="@dimen/size14"
                     android:textStyle="bold"></TextView>
@@ -459,30 +460,39 @@
                     android:layout_height="1dp"
                     android:background="@color/gray" />
 
-                <EditText
-                    android:id="@+id/et_pickup_person_name"
+                <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:gravity="left"
-                    android:hint="Name of  person / Food / Packge"
-                    android:singleLine="true"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/size10"
-                    android:typeface="serif"
-                    android:visibility="gone"></EditText>
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/et_callback_number"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:gravity="left"
-                    android:hint="Callback number"
-                    android:inputType="phone"
-                    android:singleLine="true"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/size10"
-                    android:typeface="serif"
-                    android:visibility="gone"></EditText>
+                    <EditText
+                        android:id="@+id/et_pickup_person_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:hint="Name of  person / Food / Packge"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size10"
+                        android:typeface="sans"
+                        android:visibility="visible"></EditText>
+
+
+                    <EditText
+                        android:id="@+id/et_callback_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="right"
+                        android:gravity="left"
+                        android:hint="@string/CallBackNumber"
+                        android:inputType="phone"
+                        android:onClick="AddDriverNotes"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size10"
+                        android:typeface="sans"
+                        android:visibility="visible"></EditText>
+                </LinearLayout>
 
                 <EditText
                     android:id="@+id/et_driver_notes"
@@ -490,15 +500,16 @@
                     android:layout_height="fill_parent"
                     android:gravity="left"
                     android:hint="@string/AddDriverNotes"
-                    android:onClick="AddDriverNotes"
                     android:singleLine="true"
                     android:textColor="@color/black"
                     android:textSize="@dimen/size10"
-                    android:typeface="serif"></EditText>
+                    android:typeface="serif"
+                    android:visibility="gone"></EditText>
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:visibility="visible">
 
@@ -596,13 +607,13 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="@dimen/size10"
                 android:layout_marginTop="@dimen/promotions_baloon_margin"
+                android:background="@drawable/info_balloon"
                 android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/size10"
                 android:paddingLeft="@dimen/size10"
                 android:paddingRight="@dimen/size10"
                 android:paddingTop="5dp"
-                android:paddingBottom="@dimen/size10"
                 android:text="Promotions\nAvailable"
-                android:background="@drawable/info_balloon"
                 android:visibility="gone" />
 
             <LinearLayout

@@ -67,6 +67,7 @@ import org.w3c.dom.Document;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Timer;
@@ -111,7 +112,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
     private Location lastLocation;
     private TextView tv_app_version, tv_promo_available, tv_timer, tv_pick_drop, tv_address, tv_pick_address, tv_drop_address, tv_sendme, tv_nearestcab, tv_selectedcab, tv_fare_estimate, tv_mile_estimate, menu_header, tv_refresh, tv_airport_note;
     private CheckBox cb_fav_pick, cb_fav_drop;
-    private TextView tv_selected_time, tv_payWith, tv_endingWih;
+    private TextView tv_selected_time_title, tv_selected_time, tv_payWith, tv_endingWih;
     private EditText et_pickup_person_name, et_callback_number, et_driver_notes;
     private ImageView pointer, iv_menu, iv_home, iv_company_logo;
     private ImageButton cancel_drop;
@@ -229,6 +230,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
 
         tv_selected_time = (TextView) findViewById(R.id.tv_selected_time);
+        tv_selected_time_title = (TextView) findViewById(R.id.tv_selected_time_title);
         timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
         datePicker1 = (DatePicker) findViewById(R.id.datePicker1);
         et_pickup_person_name = (EditText) findViewById(R.id.et_pickup_person_name);
@@ -293,6 +295,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         geocoder = new Geocoder(ActivityMain.this);
         mapDirections = new GMapV2Direction();
 
+        //Toast.makeText(MainActivity.this, BookingApplication.displayDensityName(), Toast.LENGTH_SHORT).show();
+
     }
 
     /*------------------------------------------------------ onStart -------------------------------------------------------------------------------------*/
@@ -340,8 +344,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         BookingApplication.isMinimized = false;
         BookingApplication.callerContext = ActivityMain.this;
         BookingApplication.currentCallbackListener = ActivityMain.this;
-        if (history.isShown())
-            history.setVisibility(View.GONE);
+        history.setVisibility(View.GONE);
     }
 
     /*------------------------------------------------- onBackPressed --------------------------------------------------------------------------------------*/
@@ -403,6 +406,11 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             menu.setVisibility(View.GONE);
         getCurrentRides(3000);
         history.setVisibility(View.VISIBLE);
+    }
+
+    /*--------------------------------------------- closeVehicleMarker ---------------------------------------------------------------------------------*/
+    public void closeVehicleMarker(View v) {
+        vehicle_balloon.setVisibility(View.GONE);
     }
 
     /*---------------------------------------------- showHelpView -------------------------------------------------------------------------------------*/
@@ -520,6 +528,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
         BookingApplication.getVehicleClassesFromDB(this, pickNow, classOfVehicleAdaptor);
 
+        tv_selected_time_title.setText(R.string.imready);
         tv_selected_time.setText(R.string.Now);
         tv_nearestcab.setText(R.string.nearestcab);
         tv_nearestcab.setLines(1);
@@ -623,6 +632,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
                 //BookingApplication.getVehicleClassesFromDB(this, pickNow, classOfVehicleAdaptor);
 
+                tv_selected_time_title.setText(R.string.imreadyat);
                 tv_selected_time.setText(BookingApplication.formatDateTime(chosenDateTime, "h:mm a 'on' EEEE"));
                 goToStep(4, false);
 
@@ -777,6 +787,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 ll_drop_address.setVisibility(View.VISIBLE);
             }
 
+            tv_selected_time_title.setText(R.string.imready);
             tv_selected_time.setText(R.string.Now);
             tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, BookingApplication.getAffiliateNameFromDB(this, currVehicle.iAffiliateID)));
 
@@ -1387,7 +1398,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         myFav.country = address.getCountryCode();
 
         if (BookingApplication.favorites.contains(myFav)) {
-            //BookingApplication.db.delete("Favorites", "favId=?", new String[] { Integer.toString(currFav.favId) });
             BookingApplication.removeFavorite(BookingApplication.favorites.get(BookingApplication.favorites.indexOf(myFav)), ActivityMain.this);
             BookingApplication.favorites.remove(myFav);
         } else
@@ -1400,11 +1410,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             addRemoveFavorite(tv_pick_address.getText().toString(), pickAddress, null, v.getId());
         else if (v.getId() == R.id.fav_drop && dropMarker != null)
             addRemoveFavorite(tv_drop_address.getText().toString(), dropAddress, null, v.getId());
-    }
-
-    /*------------------------------------------------- addRemoveFavorite ---------------------------------------------------------------------------------*/
-    public void closeVehicleMarker(View v) {
-        vehicle_balloon.setVisibility(View.GONE);
     }
 
     /*------------------------------------------------ showHideBottomViews ---------------------------------------------------------------------------------*/
@@ -1922,12 +1927,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         tv_endingWih.setText(getResources().getString(R.string.NoCreditCard));
                     }
                 }
-
-                //if (!ll_cancelConfirm.isShown()) {
-                //Animation slideInBottom = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_bottom);
-                //ll_cancelConfirm.startAnimation(slideInBottom);
-                //ll_cancelConfirm.setVisibility(View.VISIBLE);
-                //}
             }
         }
         if (step < 6) {
@@ -2143,6 +2142,14 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     case CODES.PPV_RESPONSE: {
                         break;
                     }
+                    case CODES.SIGNATURE_REQUIRED: {
+                        BookingApplication.cancelTrip(trip_requested.ConfirmNumber, dialogText, trip_requested.iServiceID, trip_requested.tripType, ActivityMain.this);
+                        break;
+                    }
+                    case CODES.PAYMENT_OPTION_ACTIVITY: {
+                        BookingApplication.cancelTrip(trip_requested.ConfirmNumber, dialogText, trip_requested.iServiceID, trip_requested.tripType, ActivityMain.this);
+                        break;
+                    }
                     case CODES.EXIT: {
                         BookingApplication.exitAPP();
                     }
@@ -2235,6 +2242,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                             tv_drop_address.setText(R.string.will_tell_driver);
                             btn_drop_notes.setVisibility(View.GONE);
                             cb_fav_drop.setVisibility(View.GONE);
+                            tv_selected_time_title.setText(R.string.imready);
                             tv_selected_time.setText(R.string.Now);
                             tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, trip_requested.companyName));
 
@@ -2263,6 +2271,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         trip_requested.state = "ACCEPTED";
                         BookingApplication.recentTrips.add(trip_requested);
                         BookingApplication.unPerformedTripsCount++;
+                        Collections.sort(BookingApplication.recentTrips);
                         trips_adapter.notifyDataSetChanged();
                         if (jsonResponse.getInt("waitCountDown") == 0)
                             showCustomDialog(CODES.RESERVATION_SUCCESS, R.string.Booking_Status, getResources().getString(R.string.Booking_Success, jsonResponse.getString("confirmationNo")), 0, false);
@@ -2305,18 +2314,14 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                             mCountDownTimer.cancel();
                             mCountDownTimer.onFinish();
                             BookingApplication.showSignatureScreen(jsonResponse.getString("fareEstimate"), ActivityMain.this);
-                            BookingApplication.showCustomToast(0, jsonResponse.getString("responseMessage"), false);
+                            showCustomDialog(CODES.PAYMENT_OPTION_ACTIVITY, R.string.Booking_Status, jsonResponse.getString("responseMessage"), 0, false);
                             break;
 
                         case CODES.PAYMENT_OPTION_ACTIVITY:
                             trip_requested.isPaymentDeclined = true;
                             mCountDownTimer.cancel();
                             mCountDownTimer.onFinish();
-                            ll_pick_address.setVisibility(View.INVISIBLE);
-                            ll_drop_address.setVisibility(View.INVISIBLE);
-                            ll_selected_time.setVisibility(View.INVISIBLE);
-                            ll_selected_cab.setVisibility(View.INVISIBLE);
-                            BookingApplication.showCustomToast(0, jsonResponse.getString("responseMessage"), true);
+                            showCustomDialog(CODES.PAYMENT_OPTION_ACTIVITY, R.string.Booking_Status, jsonResponse.getString("responseMessage"), 0, false);
                             break;
 
                         case CODES.BOOKING_FAILED:
@@ -2498,7 +2503,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             lastLocationMarker.remove();
         if (auto_zoom) {
             mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(loc.getLatitude(), loc.getLongitude()), 18));
-            tv_address.setText(BookingApplication.currentAddress.getAddressLine(0) + BookingApplication.currentAddress.getLocality() == null ? "" : ", " + BookingApplication.currentAddress.getLocality());
+            tv_address.setText((BookingApplication.currentAddress.getAddressLine(0) + BookingApplication.currentAddress.getLocality()).trim().startsWith("null") ? "" : ", " + BookingApplication.currentAddress.getLocality());
             auto_zoom = false;
         }
     }

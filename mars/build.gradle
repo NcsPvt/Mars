@@ -28,8 +28,8 @@ android {
         resValue "string", "google_places_key", "AIzaSyARrZJY169UzIHNsYiKhj7MgalzyesqnO0"
         minSdkVersion 11
         targetSdkVersion 21
-        versionCode 38
-        versionName '1.0.38'
+        versionCode 40
+        versionName '1.0.40'
         signingConfig signingConfigs.mars_sign_config
     }
     buildTypes {
@@ -149,10 +149,16 @@ android {
         ycfrederick {
             applicationId 'itcurves.mars.ycfrederick'
             manifestPlaceholders = [applicationLabel: "Yellow Cab Frederick"]
+            resValue "string", "project_id", "649129896498"
+            resValue "string", "google_maps_api_key", "AIzaSyAMd5i1yy1PyUwVkJZGlaOM8hCfaaX5X80"
+            resValue "string", "google_places_key", "AIzaSyC9zGc5aaHsyzCidhflgWPxgQKTAVFc9MY"
         }
         ycindy {
             applicationId 'itcurves.mars.ycindy'
             manifestPlaceholders = [applicationLabel: "Yellow Cab"]
+            resValue "string", "project_id", "41140804613"
+            resValue "string", "google_maps_api_key", "AIzaSyCEQiv63Or373b2meauNXYnuc1qkOVRc-c"
+            resValue "string", "google_places_key", "AIzaSyAsT9uSPZBaoA8JcJsN3QngSWyVyZTpj6M"
         }
         ycpwc {
             applicationId 'itcurves.mars.ycpwc'

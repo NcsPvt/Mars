@@ -88,7 +88,7 @@
     <string name="drop">Soltar</string>
     <string name="pickme">¿Dónde debemos a recogerlo ?(Seleccionar a continuación)</string>
     <string name="dropme">¿Dónde debemos te deja ? (opcional )</string>
-    <string name="imready">I\'m ready at</string>
+    <string name="imready">I\'m ready </string>
     <string name="imreadynow">I\'m ready now.</string>
     <string name="sendme">Send me</string>
     <string name="nearestcab">the nearest cab</string>
@@ -276,4 +276,8 @@
     <string name="provideMobileNumber">Please Provide Mobile Number</string>
     <string name="overlayText1">•\tIf you wish to pay by Cash Only for your trips, Please press SKIP. \\n•\tIf you wish to Pay By Credit Card ~ Please register Your Credit Card by Clicking on Add Card Button.</string>
     <string name="Time">Time</string>
+    <string name="secret_question_blank">Please choose a secret question</string>
+    <string name="answer_or_check_email">Answer the question below or check your email for password reset link.</string>
+    <string name="imreadyat">I\\\'m ready at</string>
+    <string name="CallBackNumber">Callback Number</string>
 </resources>

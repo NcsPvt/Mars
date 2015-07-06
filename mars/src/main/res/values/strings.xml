@@ -90,7 +90,7 @@
     <string name="drop">Dropoff</string>
     <string name="pickme">PICK UP FROM</string>
     <string name="dropme">DROP OFF LOCATION ? (optional)</string>
-    <string name="imready">I\'m ready at</string>
+    <string name="imready">I\'m ready </string>
     <string name="imreadynow">I\'m ready now.</string>
     <string name="sendme">Send me</string>
     <string name="nearestcab">the nearest cab</string>
@@ -278,6 +278,10 @@
     <string name="provideMobileNumber">Please Provide Mobile Number</string>
     <string name="overlayText1">•	If you wish to pay by Cash Only for your trips, Please press SKIP.\n•	If you wish to Pay By Credit Card ~ Please register Your Credit Card by Clicking on Add Card Button.</string>
     <string name="Time">Time</string>
+    <string name="secret_question_blank">Please choose a secret question</string>
+    <string name="answer_or_check_email">Answer the question below\n - or -\n check your email for password reset link.</string>
+    <string name="imreadyat">وأنا على استعداد في</string>
+    <string name="CallBackNumber">Callback Number</string>
 
 
 </resources>

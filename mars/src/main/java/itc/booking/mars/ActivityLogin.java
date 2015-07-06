@@ -17,7 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntity;
@@ -34,7 +33,7 @@ import itcurves.mars.R;
 
 public class ActivityLogin extends Activity implements CallbackResponseListener {
 
-    LinearLayout ll_register_signin_buttons, forgotPasswordViews, registerViews;
+    LinearLayout ll_phone_number, ll_register_signin_buttons, forgotPasswordViews, registerViews;
     Button btn_login, btn_register;
     CheckBox showNumberToDrivers, cb_Terms;
     TextView forgot_password, tv_secret_question, lbl_OR, termOfUse;
@@ -54,7 +53,7 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
             BookingApplication.performForgotPassword(phoneNumber, this);
         else {
             userPhone.setError(getResources().getString(R.string.invalid_phone_number));
-            Toast.makeText(ActivityLogin.this, R.string.invalid_phone_number, Toast.LENGTH_SHORT).show();
+            BookingApplication.showCustomToast(R.string.invalid_phone_number, "", true);
         }
     }
 
@@ -68,15 +67,15 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
                     BookingApplication.performResetPassword(phoneNumber, secret_answer_recovery.getText().toString(), password, this);
                 } else {
                     confirm_new_password.setError(getResources().getString(R.string.invalid_password_match));
-                    Toast.makeText(ActivityLogin.this, R.string.invalid_password_match, Toast.LENGTH_SHORT).show();
+                    BookingApplication.showCustomToast(R.string.invalid_password_match, "", true);
                 }
             else {
                 loginPass.setError(getResources().getString(R.string.invalid_password_length));
-                Toast.makeText(ActivityLogin.this, R.string.invalid_password_length, Toast.LENGTH_SHORT).show();
+                BookingApplication.showCustomToast(R.string.invalid_password_length, "", true);
             }
         else {
             userPhone.setError(getResources().getString(R.string.invalid_phone_number));
-            Toast.makeText(ActivityLogin.this, R.string.invalid_phone_number, Toast.LENGTH_SHORT).show();
+            BookingApplication.showCustomToast(R.string.invalid_phone_number, "", true);
         }
 
     }
@@ -88,25 +87,27 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
                 if (BookingApplication.isValidPhone(cc.getText().toString().trim(), userPhone.getText().toString().trim()))
                     if (loginPass.getText().toString().length() > 3)
                         if (repeatPass.getText().toString().equals(loginPass.getText().toString()))
-                            if (cb_Terms.isChecked()) {
-                                phoneNumber = "+" + cc.getText().toString().trim() + userPhone.getText().toString().trim();
-                                password = loginPass.getText().toString();
-                                repeatPass.setError(null);
-                                BookingApplication.performRegister(phoneNumber, Boolean.toString(showNumberToDrivers.isChecked()), password, fullName.getText().toString(), email.getText().toString(), secretQuestion.getSelectedItemPosition() > 0 ? secretQuestion.getSelectedItem().toString()
-                                        : "", secretAnswer.getText().toString(), this);
-                            } else
-                                Toast.makeText(ActivityLogin.this, R.string.AcceptTerms, Toast.LENGTH_SHORT).show();
+                            if (secretQuestion.getSelectedItemPosition() > 0)
+                                if (cb_Terms.isChecked()) {
+                                    phoneNumber = "+" + cc.getText().toString().trim() + userPhone.getText().toString().trim();
+                                    password = loginPass.getText().toString();
+                                    repeatPass.setError(null);
+                                    BookingApplication.performRegister(phoneNumber, Boolean.toString(showNumberToDrivers.isChecked()), password, fullName.getText().toString(), email.getText().toString(), secretQuestion.getSelectedItem().toString(), secretAnswer.getText().toString(), this);
+                                } else
+                                    BookingApplication.showCustomToast(R.string.AcceptTerms, "", true);
+                            else
+                                BookingApplication.showCustomToast(R.string.secret_question_blank, "", true);
                         else {
                             repeatPass.setError(getResources().getString(R.string.invalid_password_match));
-                            Toast.makeText(ActivityLogin.this, R.string.invalid_password_match, Toast.LENGTH_SHORT).show();
+                            BookingApplication.showCustomToast(R.string.invalid_password_match, "", true);
                         }
                     else {
                         loginPass.setError(getResources().getString(R.string.invalid_password_length));
-                        Toast.makeText(ActivityLogin.this, R.string.invalid_password_length, Toast.LENGTH_SHORT).show();
+                        BookingApplication.showCustomToast(R.string.invalid_password_length, "", true);
                     }
                 else {
                     userPhone.setError(getResources().getString(R.string.invalid_phone_number));
-                    Toast.makeText(ActivityLogin.this, R.string.invalid_phone_number, Toast.LENGTH_SHORT).show();
+                    BookingApplication.showCustomToast(R.string.invalid_phone_number, "", true);
                 }
             } else {
                 loginPass.setHint(R.string.New_password);
@@ -117,7 +118,7 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
                 lbl_OR.setVisibility(View.GONE);
             }
         } catch (Exception e) {
-            Toast.makeText(ActivityLogin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            BookingApplication.showCustomToast(0, e.getMessage(), true);
         }
     }
 
@@ -133,25 +134,29 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
                     BookingApplication.performLogin(phoneNumber, password, BookingApplication.code, this);
                 } else {
                     loginPass.setError(getResources().getString(R.string.invalid_password_length));
-                    Toast.makeText(ActivityLogin.this, R.string.invalid_password_length, Toast.LENGTH_SHORT).show();
+                    BookingApplication.showCustomToast(R.string.invalid_password_length, "", true);
                 }
             else {
                 userPhone.setError(getResources().getString(R.string.invalid_phone_number));
-                Toast.makeText(ActivityLogin.this, R.string.invalid_phone_number, Toast.LENGTH_SHORT).show();
+                BookingApplication.showCustomToast(R.string.invalid_phone_number, "", true);
             }
         } catch (Exception e) {
-            Toast.makeText(ActivityLogin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            BookingApplication.showCustomToast(0, e.getMessage(), true);
         }
     }
 
     /*------------------------------------------------- onBackPressed ----------------------------------------------------------------*/
     @Override
     public void onBackPressed() {
-        if (registerViews.getVisibility() == View.VISIBLE) {
+        if (registerViews.getVisibility() == View.VISIBLE || forgotPasswordViews.getVisibility() == View.VISIBLE) {
             loginPass.setHint(R.string.password);
             registerViews.setVisibility(View.GONE);
-            forgot_password.setVisibility(View.VISIBLE);
             showNumberToDrivers.setVisibility(View.GONE);
+            forgotPasswordViews.setVisibility(View.GONE);
+            preferedLanguage.setVisibility(View.VISIBLE);
+            ll_phone_number.setVisibility(View.VISIBLE);
+            forgot_password.setVisibility(View.VISIBLE);
+            ll_register_signin_buttons.setVisibility(View.VISIBLE);
             btn_login.setVisibility(View.VISIBLE);
             lbl_OR.setVisibility(View.VISIBLE);
         } else {
@@ -191,6 +196,7 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
                     scrollview_login.scrollTo(0, 400 + v.getHeight() * 2);
             }
         });
+        ll_phone_number = (LinearLayout) findViewById(R.id.ll_phone_number);
         ll_register_signin_buttons = (LinearLayout) findViewById(R.id.ll_register_signin_buttons);
         registerViews = (LinearLayout) findViewById(R.id.registerViews);
         forgotPasswordViews = (LinearLayout) findViewById(R.id.forgotPasswordViews);
@@ -328,14 +334,14 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
 
                             BookingApplication.userInfoPrefs.edit().putString("UserID", jsonResponse.getString("UserID")).commit();
                             if (BookingApplication.bsendsms) {
-                                Toast.makeText(ActivityLogin.this, jsonResponse.getString("ReasonPhrase"), Toast.LENGTH_LONG).show();
+                                BookingApplication.showCustomToast(0, jsonResponse.getString("ReasonPhrase"), true);
                                 BookingApplication.showVerificationScreen(ActivityLogin.this);
                             } else {
                                 BookingApplication.code = jsonResponse.getString("ReasonPhrase");
                                 BookingApplication.performPostActivation(BookingApplication.code, "", phoneNumber);
                             }
                         } else
-                            Toast.makeText(ActivityLogin.this, jsonResponse.getString("ReasonPhrase"), Toast.LENGTH_LONG).show();
+                            BookingApplication.showCustomToast(0, jsonResponse.getString("ReasonPhrase"), true);
 
                 } catch (JSONException e) {
                     BookingApplication.showLoginScreen(ActivityLogin.this);
@@ -370,15 +376,17 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
                     try {
                         if (jsonResponse.has("vSecretQuestion")) {
                             forgotPasswordViews.setVisibility(View.VISIBLE);
+                            preferedLanguage.setVisibility(View.GONE);
+                            ll_phone_number.setVisibility(View.GONE);
                             forgot_password.setVisibility(View.GONE);
                             ll_register_signin_buttons.setVisibility(View.GONE);
                             registerViews.setVisibility(View.GONE);
                             tv_secret_question.setText(jsonResponse.getString("vSecretQuestion"));
                             loginPass.setHint(R.string.New_password);
                         } else
-                            Toast.makeText(ActivityLogin.this, R.string.contact_backoffice, Toast.LENGTH_SHORT).show();
+                            BookingApplication.showCustomToast(R.string.contact_backoffice, "", true);
                     } catch (JSONException e) {
-                        Toast.makeText(ActivityLogin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        BookingApplication.showCustomToast(0, e.getMessage(), true);
                     }
                 break;
 
@@ -387,14 +395,11 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
                     try {
                         confirm_new_password.setText("");
                         secret_answer_recovery.setText("");
-                        forgotPasswordViews.setVisibility(View.GONE);
-                        forgot_password.setVisibility(View.VISIBLE);
-                        ll_register_signin_buttons.setVisibility(View.VISIBLE);
-                        loginPass.setText("");
                         if (jsonResponse.has("responseMessage"))
-                            Toast.makeText(ActivityLogin.this, jsonResponse.getString("responseMessage"), Toast.LENGTH_SHORT).show();
+                            BookingApplication.showCustomToast(0, jsonResponse.getString("responseMessage"), false);
+                        ITC_Login(null);
                     } catch (JSONException e) {
-                        Toast.makeText(ActivityLogin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        BookingApplication.showCustomToast(0, e.getMessage(), true);
                     }
                 break;
 
@@ -404,7 +409,7 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
 
     private void updateTexts() {
         userPhone.setHint(R.string.Phone_number);
-        loginPass.setHint(R.string.New_password);
+        loginPass.setHint(R.string.password);
         forgot_password.setText(R.string.Forgot_Password);
         btn_login.setText(R.string.login_signin);
         lbl_OR.setText(R.string.OR);

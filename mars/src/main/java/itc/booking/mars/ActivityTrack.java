@@ -386,6 +386,8 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                         currVehicle.setLatlong(new LatLng(driver.getDouble("Latitude"), driver.getDouble("Longitude")));
                     }
 
+                    currVehicle.companyLogo = jsonResponse.getString("BottomLogoLink");
+
                     currVehicle.driverPicture = driver.getString("DriverPicture");
                     currVehicle.driverName = driver.getString("DriverName");
                     currVehicle.iAffiliateID = driver.getInt("iAffiliateID");
@@ -414,8 +416,6 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                         showVehicleBaloon();
                     }
                 }
-
-                currVehicle.companyLogo = jsonResponse.getString("BottomLogoLink");
 
                 switch (jsonResponse.getInt("requestStatusCode")) {
                     case BookingApplication.CODES.BOOKING_SUCCESS:

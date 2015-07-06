@@ -6,7 +6,7 @@ import android.os.Build;
 import java.util.Calendar;
 import java.util.TimeZone;
 
-public class Trip {
+public class Trip implements Comparable<Trip> {
 
     public String tripType;        //CURR   FUT   REC
     public String PaymentType;    //cash   credit card
@@ -28,11 +28,11 @@ public class Trip {
     protected String DOstate;
     protected String DOZip;
     protected String DOcountry;
-    int companyID;
-    int vehTypeID;
-    int vehID;
-    String vehNo;
-    int etiquetteRating, taxiLateRating, cleanlinessRating, serviceRating;
+    protected int companyID;
+    protected int vehTypeID;
+    protected int vehID;
+    protected String vehNo;
+    protected int etiquetteRating, taxiLateRating, cleanlinessRating, serviceRating;
     protected Calendar PUDateTime;
 
     protected String state;
@@ -133,4 +133,20 @@ public class Trip {
         return java.util.Objects.hashCode(this.iServiceID);
     }
 
+    /**
+     * Compares this object to the specified object to determine their relative
+     * order.
+     *
+     * @param another the object to compare to this instance.
+     * @return a negative integer if this instance is less than {@code another};
+     * a positive integer if this instance is greater than
+     * {@code another}; 0 if this instance has the same order as
+     * {@code another}.
+     * @throws ClassCastException if {@code another} cannot be converted into something
+     *                            comparable to {@code this} instance.
+     */
+    @Override
+    public int compareTo(Trip another) {
+        return PUDateTime.compareTo(another.PUDateTime);
+    }
 }

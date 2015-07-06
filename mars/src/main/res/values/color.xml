@@ -45,7 +45,7 @@
     <color name="mars_red">#EE0000</color>
     <color name="mars_blue">#2149ad</color>
     <color name="mars_green">#9acd32</color>
-    <color name="mars_yellow">#ff8800</color>
+    <color name="mars_yellow">#ffff9900</color>
     <color name="mars_purple">#AA66CC</color>
     <color name="mars_cyan">#00AFF0</color>
 </resources>

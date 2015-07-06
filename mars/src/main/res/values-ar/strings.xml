@@ -286,5 +286,9 @@
     <string name="provideCompanyWebsite">Please Provide Mobile Number</string>
     <string name="overlayText1">• لو ترغب بالدفع نقدا فقط لرحلتك – الرجاء الضغط على تجاهل.\n • لو ترغب بالدفع بواسطة بطاقة الائتمان – الرجاء تسجيل بطاقتك الائتمانية بواسطة الضغط على تسجيل بطاقة الائتمان.\n •</string>
     <string name="Time">Time</string>
+    <string name="secret_question_blank">Please choose a secret question</string>
+    <string name="answer_or_check_email">Answer the question below or check your email for password reset link.</string>
+    <string name="imreadyat">I\\\'m ready at</string>
+    <string name="CallBackNumber">Callback Number</string>
 
 </resources>
