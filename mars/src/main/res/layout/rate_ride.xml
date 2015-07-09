@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mess"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="15.0dp"
+    android:paddingLeft="5.0dp"
+    android:paddingRight="5.0dp"
+    android:paddingTop="5.0dp">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_silver"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/ShareExperience"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size20" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dp"
+            android:layout_marginTop="5.0dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/rating_service"
+                style="@style/customratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:max="5"
+                android:minWidth="100.0dp"
+                android:numStars="5"
+                android:progress="5"
+                android:rating="1"
+                android:stepSize="1" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="@string/Service_Quality"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dp"
+            android:layout_marginTop="5.0dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/rating_clean"
+                style="@style/customratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:max="5"
+                android:minWidth="100.0dp"
+                android:numStars="5"
+                android:progress="5"
+                android:rating="1.0"
+                android:stepSize="1" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="@string/Cleanliness"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dp"
+            android:layout_marginTop="5.0dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/rating_etiquette"
+                style="@style/customratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:max="5"
+                android:minWidth="100.0dp"
+                android:numStars="5"
+                android:progress="5"
+                android:rating="1.0"
+                android:stepSize="1" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="@string/Etiquettes"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dp"
+            android:layout_marginTop="5.0dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/rating_TaxiOnTime"
+                style="@style/customratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:max="5"
+                android:minWidth="100.0dp"
+                android:numStars="5"
+                android:progress="5"
+                android:rating="1.0"
+                android:stepSize="1" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="@string/TaxiOnTime"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size14" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/comments"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_check_box"
+        android:gravity="left"
+        android:hint="@string/Comments"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size12" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel_rating"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_yellow"
+            android:onClick="Cancel_Rating"
+            android:text="@string/Cancel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+
+        <Button
+            android:id="@+id/btn_submit_rating"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_yellow"
+            android:onClick="Submit_Rating"
+            android:text="@string/SUBMIT"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+    </LinearLayout>
+</LinearLayout>
