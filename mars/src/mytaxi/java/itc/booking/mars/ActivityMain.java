@@ -239,7 +239,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         datePicker1 = (DatePicker) findViewById(R.id.datePicker1);
         et_pickup_person_name = (EditText) findViewById(R.id.et_pickup_person_name);
         et_callback_number = (EditText) findViewById(R.id.et_callback_number);
-        et_callback_number.setText(BookingApplication.getUserSimNumber());
+        et_callback_number.setText("");
         et_driver_notes = (EditText) findViewById(R.id.et_driver_notes);
         tv_fare_estimate = (TextView) findViewById(R.id.tv_fare_estimate);
         tv_mile_estimate = (TextView) findViewById(R.id.tv_mile_estimate);
@@ -661,7 +661,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             //trip_requested.companyID = BookingApplication.getAffiliateIDFromDB(ActivityMain.this, spinner_affiliates.getSelectedItem().toString());
             //trip_requested.vehTypeID = BookingApplication.getVehicleIDFromDB(ActivityMain.this, spinner_vehicles.getSelectedItem().toString());
             trip_requested.callbackName = et_pickup_person_name.getText().toString().length() > 0 ? et_pickup_person_name.getText().toString() : BookingApplication.userName;
-            trip_requested.callbackNumber = et_callback_number.getText().toString();
+            trip_requested.callbackNumber = et_callback_number.getText().toString().trim().length()>7?et_callback_number.getText().toString():BookingApplication.getUserSimNumber();
             trip_requested.otherInfo = et_driver_notes.getText().toString();
 
             if (dropMarker != null) {
@@ -2353,7 +2353,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         pointer.setVisibility(View.VISIBLE);
         et_driver_notes.setText("");
         et_pickup_person_name.setText("");
-        et_callback_number.setText(BookingApplication.getUserSimNumber());
+        et_callback_number.setText("");
         tv_refresh.setText(R.string.Help_Mark);
         tv_refresh.setBackgroundResource(BookingApplication.textView_Background);
         SpannableString ss1=  new SpannableString(getResources().getString(R.string.pickme));

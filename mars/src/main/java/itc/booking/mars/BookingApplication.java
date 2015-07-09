@@ -1194,8 +1194,9 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                 outEntity.addPart("classofserviceid", new StringBody(Integer.toString(p.classofserviceid), Charset.forName("UTF-8")));
 
                 if (p.tripType.equalsIgnoreCase("FUT"))
-                    //inFormat1.setTimeZone(TimeZone.getTimeZone("UTC"));
                     outEntity.addPart("pickdatetime", new StringBody(inFormat1.format(p.PUDateTime.getTime()), Charset.forName("UTF-8")));
+                else if (p.tripType.equalsIgnoreCase("CURR"))
+                    outEntity.addPart("nearbyvehicles", new StringBody(nearByVehicles.toString(), Charset.forName("UTF-8")));
 
                 if (p.PaymentType.equals("cash") || p.signatureUrl.length() == 0)
                     outEntity.addPart("signature", new StringBody(""));
@@ -1603,6 +1604,9 @@ public class BookingApplication extends Application implements GoogleApiClient.C
             outEntity.addPart("noofluggage", new StringBody(Integer.toString(p.bagsCount), Charset.forName("UTF-8")));
             outEntity.addPart("bisexclusive", new StringBody(Boolean.toString(p.exclusiveRide), Charset.forName("UTF-8")));
             outEntity.addPart("classofserviceid", new StringBody(Integer.toString(p.classofserviceid), Charset.forName("UTF-8")));
+
+            if (p.tripType.equalsIgnoreCase("CURR"))
+                outEntity.addPart("nearbyvehicles", new StringBody(nearByVehicles.toString(), Charset.forName("UTF-8")));
 
             ITCWebService removeTask = (new BookingApplication()).new ITCWebService();
             removeTask.apiCalled = APIs.GETFAREINFO;
@@ -2364,7 +2368,7 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                                 if (JSONResp.has("Vehicles")) {
                                     jsonArray = JSONResp.getJSONArray("Vehicles");
                                     nearByVehicles.clear();
-                                    if (jsonArray.length() > 0)
+                                    if (jsonArray.length() > 0) {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             tempObj = jsonArray.getJSONObject(i);
                                             NearbyVehicle nbv = new NearbyVehicle(tempObj.getString("VehicleColor"), new LatLng(tempObj.getDouble("Latitude"), tempObj.getDouble("Longitude")));
@@ -2394,7 +2398,8 @@ public class BookingApplication extends Application implements GoogleApiClient.C
 
                                             nearByVehicles.add(nbv);
                                         }
-                                        //drawNearByVehicles();
+                                        //nearByVehicles.toString();
+                                    }
                                     else
                                         showCustomToast(R.string.No_nearbyvehicle_available, "", false);
                                 }

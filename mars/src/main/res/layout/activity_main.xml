@@ -30,7 +30,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_margin="1dp"
-                android:src="@drawable/launcher_icon"></ImageView>
+                android:src="@drawable/launcher_icon" />
 
             <ImageView
                 android:id="@+id/iv_menu"
@@ -41,7 +41,7 @@
                 android:background="@color/mars_yellow"
                 android:onClick="showMenuView"
                 android:padding="-1dp"
-                android:src="@drawable/menu"></ImageView>
+                android:src="@drawable/menu" />
 
             <ImageView
                 android:id="@+id/iv_home"
@@ -52,7 +52,7 @@
                 android:layout_toRightOf="@id/iv_menu"
                 android:background="@color/mars_yellow"
                 android:onClick="showHomeScreen"
-                android:src="@drawable/home"></ImageView>
+                android:src="@drawable/home" />
 
             <TextView
                 android:id="@+id/tv_refresh"
@@ -72,7 +72,7 @@
                 android:textColor="@color/mars_yellow"
                 android:textSize="@dimen/size10"
                 android:textStyle="bold"
-                android:typeface="serif"></TextView>
+                android:typeface="serif" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -128,20 +128,20 @@
 
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:text="@string/PickupLocation"
                         android:textColor="@color/white"
                         android:textSize="@dimen/size14"
-                        android:textStyle="bold"></TextView>
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btn_pick_notes"
@@ -189,20 +189,20 @@
 
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
                         android:text="@string/DropLocation"
                         android:textColor="@color/white"
                         android:textSize="@dimen/size14"
-                        android:textStyle="bold"></TextView>
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btn_drop_notes"
@@ -317,7 +317,7 @@
                         android:text="@string/pickme"
                         android:textColor="@color/black"
                         android:textSize="@dimen/size9"
-                        android:textStyle="bold"></TextView>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_address"
@@ -327,7 +327,7 @@
                         android:text="@string/getting_address"
                         android:textColor="@color/black"
                         android:textSize="@dimen/size8"
-                        android:typeface="serif"></TextView>
+                        android:typeface="serif" />
                 </LinearLayout>
             </RelativeLayout>
 
@@ -351,7 +351,7 @@
                     android:text="@string/imreadyat"
                     android:textColor="@color/white"
                     android:textSize="@dimen/size14"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_selected_time"
@@ -361,7 +361,7 @@
                     android:singleLine="true"
                     android:textColor="@color/white"
                     android:textSize="@dimen/size10"
-                    android:typeface="serif"></TextView>
+                    android:typeface="serif" />
             </LinearLayout>
 
             <LinearLayout
@@ -383,7 +383,7 @@
                     android:text="@string/sendme"
                     android:textColor="@color/white"
                     android:textSize="@dimen/size14"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_selected_cab"
@@ -394,7 +394,7 @@
                     android:text="@string/nearestcab"
                     android:textColor="@color/white"
                     android:textSize="@dimen/size10"
-                    android:typeface="serif"></TextView>
+                    android:typeface="serif" />
             </LinearLayout>
 
             <LinearLayout
@@ -415,7 +415,7 @@
                     android:paddingBottom="5dp">
 
                     <LinearLayout
-                        android:layout_width="fill_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
@@ -423,14 +423,14 @@
                         <TextView
                             android:id="@+id/tv_fare_estimate"
                             android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="0dp"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:maxLines="2"
                             android:text="@string/yourfare"
                             android:textColor="@color/black"
                             android:textSize="@dimen/size12"
-                            android:textStyle="bold"></TextView>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv_mile_estimate"
@@ -440,7 +440,7 @@
                             android:singleLine="true"
                             android:textColor="@color/black"
                             android:textSize="@dimen/size10"
-                            android:typeface="serif"></TextView>
+                            android:typeface="serif" />
 
                     </LinearLayout>
 
@@ -452,7 +452,7 @@
                         android:background="@drawable/mars_center_btn_selector"
                         android:onClick="showPromoDialog"
                         android:padding="-1dp"
-                        android:src="@drawable/menu"></ImageView>
+                        android:src="@drawable/menu" />
                 </LinearLayout>
 
                 <View
@@ -467,15 +467,16 @@
 
                     <EditText
                         android:id="@+id/et_pickup_person_name"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0.0dp"
                         android:layout_height="fill_parent"
+                        android:layout_weight="1"
                         android:gravity="left"
                         android:hint="Name of  person / Food / Packge"
                         android:singleLine="true"
                         android:textColor="@color/black"
                         android:textSize="@dimen/size10"
                         android:typeface="sans"
-                        android:visibility="visible"></EditText>
+                        android:visibility="visible" />
 
 
                     <EditText
@@ -483,7 +484,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:layout_gravity="right"
-                        android:gravity="left"
+                        android:gravity="center"
                         android:hint="@string/CallBackNumber"
                         android:inputType="phone"
                         android:onClick="AddDriverNotes"
@@ -491,7 +492,7 @@
                         android:textColor="@color/black"
                         android:textSize="@dimen/size10"
                         android:typeface="sans"
-                        android:visibility="visible"></EditText>
+                        android:visibility="visible" />
                 </LinearLayout>
 
                 <EditText
@@ -504,7 +505,7 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/size10"
                     android:typeface="serif"
-                    android:visibility="gone"></EditText>
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -531,7 +532,7 @@
                             android:text="@string/Paywith"
                             android:textColor="@color/black"
                             android:textSize="@dimen/size14"
-                            android:textStyle="bold"></TextView>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tv_endingWih"
@@ -542,7 +543,7 @@
                             android:text="@string/EndingIn"
                             android:textColor="@color/black"
                             android:textSize="@dimen/size10"
-                            android:typeface="serif"></TextView>
+                            android:typeface="serif" />
                     </LinearLayout>
 
                     <ImageView
@@ -554,7 +555,7 @@
                         android:background="@drawable/mars_center_btn_selector"
                         android:onClick="confirm_Payment"
                         android:padding="-1dp"
-                        android:src="@drawable/menu"></ImageView>
+                        android:src="@drawable/menu" />
                 </LinearLayout>
 
                 <View
@@ -597,7 +598,7 @@
                     android:text="@string/PayInCab"
                     android:textColor="@color/black"
                     android:textSize="@dimen/size14"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
@@ -614,6 +615,8 @@
                 android:paddingRight="@dimen/size10"
                 android:paddingTop="5dp"
                 android:text="Promotions\nAvailable"
+                android:clickable="true"
+                android:onClick="showPromoDialog"
                 android:visibility="gone" />
 
             <LinearLayout

@@ -54,9 +54,9 @@ import itcurves.mars.R;
 public class ActivityTrack extends FragmentActivity implements CallbackResponseListener {
 
     /*-----------------------------------------------------------------------------------------------------------------------------------------------
-     *---------------------------------------------------------- DrawPathTask AsyncTask ------------------------------------------------------------
-     *-----------------------------------------------------------------------------------------------------------------------------------------------
-     */
+         *---------------------------------------------------------- DrawPathTask AsyncTask ------------------------------------------------------------
+         *-----------------------------------------------------------------------------------------------------------------------------------------------
+         */
     private class DrawPathTask extends AsyncTask<LatLng, Void, ArrayList<LatLng>> {
 
         private Polyline pathLine;
@@ -88,6 +88,9 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                 else
                     eta.setText(getResources().getString(R.string.ETA, mapDirections.getDurationText(routeDoc)));
 
+                tv_Distance.setText(mapDirections.getDistanceText(routeDoc));
+                tv_travel_time.setText(mapDirections.getDurationText(routeDoc));
+
                 if (autozoom) {
                     autozoom = false;
                     mapFragment.animateCamera(CameraUpdateFactory.newLatLngBounds(boundsBuilder.build(), 130));
@@ -111,9 +114,9 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
     Button btn_call, bt_cancel;
     Timer requestStatustimer = new Timer();
     MediaPlayer callout_Sound;
-    LinearLayout ll_rating, vehicle_balloon;
+    LinearLayout ll_rating, vehicle_balloon, payment_receipt;
     RelativeLayout rl_top;
-    TextView header, eta, comments;
+    TextView header, eta, comments, tv_Distance, tv_travel_time, tv_total_fare;
     RatingBar rating_service, rating_clean, rating_etiquette, rating_TaxiOnTime;
     private LatLngBounds.Builder boundsBuilder;
 
@@ -140,7 +143,10 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
         bt_cancel = (Button) findViewById(R.id.bt_cancel);
         rl_top = (RelativeLayout) findViewById(R.id.rl_top);
         vehicle_balloon = (LinearLayout) findViewById(R.id.vehicle_balloon_track_screen);
-
+        payment_receipt = (LinearLayout) findViewById(R.id.payment_receipt);
+        tv_Distance = (TextView) findViewById(R.id.tvDistance);
+        tv_travel_time = (TextView) findViewById(R.id.tv_travel_time);
+        tv_total_fare = (TextView) findViewById(R.id.tv_total_fare);
         rating_service = (RatingBar) findViewById(R.id.rating_service);
         rating_clean = (RatingBar) findViewById(R.id.rating_clean);
         rating_etiquette = (RatingBar) findViewById(R.id.rating_etiquette);
@@ -163,6 +169,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
         mapDirections = new GMapV2Direction();
         mapFragment = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapview_track)).getMap();
         mapFragment.getUiSettings().setZoomControlsEnabled(false);
+        mapFragment.setPadding(0, 0, 0, (int) (BookingApplication.screenHeight / 2.5) + 10);
 
         mapFragment.setOnMarkerClickListener(new OnMarkerClickListener() {
 
@@ -197,9 +204,13 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
             @Override
             public void onCameraChange(final CameraPosition position) {
 
-                int cameraY = mapFragment.getProjection().toScreenLocation(mapFragment.getCameraPosition().target).y;
-                vehicle_balloon.setY(cameraY - vehicle_balloon.getHeight() + rl_top.getHeight());
-
+//                if(payment_receipt.getVisibility() == View.VISIBLE)
+//                {
+//                    vehicle_balloon.setY(payment_receipt.getY() - vehicle_balloon.getHeight() + rl_top.getHeight());
+//                }else {
+//                    int cameraY = mapFragment.getProjection().toScreenLocation(mapFragment.getCameraPosition().target).y;
+//                    vehicle_balloon.setY(cameraY - vehicle_balloon.getHeight() + rl_top.getHeight());
+//                }
             }
         });
 
@@ -412,7 +423,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                     vehicleMarker = mapFragment.addMarker(currVehicle.vehMarker);
                     if (autozoom) {
                         autozoom = false;
-                        mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(currVehicle.getLatlong(), 16));
+                        mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(currVehicle.getLatlong(), 14));
                         showVehicleBaloon();
                     }
                 }
@@ -427,7 +438,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                                 (new DrawPathTask()).execute(pickMarker.getPosition(), vehicleMarker.getPosition());
                             else if (autozoom) {
                                 autozoom = false;
-                                mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 16));
+                                mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 18));
                             }
                         } else if (jsonResponse.getString("requestStatus").equalsIgnoreCase("CALLOUT")) {
                             callout_Sound.start();
@@ -511,18 +522,19 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                         eta.setVisibility(View.GONE);
                         bt_cancel.setVisibility(View.GONE);
 
+                        tv_total_fare.setText(jsonResponse.getString("fareEstimate"));
 
-                        if (!rateLater)
-                            if (!ll_rating.isShown()) {
-                                Animation inAnim = AnimationUtils.loadAnimation(ActivityTrack.this, R.anim.slide_in_bottom);
-                                ll_rating.startAnimation(inAnim);
-                                ll_rating.setVisibility(View.VISIBLE);
-                            }
+                        //if (!rateLater)
+                        // if (!ll_rating.isShown()) {
+                        Animation inAnim = AnimationUtils.loadAnimation(ActivityTrack.this, R.anim.slide_in_bottom);
+                        payment_receipt.startAnimation(inAnim);
+                        payment_receipt.setVisibility(View.VISIBLE);
+                        //}
 
                         if (dropMarker != null) {
                             (new DrawPathTask()).execute(pickMarker.getPosition(), dropMarker.getPosition());
                         } else
-                            mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 16));
+                            mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 18));
 
                         showCustomDialog(BookingApplication.CODES.TRIP_SERVED, getApplicationContext().getApplicationInfo().name, jsonResponse.getString("responseMessage"), 0, false);
 
@@ -540,6 +552,16 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
             tempTrip.iServiceID = iServiceID;
             BookingApplication.recentTrips.remove(tempTrip);
             finish();
+        }
+    }
+
+    /*---------------------------------------------- Rate_Ride ---------------------------------------------------------------------------------*/
+    public void Rate_Ride(View view) {
+
+        if (!ll_rating.isShown()) {
+            Animation inAnim = AnimationUtils.loadAnimation(ActivityTrack.this, R.anim.slide_in_bottom);
+            ll_rating.startAnimation(inAnim);
+            ll_rating.setVisibility(View.VISIBLE);
         }
     }
 

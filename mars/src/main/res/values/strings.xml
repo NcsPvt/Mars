@@ -280,8 +280,8 @@
     <string name="Time">Time</string>
     <string name="secret_question_blank">Please choose a secret question</string>
     <string name="answer_or_check_email">Answer the question below\n - or -\n check your email for password reset link.</string>
-    <string name="imreadyat">وأنا على استعداد في</string>
     <string name="CallBackNumber">Callback Number</string>
+    <string name="imreadyat">I\\\'m ready at</string>
 
 
 </resources>
