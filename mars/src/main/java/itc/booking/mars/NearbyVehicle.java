@@ -132,6 +132,11 @@ public class NearbyVehicle {
     }
 
     @Override
+    public String toString() {
+        return Integer.toString(iVehicleID);
+    }
+
+    @Override
     public boolean equals(Object obj) {
         Boolean result = false;
         if (obj instanceof NearbyVehicle) {

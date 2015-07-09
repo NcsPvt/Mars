@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -39,16 +40,17 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
     private AutoCompleteTextView profile_email;
     private Spinner preferedLanguage, profile_secret_question, spinner_prefered_company;
     private CheckBox cb_showNumberToDriver, isExclusive;
-    private TextView profile_phone, profile_marsID;
+    private TextView language_lbl, profile_phone, profile_marsID;
     private EditText profile_fullname, profile_user_password, profile_new_password, profile_repeatNew_password, profile_secret_answer;
     private ImageView iv_changePassword;
+    private Button saveBtn;
     private JSONArray jsonArray;
     private JSONObject tempObject;
     protected String tspPreferrence = "None";
     protected String tspID = "0";
     private LinearLayout preferredCompanyRow;
     int spinnerLastPosition = 0;
-
+    int questionsIterator = -1;
     public static ArrayList<TSPs> tsplist = new ArrayList<TSPs>();
     public static ArrayList<String> tspListNames = new ArrayList<String>();
 
@@ -154,8 +156,8 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
                         break;
                 }
                 BookingApplication.setMyLanguage(BookingApplication.selected_lang);
-                //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-                //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                updateTexts();
+
             }
 
             @Override
@@ -164,6 +166,7 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
             }
         });
 
+        language_lbl = (TextView) findViewById(R.id.language_lbl);
         profile_phone = (TextView) findViewById(R.id.profile_phone_number);
         profile_phone.setText(BookingApplication.phoneNumber);
         profile_marsID = (TextView) findViewById(R.id.profile_marsid);
@@ -188,6 +191,7 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
             }
         });
 
+        saveBtn = (Button) findViewById(R.id.btn_Register);
         ArrayAdapter<String> emailAdapter = new ArrayAdapter<String>(ActivityProfile.this, android.R.layout.simple_spinner_dropdown_item, BookingApplication.possibleEmail);
         profile_email.setAdapter(emailAdapter);
 
@@ -259,11 +263,11 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
                     profile_secret_answer.setText(jsonResponse.getString("vSecretAnswer"));
                     String[] questionsArray = getResources().getStringArray(R.array.questions);
                     int i;
-                    for (i = 0; i < questionsArray.length; i++)
-                        if (questionsArray[i].equalsIgnoreCase(jsonResponse.getString("vSecretQuestion")))
+                    for (questionsIterator = 0; questionsIterator < questionsArray.length; questionsIterator++)
+                        if (questionsArray[questionsIterator].equalsIgnoreCase(jsonResponse.getString("vSecretQuestion")))
                             break;
-                    if (i < questionsArray.length)
-                        profile_secret_question.setSelection(i);
+                    if (questionsIterator < questionsArray.length)
+                        profile_secret_question.setSelection(questionsIterator);
 
                     if (jsonResponse.has("Affiliates")) {
                         jsonArray = jsonResponse.getJSONArray("Affiliates");
@@ -296,5 +300,26 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
                 break;
             }//FETCHPROFILE
         }
+    }
+
+    private void updateTexts() {
+        cb_showNumberToDriver.setText(R.string.showNumber);
+        language_lbl.setText(R.string.Language);
+        profile_fullname.setHint(R.string.Full_name);
+        profile_user_password.setHint(R.string.password);
+        profile_secret_answer.setHint(R.string.secret_answer);
+
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this, R.array.questions, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        profile_secret_question.setAdapter(adapter);
+
+
+        if (questionsIterator > -1)
+            profile_secret_question.setSelection(questionsIterator);
+
+        saveBtn.setText(R.string.Save);
+
     }
 }

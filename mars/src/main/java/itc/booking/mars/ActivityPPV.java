@@ -29,6 +29,7 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
     private TextView voucherHeader, creditHeader, availableBalance;
     private EditText voucherNumber, topUpAmount;
     private static String topUPAmt = "";
+    private static boolean checkBal = false;
 
     @Override
     /*------------------------------------------------- onCreate ---------------------------------------------------------------------*/
@@ -58,6 +59,13 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
     @Override
     protected void onResume() {
         super.onResume();
+        checkBalance();
+    }
+
+    /*---------------------------------------------- checkBalance -------------------------------------------------------------------------------------*/
+    public void checkBalance() {
+        checkBal = true;
+        BookingApplication.topUpBalance("00000000000000", BookingApplication.phoneNumber, BookingApplication.CompanyID, this);
 
     }
 
@@ -95,6 +103,9 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
                             BookingApplication.availableBalance = jsonResponse.getString("UpdatedAmount");
                             voucherNumber.setText("");
                             showCustomDialog(BookingApplication.CODES.PPV_RESPONSE, "PPV", "Topup Successfull by Voucher", 0, false);
+                        } else if (checkBal) {
+                            availableBalance.setText("Available Balance: " + jsonResponse.getString("UpdatedAmount"));
+                            checkBal = false;
                         } else {
                             voucherNumber.setError("Invalid Card Number");
                             availableBalance.setText("Available Balance: " + jsonResponse.getString("UpdatedAmount"));
@@ -190,4 +201,9 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
         thisDialog.show();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        checkBal = false;
+    }
 }
