@@ -290,5 +290,6 @@
     <string name="answer_or_check_email">Answer the question below or check your email for password reset link.</string>
     <string name="imreadyat">وأنا على استعداد في</string>
     <string name="CallBackNumber">Callback Number</string>
+    <string name="getting_available_promotions">Getting Available Promotions</string>
 
 </resources>

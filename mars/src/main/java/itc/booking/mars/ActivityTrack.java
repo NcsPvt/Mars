@@ -93,7 +93,8 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
 
                 if (autozoom) {
                     autozoom = false;
-                    mapFragment.animateCamera(CameraUpdateFactory.newLatLngBounds(boundsBuilder.build(), 130));
+                    mapFragment.animateCamera(CameraUpdateFactory.newLatLngBounds(boundsBuilder.build(), 200, 200, 10));
+                    showVehicleBaloon();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -169,7 +170,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
         mapDirections = new GMapV2Direction();
         mapFragment = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapview_track)).getMap();
         mapFragment.getUiSettings().setZoomControlsEnabled(false);
-        mapFragment.setPadding(0, 0, 0, (int) (BookingApplication.screenHeight / 2.5) + 10);
+        mapFragment.setPadding(0, 0, 0, (int) (BookingApplication.screenHeight / 2));
 
         mapFragment.setOnMarkerClickListener(new OnMarkerClickListener() {
 
@@ -180,7 +181,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
 
                         showVehicleBaloon();
                         marker.hideInfoWindow();
-                        return false;
+
                     }
 
                 } catch (Exception e) {
@@ -236,9 +237,9 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
             @Override
             public void onClick(View v) {
 
-                if (currVehicle.driverPhone.length() > 7)
+                if (driverPhone.length() > 7)
                     if (BookingApplication.isDialerAvailable(ActivityTrack.this))
-                        new AlertDialog.Builder(ActivityTrack.this).setMessage(getResources().getString(R.string.Call) + " " + currVehicle.driverPhone + " ?").setPositiveButton(R.string.Call, new DialogInterface.OnClickListener() {
+                        new AlertDialog.Builder(ActivityTrack.this).setMessage(getResources().getString(R.string.Call) + " " + driverPhone + " ?").setPositiveButton(R.string.Call, new DialogInterface.OnClickListener() {
 
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -246,7 +247,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                                 BookingApplication.AddC2DHistoryInOutLoad(ActivityTrack.this, iServiceID);
 
                                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                                callIntent.setData(Uri.parse("tel:" + currVehicle.driverPhone));
+                                callIntent.setData(Uri.parse("tel:" + driverPhone));
                                 startActivity(callIntent);
                             }
                         }).setNegativeButton(R.string.Cancel, new DialogInterface.OnClickListener() {
@@ -402,7 +403,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                     currVehicle.driverPicture = driver.getString("DriverPicture");
                     currVehicle.driverName = driver.getString("DriverName");
                     currVehicle.iAffiliateID = driver.getInt("iAffiliateID");
-                    currVehicle.driverPhone = driver.getString("DriverPhone");
+                    //currVehicle.driverPhone = driver.getString("DriverPhone");
                     currVehicle.vinNumber = driver.getString("VinNum");
                     currVehicle.VehicleNo = driver.getString("VehicleNum");
                     currVehicle.iTotalRatings = driver.getInt("Ratings");
@@ -415,17 +416,11 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                     currVehicle.aboutUs = jsonResponse.has("AboutUsLink") ? jsonResponse.getString("AboutUsLink") : "";
 
                     btn_call.setText(R.string.Call_driver);
-                    driverPhone = driver.getString("DriverPhone");
 
                     if (vehicleMarker != null)
                         vehicleMarker.remove();
 
                     vehicleMarker = mapFragment.addMarker(currVehicle.vehMarker);
-                    if (autozoom) {
-                        autozoom = false;
-                        mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(currVehicle.getLatlong(), 14));
-                        showVehicleBaloon();
-                    }
                 }
 
                 switch (jsonResponse.getInt("requestStatusCode")) {
@@ -439,6 +434,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                             else if (autozoom) {
                                 autozoom = false;
                                 mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 18));
+                                showVehicleBaloon();
                             }
                         } else if (jsonResponse.getString("requestStatus").equalsIgnoreCase("CALLOUT")) {
                             callout_Sound.start();
@@ -536,7 +532,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                         } else
                             mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(pickMarker.getPosition(), 18));
 
-                        showCustomDialog(BookingApplication.CODES.TRIP_SERVED, getApplicationContext().getApplicationInfo().name, jsonResponse.getString("responseMessage"), 0, false);
+                        //showCustomDialog(BookingApplication.CODES.TRIP_SERVED, getApplicationContext().getApplicationInfo().name, jsonResponse.getString("responseMessage"), 0, false);
 
                         break;
                 }//switch

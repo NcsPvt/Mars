@@ -2399,8 +2399,7 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                                             nearByVehicles.add(nbv);
                                         }
                                         //nearByVehicles.toString();
-                                    }
-                                    else
+                                    } else if (callerContext.getClass().getSimpleName().equals(ActivityMain.class.getSimpleName()))
                                         showCustomToast(R.string.No_nearbyvehicle_available, "", false);
                                 }
 

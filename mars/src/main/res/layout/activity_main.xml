@@ -668,7 +668,7 @@
                 <LinearLayout
                     android:id="@+id/ll_getting_nearby_progress"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="fill_parent"
                     android:layout_below="@id/tv_nearby_places"
                     android:background="@color/white"
                     android:gravity="center"

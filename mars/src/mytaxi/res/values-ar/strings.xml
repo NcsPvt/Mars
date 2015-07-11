@@ -286,7 +286,7 @@
     <string name="proceed"><![CDATA[Proceed >]]></string>
     <string name="approxFare">Approx. Fare</string>
     <string name="dropoff_required">Drop-off Required</string>
-    <string name="PayWithVoucher">لايوجد بطاقة أئتمانية بملفك</string>
+    <string name="PayWithVoucher">لايوجد بطاقة أئتمانية بملفك| %s</string>
     <string name="PayingByVoucher">Paying by voucher</string>
     <string name="ContactSupport">Contact Support</string>
     <string name="choose">اختار</string>

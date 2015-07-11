@@ -2167,7 +2167,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         trip_requested.supportedPaymentType = BookingApplication.getAffiliatePaymentType(ActivityMain.this, trip_requested.companyName);
                         tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, BookingApplication.getAffiliateNameFromDB(ActivityMain.this, trip_requested.companyID)));
                         ppvBalance = jsonResponse.getString("CustomerPPVBalance");
-                        tv_payWithVoucher.setText(getResources().getString(R.string.PayWithVoucher, "SAR"+ ppvBalance));
+                        tv_payWithVoucher.setText(getResources().getString(R.string.PayWithVoucher, trip_requested.currencySymbol + ppvBalance));
                     } else {
                         showCustomDialog(CODES.BOOKING_FAILED, R.string.Booking_Status, jsonResponse.getString("ReasonPhrase"), 0, false);
                         goToStep(3, false);
@@ -2208,9 +2208,9 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     if (success) {
                         trip_requested.iServiceID = jsonResponse.getString("iServiceID");
                         trip_requested.state = "ACCEPTED";
-                        BookingApplication.recentTrips.add(trip_requested);
+                        BookingApplication.recentTrips.add(0, trip_requested);
                         BookingApplication.unPerformedTripsCount++;
-                        Collections.sort(BookingApplication.recentTrips);
+                        //Collections.sort(BookingApplication.recentTrips);
                         trips_adapter.notifyDataSetChanged();
                         if (jsonResponse.getInt("waitCountDown") == 0)
                             showCustomDialog(CODES.RESERVATION_SUCCESS, R.string.Booking_Status, getResources().getString(R.string.Booking_Success, jsonResponse.getString("confirmationNo")), 0, false);

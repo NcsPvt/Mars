@@ -50,7 +50,7 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
     protected String tspID = "0";
     private LinearLayout preferredCompanyRow;
     int spinnerLastPosition = 0;
-    int questionsIterator = -1;
+    int questionsIndex = -1;
     public static ArrayList<TSPs> tsplist = new ArrayList<TSPs>();
     public static ArrayList<String> tspListNames = new ArrayList<String>();
 
@@ -155,9 +155,12 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
                         BookingApplication.selected_lang = "ar";
                         break;
                 }
-                BookingApplication.setMyLanguage(BookingApplication.selected_lang);
-                updateTexts();
-
+                try {
+                    BookingApplication.setMyLanguage(BookingApplication.selected_lang);
+                    updateTexts();
+                } catch (Exception e) {
+                    BookingApplication.showCustomToast(0, e.getLocalizedMessage(), true);
+                }
             }
 
             @Override
@@ -263,11 +266,11 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
                     profile_secret_answer.setText(jsonResponse.getString("vSecretAnswer"));
                     String[] questionsArray = getResources().getStringArray(R.array.questions);
                     int i;
-                    for (questionsIterator = 0; questionsIterator < questionsArray.length; questionsIterator++)
-                        if (questionsArray[questionsIterator].equalsIgnoreCase(jsonResponse.getString("vSecretQuestion")))
+                    for (questionsIndex = 0; questionsIndex < questionsArray.length; questionsIndex++)
+                        if (questionsArray[questionsIndex].equalsIgnoreCase(jsonResponse.getString("vSecretQuestion")))
                             break;
-                    if (questionsIterator < questionsArray.length)
-                        profile_secret_question.setSelection(questionsIterator);
+                    if (questionsIndex < questionsArray.length)
+                        profile_secret_question.setSelection(questionsIndex);
 
                     if (jsonResponse.has("Affiliates")) {
                         jsonArray = jsonResponse.getJSONArray("Affiliates");
@@ -310,14 +313,13 @@ public class ActivityProfile extends Activity implements CallbackResponseListene
         profile_secret_answer.setHint(R.string.secret_answer);
 
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                this, R.array.questions, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.questions, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         profile_secret_question.setAdapter(adapter);
 
-
-        if (questionsIterator > -1)
-            profile_secret_question.setSelection(questionsIterator);
+        String[] questionsArray = getResources().getStringArray(R.array.questions);
+        if (questionsIndex < questionsArray.length)
+            profile_secret_question.setSelection(questionsIndex);
 
         saveBtn.setText(R.string.Save);
 

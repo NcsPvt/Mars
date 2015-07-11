@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Mars</string>
+
     <string name="CompanyWeb">www.itcurves.us</string>
     <string name="about_text">Hi, Welcome to Mars\nWe commit to serve you\nAny Car, Anytime, Anywhere\nConvenience and Safety with Privacy.</string>
 
@@ -282,6 +284,7 @@
     <string name="answer_or_check_email">Answer the question below\n - or -\n check your email for password reset link.</string>
     <string name="CallBackNumber">Callback Number</string>
     <string name="imreadyat">I\\\'m ready at</string>
+    <string name="getting_available_promotions">Getting Available Promotions</string>
 
 
 </resources>

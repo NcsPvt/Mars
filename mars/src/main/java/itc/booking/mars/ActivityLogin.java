@@ -419,8 +419,7 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
         termOfUse.setText(R.string.termsofuse);
         repeatPass.setHint(R.string.Repeat_password);
         fullName.setHint(R.string.Full_name);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                this, R.array.questions, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.questions, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         secretQuestion.setAdapter(adapter);
         secretAnswer.setHint(R.string.secret_answer);

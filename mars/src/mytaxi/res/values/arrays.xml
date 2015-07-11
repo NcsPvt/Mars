@@ -14,6 +14,7 @@
         <item>What is the name of your favorite movie ?</item>
         <item>What was your first pet\'s name ?</item>
     </string-array>
+
     <string-array name="languages">
         <item>English</item>
         <item>Spanish</item>

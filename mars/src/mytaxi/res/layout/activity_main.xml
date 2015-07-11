@@ -8,7 +8,8 @@
 
         <RelativeLayout android:id="@+id/app_action_bar" android:layout_width="fill_parent"
             android:layout_height="wrap_content" android:layout_alignParentTop="true"
-            android:background="@drawable/button_translucent" android:padding="10dp">
+            android:background="@drawable/button_translucent" android:paddingBottom="3dp"
+            android:paddingLeft="10dp" android:paddingRight="10dp" android:paddingTop="3dp">
 
             <ImageView android:id="@+id/iv_company_logo" android:layout_width="130dp"
                 android:layout_height="@dimen/size31" android:layout_centerHorizontal="true"
@@ -34,7 +35,7 @@
                 android:background="@drawable/mars_text_view_yellow" android:clickable="true"
                 android:gravity="center" android:onClick="showHelpView" android:paddingLeft="10dp"
                 android:paddingRight="10dp" android:text="@string/Help_Mark"
-                android:textColor="@color/mars_yellow" android:textSize="@dimen/size10"
+                android:textColor="@color/mars_yellow" android:textSize="@dimen/size9"
                 android:textStyle="bold" android:typeface="serif" />
         </RelativeLayout>
 
@@ -276,7 +277,7 @@
 
                 <LinearLayout android:layout_width="fill_parent"
                     android:layout_height="wrap_content" android:paddingBottom="5dp"
-                    android:visibility="visible">
+                    android:visibility="gone">
 
                     <LinearLayout android:id="@+id/ll_payWith" android:layout_width="0dp"
                         android:layout_height="wrap_content" android:layout_weight="1"

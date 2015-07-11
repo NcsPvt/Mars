@@ -234,7 +234,7 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
     private PromotionAdapter promo_adapter;
     private PromotionDetailAdapter promo_detail_adapter;
     private InviteeAdapter invitee_adapter;
-    private LinearLayout ll_pageHeader;
+    private LinearLayout ll_pageHeader, ll_getting_promos_progress;
     private RelativeLayout rl_main_promotions, rl_promotion_details;
     private ImageView iv_company_logo;
     private TextView rewardPoints, totalTrips, tv_selected_code, tv_selected_balance, tv_selected_perTrip, tv_no_promos_available, promosReadyHeader, rewardsHeader, inviteesHeader;
@@ -247,6 +247,7 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
         BookingApplication.setMyTheme(ActivityPromotions.this);
         setContentView(R.layout.activity_promotions);
 
+        ll_getting_promos_progress = (LinearLayout) findViewById(R.id.ll_getting_promos_progress);
         ll_pageHeader = (LinearLayout) findViewById(R.id.ll_pageHeader);
         ll_pageHeader.setBackgroundColor(getResources().getColor(BookingApplication.theme_color));
         rl_main_promotions = (RelativeLayout) findViewById(R.id.rl_main_promotions);
@@ -299,6 +300,7 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
     protected void onResume() {
         super.onResume();
         BookingApplication.callerContext = this;
+        ll_getting_promos_progress.setVisibility(View.VISIBLE);
         BookingApplication.getNearbyVehicles(BookingApplication.currentAddress, null, false);
     }
 
@@ -395,6 +397,8 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
                     }
                     break;
                 case BookingApplication.APIs.GETNEARBYVEHICLES:
+
+                    ll_getting_promos_progress.setVisibility(View.GONE);
                     promo_adapter.notifyDataSetChanged();
                     break;
             }
