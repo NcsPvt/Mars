@@ -226,7 +226,7 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
 
         Button btn_hail = (Button) vehicle_balloon.findViewById(R.id.btn_hail);
 
-        if (currVehicle.driverPhone.length() > 7) {
+        if (driverPhone.length() > 7) {
             btn_hail.setVisibility(View.VISIBLE);
             btn_hail.setText(R.string.Call);
         } else

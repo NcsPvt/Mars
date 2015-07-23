@@ -2766,8 +2766,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 time.setText(BookingApplication.timeFormat.format(currentTrip.PUDateTime.getTime()));
                 date.setText(BookingApplication.dateFormat.format(currentTrip.PUDateTime.getTime()));
                 pickup.setText(currentTrip.PUaddress);
-                if (currentTrip.DOlat > 0)
-                    drop.setText(currentTrip.DOaddress);
+                drop.setText((currentTrip.DOlat > 0) ? currentTrip.DOaddress : "");
                 bookingID.setText(currentTrip.ConfirmNumber);
 
                 currentView.setTag(currentTrip.ConfirmNumber);

@@ -182,7 +182,9 @@
                 android:gravity="center"
                 android:paddingBottom="3dp"
                 android:paddingTop="3dp"
-                android:text="@string/terms_of_use" />
+                android:text="@string/terms_of_use"
+                android:visibility="visible"
+                android:onClick="showTermsOfUse" />
 
             <TextView
                 android:id="@+id/lbl_Balance"
@@ -255,7 +257,8 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/promo_type" />
+                android:text="@string/promo_type"
+                android:visibility="visible" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -267,19 +270,10 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="1.1"
+                android:layout_weight="1.2"
                 android:gravity="center"
                 android:text="@string/promo_balance" />
-            <!--
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:layout_weight="1.2"
-                            android:gravity="center"
-                            android:text="@string/per_trip"/>
-
-            -->
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"

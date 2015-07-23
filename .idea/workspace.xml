@@ -33,15 +33,15 @@
       <config>
         <devices>
           <device id="Nexus 5" />
-          <device id="3.4in WQVGA" />
-          <device id="4in WVGA (Nexus S)" />
+          <device id="Nexus 7 2013" />
+          <device id="Nexus 10" />
+          <device id="Nexus 6" />
+          <device id="Nexus 9" />
+          <device id="Nexus 4" />
           <device id="Nexus One" />
           <device id="Nexus S" />
-          <device id="Galaxy Nexus" />
-          <device id="Nexus 10" />
-          <device id="Nexus 4" />
-          <device id="Nexus 7 2013" />
-          <device id="Nexus 7" />
+          <device id="3.4in WQVGA" />
+          <device id="4in WVGA (Nexus S)" />
         </devices>
       </config>
     </shared>
@@ -137,8 +137,19 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/resources-mars-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/resources-mars-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/resources-mars-debug.ap_" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/resources-mars-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityPPV.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityPPV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityProfile.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityProfile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityLogin.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityLogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/chtaxi/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/chtaxi/java/itc/booking/mars/ActivityMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/memphis/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/memphis/java/itc/booking/mars/ActivityMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/regency/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/regency/java/itc/booking/mars/ActivityMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/springscab/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/springscab/java/itc/booking/mars/ActivityMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/uniontaxi/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/uniontaxi/java/itc/booking/mars/ActivityMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/ycfrederick/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/ycfrederick/java/itc/booking/mars/ActivityMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/ycindy/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/ycindy/java/itc/booking/mars/ActivityMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/ycpwc/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/ycpwc/java/itc/booking/mars/ActivityMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityPromotions.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityPromotions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityReferedby.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityReferedby.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityTrack.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityTrack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/aapt/AndroidManifest.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/aapt/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/AndroidManifest.xml" />
@@ -168,9 +179,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.5.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.5.0/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/manifest/androidTest/mars/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/manifest/androidTest/mars/debug/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/manifests/full/mars/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/manifests/full/mars/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/generated/source/buildConfig/androidTest/mars/debug/itcurves/mars/test/BuildConfig.java" afterPath="$PROJECT_DIR$/mars/build/generated/source/buildConfig/androidTest/mars/debug/itcurves/mars/test/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/generated/source/buildConfig/mars/debug/itcurves/mars/BuildConfig.java" afterPath="$PROJECT_DIR$/mars/build/generated/source/buildConfig/mars/debug/itcurves/mars/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/JSONhandler.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/JSONhandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/NearbyVehicle.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/NearbyVehicle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/generated/source/r/mars/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/mars/build/generated/source/r/mars/debug/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/generated/source/r/mars/debug/android/support/v7/mediarouter/R.java" afterPath="$PROJECT_DIR$/mars/build/generated/source/r/mars/debug/android/support/v7/mediarouter/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/generated/source/r/mars/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/mars/build/generated/source/r/mars/debug/com/google/android/gms/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/generated/source/r/mars/debug/com/google/android/gms/ads/R.java" afterPath="$PROJECT_DIR$/mars/build/generated/source/r/mars/debug/com/google/android/gms/ads/R.java" />
@@ -252,22 +266,23 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/drawable/abc_tab_indicator_material.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/drawable/abc_tab_indicator_material.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/drawable/abc_textfield_search_material.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/drawable/abc_textfield_search_material.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/about.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/about.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/layout/about.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/layout/about.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_feedback_referedby.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_feedback_referedby.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/layout/activity_feedback_referedby.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/layout/activity_feedback_referedby.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_feedback_screen.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_feedback_screen.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_login.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_login.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_menu.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_menu.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_ppv.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_ppv.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_profile.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_profile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/layout/activity_profile.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/layout/activity_profile.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_promotions.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_promotions.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/layout/activity_promotions.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/layout/activity_promotions.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_splash.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_splash.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_track_screen.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/activity_track_screen.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_ads_attrs.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_ads_attrs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_iap_style.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/res/values/admob_iap_style.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable-hdpi/bg_check_box.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable-hdpi/bg_check_box.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/btn_payment_email_click.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/btn_payment_email_click.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build.gradle" afterPath="$PROJECT_DIR$/mars/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/button_blue.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/button_blue.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/button_bottom_corner.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/button_bottom_corner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/button_dark_gray.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/button_dark_gray.xml" />
@@ -372,9 +387,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/greybuttonfeedbacktranslucent.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/greybuttonfeedbacktranslucent.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/list_item_fav.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/list_item_fav.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/list_item_promo.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/list_item_promo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/list_item_promo_detail.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/list_item_promo_detail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/layout/list_item_promo_detail.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/layout/list_item_promo_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/outputs/logs/manifest-merger-mars-debug-report.txt" afterPath="$PROJECT_DIR$/mars/build/outputs/logs/manifest-merger-mars-debug-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/res/values/maps_attrs.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/res/values/maps_attrs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/mars.iml" afterPath="$PROJECT_DIR$/mars/mars.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/mars_center_btn_selector.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/mars_center_btn_selector.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/mars_left_btn_selector.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/mars_left_btn_selector.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/mars_menu_button.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/mars_menu_button.xml" />
@@ -501,6 +517,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/layout-v17/mr_media_route_list_item.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/layout-v17/mr_media_route_list_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/my_progress_indeterminate.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/my_progress_indeterminate.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/anim/no_anim.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/anim/no_anim.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/payment_receipt.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/layout/payment_receipt.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/recent_button.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/recent_button.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/ridemap_info_background.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/ridemap_info_background.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/selector_favorite_checkbox.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/drawable/selector_favorite_checkbox.xml" />
@@ -517,6 +534,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/anim/slide_out_left.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/anim/slide_out_left.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/anim/slide_out_right.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/anim/slide_out_right.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/anim/slide_out_top.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/anim/slide_out_top.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/values-ar/strings.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/values-ar/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/values-es/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/layout/support_simple_spinner_dropdown_item.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/layout/support_simple_spinner_dropdown_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/values-ar/values-ar.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/values-ar/values-ar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/values-es/values-es.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/res/merged/mars/debug/values-es/values-es.xml" />
@@ -694,40 +714,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_styles.xml" afterPath="$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list id="92c122f6-53bb-4bd2-af48-c6d6690e852a" name="Failed commit: Default" comment="Version 1.0.40">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityLogin.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/checkerkc/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/checkerkc/java/itc/booking/mars/ActivityMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/chtaxi/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/chtaxi/java/itc/booking/mars/ActivityMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/executive2000/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/executive2000/java/itc/booking/mars/ActivityMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/memphis/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/memphis/java/itc/booking/mars/ActivityMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/mytaxi/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/mytaxi/java/itc/booking/mars/ActivityMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/regency/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/regency/java/itc/booking/mars/ActivityMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/springscab/java/itc/booking/mars/ActivityMain.java" afterPath="$PROJECT_DIR$/mars/src/springscab/java/itc/booking/mars/ActivityMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/checkerkc/java/itc/booking/mars/ActivitySplash.java" afterPath="$PROJECT_DIR$/mars/src/checkerkc/java/itc/booking/mars/ActivitySplash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/executive2000/java/itc/booking/mars/ActivitySplash.java" afterPath="$PROJECT_DIR$/mars/src/executive2000/java/itc/booking/mars/ActivitySplash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/memphis/java/itc/booking/mars/ActivitySplash.java" afterPath="$PROJECT_DIR$/mars/src/memphis/java/itc/booking/mars/ActivitySplash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/springscab/java/itc/booking/mars/ActivitySplash.java" afterPath="$PROJECT_DIR$/mars/src/springscab/java/itc/booking/mars/ActivitySplash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityTrack.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityTrack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/Addresses.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/Addresses.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/JSONhandler.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/JSONhandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/Trip.java" afterPath="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/Trip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/layout/activity_feedback_screen.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/layout/activity_feedback_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/mytaxi/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/mars/src/mytaxi/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/build.gradle" afterPath="$PROJECT_DIR$/mars/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/drawable/button_red.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/drawable/button_red.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/drawable/button_yellow.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/drawable/button_yellow.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/values/color.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/values/color.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/values-ar/strings.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/values-ar/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mars/src/main/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/mars/src/main/res/values-es/strings.xml" />
-    </list>
     <manually-removed-from-ignored>
-      <directory path="gradle/wrapper/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/games/" />
+      <directory path="gradle/wrapper/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/" />
@@ -737,75 +726,75 @@
       <directory path="mars/build/generated/source/r/mars/debug/itcurves/" />
       <directory path="mars/build/generated/res/rs/mars/" />
       <directory path="mars/build/generated/res/rs/mars/debug/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mk-rMK/" />
       <directory path="mars/build/generated/source/buildConfig/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mk-rMK/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/" />
       <directory path="mars/build/generated/source/rs/test/mars/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values-es/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/" />
-      <directory path="build/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/" />
+      <directory path="build/" />
       <directory path="gradle/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fr/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-is-rIS/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-eu-rES/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ne-rNP/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/res/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/nearby/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-si-rLK/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-en-rIN/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/" />
       <directory path="$PROJECT_DIR$/.gradle/" />
-      <directory path="mars/build/generated/source/buildConfig/test/mars/debug/itcurves/mars/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/pre-dexed/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/res/" />
+      <directory path="mars/build/generated/source/buildConfig/test/mars/debug/itcurves/mars/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-cs/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-el/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-nb/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-lt/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable/" />
-      <directory path="mars/build/generated/source/rs/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-te-rIN/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/res/drawable-hdpi/" />
+      <directory path="mars/build/generated/source/rs/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-in/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-uz-rUZ/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zh-rCN/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/res/drawable-hdpi/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zh-rCN/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-uz-rUZ/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-am/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/dex-cache/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-et-rEE/" />
       <directory path="mars/build/generated/source/aidl/test/" />
       <directory path="mars/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/libs/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/dependency-cache/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt/" />
       <directory path=".idea/inspectionProfiles/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ko/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-kn-rIN/" />
-      <directory path="$PROJECT_DIR$/mars/build/intermediates/ndk/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/lint/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/res/" />
+      <directory path="$PROJECT_DIR$/mars/build/intermediates/ndk/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-kn-rIN/" />
       <directory path="mars/build/intermediates/exploded-aar/com.android.support/support-v4/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sr/" />
       <directory path="mars/build/generated/source/r/mars/debug/itcurves/mars/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ky-rKG/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mn-rMN/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ky-rKG/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-tr/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/" />
-      <directory path="$PROJECT_DIR$/mars/build/intermediates/jacoco/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/" />
+      <directory path="$PROJECT_DIR$/mars/build/intermediates/jacoco/" />
       <directory path="mars/build/generated/source/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ml-rIN/" />
       <directory path="mars/build/generated/source/r/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/res/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/appindexing/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ru/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hu/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ru/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pl/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/classes/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/javaResources/" />
@@ -818,63 +807,63 @@
       <directory path="mars/build/generated/source/buildConfig/mars/" />
       <directory path="mars/build/generated/source/rs/mars/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zh-rHK/" />
-      <directory path="mars/build/generated/source/rs/mars/debug/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/bundles/" />
+      <directory path="mars/build/generated/source/rs/mars/debug/" />
       <directory path="mars/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aidl/android/support/v4/media/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-my-rMM/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zu/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sl/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ka-rGE/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.0.0/res/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/proguard/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-tl/" />
       <directory path="mars/build/generated/source/r/test/mars/debug/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-iw/" />
       <directory path="mars/build/generated/source/rs/test/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/" />
       <directory path="mars/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable-xhdpi/" />
       <directory path="mars/build/generated/source/aidl/test/mars/debug/" />
-      <directory path="mars/build/generated/source/buildConfig/mars/debug/itcurves/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hi/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.android.support/" />
+      <directory path="mars/build/generated/source/buildConfig/mars/debug/itcurves/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.android.support/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/color/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/location/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/dex/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/panorama/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/coverage-instrumented-classes/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/all/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/" />
       <directory path=".idea/copyright/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/res/raw/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/" />
       <directory path="mars/build/generated/source/r/test/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/res/raw/" />
       <directory path="mars/build/generated/source/buildConfig/test/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-en-rGB/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-bn-rBD/" />
-      <directory path="mars/build/generated/source/aidl/mars/debug/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-bg/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/res/" />
+      <directory path="mars/build/generated/source/aidl/mars/debug/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/wallet/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/res/" />
       <directory path="mars/build/generated/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/" />
       <directory path="mars/build/generated/source/r/mars/debug/" />
       <directory path="mars/build/generated/res/rs/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/cast/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ms-rMY/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/res/values/" />
-      <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/drive/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fi/" />
+      <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/drive/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/" />
@@ -882,13 +871,13 @@
       <directory path="mars/build/generated/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sw/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hr/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.0.0/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/maps/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.0.0/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/identity/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable-hdpi/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-kk-rKZ/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/" />
       <directory path="mars/build/generated/res/rs/test/mars/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt-rPT/" />
       <directory path="mars/build/generated/source/r/mars/" />
@@ -897,20 +886,20 @@
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/appstate/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/plus/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/libs/" />
-      <directory path="$PROJECT_DIR$/mars/build/intermediates/rs/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/analytics/" />
+      <directory path="$PROJECT_DIR$/mars/build/intermediates/rs/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ur-rPK/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/fitness/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/res/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ta-rIN/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-lo-rLA/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/" />
       <directory path="mars/build/generated/source/aidl/mars/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-nl/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/" />
       <directory path="mars/build/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/" />
       <directory path="mars/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aidl/android/support/" />
@@ -918,46 +907,46 @@
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/safetynet/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-vi/" />
       <directory path="mars/build/generated/source/buildConfig/test/mars/debug/itcurves/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-af/" />
-      <directory path="mars/build/generated/source/buildConfig/test/mars/debug/itcurves/mars/test/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/res/" />
+      <directory path="mars/build/generated/source/buildConfig/test/mars/debug/itcurves/mars/test/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-af/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-es/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-it/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/color/" />
       <directory path="mars/build/generated/source/rs/test/mars/debug/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/color/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-it/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/res/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/ads/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable-xxhdpi/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/res/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable-xxhdpi/" />
       <directory path="mars/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/res/" />
       <directory path="mars/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aidl/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-lv/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/" />
       <directory path="mars/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/assets/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-gl-rES/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/res/" />
       <directory path="build/intermediates/dex-cache/" />
-      <directory path="$PROJECT_DIR$/mars/build/outputs/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/" />
+      <directory path="$PROJECT_DIR$/mars/build/outputs/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/res/drawable-xxhdpi/" />
       <directory path="mars/build/generated/source/buildConfig/mars/debug/itcurves/mars/" />
       <directory path="mars/build/generated/source/aidl/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/res/drawable-mdpi/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mr-rIN/" />
       <directory path="build/intermediates/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mr-rIN/" />
       <directory path="./" />
-      <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/wearable/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/" />
+      <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/wearable/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hy-rAM/" />
       <directory path="mars/build/generated/source/buildConfig/mars/debug/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/res/drawable-xhdpi/" />
-      <directory path="$PROJECT_DIR$/build/classes/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-uk/" />
+      <directory path="$PROJECT_DIR$/build/classes/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-km-rKH/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-uk/" />
       <directory path="mars/build/generated/source/r/test/mars/" />
       <directory path=".idea/dictionaries/" />
       <directory path="mars/build/generated/res/rs/test/" />
@@ -970,23 +959,23 @@
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-es-rUS/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sv/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ca/" />
-      <directory path="mars/build/intermediates/exploded-aar/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/" />
+      <directory path="mars/build/intermediates/exploded-aar/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ca/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/manifests/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ro/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ja/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/res/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ja/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ro/" />
       <directory path="mars/build/generated/res/rs/test/mars/debug/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ar/" />
       <directory path="mars/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/aidl/android/support/v4/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ar/" />
       <directory path="$PROJECT_DIR$/mars/build/intermediates/symbols/" />
       <directory path="mars/build/intermediates/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fa/" />
       <directory path="app/" />
-      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fr-rCA/" />
       <directory path="mars/build/generated/source/r/mars/debug/com/google/android/gms/gcm/" />
+      <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fr-rCA/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/" />
       <directory path="mars/build/generated/source/buildConfig/test/mars/" />
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt-rBR/" />
@@ -996,7 +985,6 @@
       <directory path="mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-da/" />
     </manually-removed-from-ignored>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java" ignored="false" />
     <option name="TRACKING_ENABLED" value="false" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1029,34 +1017,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BookingApplication.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BookingApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60601264">
-              <caret line="490" column="62" selection-start-line="490" selection-start-column="62" selection-end-line="490" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2610" column="38" selection-start-line="2610" selection-start-column="38" selection-end-line="2610" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivityReferedby.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityReferedby.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivityMain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.31850117">
+              <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
               <folding>
-                <element signature="class#PromoPartner#0;class#BookingApplication#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityMain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java">
+      <file leaf-file-name="ActivityPromotions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityPromotions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1812" column="28" selection-start-line="1812" selection-start-column="28" selection-end-line="1812" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityLogin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityLogin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="251" column="74" selection-start-line="251" selection-start-column="74" selection-end-line="251" selection-end-column="74" />
-              <folding />
+              <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
+              <folding>
+                <element signature="class#PromotionAdapter#0;class#ActivityPromotions#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -17944,7 +17944,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4295458044083" />
+        <entry key="$PROJECT_DIR$" value="4296133438776" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -18238,24 +18238,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mars/src/main/res/layout/vehicle_ballon.xml" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/GcmIntentService.java" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/GcmBroadcastReceiver.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/SystemBroadcastReceiver.java" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/MyInstanceIDService.java" />
-        <option value="$PROJECT_DIR$/mars/google-services.json" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/GcmListenService.java" />
-        <option value="$PROJECT_DIR$/mars/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityPaymentOptions.java" />
-        <option value="$PROJECT_DIR$/mars/src/main/res/values-es/strings.xml" />
         <option value="$PROJECT_DIR$/mars/src/mytaxi/res/values-ar/strings.xml" />
         <option value="$PROJECT_DIR$/mars/src/mytaxi/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityFeedback.java" />
-        <option value="$PROJECT_DIR$/mars/src/main/res/values-ar/strings.xml" />
-        <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_feedback_referedby.xml" />
-        <option value="$PROJECT_DIR$/mars/src/main/res/layout/payment_receipt.xml" />
-        <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_track_screen.xml" />
         <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_payment.xml" />
         <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_when.xml" />
         <option value="$PROJECT_DIR$/mars/src/main/res/drawable/greybuttonfeedbacktranslucent.xml" />
@@ -18269,26 +18254,41 @@
         <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/mars/src/ycindy/java/itc/booking/mars/ActivityMain.java" />
         <option value="$PROJECT_DIR$/mars/src/ycindy/java/itc/booking/mars/ActivitySplash.java" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/JSONhandler.java" />
-        <option value="$PROJECT_DIR$/mars/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/Addresses.java" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityTrack.java" />
         <option value="$PROJECT_DIR$/mars/src/main/res/drawable/button_red.xml" />
         <option value="$PROJECT_DIR$/mars/src/main/res/values/color.xml" />
         <option value="$PROJECT_DIR$/mars/src/main/res/drawable/button_yellow.xml" />
         <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_feedback_screen.xml" />
         <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityLogin.java" />
         <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/Trip.java" />
-        <option value="$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java" />
         <option value="$PROJECT_DIR$/mars/src/mytaxi/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/NearbyVehicle.java" />
-        <option value="$PROJECT_DIR$/mars/build.gradle" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java" />
-        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityProfile.java" />
         <option value="$PROJECT_DIR$/mars/src/main/res/layout/about.xml" />
-        <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/layout/payment_receipt.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/layout/rate_ride.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_track_screen.xml" />
         <option value="$PROJECT_DIR$/mars/src/mytaxi/java/itc/booking/mars/ActivityMain.java" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/mars/src/mytaxi/res/values/arrays.xml" />
+        <option value="$PROJECT_DIR$/mars/src/mytaxi/res/values-ar/arrays.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/values-ar/arrays.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/values-es/arrays.xml" />
+        <option value="$PROJECT_DIR$/mars/src/mytaxi/res/values-es/arrays.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityProfile.java" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/values-ar/strings.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/values-es/strings.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityTrack.java" />
+        <option value="$PROJECT_DIR$/mars/build.gradle" />
+        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityLogin.java" />
+        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/JSONhandler.java" />
+        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/NearbyVehicle.java" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/layout/list_item_promo_detail.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_promotions.xml" />
+        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityPromotions.java" />
+        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityReferedby.java" />
+        <option value="$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java" />
+        <option value="$PROJECT_DIR$/mars/src/main/res/layout/activity_feedback_referedby.xml" />
+        <option value="$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java" />
       </list>
     </option>
   </component>
@@ -18355,6 +18355,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -18494,7 +18495,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -18519,9 +18519,9 @@
     <property name="DEBUGGABLE_DEVICE" value="lge-lg_d855-LGD8559a14606d" />
     <property name="DEBUGGABLE_PROCESS" value="itcurves.mars" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="last_opened_file_path" value="D:/Downloads/activity_profile.xml" />
+    <property name="last_opened_file_path" value="D:/Downloads/ActivityPPV.java" />
     <property name="ExportApk.ApkPath" value="D:\Releases" />
-    <property name="ExportApk.Flavors" value="mytaxi" />
+    <property name="ExportApk.Flavors" value="chtaxi&#10;mars&#10;memphis&#10;regency&#10;ycfrederick&#10;ycpwc" />
     <property name="ExportApk.BuildType" value="release" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="350" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
@@ -18530,7 +18530,8 @@
     <property name="LayoutCode.rearrangeEntriesXML" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="two.files.diff.last.used.file" value="D:/Downloads/activity_profile.xml" />
+    <property name="two.files.diff.last.used.file" value="D:/Downloads/ActivityPPV.java" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -18538,11 +18539,11 @@
       <recent name="itc.downloader.image" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Workspace_Android\Mars\mars\src\ycindy\res\drawable-hdpi" />
-      <recent name="D:\Workspace_Android\Mars\mars\src\ycventura" />
-      <recent name="D:\Workspace_Android\Mars\mars\src\ycsacramento" />
+      <recent name="D:\Workspace_Android\Mars\mars\src\chtaxi" />
       <recent name="D:\Workspace_Android\Mars\mars\src\ycpwc" />
-      <recent name="D:\Workspace_Android\Mars\mars\src\ycindy" />
+      <recent name="D:\Workspace_Android\Mars\mars\src\ycfrederick" />
+      <recent name="D:\Workspace_Android\Mars\mars\src\memphis" />
+      <recent name="D:\Workspace_Android\Mars\mars\src\regency" />
     </key>
     <key name="android.template.packageName">
       <recent name="itcurves.bookingapp.mytaxi" />
@@ -18811,7 +18812,31 @@
       <option name="project" value="LOCAL" />
       <updated>1435732197323</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Version 1.0.41">
+      <created>1436424038869</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1436424038869</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Version 1.0.41">
+      <created>1436457169805</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1436457169805</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Version 1.0.41">
+      <created>1436457297733</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1436457297733</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Version 1.0.42">
+      <created>1436631547027</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1436631547027</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -18825,31 +18850,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="816" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276699" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7612903" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36515152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3212121" sideWeight="0.50323623" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5530303" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33064517" sideWeight="0.50647247" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24433658" sideWeight="0.4" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33030304" sideWeight="0.50647247" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24433658" sideWeight="0.4097222" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38181818" sideWeight="0.49676377" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31666666" sideWeight="0.4935275" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31060606" sideWeight="0.4935275" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32419354" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496112" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24433658" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24433658" sideWeight="0.5902778" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3212121" sideWeight="0.49029127" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="99" y="100" width="1168" height="528" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3212121" sideWeight="0.49029127" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30769232" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -18857,44 +18883,43 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3090909" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34545454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="99" y="100" width="1168" height="528" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3212121" sideWeight="0.50323623" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24433658" sideWeight="0.38484848" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33064517" sideWeight="0.50647247" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5530303" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33030304" sideWeight="0.50647247" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24433658" sideWeight="0.4097222" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32419354" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32419354" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24433658" sideWeight="0.6151515" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3212121" sideWeight="0.49029127" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24433658" sideWeight="0.5902778" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3212121" sideWeight="0.49029127" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30769232" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Properties" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276699" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276699" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7612903" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3090909" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34545454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36515152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38181818" sideWeight="0.49676377" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31666666" sideWeight="0.4935275" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22727273" sideWeight="0.4935275" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496112" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -18916,7 +18941,9 @@
     <MESSAGE value="First Commit 1.0.38" />
     <MESSAGE value="First Commit 1.0.37" />
     <MESSAGE value="Version 1.0.40" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.0.40" />
+    <MESSAGE value="Version 1.0.41" />
+    <MESSAGE value="Version 1.0.42" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.0.42" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -18924,214 +18951,172 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityTrack.java</url>
-          <line>371</line>
+          <line>383</line>
           <properties />
-          <option name="timeStamp" value="160" />
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java</url>
+          <line>1961</line>
+          <properties />
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java</url>
+          <line>1958</line>
+          <properties />
+          <option name="timeStamp" value="184" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="166" />
+      <option name="time" value="197" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Android/sdk/platforms/android-21/android.jar!/org/apache/http/impl/client/DefaultRequestDirector.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.68">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Android/sdk/platforms/android-21/android.jar!/org/apache/http/impl/client/AbstractHttpClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.36">
-          <caret line="239" column="30" selection-start-line="239" selection-start-column="30" selection-end-line="239" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325527">
-          <caret line="1047" column="31" selection-start-line="1047" selection-start-column="31" selection-end-line="1047" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/chtaxi/res/drawable-hdpi/launcher_icon.png">
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/drawable-xxhdpi/signature.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/GcmBroadcastReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18829113">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/drawable-hdpi/iconcancel.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/drawable-hdpi/icondone.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/lang/Byte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322785">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/drawable-xxhdpi/noshow.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.278481">
-          <caret line="293" column="34" selection-start-line="293" selection-start-column="34" selection-end-line="293" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/util/Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322785">
-          <caret line="1343" column="18" selection-start-line="1343" selection-start-column="18" selection-end-line="1343" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/lang/Number.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6993671">
-          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/lang/Long.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322785">
-          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/math/BigInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.15189873">
-          <caret line="789" column="18" selection-start-line="789" selection-start-column="18" selection-end-line="789" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/Promotion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10759494">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ClassOfVehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.43691587">
-          <caret line="70" column="15" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/activity_feedback_referedby.xml">
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/rate_ride.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54746836">
-          <caret line="409" column="88" selection-start-line="409" selection-start-column="22" selection-end-line="409" selection-end-column="88" />
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/activity_track_screen.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="151" column="32" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/android/os/AsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322785">
-          <caret line="533" column="53" selection-start-line="533" selection-start-column="53" selection-end-line="533" selection-end-column="53" />
-        </state>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/org/json/JSONObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322785">
-          <caret line="548" column="18" selection-start-line="548" selection-start-column="18" selection-end-line="548" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/SystemBroadcastReceiver.java">
+    <entry file="file://$PROJECT_DIR$/mars/src/mytaxi/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/JSONhandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/mytaxi/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36408567">
-          <caret line="70" column="30" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/res/values-hdpi/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18987341">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/Addresses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.596519">
-          <caret line="34" column="71" selection-start-line="34" selection-start-column="71" selection-end-line="34" selection-end-column="71" />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityVerifyNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0490507">
-          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.87341774">
+          <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/util/Calendar.java">
+    <entry file="jar://$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar!/com/google/android/gms/maps/internal/ICameraUpdateFactoryDelegate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49367088">
-          <caret line="1257" column="15" selection-start-line="1257" selection-start-column="15" selection-end-line="1257" selection-end-column="15" />
+        <state vertical-scroll-proportion="-4.8">
+          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityTrack.java">
+    <entry file="jar://$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar!/com/google/android/gms/maps/CameraUpdateFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04145937">
-          <caret line="390" column="0" selection-start-line="390" selection-start-column="0" selection-end-line="390" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-7.2">
+          <caret line="113" column="56" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/res/values/color.xml">
+    <entry file="file://$PROJECT_DIR$/mars/src/mytaxi/java/itc/booking/mars/ActivityMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7579114">
-          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        <state vertical-scroll-proportion="-1.2358723">
+          <caret line="2211" column="67" selection-start-line="2211" selection-start-column="67" selection-end-line="2211" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/res/drawable/button_red.xml">
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.724138">
+          <caret line="678" column="29" selection-start-line="666" selection-start-column="0" selection-end-line="698" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/values/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.514403">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/values-es/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2798354">
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/values-ar/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6995885">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/mytaxi/res/values/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43037975">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/mytaxi/res/values-ar/arrays.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26898733">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/mytaxi/res/values-es/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29588607">
+          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Android/sdk/sources/android-21/android/os/Looper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33168316">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Android/sdk/sources/android-21/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33168316">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -19145,231 +19130,277 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/res/drawable/button_yellow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34968355">
-          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322785">
-          <caret line="4750" column="19" selection-start-line="4750" selection-start-column="19" selection-end-line="4750" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/Trip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3776#3777#0" expanded="false" />
-            <element signature="e#3842#3843#0" expanded="false" />
-            <element signature="e#4465#4466#0" expanded="false" />
-            <element signature="e#4528#4529#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="android-dummy://Mars/mars/Translations Editor">
-      <provider selected="true" editor-type-id="string-resource-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/mytaxi/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.72626585">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/android/location/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.370253">
-          <caret line="275" column="27" selection-start-line="275" selection-start-column="15" selection-end-line="275" selection-end-column="27" />
-          <folding>
-            <element signature="e#7891#7892#0" expanded="false" />
-            <element signature="e#7926#7927#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/android/location/Geocoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6772152">
-          <caret line="254" column="37" selection-start-line="254" selection-start-column="37" selection-end-line="254" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Android/sdk/sources/android-21/java/util/AbstractCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="362" column="18" selection-start-line="362" selection-start-column="18" selection-end-line="362" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.071782">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivitySearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="330" column="67" selection-start-line="330" selection-start-column="67" selection-end-line="330" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="class#SearchListAdapter#0;class#ActivitySearch#0" expanded="false" />
-            <element signature="e#1490#1491#0" expanded="false" />
-            <element signature="e#1526#1527#0" expanded="false" />
-            <element signature="class#FavoritesAdapter#0;class#ActivitySearch#0" expanded="false" />
-            <element signature="e#2974#2975#0" expanded="false" />
-            <element signature="e#3010#3011#0" expanded="false" />
-            <element signature="e#4258#5171#0" expanded="false" />
-            <element signature="e#5170#5171#0" expanded="false" />
-            <element signature="e#5340#6406#0" expanded="false" />
-            <element signature="e#6405#6406#0" expanded="false" />
-            <element signature="e#6897#6905#0" expanded="false" />
-            <element signature="e#8503#9020#0" expanded="false" />
-            <element signature="e#9019#9020#0" expanded="false" />
-            <element signature="e#9697#9698#0" expanded="false" />
-            <element signature="e#9759#9760#0" expanded="false" />
-            <element signature="e#12752#15982#0" expanded="false" />
-            <element signature="e#12864#15956#0" expanded="false" />
-            <element signature="e#13034#13293#0" expanded="false" />
-            <element signature="e#13292#13293#0" expanded="false" />
-            <element signature="e#15214#15475#0" expanded="false" />
-            <element signature="e#15474#15475#0" expanded="false" />
-            <element signature="e#15578#15839#0" expanded="false" />
-            <element signature="e#15838#15839#0" expanded="false" />
-            <element signature="e#15955#15956#0" expanded="false" />
-            <element signature="e#15981#15982#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityProfile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4129747">
-          <caret line="171" column="70" selection-start-line="171" selection-start-column="70" selection-end-line="171" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22553897">
-          <caret line="77" column="47" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/about.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.896552">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/res/drawable-hdpi/iconcancel.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/mytaxi/java/itc/booking/mars/ActivityMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="571" column="51" selection-start-line="571" selection-start-column="49" selection-end-line="571" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#126162#126163#0" expanded="true" />
-            <element signature="e#126257#126258#0" expanded="true" />
-            <element signature="e#130046#130047#0" expanded="true" />
-            <element signature="e#130145#130146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="64" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
-          <folding />
+          <caret line="303" column="27" selection-start-line="303" selection-start-column="27" selection-end-line="303" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/activity_main.xml">
+    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityFeedback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="249" column="32" selection-start-line="249" selection-start-column="32" selection-end-line="249" selection-end-column="32" />
-          <folding>
-            <element signature="n#TextView#0;n#LinearLayout#4;n#RelativeLayout#1;n#LinearLayout#0;n#FrameLayout#0;n#!!top" expanded="false" />
-            <element signature="n#View#2;n#LinearLayout#4;n#RelativeLayout#1;n#LinearLayout#0;n#FrameLayout#0;n#!!top" expanded="false" />
-            <element signature="n#RelativeLayout#2;n#RelativeLayout#1;n#LinearLayout#0;n#FrameLayout#0;n#!!top" expanded="false" />
-            <element signature="n#RelativeLayout#3;n#RelativeLayout#1;n#LinearLayout#0;n#FrameLayout#0;n#!!top" expanded="false" />
-            <element signature="n#RelativeLayout#4;n#RelativeLayout#1;n#LinearLayout#0;n#FrameLayout#0;n#!!top" expanded="false" />
-            <element signature="n#LinearLayout#6;n#RelativeLayout#1;n#LinearLayout#0;n#FrameLayout#0;n#!!top" expanded="false" />
-            <element signature="n#include#0;n#RelativeLayout#1;n#LinearLayout#0;n#FrameLayout#0;n#!!top" expanded="false" />
-            <element signature="n#include#1;n#RelativeLayout#1;n#LinearLayout#0;n#FrameLayout#0;n#!!top" expanded="false" />
-            <element signature="n#LinearLayout#7;n#RelativeLayout#1;n#LinearLayout#0;n#FrameLayout#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.21518987">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mars/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.897858">
-          <caret line="282" column="4" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="4" />
-          <folding />
+        <state vertical-scroll-proportion="0.3970346">
+          <caret line="273" column="49" selection-start-line="273" selection-start-column="49" selection-end-line="273" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java">
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/values-ar/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3574958">
+          <caret line="282" column="45" selection-start-line="282" selection-start-column="45" selection-end-line="282" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/values-es/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48105437">
+          <caret line="270" column="49" selection-start-line="270" selection-start-column="49" selection-end-line="270" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityTrack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1812" column="28" selection-start-line="1812" selection-start-column="28" selection-end-line="1812" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/NearbyVehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27373418">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
+          <caret line="406" column="71" selection-start-line="406" selection-start-column="71" selection-end-line="406" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="class#DrawPathTask#0;class#ActivityTrack#0" expanded="false" />
+            <element signature="e#7874#8413#0" expanded="false" />
+            <element signature="e#8412#8413#0" expanded="false" />
+            <element signature="e#8459#8640#0" expanded="false" />
+            <element signature="e#8639#8640#0" expanded="false" />
+            <element signature="e#8690#9332#0" expanded="false" />
+            <element signature="e#9331#9332#0" expanded="false" />
+            <element signature="e#10532#11825#0" expanded="false" />
+            <element signature="e#10930#11486#0" expanded="false" />
+            <element signature="e#11485#11486#0" expanded="false" />
+            <element signature="e#11523#11792#0" expanded="false" />
+            <element signature="e#11791#11792#0" expanded="false" />
+            <element signature="e#11824#11825#0" expanded="false" />
+            <element signature="e#12791#13054#0" expanded="false" />
+            <element signature="e#13053#13054#0" expanded="false" />
+            <element signature="e#13179#13442#0" expanded="false" />
+            <element signature="e#13441#13442#0" expanded="false" />
+            <element signature="e#13567#13830#0" expanded="false" />
+            <element signature="e#13829#13830#0" expanded="false" />
+            <element signature="e#13951#14212#0" expanded="false" />
+            <element signature="e#14211#14212#0" expanded="false" />
+            <element signature="e#17181#17546#0" expanded="false" />
+            <element signature="e#17293#17520#0" expanded="false" />
+            <element signature="e#17519#17520#0" expanded="false" />
+            <element signature="e#17545#17546#0" expanded="false" />
+            <element signature="e#23948#24395#0" expanded="false" />
+            <element signature="e#24394#24395#0" expanded="false" />
+            <element signature="e#24428#24875#0" expanded="false" />
+            <element signature="e#24874#24875#0" expanded="false" />
+            <element signature="e#25143#25412#0" expanded="false" />
+            <element signature="e#25411#25412#0" expanded="false" />
+            <element signature="e#25846#26181#0" expanded="false" />
+            <element signature="e#26180#26181#0" expanded="false" />
+            <element signature="e#28920#28921#0" expanded="false" />
+            <element signature="e#28976#28977#0" expanded="false" />
+            <element signature="e#29813#30305#0" expanded="false" />
+            <element signature="e#30304#30305#0" expanded="false" />
+            <element signature="e#30342#30571#0" expanded="false" />
+            <element signature="e#30570#30571#0" expanded="false" />
+            <element signature="e#33236#33771#0" expanded="false" />
+            <element signature="e#33770#33771#0" expanded="false" />
+            <element signature="e#33813#33963#0" expanded="false" />
+            <element signature="e#33962#33963#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityLogin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="251" column="74" selection-start-line="251" selection-start-column="74" selection-end-line="251" selection-end-column="74" />
+          <caret line="388" column="110" selection-start-line="388" selection-start-column="110" selection-end-line="388" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Android/sdk/platforms/android-21/android.jar!/android/widget/ImageView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3509061">
+          <caret line="121" column="16" selection-start-line="121" selection-start-column="16" selection-end-line="121" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Android/sdk/sources/android-21/android/graphics/BitmapFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26898733">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/downloader/image/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6186709">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.448598">
+          <caret line="112" column="64" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar!/com/google/android/gms/common/internal/zzg.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2382134">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar!/com/google/android/gms/common/api/GoogleApiClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.68">
+          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar!/com/google/android/gms/common/internal/zzd.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21091811">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar!/com/google/android/gms/internal/zzkz.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.12">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Android/sdk/sources/android-21/android/content/pm/PackageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="112" column="64" selection-start-line="112" selection-start-column="62" selection-end-line="112" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar!/com/google/android/gms/common/GooglePlayServicesUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.44">
+          <caret line="144" column="60" selection-start-line="144" selection-start-column="60" selection-end-line="144" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ClassOfVehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.344828">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Android/sdk/sources/android-21/android/os/AsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Android/sdk/sources/android-21/android/location/Geocoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2608695">
+          <caret line="122" column="25" selection-start-line="122" selection-start-column="25" selection-end-line="122" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/JSONhandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/NearbyVehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="16" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6835443">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/activity_promotions.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="186" column="47" selection-start-line="186" selection-start-column="33" selection-end-line="186" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/list_item_promo_detail.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityPromotions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
+          <folding>
+            <element signature="class#PromotionAdapter#0;class#ActivityPromotions#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/BookingApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60601264">
-          <caret line="490" column="62" selection-start-line="490" selection-start-column="62" selection-end-line="490" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2610" column="38" selection-start-line="2610" selection-start-column="38" selection-end-line="2610" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/res/layout/activity_feedback_referedby.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1034484">
+          <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/main/java/itc/booking/mars/ActivityReferedby.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="64" selection-start-line="96" selection-start-column="64" selection-end-line="96" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mars/src/mars/java/itc/booking/mars/ActivityMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31850117">
+          <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
           <folding>
-            <element signature="class#PromoPartner#0;class#BookingApplication#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

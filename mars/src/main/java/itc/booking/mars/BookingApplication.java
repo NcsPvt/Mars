@@ -49,6 +49,7 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
+import com.google.android.gms.internal.zzkz;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
@@ -92,6 +93,7 @@ public class BookingApplication extends Application implements GoogleApiClient.C
         public String dtExpiry;
         public String PromoURL;
         public String PerTripAmount;
+        public String termsOfUse;
 
         public Campaign() {
             CampaignName = "";
@@ -100,6 +102,7 @@ public class BookingApplication extends Application implements GoogleApiClient.C
             dtExpiry = "";
             PromoURL = "";
             PerTripAmount = "";
+            termsOfUse = "";
         }
     }
 
@@ -1325,6 +1328,27 @@ public class BookingApplication extends Application implements GoogleApiClient.C
         }
     }
 
+    /*------------------------------------------------------submitReferredBy()----------------------------------------------------------------------------*/
+    public static void submitReferredBy(String phoneno, String marsid, String companywebsite, String comments, String referredby, CallbackResponseListener requestStatusListener) {
+
+        currentCallbackListener = requestStatusListener;
+
+        MultipartEntity outEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE, "~~~", Charset.forName("UTF-8"));
+        try {
+            outEntity.addPart("phoneno", new StringBody(phoneno, Charset.forName("UTF-8")));
+            outEntity.addPart("marsid", new StringBody(marsid, Charset.forName("UTF-8")));
+            outEntity.addPart("companywebsite", new StringBody(companywebsite, Charset.forName("UTF-8")));
+            outEntity.addPart("comments", new StringBody(comments, Charset.forName("UTF-8")));
+            outEntity.addPart("referredby", new StringBody(referredby, Charset.forName("UTF-8")));
+
+            ITCWebService registerTask = (new BookingApplication()).new ITCWebService();
+            registerTask.apiCalled = APIs.SubmitReferredBy;
+            registerTask.execute(outEntity);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
     /*------------------------------------------------------putOnWall()----------------------------------------------------------------------------*/
     public static void putOnWall(String iServiceID, CallbackResponseListener putOnWallListener, Boolean putOnWall) {
 
@@ -2012,6 +2036,7 @@ public class BookingApplication extends Application implements GoogleApiClient.C
         public static final int AvailPromotion = 31;
         public static final int SendNoShowResponse = 32;
         public static final int ADDC2D = 33;
+        public static final int SubmitReferredBy = 34;
 
         //outload.mars.itcurves.us, 86.51.177.115:8085 (MyTaxi)  outload.mytaxi.itcurves.us:82 (mytaxi-beta)  outload.demo.itcurves.us (Demo)
 
@@ -2036,6 +2061,8 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                     return SERVER_IP + "/API/Account/PostActivation/";
                 case UPDATEPROFILE:
                     return SERVER_IP + "/API/Account/UpdateProfile/";
+                case SubmitReferredBy:
+                    return SERVER_IP + "/API/Account/SubmitReferredBy/";
                 case FETCHPROFILE:
                     return SERVER_IP + "/API/Account/GetUserInfo/";
                 case ADDUPDATEFAVORITE:
@@ -2110,6 +2137,8 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                     return "PostActivation";
                 case UPDATEPROFILE:
                     return "UpdateProfile";
+                case SubmitReferredBy:
+                    return "SubmitReferredBy";
                 case FETCHPROFILE:
                     return "GetUserInfo";
                 case ADDUPDATEFAVORITE:
@@ -2181,6 +2210,8 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                 return POSTACTIVATE;
             else if (apiName.equalsIgnoreCase("UpdateProfileResponse"))
                 return UPDATEPROFILE;
+            else if (apiName.equalsIgnoreCase("SubmitReferredByResponse"))
+                return SubmitReferredBy;
             else if (apiName.equalsIgnoreCase("GetUserInfoResponse"))
                 return FETCHPROFILE;
             else if (apiName.equalsIgnoreCase("AddUpdateFavoriteResponse"))
@@ -2315,8 +2346,9 @@ public class BookingApplication extends Application implements GoogleApiClient.C
         protected JSONObject doInBackground(MultipartEntity... params) throws NullPointerException {
 
             try {
-                if (isNetworkConnected)
+                if (isNetworkConnected) {
                     return JSONhandler.getJSONfromURL(APIs.GetURIFor(apiCalled), params[0]);
+                }
                 else {
                     response = new JSONObject();
                     try {
@@ -2359,8 +2391,10 @@ public class BookingApplication extends Application implements GoogleApiClient.C
             try {
 
                 if (JSONResp != null) {
-                    if (JSONResp.has("Fault") && !isMinimized)
+                    if (JSONResp.has("Fault") && !isMinimized && apiCalled != APIs.SubmitReferredBy)
                         showCustomToast(0, JSONResp.getString("ReasonPhrase"), true);
+                    else if (apiCalled == APIs.SubmitReferredBy)
+                        currentCallbackListener.callbackResponseReceived(APIs.SubmitReferredBy, JSONResp, null, false);
 
                     if (JSONResp.has("ResponseType"))
                         switch (APIs.GetApiCalled(JSONResp.getString("ResponseType"))) {
@@ -2372,7 +2406,10 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             tempObj = jsonArray.getJSONObject(i);
                                             NearbyVehicle nbv = new NearbyVehicle(tempObj.getString("VehicleColor"), new LatLng(tempObj.getDouble("Latitude"), tempObj.getDouble("Longitude")));
-                                            nbv.vehMarker.snippet(Integer.toString(i));
+                                            if (nbv.vehMarker != null) {
+                                                nbv.vehMarker.snippet(Integer.toString(i));
+                                                nbv.setDirection(callerContext, tempObj.has("Direction") ? tempObj.getString("Direction") : "North");
+                                            }
                                             nbv.vinNumber = tempObj.getString("VinNo");
                                             nbv.avg_Rating = tempObj.getDouble("AverageRating");
                                             nbv.iTotalRatings = tempObj.getInt("TotalRatings");
@@ -2386,7 +2423,6 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                                             nbv.driverPicture = tempObj.getString("DriverPicture");
                                             nbv.bHailingAllowed = tempObj.getBoolean("bHailingAllowed");
                                             nbv.PaymentType = tempObj.getInt("PaymentType");
-                                            nbv.setDirection(callerContext, tempObj.has("Direction") ? tempObj.getString("Direction") : "North");
                                             nbv.ourRates = tempObj.has("RatesLink") ? tempObj.getString("RatesLink") : "";
                                             nbv.ourFleet = tempObj.has("FleetInfoLink") ? tempObj.getString("FleetInfoLink") : "";
                                             nbv.ourTerms = tempObj.has("TCLink") ? tempObj.getString("TCLink") : "";
@@ -2545,6 +2581,7 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                                                 activePromotion.dtExpiry = tempObj.getString("dtExpiry");
                                                 activePromotion.PerTripAmount = tempObj.getString("PerTripAmount");
                                                 activePromotion.PromoURL = tempObj.getString("PromoURL");
+                                                activePromotion.termsOfUse = tempObj.has("TermsOfUse") ? tempObj.getString("TermsOfUse") : "";
                                                 activePromotions.add(activePromotion);
                                             }
                                         }
@@ -2565,6 +2602,12 @@ public class BookingApplication extends Application implements GoogleApiClient.C
                             case APIs.AvailPromotion:
                                 if (!JSONResp.has("Fault"))
                                     currentCallbackListener.callbackResponseReceived(APIs.AvailPromotion, JSONResp, null, true);
+                                break;
+                            case APIs.SubmitReferredBy:
+                                if (!JSONResp.has("Fault"))
+                                    currentCallbackListener.callbackResponseReceived(APIs.SubmitReferredBy, JSONResp, null, true);
+                                else
+                                    currentCallbackListener.callbackResponseReceived(APIs.SubmitReferredBy, JSONResp, null, false);
                                 break;
                             case APIs.FETCHPROFILE:
                                 if (!JSONResp.has("Fault"))
@@ -2897,7 +2940,7 @@ public class BookingApplication extends Application implements GoogleApiClient.C
         mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(10000);
         mLocationRequest.setFastestInterval(5000);
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_LOW_POWER);
     }
 
     protected synchronized void buildGoogleApiClient() {
@@ -2913,9 +2956,20 @@ public class BookingApplication extends Application implements GoogleApiClient.C
     private boolean isGooglePlayServicesAvailable() {
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
         if (ConnectionResult.SUCCESS == status) {
+            try {
+                int requiredVersion = zzkz.zzbN(7571000);
+                int deviceVersion = zzkz.zzbN(getPackageManager().getPackageInfo("com.google.android.gms", PackageManager.GET_SIGNATURES).versionCode);
+                if (deviceVersion < requiredVersion) {
+                    Log.w("GooglePlayServicesUtil", "Google Play services out of date.  Requires ");
+                    GooglePlayServicesUtil.getErrorDialog(ConnectionResult.SERVICE_VERSION_UPDATE_REQUIRED, callerContext, 0).show();
+                }
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+            }
             return true;
         } else {
-            GooglePlayServicesUtil.getErrorDialog(status, callerContext, 0).show();
+            if (GooglePlayServicesUtil.isUserRecoverableError(status))
+                GooglePlayServicesUtil.getErrorDialog(status, callerContext, 0).show();
             return false;
         }
     }

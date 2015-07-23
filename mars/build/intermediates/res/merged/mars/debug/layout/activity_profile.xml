@@ -30,50 +30,50 @@
                 android:gravity="center"
                 android:padding="3.0dp">
 
-                    <TextView
-                        android:id="@+id/lbl_profile_ph"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:layout_marginRight="@dimen/size12"
-                        android:text="@string/Phone_number"
-                        android:textColor="@color/blue_regency"
-                        android:textSize="@dimen/size11"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/lbl_profile_ph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="@dimen/size12"
+                    android:text="@string/Phone_number"
+                    android:textColor="@color/blue_regency"
+                    android:textSize="@dimen/size11"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/profile_phone_number"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/lbl_profile_ph"
-                        android:text="+1 (555) 555-5555"
-                        android:textColor="@color/dark_gray"
-                        android:textSize="@dimen/size12"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/profile_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/lbl_profile_ph"
+                    android:text="+1 (555) 555-5555"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size12"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:layout_below="@id/lbl_profile_ph"
-                        android:layout_alignLeft="@id/lbl_profile_ph"
-                        android:layout_alignRight="@id/lbl_profile_ph"
-                        android:text="@string/userid"
-                        android:textColor="@color/blue_regency"
-                        android:textSize="@dimen/size11"
-                        android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_below="@id/lbl_profile_ph"
+                    android:layout_alignLeft="@id/lbl_profile_ph"
+                    android:layout_alignRight="@id/lbl_profile_ph"
+                    android:text="@string/userid"
+                    android:textColor="@color/blue_regency"
+                    android:textSize="@dimen/size11"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/profile_marsid"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/profile_phone_number"
-                        android:layout_alignLeft="@id/profile_phone_number"
-                        android:layout_alignRight="@id/profile_phone_number"
-                        android:text="user00001234"
-                        android:textColor="@color/dark_gray"
-                        android:textSize="@dimen/size12"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/profile_marsid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_phone_number"
+                    android:layout_alignLeft="@id/profile_phone_number"
+                    android:layout_alignRight="@id/profile_phone_number"
+                    android:text="user00001234"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/size12"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -124,6 +124,7 @@
                 android:layout_weight="1.0" />
 
             <TextView
+                android:id="@+id/language_lbl"
                 android:layout_width="0.0sp"
                 android:layout_height="fill_parent"
                 android:layout_weight="3.0"

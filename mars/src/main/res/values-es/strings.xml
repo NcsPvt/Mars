@@ -268,9 +268,9 @@
     <string name="RemoveFavourite">Remover De Favoritos</string>
     <string name="ProvideAddressName">Por favor Proporcionar Dirección Nombre</string>
     <string name="chooseVehicleType">Toque aquí para seleccionar Vehículo / Tipo de servicio</string>
-    <string name="companyWebsite">Company Website :</string>
+    <string name="companyWebsite">Company Website</string>
     <string name="map_location">&#160;&#160;(Press-to move to your current location)</string>
-    <string name="mobileNumber">Mobile Number :</string>
+    <string name="mobileNumber">Mobile Number</string>
     <string name="overlayText">\no	“%1$s” deals with Local Bank for Credit Card Processing. \n\no	Registration is via secured bank Gateway \n\no	Registration and Transactions Conforms to the “PCI DSS"(Payment Card Industry Data Security Standards) \n\no	Record of Customer Information is Stored securely in the Bank \n\no	Payment Gateway Secured database. Card Details not retained in %1$s records. \n\no	Payments for trips could be made by Cash even if Credit Card is registered. Payment by Credit Card optional. \n\no	Payment by Credit Card for trips could be made only if the Credit Card is registered. \n\no	Registration could be carried out anytime by accessing the Credit Card Option in the Application Menu Page.</string>
     <string name="provideCompanyWebsite">Please Provide Company Website</string>
     <string name="provideMobileNumber">Please Provide Mobile Number</string>
@@ -281,4 +281,6 @@
     <string name="imreadyat">I\\\'m ready at</string>
     <string name="CallBackNumber">Callback Number</string>
     <string name="getting_available_promotions">Getting Available Promotions</string>
+    <string name="ReferedByOther">Other</string>
+    <string name="feedback_msg_hint">Provide additional comments here...</string>
 </resources>

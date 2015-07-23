@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:state_pressed="true" >
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
         <shape>
-        	<solid
-        		android:color="@color/mars_green" />
-            <stroke
-                android:width="2dp"
-                android:color="@color/mars_green" />
-            <corners
-                android:radius="3dp" />
+            <solid android:color="@color/mars_green" />
+            <stroke android:width="2dp" android:color="@color/mars_green" />
+            <corners android:radius="3dp" />
         </shape>
     </item>
     <item>
         <shape>
-        	<solid
-        		android:color="@color/translucent_dark" />
-            <stroke
-                android:width="2dp"
-                android:color="@color/mars_green" />
-            <corners
-                android:radius="3dp" />
+            <solid android:color="@color/translucent_dark" />
+            <stroke android:width="2dp" android:color="@color/mars_green" />
+            <corners android:radius="3dp" />
         </shape>
     </item>
 </selector><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/drawable/mars_text_view_gray_green.xml -->

@@ -385,8 +385,10 @@ public class ActivityLogin extends Activity implements CallbackResponseListener 
                             loginPass.setHint(R.string.New_password);
                         } else
                             BookingApplication.showCustomToast(R.string.contact_backoffice, "", true);
+
+                        BookingApplication.showCustomToast(0, jsonResponse.getString("responseMessage"), false);
                     } catch (JSONException e) {
-                        BookingApplication.showCustomToast(0, e.getMessage(), true);
+                        BookingApplication.showCustomToast(0, e.getLocalizedMessage(), true);
                     }
                 break;
 

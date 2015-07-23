@@ -1,6 +1,7 @@
 package itc.booking.mars;
 
 import android.app.Activity;
+import android.location.Address;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -8,19 +9,22 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONObject;
+
+import java.util.List;
 
 import itc.booking.mars.BookingApplication.CODES;
 import itc.downloader.image.FileCache;
 import itc.emailsender.gmail.GMailSender;
 import itcurves.mars.R;
 
-public class ActivityReferedby extends Activity {
+public class ActivityReferedby extends Activity implements CallbackResponseListener {
     /*-----------------------------------------------------------------------------------------------------------------------------------------------
-     *---------------------------------------------------------- FeedbackTask AsyncTask ------------------------------------------------------------
-     *-----------------------------------------------------------------------------------------------------------------------------------------------
-     */
+         *---------------------------------------------------------- FeedbackTask AsyncTask ------------------------------------------------------------
+         *-----------------------------------------------------------------------------------------------------------------------------------------------
+         */
     private class FeedbackTask extends AsyncTask<String, Void, String> {
 
         @Override
@@ -55,10 +59,8 @@ public class ActivityReferedby extends Activity {
         }
     }
 
-    EditText feedbackMessage, et_drivernumber, et_mobilenumber, et_companywebsite;
-    RadioButton friend;
-    RadioButton company;
-    RadioButton driver;
+    EditText feedbackMessage, et_marsid, et_mobilenumber, et_companywebsite;
+    RadioButton friend, company, driver, other;
     FileCache fileCache;
 
     /*--------------------------------------------------- cancel_feedback ----------------------------------------------------------------------------------*/
@@ -77,10 +79,11 @@ public class ActivityReferedby extends Activity {
         BookingApplication.setMyTheme(ActivityReferedby.this);
         setContentView(R.layout.activity_feedback_referedby);
 
-        friend = (RadioButton) findViewById(R.id.feedback_friend);
-        company = (RadioButton) findViewById(R.id.feedback_company);
-        driver = (RadioButton) findViewById(R.id.feedback_driver);
-        et_drivernumber = (EditText) findViewById(R.id.et_drivernumber);
+        friend = (RadioButton) findViewById(R.id.referredBy_friend);
+        company = (RadioButton) findViewById(R.id.referredBy_company);
+        driver = (RadioButton) findViewById(R.id.referredBy_driver);
+        other = (RadioButton) findViewById(R.id.referredBy_other);
+        et_marsid = (EditText) findViewById(R.id.et_marsid);
         feedbackMessage = (EditText) findViewById(R.id.feedback_message);
         et_mobilenumber = (EditText) findViewById(R.id.et_mobilenumber);
         et_companywebsite = (EditText) findViewById(R.id.et_companywebsite);
@@ -90,13 +93,10 @@ public class ActivityReferedby extends Activity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    et_drivernumber.setVisibility(View.VISIBLE);
-                    et_mobilenumber.setVisibility(View.GONE);
+                    et_marsid.setVisibility(View.VISIBLE);
+                    et_mobilenumber.setVisibility(View.VISIBLE);
                     et_companywebsite.setVisibility(View.GONE);
 
-                } else {
-                    et_drivernumber.setVisibility(View.GONE);
-                    feedbackMessage.setText("");
                 }
             }
         });
@@ -106,11 +106,9 @@ public class ActivityReferedby extends Activity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    et_drivernumber.setVisibility(View.GONE);
+                    et_marsid.setVisibility(View.GONE);
                     et_mobilenumber.setVisibility(View.VISIBLE);
                     et_companywebsite.setVisibility(View.GONE);
-                } else {
-                    et_mobilenumber.setVisibility(View.GONE);
                 }
             }
         });
@@ -120,47 +118,89 @@ public class ActivityReferedby extends Activity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    et_drivernumber.setVisibility(View.GONE);
+                    et_marsid.setVisibility(View.GONE);
                     et_mobilenumber.setVisibility(View.GONE);
                     et_companywebsite.setVisibility(View.VISIBLE);
-                } else {
+                }
+            }
+        });
+
+        other.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    et_marsid.setVisibility(View.GONE);
+                    et_mobilenumber.setVisibility(View.VISIBLE);
                     et_companywebsite.setVisibility(View.GONE);
                 }
             }
         });
-        friend.setChecked(true);
 
+        friend.setChecked(true);
         fileCache = new FileCache(this);
     }
 
+    /*------------------------------------------------------- onResume -------------------------------------------------------------------------------------*/
+    @Override
+    protected void onResume() {
+        super.onResume();
+        BookingApplication.callerContext = ActivityReferedby.this;
+        BookingApplication.currentCallbackListener = ActivityReferedby.this;
+    }
+
     /*------------------------------------------------------ submit_feedback -------------------------------------------------------------------------------*/
-    public void submit_feedback(View v) {
+    public void submit_ReferredBy(View v) {
         try {
-            String feedbackType = "";
+            String referredby = "";
 
             if (friend.isChecked())
                 if (et_mobilenumber.getText().toString().trim().equals("")) {
-                    Toast.makeText(getApplicationContext(), R.string.provideMobileNumber, Toast.LENGTH_LONG).show();
+                    BookingApplication.showCustomToast(R.string.provideMobileNumber, "", false);
                     return;
                 } else
-                    feedbackType = "Booking App - Recommended by Friend " + et_mobilenumber.getText().toString();
+                    referredby = "friend"; // et_mobilenumber.getText().toString();
             else if (company.isChecked())
                 if (et_companywebsite.getText().toString().trim().equals("")) {
-                    Toast.makeText(getApplicationContext(), R.string.provideCompanyWebsite, Toast.LENGTH_LONG).show();
+                    BookingApplication.showCustomToast(R.string.provideCompanyWebsite, "", false);
                     return;
                 } else
-                    feedbackType = "Booking App - Recommended by Company's Website " + et_companywebsite.getText().toString();
+                    referredby = "company"; // et_companywebsite.getText().toString();
             else if (driver.isChecked())
-                if (et_drivernumber.getText().toString().trim().equals("")) {
-                    Toast.makeText(getApplicationContext(), R.string.ProvideDrivernumber, Toast.LENGTH_LONG).show();
+                if (et_mobilenumber.getText().toString().trim().equals("")) {
+                    BookingApplication.showCustomToast(R.string.provideMobileNumber, "", false);
                     return;
                 } else
-                    feedbackType = "Booking App - Recommended by Driver " + et_drivernumber.getText().toString();
+                    referredby = "driver"; // et_marsid.getText().toString();
+            else if (other.isChecked())
+                if (et_marsid.getText().toString().trim().equals("")) {
+                    BookingApplication.showCustomToast(R.string.provideMobileNumber, "", false);
+                    return;
+                } else
+                    referredby = "other"; // et_marsid.getText().toString();
 
-            new FeedbackTask().execute(feedbackType, feedbackMessage.getText().toString(), BookingApplication.senderEmailPassword.split("@")[0] + "@gmail.com", BookingApplication.receiverEmail);
+            //new FeedbackTask().execute(referredby, feedbackMessage.getText().toString(), BookingApplication.senderEmailPassword.split("@")[0] + "@gmail.com", BookingApplication.receiverEmail);
+            BookingApplication.submitReferredBy(et_mobilenumber.getText().toString(), et_marsid.getText().toString(), et_companywebsite.getText().toString(), feedbackMessage.getText().toString(), referredby, ActivityReferedby.this);
 
         } catch (Exception e) {
-            Toast.makeText(ActivityReferedby.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            BookingApplication.showCustomToast(0, e.getLocalizedMessage(), true);
         }
     }
+
+    /*-------------------------------------------------- callbackResponseReceived ------------------------------------------------------------*/
+    @Override
+    public void callbackResponseReceived(int apiCalled, JSONObject jsonResponse, List<Address> addressList, boolean success) {
+        try {
+            switch (apiCalled) {
+                case BookingApplication.APIs.SubmitReferredBy:
+                    fileCache.openFile("userID");
+                    fileCache.writeOpenedFile(BookingApplication.phoneNumber);
+                    BookingApplication.showSplashScreen(ActivityReferedby.this);
+                    break;
+            }
+        } catch (Exception e) {
+            BookingApplication.showCustomToast(0, e.getLocalizedMessage(), true);
+        }
+    }
+
 }

@@ -113,7 +113,12 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
         private final ArrayList<BookingApplication.Campaign> promosDetailList;
         private final int viewResourceId;
         private Context myContext;
+        private int selectedIndex = -1;
 
+
+        public void setSelectedIndex(int ind) {
+            selectedIndex = ind;
+        }
         public PromotionDetailAdapter(Context context, int _viewResourceId, ArrayList<BookingApplication.Campaign> promoList) {
 
             super(context, _viewResourceId, promoList);
@@ -152,6 +157,13 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
                 LayoutInflater vi = (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 currentView = vi.inflate(viewResourceId, null);
             }
+
+            if (position == selectedIndex) {
+                currentView.setBackgroundColor(getResources().getColor(R.color.mars_cyan));
+            } else {
+                currentView.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+
             if (currentPromotion != null) {
 
                 ImageView companyLogo = (ImageView) currentView.findViewById(R.id.iv_promo_type);
@@ -230,6 +242,7 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
         }
     } // AffiliatePromoAdapter Class
 
+    private int selectedPromo = -1;
     private ListView promosListView, list_ready_promos, list_affiliates_promo;
     private PromotionAdapter promo_adapter;
     private PromotionDetailAdapter promo_detail_adapter;
@@ -259,7 +272,7 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
         tv_selected_balance = (TextView) findViewById(R.id.tv_selected_balance);
         tv_selected_perTrip = (TextView) findViewById(R.id.tv_selected_perTrip);
         rl_promotion_details = (RelativeLayout) findViewById(R.id.rl_promotion_details);
-        rl_promotion_details.setBackgroundResource(BookingApplication.textView_Background);
+        //rl_promotion_details.setBackgroundResource(BookingApplication.textView_Background);
         promosReadyHeader = (TextView) findViewById(R.id.promosReadyHeader);
         promosReadyHeader.setBackgroundColor(getResources().getColor(BookingApplication.theme_color));
         rewardsHeader = (TextView) findViewById(R.id.rewardsHeader);
@@ -287,6 +300,10 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
                 tv_selected_code.setText(camp.PromoCode);
                 tv_selected_balance.setText(camp.Balance);
                 tv_selected_perTrip.setText(camp.PerTripAmount);
+
+                selectedPromo = position;
+                promo_detail_adapter.setSelectedIndex(selectedPromo);
+                promo_detail_adapter.notifyDataSetChanged();
             }
         });
 
@@ -312,6 +329,12 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
         if ((bottomLogo.length() > 0) && (bottomLogo.endsWith("png") || bottomLogo.endsWith("jpg")))
             BookingApplication.imagedownloader.DisplayImage(bottomLogo, iv_company_logo);
         BookingApplication.getUserPromoDetail(BookingApplication.CompanyID);
+    }
+
+    /*------------------------------------------------- showTermsOfUse --------------------------------------------------------------------------------------*/
+    public void showTermsOfUse(View v) {
+        if (selectedPromo > -1)
+            showCustomDialog(R.string.promotions, BookingApplication.activePromotions.get(selectedPromo).termsOfUse, 0, false);
     }
 
 
@@ -365,7 +388,8 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
         });
 
         thisDialog.setView(layout);
-        thisDialog.show();
+        if (dialogText.length() > 0)
+            thisDialog.show();
     }
 
 
@@ -403,7 +427,7 @@ public class ActivityPromotions extends Activity implements CallbackResponseList
                     break;
             }
         } catch (Exception e) {
-            Toast.makeText(ActivityPromotions.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(ActivityPromotions.this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         }
     }
 

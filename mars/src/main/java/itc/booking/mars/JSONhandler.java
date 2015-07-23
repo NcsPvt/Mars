@@ -1,7 +1,5 @@
 package itc.booking.mars;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.util.Log;
 
 import org.apache.http.HttpEntity;
@@ -19,9 +17,6 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -33,30 +28,30 @@ public class JSONhandler {
 
     private static String result = "";
 
-    public static File getImage(String imagePath, Boolean performCompression) throws IOException {
-        Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
-
-        if (bitmap == null)
-            throw new FileNotFoundException(imagePath.substring(imagePath.lastIndexOf('/') + 1) + "\nNot Found");
-        else {
-            double sourceRatio = (double) bitmap.getWidth() / (double) bitmap.getHeight();
-
-            if (sourceRatio > ratio640x480)
-                bitmap = Bitmap.createScaledBitmap(bitmap, 640, (int) (640 / sourceRatio), true);
-            else
-                bitmap = Bitmap.createScaledBitmap(bitmap, (int) (480 * sourceRatio), 480, true);
-        }
-
-        FileOutputStream outStream = new FileOutputStream(imagePath);
-        if (performCompression)
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 80, outStream);
-
-        outStream.flush();
-        outStream.close();
-
-        File bin = new File(imagePath);
-        return bin;
-    }
+//    public static File getImage(String imagePath, Boolean performCompression) throws IOException {
+//        Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+//
+//        if (bitmap == null)
+//            throw new FileNotFoundException(imagePath.substring(imagePath.lastIndexOf('/') + 1) + "\nNot Found");
+//        else {
+//            double sourceRatio = (double) bitmap.getWidth() / (double) bitmap.getHeight();
+//
+//            if (sourceRatio > ratio640x480)
+//                bitmap = Bitmap.createScaledBitmap(bitmap, 640, (int) (640 / sourceRatio), true);
+//            else
+//                bitmap = Bitmap.createScaledBitmap(bitmap, (int) (480 * sourceRatio), 480, true);
+//        }
+//
+//        FileOutputStream outStream = new FileOutputStream(imagePath);
+//        if (performCompression)
+//            bitmap.compress(Bitmap.CompressFormat.JPEG, 80, outStream);
+//
+//        outStream.flush();
+//        outStream.close();
+//
+//        File bin = new File(imagePath);
+//        return bin;
+//    }
 
     public static JSONObject getJSONfromURL(String apiUrl, MultipartEntity... params) throws ClientProtocolException, IOException, JSONException {
         MultipartEntity outEntity = params[0];

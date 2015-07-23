@@ -259,7 +259,6 @@
         <item>الذي كان تاريخك ليلة حفلة موسيقية؟</item>
         <item>ما هو اسم ابن عمك الأكبر؟</item>
         <item>من هو كل ما تبذلونه من الوقت الفرقة المفضلة لديك؟</item>
-        <item>ما هو كل ما تبذلونه من الوقت الأغنية المفضلة لديك؟</item>
         <item>ما هو اسم سحق الطفولة الأولى؟</item>
         <item>ما هو اسم الكتاب المفضل لديك؟</item>
         <item>ما هو اسم الفيلم المفضل لديك؟</item>
@@ -284,6 +283,7 @@
     <string name="Booking_Status">تفاصيل الرحلة</string>
     <string name="Booking_Success">تم حجز رحلتك بنجاح \r ن تأكيد لا.:%s</string>
     <string name="Call">اتصل</string>
+    <string name="CallBackNumber">Callback Number</string>
     <string name="Call_driver">اتصل بالسائق</string>
     <string name="Cancel">إلغاء</string>
     <string name="Cancel_ride">إلغاء الحجز</string>
@@ -393,6 +393,7 @@
     <string name="ReferedByCompany">من الانترنت</string>
     <string name="ReferedByDriver">تم توصيته من محركات بحث اخرى</string>
     <string name="ReferedByFriend">من صديق</string>
+    <string name="ReferedByOther">Other</string>
     <string name="Register">التسجيل</string>
     <string name="RegisterAgain">تسجيل مرة أخرى</string>
     <string name="Remove">نزع</string>
@@ -455,6 +456,7 @@
     <string name="about_us"><u>حول</u></string>
     <string name="address">: عنوان</string>
     <string name="airport_drop_note">For airport dropoff %s hours advance pickup required.</string>
+    <string name="answer_or_check_email">Answer the question below or check your email for password reset link.</string>
     <string name="app_name">ماي تاكسي السعودية</string>
     <string name="approxFare">Approx. Fare</string>
     <string name="availability">التوفر:</string>
@@ -528,12 +530,15 @@
     <string name="fairDetails">تفاصيل أجرة</string>
     <string name="fairEstimate">تقدير النظيف:</string>
     <string name="feedback">ردود الفعل</string>
+    <string name="feedback_msg_hint">Provide additional comments here...</string>
     <string name="general">عام</string>
     <string name="gettingFairEstimate">الحصول على تقديرات عادلة ...</string>
     <string name="getting_address">الحصول على عنوان</string>
+    <string name="getting_available_promotions">Getting Available Promotions</string>
     <string name="getting_nearby_places">الحصول على الأماكن القريبة ...</string>
     <string name="gotCreditFromFriends">حصلت على الرصيد عن طريق اضافة صديق</string>
     <string name="imready">وأنا على استعداد في</string>
+    <string name="imreadyat">وأنا على استعداد في</string>
     <string name="imreadynow">أنا جاهز الأن</string>
     <string name="invalid_email_address">عنوان البريد الإلكتروني غير صحيح</string>
     <string name="invalid_firstname_length">الاسم الأول قصيرة جدا</string>
@@ -549,7 +554,7 @@
     <string name="login_signin">الدخول</string>
     <string name="map_location">  (صحافة-للانتقال إلى موقعك الحالي)</string>
     <string name="menu">قائمة</string>
-    <string name="mobileNumber">Mobile Number :</string>
+    <string name="mobileNumber">Mobile Number</string>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values-ar/values.xml -->
     <eat-comment/>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"إرسال"</string>
@@ -593,6 +598,7 @@
     <string name="saved_locations">المفضلة</string>
     <string name="secret_answer">إجابة السؤال السري</string>
     <string name="secret_question">أضغط هنا لاختيار السؤال السري</string>
+    <string name="secret_question_blank">Please choose a secret question</string>
     <string name="select_destination">حدد الوجهة</string>
     <string name="select_pickup_point">حدد نقطة تحميل الراكب</string>
     <string name="sendme">ارسل إلي</string>

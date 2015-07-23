@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true" android:drawable="@color/translucent_dark" />
     <item android:drawable="@color/dark_gray" />
 </selector><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/drawable/greybuttonfeedbacktranslucent.xml -->

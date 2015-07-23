@@ -72,8 +72,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/background_textured_gray"
         android:orientation="vertical"
-        android:layout_below="@+id/rl_main_ppv"
-        >
+        android:layout_below="@+id/rl_main_ppv">
 
         <RelativeLayout
             android:id="@+id/rl_Charge_From_Voucer"
@@ -93,8 +92,8 @@
                 android:padding="10.0sp"
                 android:singleLine="true"
                 android:textSize="@dimen/size17"
-                android:layout_margin="@dimen/size10"
-                />
+                android:layout_margin="@dimen/size10" />
+
             <Button
                 android:id="@+id/btn_ppv_chargeFromVoucher"
                 android:layout_width="match_parent"
@@ -108,8 +107,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:padding="5dp"
-                android:onClick="chargeByVoucher"
-                />
+                android:onClick="chargeByVoucher" />
 
         </RelativeLayout>
 
@@ -126,7 +124,7 @@
             android:textSize="@dimen/size13"
             android:textStyle="italic"
             android:typeface="serif"
-            android:layout_marginTop="@dimen/size10"/>
+            android:layout_marginTop="@dimen/size10" />
 
         <EditText
             android:id="@+id/topup_Amount"
@@ -140,8 +138,7 @@
             android:singleLine="true"
             android:textSize="@dimen/size17"
             android:layout_margin="@dimen/size10"
-            android:layout_below="@+id/creditChargingHeader"
-            />
+            android:layout_below="@+id/creditChargingHeader" />
 
         <Button
             android:id="@+id/btn_ppv_chargeFromCC"
@@ -170,7 +167,7 @@
             android:textSize="@dimen/size13"
             android:textStyle="italic"
             android:typeface="serif"
-            android:layout_marginTop="@dimen/size10"/>
+            android:layout_marginTop="@dimen/size10" />
 
     </RelativeLayout>
 </RelativeLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/activity_ppv.xml -->

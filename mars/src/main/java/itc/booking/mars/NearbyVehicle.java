@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Build;
+import android.util.Log;
 
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -76,13 +77,20 @@ public class NearbyVehicle {
 
         marker = BookingApplication.getVehicleDrawable(vehColor);
 
-        vehMarker = new MarkerOptions().position(latlong).title("Vehicle").snippet("").flat(true).icon(BitmapDescriptorFactory.fromResource(marker)).anchor(0.5f, 0.5f);
-
+        try {
+            vehMarker = new MarkerOptions().position(latlong).title("Vehicle").snippet("").flat(true).icon(BitmapDescriptorFactory.fromResource(marker)).anchor(0.5f, 0.5f);
+        } catch (Exception e) {
+            Log.e(getClass().getSimpleName(), e.getLocalizedMessage());
+        }
     }
 
     public void setLatlong(LatLng ll) {
+        try {
         latlong = ll;
         vehMarker = new MarkerOptions().position(latlong).title("Vehicle").snippet("").flat(true).icon(BitmapDescriptorFactory.fromResource(marker)).anchor(0.5f, 0.5f);
+        } catch (Exception e) {
+            Log.e(getClass().getSimpleName(), e.getLocalizedMessage());
+        }
     }
 
     public LatLng getLatlong() {

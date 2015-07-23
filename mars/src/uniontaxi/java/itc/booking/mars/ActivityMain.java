@@ -67,7 +67,6 @@ import org.w3c.dom.Document;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Timer;
@@ -235,7 +234,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         datePicker1 = (DatePicker) findViewById(R.id.datePicker1);
         et_pickup_person_name = (EditText) findViewById(R.id.et_pickup_person_name);
         et_callback_number = (EditText) findViewById(R.id.et_callback_number);
-        et_callback_number.setText(BookingApplication.getUserSimNumber());
+        et_callback_number.setText("");
         et_driver_notes = (EditText) findViewById(R.id.et_driver_notes);
         tv_fare_estimate = (TextView) findViewById(R.id.tv_fare_estimate);
         tv_mile_estimate = (TextView) findViewById(R.id.tv_mile_estimate);
@@ -372,23 +371,23 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             showNotesDialog(R.string.Cancel, R.id.btn_pick_notes);
         else if (v.getId() == R.id.btn_drop_notes)
             showNotesDialog(R.string.Cancel, R.id.btn_drop_notes);
-        else {
-            if (rl_vehicle_company_fare.isShown()) {
-                Animation outAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_top);
-                rl_vehicle_company_fare.startAnimation(outAnim);
-                rl_vehicle_company_fare.setVisibility(View.GONE);
-            }
-            if (!et_callback_number.isShown()) {
-                Animation inTopAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_top);
-                et_callback_number.startAnimation(inTopAnim);
-                et_callback_number.setVisibility(View.VISIBLE);
-            }
-            if (!et_pickup_person_name.isShown()) {
-                Animation inTopAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_top);
-                et_pickup_person_name.startAnimation(inTopAnim);
-                et_pickup_person_name.setVisibility(View.VISIBLE);
-            }
-        }
+//        else {
+//            if (rl_vehicle_company_fare.isShown()) {
+//                Animation outAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_out_top);
+//                rl_vehicle_company_fare.startAnimation(outAnim);
+//                rl_vehicle_company_fare.setVisibility(View.GONE);
+//            }
+//            if (!et_callback_number.isShown()) {
+//                Animation inTopAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_top);
+//                et_callback_number.startAnimation(inTopAnim);
+//                et_callback_number.setVisibility(View.VISIBLE);
+//            }
+//            if (!et_pickup_person_name.isShown()) {
+//                Animation inTopAnim = AnimationUtils.loadAnimation(ActivityMain.this, R.anim.slide_in_top);
+//                et_pickup_person_name.startAnimation(inTopAnim);
+//                et_pickup_person_name.setVisibility(View.VISIBLE);
+//            }
+//        }
     }
 
     /*---------------------------------------------- showFavorites -------------------------------------------------------------------------------------*/
@@ -654,7 +653,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             //trip_requested.companyID = BookingApplication.getAffiliateIDFromDB(ActivityMain.this, spinner_affiliates.getSelectedItem().toString());
             //trip_requested.vehTypeID = BookingApplication.getVehicleIDFromDB(ActivityMain.this, spinner_vehicles.getSelectedItem().toString());
             trip_requested.callbackName = et_pickup_person_name.getText().toString().length() > 0 ? et_pickup_person_name.getText().toString() : BookingApplication.userName;
-            trip_requested.callbackNumber = et_callback_number.getText().toString();
+            trip_requested.callbackNumber = et_callback_number.getText().toString().trim().length() > 7 ? et_callback_number.getText().toString() : BookingApplication.getUserSimNumber();
             trip_requested.otherInfo = et_driver_notes.getText().toString();
 
             if (dropMarker != null) {
@@ -1266,7 +1265,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 @Override
                 public boolean onMarkerClick(final Marker marker) {
                     try {
-                        if (marker.getTitle().equalsIgnoreCase("Vehicle")) {
+                        if (marker.getTitle().equalsIgnoreCase("Vehicle") && !timer_view.isShown()) {
 
                             currVehicle = BookingApplication.nearByVehicles.get(Integer.parseInt(marker.getSnippet()));
 
@@ -1361,7 +1360,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                             vehicle_balloon.setVisibility(View.VISIBLE);
                             return false;
 
-                        }
+                        } else
+                            return true;
 
                     } catch (Exception e) {
                         Toast.makeText(ActivityMain.this, e.toString(), Toast.LENGTH_LONG).show();
@@ -1424,7 +1424,12 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             rl_bottom_views.startAnimation(outAnim);
             rl_bottom_views.setVisibility(View.VISIBLE);
 
-            lv_nearby_places.setVisibility(View.VISIBLE);
+            if (placesList.isEmpty()) {
+                ll_getting_nearby_progress.setVisibility(View.VISIBLE);
+                lv_nearby_places.setVisibility(View.GONE);
+            } else
+                lv_nearby_places.setVisibility(View.VISIBLE);
+
             BookingApplication.bShowNearbyPlaces = true;
 
             tt = new TimerTask() {
@@ -1440,6 +1445,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                                 placesList.clear();
                                 placesList.addAll(places);
                                 placesAdaptor.notifyDataSetChanged();
+                                lv_nearby_places.setVisibility(View.VISIBLE);
                                 ll_getting_nearby_progress.setVisibility(View.GONE);
                             }
                         });
@@ -2269,9 +2275,9 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     if (success) {
                         trip_requested.iServiceID = jsonResponse.getString("iServiceID");
                         trip_requested.state = "ACCEPTED";
-                        BookingApplication.recentTrips.add(trip_requested);
+                        BookingApplication.recentTrips.add(0, trip_requested);
                         BookingApplication.unPerformedTripsCount++;
-                        Collections.sort(BookingApplication.recentTrips);
+                        //Collections.sort(BookingApplication.recentTrips);
                         trips_adapter.notifyDataSetChanged();
                         if (jsonResponse.getInt("waitCountDown") == 0)
                             showCustomDialog(CODES.RESERVATION_SUCCESS, R.string.Booking_Status, getResources().getString(R.string.Booking_Success, jsonResponse.getString("confirmationNo")), 0, false);
@@ -2415,7 +2421,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         pointer.setVisibility(View.VISIBLE);
         et_driver_notes.setText("");
         et_pickup_person_name.setText("");
-        et_callback_number.setText(BookingApplication.getUserSimNumber());
+        et_callback_number.setText("");
         tv_refresh.setText(R.string.Help_Mark);
         tv_refresh.setBackgroundResource(BookingApplication.textView_Background);
         tv_pick_drop.setText(R.string.pickme);
@@ -2743,6 +2749,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     tripstatus.setImageResource(R.drawable.icondone);
                 else if (currentTrip.state.equalsIgnoreCase("CANCELLED"))
                     tripstatus.setImageResource(R.drawable.iconcancel);
+                else if (currentTrip.state.equalsIgnoreCase("NOSHOW"))
+                    tripstatus.setImageResource(R.drawable.noshow);
                 else if (currentTrip.state.equalsIgnoreCase("IRTPU"))
                     tripstatus.setImageResource(R.drawable.irtpu);
                 else if (currentTrip.state.equalsIgnoreCase("IRTDO") || currentTrip.state.equalsIgnoreCase("PICKEDUP"))

@@ -280,7 +280,7 @@
     <string name="ProvideAddressName">يرجى تقديم اسم العنوان</string>
     <string name="chooseVehicleType">اضغط هنا لتحديد المركبات / نوع الخدمة</string>
     <string name="companyWebsite">Availability:</string>
-    <string name="mobileNumber">Mobile Number :</string>
+    <string name="mobileNumber">Mobile Number</string>
     <string name="provideMobileNumber">يرجى تقديم رقم الجوال</string>
     <string name="overlayText">> %1$s متعاقدة مع البنوك لإجراء عمليات الدفع بواسطة بطاقات الائتمان.\n • التسجيل يتم عبر بوابة بنك مؤمنة\n • التسجيل والعمليات تتفق مع ( PCI DSS ) معايير  الأمن في صناعة بطاقات الدفع\n • سجل معلومات العميل يتم تخزنها بشكل آمن في البنك\n • قاعدة معلومات بوابة الدفع مؤمنة ، وبيانات البطاقة لايتم الإحتفاظ بها في %1$s.\n • قيمة الرحلة يمكن دفعها نقدا حتى ولو لم يتم تسجيل بطاقة الائتمان ، الدفع ببطاقة الائتمان أختياري.\n • دفع قيمة الرحلات بواسطة بطاقة الائتمان يتم فقط لو كانت البطاقة مسجلة.\n •التسجيل متاح في اي وقت من خلال الدخول الى خيار بطاقة الائتمان الموجود في قائمة تطبيق %1$s</string>
     <string name="provideCompanyWebsite">Please Provide Mobile Number</string>
@@ -291,5 +291,7 @@
     <string name="imreadyat">وأنا على استعداد في</string>
     <string name="CallBackNumber">Callback Number</string>
     <string name="getting_available_promotions">Getting Available Promotions</string>
+    <string name="ReferedByOther">Other</string>
+    <string name="feedback_msg_hint">Provide additional comments here...</string>
 
 </resources>

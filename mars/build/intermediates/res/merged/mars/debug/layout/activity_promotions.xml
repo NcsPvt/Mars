@@ -19,7 +19,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginBottom="5dp"
             android:background="@color/mars_red"
             android:gravity="center_vertical">
 
@@ -72,13 +71,47 @@
             android:id="@+id/list_promos"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+            android:layout_margin="5dp"
             android:layout_below="@id/ll_pageHeader"
             android:divider="@color/transparent"
             android:dividerHeight="3dp"
             android:overScrollMode="never"
             android:scrollbars="none"
             android:visibility="visible" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_getting_promos_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/ll_pageHeader"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dip"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="30dp"
+                android:text="@string/getting_available_promotions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size15"
+                android:textStyle="italic"
+                android:typeface="serif" />
+
+            <ProgressBar
+                android:id="@+id/progress_nearby_places"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/my_progress_indeterminate" />
+
+        </LinearLayout>
+
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -126,7 +159,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@id/lbl_Code"
                 android:text="@string/Book_Trip"
-                android:visibility="invisible"/>
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tv_selected_code"
@@ -149,7 +182,9 @@
                 android:gravity="center"
                 android:paddingBottom="3dp"
                 android:paddingTop="3dp"
-                android:text="@string/terms_of_use" />
+                android:text="@string/terms_of_use"
+                android:visibility="visible"
+                android:onClick="showTermsOfUse"/>
 
             <TextView
                 android:id="@+id/lbl_Balance"
@@ -192,7 +227,7 @@
                 android:layout_toLeftOf="@id/lbl_promo_terms"
                 android:gravity="left"
                 android:padding="3dp"
-                android:textSize="@dimen/size8"/>
+                android:textSize="@dimen/size8" />
 
         </RelativeLayout>
 
@@ -222,7 +257,8 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/promo_type" />
+                android:text="@string/promo_type"
+                android:visibility="visible" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -234,19 +270,10 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="1.1"
+                android:layout_weight="1.2"
                 android:gravity="center"
                 android:text="@string/promo_balance" />
-            <!--
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:layout_weight="1.2"
-                            android:gravity="center"
-                            android:text="@string/per_trip"/>
-
-            -->
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"

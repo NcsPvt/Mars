@@ -382,8 +382,8 @@
                 android:background="@drawable/mars_menu_button"
                 android:gravity="center_horizontal"
                 android:onClick="performLogout"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
+
                 <ImageButton
                     android:layout_width="50dp"
                     android:layout_height="50dp"

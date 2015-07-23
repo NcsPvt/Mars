@@ -259,7 +259,6 @@
         <item>¿Quién fue su fecha de la noche del baile?</item>
         <item>Cuál es el nombre de su primo más grande?</item>
         <item>¿Quién es tu banda favorita todo el tiempo?</item>
-        <item>¿Cuál es tu canción favorita de todos los tiempos?</item>
         <item>¿Cuál es el nombre de su primer amor de la infancia?</item>
         <item>¿Cuál es el nombre de su libro favorito?</item>
         <item>¿Cuál es el nombre de tu película favorita?</item>
@@ -284,6 +283,7 @@
     <string name="Booking_Status">Situacion de la reserva</string>
     <string name="Booking_Success">Su reservación fue exitosa.\n Numero de Confirmación No: %s</string>
     <string name="Call">Llamada</string>
+    <string name="CallBackNumber">Callback Number</string>
     <string name="Call_driver">Llamar Conductor/Chofer</string>
     <string name="Cancel">Cancelar</string>
     <string name="Cancel_ride">CANCELAR RESERVACION</string>
@@ -385,6 +385,7 @@
     <string name="ReferedByCompany">Company\'s Website</string>
     <string name="ReferedByDriver">Recomendado por el conductor</string>
     <string name="ReferedByFriend">Desde un amigo</string>
+    <string name="ReferedByOther">Other</string>
     <string name="Register">REGISTRAR</string>
     <string name="RegisterAgain">REGISTRARSE DE NUEVO</string>
     <string name="Remove">Quitar</string>
@@ -447,6 +448,7 @@
     <string name="about_us"><u>Sobre Nosotros</u></string>
     <string name="address">DIRECCION:</string>
     <string name="airport_drop_note">For airport dropoff %s hours advance pickup required.</string>
+    <string name="answer_or_check_email">Answer the question below or check your email for password reset link.</string>
     <string name="app_name">Mars</string>
     <string name="approxFare">Approx. Fare</string>
     <string name="availability">Availability:</string>
@@ -496,7 +498,7 @@
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"Iniciar sesión con Google"</string>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values-es/strings.xml -->
     <eat-comment/>
-    <string name="companyWebsite">Company Website :</string>
+    <string name="companyWebsite">Company Website</string>
     <string name="contact_backoffice">POR FAVOR LLAMAR AL NUMERO DEL SERVICIO AL CLIENTE</string>
     <string name="continue_to_track_cab">Desea continuar rastreando al cab</string>
     <string name="cost">Costo: %s (approx)</string>
@@ -520,12 +522,15 @@
     <string name="fairDetails">Detalles Fare</string>
     <string name="fairEstimate">Fair Estimate:<u> %s </u></string>
     <string name="feedback">Realimentación</string>
+    <string name="feedback_msg_hint">Provide additional comments here...</string>
     <string name="general">General</string>
     <string name="gettingFairEstimate">Conseguir Estimación Feria ...</string>
     <string name="getting_address">OBTENIENDO LA DIRECCION</string>
+    <string name="getting_available_promotions">Getting Available Promotions</string>
     <string name="getting_nearby_places">Llegar Lugares cercanos ...</string>
     <string name="gotCreditFromFriends">You got credit from your following friends</string>
-    <string name="imready">I\'m ready at</string>
+    <string name="imready">I\'m ready </string>
+    <string name="imreadyat">I\\\'m ready at</string>
     <string name="imreadynow">I\'m ready now.</string>
     <string name="invalid_email_address">Dirección de correo invalida</string>
     <string name="invalid_firstname_length">Primer Nombre Corto</string>
@@ -541,7 +546,7 @@
     <string name="login_signin">REGISTRARSE</string>
     <string name="map_location">  (Press-to move to your current location)</string>
     <string name="menu">menú</string>
-    <string name="mobileNumber">Mobile Number :</string>
+    <string name="mobileNumber">Mobile Number</string>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values-es/values.xml -->
     <eat-comment/>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"Enviar contenido"</string>
@@ -585,6 +590,7 @@
     <string name="saved_locations">Favoritos</string>
     <string name="secret_answer"> Proveer su respuesta secreta</string>
     <string name="secret_question">Respuesta Secreta</string>
+    <string name="secret_question_blank">Please choose a secret question</string>
     <string name="select_destination">Seleccionar Destino</string>
     <string name="select_pickup_point">Seleccionar Punto Del Que Quiere Ser Recogido</string>
     <string name="sendme">Send me</string>

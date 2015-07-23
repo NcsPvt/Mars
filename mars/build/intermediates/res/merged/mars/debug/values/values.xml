@@ -367,7 +367,7 @@
     <color name="mars_green">#9acd32</color>
     <color name="mars_purple">#AA66CC</color>
     <color name="mars_red">#EE0000</color>
-    <color name="mars_yellow">#ff8800</color>
+    <color name="mars_yellow">#ffff9900</color>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -590,6 +590,7 @@
     <string name="Booking_Status">Trip Request Status</string>
     <string name="Booking_Success">Your Trip is booked Successfully.\n Confirmation No: %s</string>
     <string name="Call">Call</string>
+    <string name="CallBackNumber">Callback Number</string>
     <string name="Call_driver">Call driver</string>
     <string name="Cancel">"Cancel"</string>
     <string name="Cancel_ride">Cancel Booking</string>
@@ -691,6 +692,7 @@
     <string name="ReferedByCompany">Company\'s Website</string>
     <string name="ReferedByDriver">Recommended by Driver</string>
     <string name="ReferedByFriend">From a Friend</string>
+    <string name="ReferedByOther">Other</string>
     <string name="Register">REGISTER</string>
     <string name="RegisterAgain">REGISTER AGAIN</string>
     <string name="Remove">Remove</string>
@@ -758,6 +760,7 @@
     <eat-comment/>
     <string name="address">ADDRESS:</string>
     <string name="airport_drop_note">For airport dropoff %s hours advance pickup required.</string>
+    <string name="answer_or_check_email">Answer the question below\n - or -\n check your email for password reset link.</string>
     <string name="app_name">Mars</string>
     <string name="approxFare">Approx. Fare</string>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/auth_strings.xml -->
@@ -820,7 +823,7 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="companyWebsite">Company Website : </string>
+    <string name="companyWebsite">Company Website</string>
     <string name="contact_backoffice">Please contact back office</string>
     <string name="continue_to_track_cab">continue to track cab</string>
     <string name="cost">Cost: %s (approx)</string>
@@ -855,9 +858,11 @@
     <string name="fairDetails">Fare Details</string>
     <string name="fairEstimate">Fair Estimate:<u> %s </u></string>
     <string name="feedback">Feedback</string>
+    <string name="feedback_msg_hint">Provide additional comments here...</string>
     <string name="general">General</string>
     <string name="gettingFairEstimate">Getting Fair Estimate…</string>
     <string name="getting_address">Getting Address …</string>
+    <string name="getting_available_promotions">Getting Available Promotions</string>
     <string name="getting_nearby_places">Getting Nearby Places …</string>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/build/generated/res/resValues/mars/debug/values/generated.xml -->
     <eat-comment/>
@@ -866,7 +871,8 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="gotCreditFromFriends">You got credit from your following friends</string>
-    <string name="imready">I\'m ready at</string>
+    <string name="imready">I\'m ready </string>
+    <string name="imreadyat">I\\\'m ready at</string>
     <string name="imreadynow">I\'m ready now.</string>
     <string name="invalid_email_address">Invalid email address</string>
     <string name="invalid_firstname_length">First name too short</string>
@@ -882,7 +888,7 @@
     <string name="login_signin">SIGN IN</string>
     <string name="map_location">  (Press-to move to your current location)</string>
     <string name="menu">Menu</string>
-    <string name="mobileNumber">Mobile Number : </string>
+    <string name="mobileNumber">Mobile Number</string>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="mr_media_route_button_content_description">Cast</string>
@@ -931,6 +937,7 @@
     <string name="saved_locations">Favorite Addresses</string>
     <string name="secret_answer">Provide a Secret Answer</string>
     <string name="secret_question">Secret Question</string>
+    <string name="secret_question_blank">Please choose a secret question</string>
     <string name="select_destination">Select Destination</string>
     <string name="select_pickup_point">Select Pickup Point</string>
     <string name="sendme">Send me</string>
@@ -988,21 +995,21 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marscyan.xml -->
     <eat-comment/>
     <style name="AutoCompleteTextViewMarsCyan" parent="android:Widget.Holo.Light.AutoCompleteTextView">
-      <item name="android:dropDownSelector">@drawable/marscyan_list_selector_holo_light</item>
-	    <item name="android:background">@drawable/marscyan_edit_text_holo_light</item>
-  </style>
+        <item name="android:dropDownSelector">@drawable/marscyan_list_selector_holo_light</item>
+        <item name="android:background">@drawable/marscyan_edit_text_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsgreen.xml -->
     <eat-comment/>
     <style name="AutoCompleteTextViewMarsGreen" parent="android:Widget.Holo.Light.AutoCompleteTextView">
-      <item name="android:dropDownSelector">@drawable/marsgreen_list_selector_holo_light</item>
-	    <item name="android:background">@drawable/marsgreen_edit_text_holo_light</item>
-  </style>
+        <item name="android:dropDownSelector">@drawable/marsgreen_list_selector_holo_light</item>
+        <item name="android:background">@drawable/marsgreen_edit_text_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marspurple.xml -->
     <eat-comment/>
     <style name="AutoCompleteTextViewMarsPurple" parent="android:Widget.Holo.Light.AutoCompleteTextView">
-      <item name="android:dropDownSelector">@drawable/marspurple_list_selector_holo_light</item>
-	    <item name="android:background">@drawable/marspurple_edit_text_holo_light</item>
-  </style>
+        <item name="android:dropDownSelector">@drawable/marspurple_list_selector_holo_light</item>
+        <item name="android:background">@drawable/marspurple_edit_text_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsred.xml -->
     <eat-comment/>
     <style name="AutoCompleteTextViewMarsRed" parent="android:Widget.Holo.Light.AutoCompleteTextView">
@@ -1880,18 +1887,18 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marscyan.xml -->
     <eat-comment/>
     <style name="ButtonMarsCyan" parent="android:Widget.Holo.Light.Button">
-	  <item name="android:background">@drawable/marscyan_btn_default_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marscyan_btn_default_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsgreen.xml -->
     <eat-comment/>
     <style name="ButtonMarsGreen" parent="android:Widget.Holo.Light.Button">
-	  <item name="android:background">@drawable/marsgreen_btn_default_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marsgreen_btn_default_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marspurple.xml -->
     <eat-comment/>
     <style name="ButtonMarsPurple" parent="android:Widget.Holo.Light.Button">
-	  <item name="android:background">@drawable/marspurple_btn_default_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marspurple_btn_default_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsred.xml -->
     <eat-comment/>
     <style name="ButtonMarsRed" parent="android:Widget.Holo.Light.Button">
@@ -1914,18 +1921,18 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marscyan.xml -->
     <eat-comment/>
     <style name="ImageButtonMarsCyan" parent="android:Widget.Holo.Light.ImageButton">
-	  <item name="android:background">@drawable/marscyan_btn_default_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marscyan_btn_default_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsgreen.xml -->
     <eat-comment/>
     <style name="ImageButtonMarsGreen" parent="android:Widget.Holo.Light.ImageButton">
-	  <item name="android:background">@drawable/marsgreen_btn_default_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marsgreen_btn_default_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marspurple.xml -->
     <eat-comment/>
     <style name="ImageButtonMarsPurple" parent="android:Widget.Holo.Light.ImageButton">
-	  <item name="android:background">@drawable/marspurple_btn_default_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marspurple_btn_default_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsred.xml -->
     <eat-comment/>
     <style name="ImageButtonMarsRed" parent="android:Widget.Holo.Light.ImageButton">
@@ -2096,38 +2103,56 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsblue.xml -->
     <eat-comment/>
     <style name="ProgressBarMarsBlue" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
-        <item name="android:progressDrawable">@drawable/marsblue_progress_horizontal_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/marsblue_progress_indeterminate_horizontal_holo_light</item>
+        <item name="android:progressDrawable">@drawable/marsblue_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marsblue_progress_indeterminate_horizontal_holo_light
+        </item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marscyan.xml -->
     <eat-comment/>
     <style name="ProgressBarMarsCyan" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
-      <item name="android:progressDrawable">@drawable/marscyan_progress_horizontal_holo_light</item>
-      <item name="android:indeterminateDrawable">@drawable/marscyan_progress_indeterminate_horizontal_holo_light</item>
-  </style>
+        <item name="android:progressDrawable">@drawable/marscyan_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marscyan_progress_indeterminate_horizontal_holo_light
+        </item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsgreen.xml -->
     <eat-comment/>
     <style name="ProgressBarMarsGreen" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
-      <item name="android:progressDrawable">@drawable/marsgreen_progress_horizontal_holo_light</item>
-      <item name="android:indeterminateDrawable">@drawable/marsgreen_progress_indeterminate_horizontal_holo_light</item>
-  </style>
+        <item name="android:progressDrawable">@drawable/marsgreen_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marsgreen_progress_indeterminate_horizontal_holo_light
+        </item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marspurple.xml -->
     <eat-comment/>
     <style name="ProgressBarMarsPurple" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
-      <item name="android:progressDrawable">@drawable/marspurple_progress_horizontal_holo_light</item>
-      <item name="android:indeterminateDrawable">@drawable/marspurple_progress_indeterminate_horizontal_holo_light</item>
-  </style>
+        <item name="android:progressDrawable">@drawable/marspurple_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marspurple_progress_indeterminate_horizontal_holo_light
+        </item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsred.xml -->
     <eat-comment/>
     <style name="ProgressBarMarsRed" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
-        <item name="android:progressDrawable">@drawable/marsred_progress_horizontal_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/marsred_progress_indeterminate_horizontal_holo_light</item>
+        <item name="android:progressDrawable">@drawable/marsred_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marsred_progress_indeterminate_horizontal_holo_light
+        </item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsyellow.xml -->
     <eat-comment/>
     <style name="ProgressBarMarsYellow" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
-        <item name="android:progressDrawable">@drawable/marsyellow_progress_horizontal_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/marsyellow_progress_indeterminate_horizontal_holo_light</item>
+        <item name="android:progressDrawable">@drawable/marsyellow_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marsyellow_progress_indeterminate_horizontal_holo_light
+        </item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
@@ -2175,43 +2200,67 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsblue.xml -->
     <eat-comment/>
     <style name="SeekBarMarsBlue" parent="android:Widget.Holo.Light.SeekBar">
-        <item name="android:progressDrawable">@drawable/marsblue_scrubber_progress_horizontal_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/marsblue_scrubber_progress_horizontal_holo_light</item>
+        <item name="android:progressDrawable">
+            @drawable/marsblue_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marsblue_scrubber_progress_horizontal_holo_light
+        </item>
         <item name="android:thumb">@drawable/marsblue_scrubber_control_selector_holo_light</item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marscyan.xml -->
     <eat-comment/>
     <style name="SeekBarMarsCyan" parent="android:Widget.Holo.Light.SeekBar">
-      <item name="android:progressDrawable">@drawable/marscyan_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:indeterminateDrawable">@drawable/marscyan_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:thumb">@drawable/marscyan_scrubber_control_selector_holo_light</item>
-  </style>
+        <item name="android:progressDrawable">
+            @drawable/marscyan_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marscyan_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:thumb">@drawable/marscyan_scrubber_control_selector_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsgreen.xml -->
     <eat-comment/>
     <style name="SeekBarMarsGreen" parent="android:Widget.Holo.Light.SeekBar">
-      <item name="android:progressDrawable">@drawable/marsgreen_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:indeterminateDrawable">@drawable/marsgreen_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:thumb">@drawable/marsgreen_scrubber_control_selector_holo_light</item>
-  </style>
+        <item name="android:progressDrawable">
+            @drawable/marsgreen_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marsgreen_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:thumb">@drawable/marsgreen_scrubber_control_selector_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marspurple.xml -->
     <eat-comment/>
     <style name="SeekBarMarsPurple" parent="android:Widget.Holo.Light.SeekBar">
-      <item name="android:progressDrawable">@drawable/marspurple_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:indeterminateDrawable">@drawable/marspurple_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:thumb">@drawable/marspurple_scrubber_control_selector_holo_light</item>
-  </style>
+        <item name="android:progressDrawable">
+            @drawable/marspurple_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marspurple_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:thumb">@drawable/marspurple_scrubber_control_selector_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsred.xml -->
     <eat-comment/>
     <style name="SeekBarMarsRed" parent="android:Widget.Holo.Light.SeekBar">
-        <item name="android:progressDrawable">@drawable/marsred_scrubber_progress_horizontal_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/marsred_scrubber_progress_horizontal_holo_light</item>
+        <item name="android:progressDrawable">
+            @drawable/marsred_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marsred_scrubber_progress_horizontal_holo_light
+        </item>
         <item name="android:thumb">@drawable/marsred_scrubber_control_selector_holo_light</item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsyellow.xml -->
     <eat-comment/>
     <style name="SeekBarMarsYellow" parent="android:Widget.Holo.Light.SeekBar">
-        <item name="android:progressDrawable">@drawable/marsyellow_scrubber_progress_horizontal_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/marsyellow_scrubber_progress_horizontal_holo_light</item>
+        <item name="android:progressDrawable">
+            @drawable/marsyellow_scrubber_progress_horizontal_holo_light
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/marsyellow_scrubber_progress_horizontal_holo_light
+        </item>
         <item name="android:thumb">@drawable/marsyellow_scrubber_control_selector_holo_light</item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsblue.xml -->
@@ -2223,21 +2272,21 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marscyan.xml -->
     <eat-comment/>
     <style name="SpinnerMarsCyan" parent="android:Widget.Holo.Light.Spinner">
-      <item name="android:background">@drawable/marscyan_spinner_background_holo_light</item>
-      <item name="android:dropDownSelector">@drawable/marscyan_list_selector_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marscyan_spinner_background_holo_light</item>
+        <item name="android:dropDownSelector">@drawable/marscyan_list_selector_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsgreen.xml -->
     <eat-comment/>
     <style name="SpinnerMarsGreen" parent="android:Widget.Holo.Light.Spinner">
-      <item name="android:background">@drawable/marsgreen_spinner_background_holo_light</item>
-      <item name="android:dropDownSelector">@drawable/marsgreen_list_selector_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marsgreen_spinner_background_holo_light</item>
+        <item name="android:dropDownSelector">@drawable/marsgreen_list_selector_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marspurple.xml -->
     <eat-comment/>
     <style name="SpinnerMarsPurple" parent="android:Widget.Holo.Light.Spinner">
-      <item name="android:background">@drawable/marspurple_spinner_background_holo_light</item>
-      <item name="android:dropDownSelector">@drawable/marspurple_list_selector_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marspurple_spinner_background_holo_light</item>
+        <item name="android:dropDownSelector">@drawable/marspurple_list_selector_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsred.xml -->
     <eat-comment/>
     <style name="SpinnerMarsRed" parent="android:Widget.Holo.Light.Spinner">
@@ -2264,36 +2313,36 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marscyan.xml -->
     <eat-comment/>
     <style name="TabMarsCyan">
-      <item name="android:gravity">center_horizontal</item>
-      <item name="android:paddingLeft">16dip</item>
-      <item name="android:paddingRight">16dip</item>
-      <item name="android:background">@drawable/marscyan_tab_indicator_holo</item>
-      <item name="android:layout_width">0dip</item>
-      <item name="android:layout_weight">1</item>
-      <item name="android:minWidth">80dip</item>
-  </style>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:paddingRight">16dip</item>
+        <item name="android:background">@drawable/marscyan_tab_indicator_holo</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minWidth">80dip</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsgreen.xml -->
     <eat-comment/>
     <style name="TabMarsGreen">
-      <item name="android:gravity">center_horizontal</item>
-      <item name="android:paddingLeft">16dip</item>
-      <item name="android:paddingRight">16dip</item>
-      <item name="android:background">@drawable/marsgreen_tab_indicator_holo</item>
-      <item name="android:layout_width">0dip</item>
-      <item name="android:layout_weight">1</item>
-      <item name="android:minWidth">80dip</item>
-  </style>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:paddingRight">16dip</item>
+        <item name="android:background">@drawable/marsgreen_tab_indicator_holo</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minWidth">80dip</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marspurple.xml -->
     <eat-comment/>
     <style name="TabMarsPurple">
-      <item name="android:gravity">center_horizontal</item>
-      <item name="android:paddingLeft">16dip</item>
-      <item name="android:paddingRight">16dip</item>
-      <item name="android:background">@drawable/marspurple_tab_indicator_holo</item>
-      <item name="android:layout_width">0dip</item>
-      <item name="android:layout_weight">1</item>
-      <item name="android:minWidth">80dip</item>
-  </style>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">16dip</item>
+        <item name="android:paddingRight">16dip</item>
+        <item name="android:background">@drawable/marspurple_tab_indicator_holo</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minWidth">80dip</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsred.xml -->
     <eat-comment/>
     <style name="TabMarsRed">
@@ -2330,36 +2379,36 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marscyan.xml -->
     <eat-comment/>
     <style name="TabTextMarsCyan">
-	  <item name="android:textColor">#000000</item>
-      <item name="android:textSize">12sp</item>
-      <item name="android:textStyle">bold</item>
-      <!-- v14 <item name="android:textAllCaps">true</item> -->
-      <item name="android:ellipsize">marquee</item>
-      <item name="android:maxLines">2</item>
-      <item name="android:maxWidth">180dip</item>
-  </style>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- v14 <item name="android:textAllCaps">true</item> -->
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:maxWidth">180dip</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsgreen.xml -->
     <eat-comment/>
     <style name="TabTextMarsGreen">
-	  <item name="android:textColor">#000000</item>
-      <item name="android:textSize">12sp</item>
-      <item name="android:textStyle">bold</item>
-      <!-- v14 <item name="android:textAllCaps">true</item> -->
-      <item name="android:ellipsize">marquee</item>
-      <item name="android:maxLines">2</item>
-      <item name="android:maxWidth">180dip</item>
-  </style>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- v14 <item name="android:textAllCaps">true</item> -->
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:maxWidth">180dip</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marspurple.xml -->
     <eat-comment/>
     <style name="TabTextMarsPurple">
-	  <item name="android:textColor">#000000</item>
-      <item name="android:textSize">12sp</item>
-      <item name="android:textStyle">bold</item>
-      <!-- v14 <item name="android:textAllCaps">true</item> -->
-      <item name="android:ellipsize">marquee</item>
-      <item name="android:maxLines">2</item>
-      <item name="android:maxWidth">180dip</item>
-  </style>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- v14 <item name="android:textAllCaps">true</item> -->
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:maxWidth">180dip</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsred.xml -->
     <eat-comment/>
     <style name="TabTextMarsRed">
@@ -2522,8 +2571,8 @@
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles_marsgreen.xml -->
     <eat-comment/>
     <style name="ToggleMarsGreen" parent="android:Widget.Holo.Light.Button.Toggle">
-      <item name="android:background">@drawable/marsgreen_btn_toggle_holo_light</item>
-  </style>
+        <item name="android:background">@drawable/marsgreen_btn_toggle_holo_light</item>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/res/values/wallet_styles.xml -->
     <eat-comment/>
     <style name="WalletFragmentDefaultButtonTextAppearance">
@@ -2669,91 +2718,122 @@
         <item name="android:editTextBackground">@drawable/marsblue_edit_text_holo_light</item>
         <item name="android:textColorHighlight">#992149ad</item>
         <item name="android:textSelectHandleLeft">@drawable/marsblue_text_select_handle_left</item>
-        <item name="android:textSelectHandleRight">@drawable/marsblue_text_select_handle_right</item>
+        <item name="android:textSelectHandleRight">@drawable/marsblue_text_select_handle_right
+        </item>
         <item name="android:textSelectHandle">@drawable/marsblue_text_select_handle_middle</item>
         <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsBlue</item>
-        <item name="android:listChoiceIndicatorMultiple">@drawable/marsblue_btn_check_holo_light</item>
-        <item name="android:listChoiceIndicatorSingle">@drawable/marsblue_btn_radio_holo_light</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/marsblue_btn_check_holo_light
+        </item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/marsblue_btn_radio_holo_light
+        </item>
         <item name="android:buttonStyle">@style/ButtonMarsBlue</item>
         <item name="android:imageButtonStyle">@style/ImageButtonMarsBlue</item>
         <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsBlue</item>
         <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsBlue</item>
         <item name="android:seekBarStyle">@style/SeekBarMarsBlue</item>
-        <item name="android:listChoiceBackgroundIndicator">@drawable/marsblue_list_selector_holo_light</item>
-        <item name="android:activatedBackgroundIndicator">@drawable/marsblue_activated_background_holo_light</item>
+        <item name="android:listChoiceBackgroundIndicator">
+            @drawable/marsblue_list_selector_holo_light
+        </item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/marsblue_activated_background_holo_light
+        </item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/themes_marscyan.xml -->
     <eat-comment/>
     <style name="_MarsCyan" parent="android:Theme.Holo.Light">
 
-    <item name="android:windowActionBar">false</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:editTextBackground">@drawable/marscyan_edit_text_holo_light</item>
-    <item name="android:textColorHighlight">#9900aff0</item>
-    <item name="android:textSelectHandleLeft">@drawable/marscyan_text_select_handle_left</item>
-    <item name="android:textSelectHandleRight">@drawable/marscyan_text_select_handle_right</item>
-    <item name="android:textSelectHandle">@drawable/marscyan_text_select_handle_middle</item>
-    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsCyan</item>
-    <item name="android:listChoiceIndicatorMultiple">@drawable/marscyan_btn_check_holo_light</item>
-    <item name="android:listChoiceIndicatorSingle">@drawable/marscyan_btn_radio_holo_light</item>
-    <item name="android:buttonStyle">@style/ButtonMarsCyan</item>
-    <item name="android:imageButtonStyle">@style/ImageButtonMarsCyan</item>
-    <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsCyan</item>
-    <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsCyan</item>
-    <item name="android:seekBarStyle">@style/SeekBarMarsCyan</item>
-    <item name="android:listChoiceBackgroundIndicator">@drawable/marscyan_list_selector_holo_light</item>
-    <item name="android:activatedBackgroundIndicator">@drawable/marscyan_activated_background_holo_light</item>
-    <item name="android:fastScrollThumbDrawable">@drawable/marscyan_fastscroll_thumb_holo</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:editTextBackground">@drawable/marscyan_edit_text_holo_light</item>
+        <item name="android:textColorHighlight">#9900aff0</item>
+        <item name="android:textSelectHandleLeft">@drawable/marscyan_text_select_handle_left</item>
+        <item name="android:textSelectHandleRight">@drawable/marscyan_text_select_handle_right
+        </item>
+        <item name="android:textSelectHandle">@drawable/marscyan_text_select_handle_middle</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsCyan</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/marscyan_btn_check_holo_light
+        </item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/marscyan_btn_radio_holo_light
+        </item>
+        <item name="android:buttonStyle">@style/ButtonMarsCyan</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonMarsCyan</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsCyan</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsCyan</item>
+        <item name="android:seekBarStyle">@style/SeekBarMarsCyan</item>
+        <item name="android:listChoiceBackgroundIndicator">
+            @drawable/marscyan_list_selector_holo_light
+        </item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/marscyan_activated_background_holo_light
+        </item>
+        <item name="android:fastScrollThumbDrawable">@drawable/marscyan_fastscroll_thumb_holo</item>
 
-  </style>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/themes_marsgreen.xml -->
     <eat-comment/>
     <style name="_MarsGreen" parent="android:Theme.Holo.Light">
-    <item name="android:windowActionBar">false</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:editTextBackground">@drawable/marsgreen_edit_text_holo_light</item>
-    <item name="android:textColorHighlight">#9999cc00</item>
-    <item name="android:textSelectHandleLeft">@drawable/marsgreen_text_select_handle_left</item>
-    <item name="android:textSelectHandleRight">@drawable/marsgreen_text_select_handle_right</item>
-    <item name="android:textSelectHandle">@drawable/marsgreen_text_select_handle_middle</item>
-    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsGreen</item>
-    <item name="android:listChoiceIndicatorMultiple">@drawable/marsgreen_btn_check_holo_light</item>
-    <item name="android:listChoiceIndicatorSingle">@drawable/marsgreen_btn_radio_holo_light</item>
-    <item name="android:buttonStyle">@style/ButtonMarsGreen</item>
-    <item name="android:imageButtonStyle">@style/ImageButtonMarsGreen</item>
-    <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsGreen</item>
-    <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsGreen</item>
-    <item name="android:seekBarStyle">@style/SeekBarMarsGreen</item>
-    <item name="android:buttonStyleToggle">@style/ToggleMarsGreen</item>
-    <item name="android:listChoiceBackgroundIndicator">@drawable/marsgreen_list_selector_holo_light</item>
-    <item name="android:activatedBackgroundIndicator">@drawable/marsgreen_activated_background_holo_light</item>
-    <item name="android:fastScrollThumbDrawable">@drawable/marsgreen_fastscroll_thumb_holo</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:editTextBackground">@drawable/marsgreen_edit_text_holo_light</item>
+        <item name="android:textColorHighlight">#9999cc00</item>
+        <item name="android:textSelectHandleLeft">@drawable/marsgreen_text_select_handle_left</item>
+        <item name="android:textSelectHandleRight">@drawable/marsgreen_text_select_handle_right
+        </item>
+        <item name="android:textSelectHandle">@drawable/marsgreen_text_select_handle_middle</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsGreen</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/marsgreen_btn_check_holo_light
+        </item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/marsgreen_btn_radio_holo_light
+        </item>
+        <item name="android:buttonStyle">@style/ButtonMarsGreen</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonMarsGreen</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsGreen</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsGreen</item>
+        <item name="android:seekBarStyle">@style/SeekBarMarsGreen</item>
+        <item name="android:buttonStyleToggle">@style/ToggleMarsGreen</item>
+        <item name="android:listChoiceBackgroundIndicator">
+            @drawable/marsgreen_list_selector_holo_light
+        </item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/marsgreen_activated_background_holo_light
+        </item>
+        <item name="android:fastScrollThumbDrawable">@drawable/marsgreen_fastscroll_thumb_holo
+        </item>
 
-  </style>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/themes_marspurple.xml -->
     <eat-comment/>
     <style name="_MarsPurple" parent="android:Theme.Holo.Light">
 
-    <item name="android:windowActionBar">false</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:editTextBackground">@drawable/marspurple_edit_text_holo_light</item>
-    <item name="android:textColorHighlight">#99aa66cc</item>
-    <item name="android:textSelectHandleLeft">@drawable/marspurple_text_select_handle_left</item>
-    <item name="android:textSelectHandleRight">@drawable/marspurple_text_select_handle_right</item>
-    <item name="android:textSelectHandle">@drawable/marspurple_text_select_handle_middle</item>
-    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsPurple</item>
-    <item name="android:listChoiceIndicatorMultiple">@drawable/marspurple_btn_check_holo_light</item>
-    <item name="android:listChoiceIndicatorSingle">@drawable/marspurple_btn_radio_holo_light</item>
-    <item name="android:buttonStyle">@style/ButtonMarsPurple</item>
-    <item name="android:imageButtonStyle">@style/ImageButtonMarsPurple</item>
-    <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsPurple</item>
-    <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsPurple</item>
-    <item name="android:seekBarStyle">@style/SeekBarMarsPurple</item>
-    <item name="android:listChoiceBackgroundIndicator">@drawable/marspurple_list_selector_holo_light</item>
-    <item name="android:activatedBackgroundIndicator">@drawable/marspurple_activated_background_holo_light</item>
-    <item name="android:fastScrollThumbDrawable">@drawable/marspurple_fastscroll_thumb_holo</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:editTextBackground">@drawable/marspurple_edit_text_holo_light</item>
+        <item name="android:textColorHighlight">#99aa66cc</item>
+        <item name="android:textSelectHandleLeft">@drawable/marspurple_text_select_handle_left
+        </item>
+        <item name="android:textSelectHandleRight">@drawable/marspurple_text_select_handle_right
+        </item>
+        <item name="android:textSelectHandle">@drawable/marspurple_text_select_handle_middle</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsPurple</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/marspurple_btn_check_holo_light
+        </item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/marspurple_btn_radio_holo_light
+        </item>
+        <item name="android:buttonStyle">@style/ButtonMarsPurple</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonMarsPurple</item>
+        <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsPurple</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsPurple</item>
+        <item name="android:seekBarStyle">@style/SeekBarMarsPurple</item>
+        <item name="android:listChoiceBackgroundIndicator">
+            @drawable/marspurple_list_selector_holo_light
+        </item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/marspurple_activated_background_holo_light
+        </item>
+        <item name="android:fastScrollThumbDrawable">@drawable/marspurple_fastscroll_thumb_holo
+        </item>
 
-  </style>
+    </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/themes_marsred.xml -->
     <eat-comment/>
     <style name="_MarsRed" parent="android:Theme.Holo.Light">
@@ -2765,15 +2845,20 @@
         <item name="android:textSelectHandleRight">@drawable/marsred_text_select_handle_right</item>
         <item name="android:textSelectHandle">@drawable/marsred_text_select_handle_middle</item>
         <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsRed</item>
-        <item name="android:listChoiceIndicatorMultiple">@drawable/marsred_btn_check_holo_light</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/marsred_btn_check_holo_light
+        </item>
         <item name="android:listChoiceIndicatorSingle">@drawable/marsred_btn_radio_holo_light</item>
         <item name="android:buttonStyle">@style/ButtonMarsRed</item>
         <item name="android:imageButtonStyle">@style/ImageButtonMarsRed</item>
         <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsRed</item>
         <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsRed</item>
         <item name="android:seekBarStyle">@style/SeekBarMarsRed</item>
-        <item name="android:listChoiceBackgroundIndicator">@drawable/marsred_list_selector_holo_light</item>
-        <item name="android:activatedBackgroundIndicator">@drawable/marsred_activated_background_holo_light</item>
+        <item name="android:listChoiceBackgroundIndicator">
+            @drawable/marsred_list_selector_holo_light
+        </item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/marsred_activated_background_holo_light
+        </item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/themes_marsyellow.xml -->
     <eat-comment/>
@@ -2782,26 +2867,34 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:editTextBackground">@drawable/marsyellow_edit_text_holo_light</item>
         <item name="android:textColorHighlight">#99ff8800</item>
-        <item name="android:textSelectHandleLeft">@drawable/marsyellow_text_select_handle_left</item>
-        <item name="android:textSelectHandleRight">@drawable/marsyellow_text_select_handle_right</item>
+        <item name="android:textSelectHandleLeft">@drawable/marsyellow_text_select_handle_left
+        </item>
+        <item name="android:textSelectHandleRight">@drawable/marsyellow_text_select_handle_right
+        </item>
         <item name="android:textSelectHandle">@drawable/marsyellow_text_select_handle_middle</item>
         <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewMarsYellow</item>
-        <item name="android:listChoiceIndicatorMultiple">@drawable/marsyellow_btn_check_holo_light</item>
-        <item name="android:listChoiceIndicatorSingle">@drawable/marsyellow_btn_radio_holo_light</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/marsyellow_btn_check_holo_light
+        </item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/marsyellow_btn_radio_holo_light
+        </item>
         <item name="android:buttonStyle">@style/ButtonMarsYellow</item>
         <item name="android:imageButtonStyle">@style/ImageButtonMarsYellow</item>
         <item name="android:dropDownSpinnerStyle">@style/SpinnerMarsYellow</item>
         <item name="android:progressBarStyleHorizontal">@style/ProgressBarMarsYellow</item>
         <item name="android:seekBarStyle">@style/SeekBarMarsYellow</item>
-        <item name="android:listChoiceBackgroundIndicator">@drawable/marsyellow_list_selector_holo_light</item>
-        <item name="android:activatedBackgroundIndicator">@drawable/marsyellow_activated_background_holo_light</item>
+        <item name="android:listChoiceBackgroundIndicator">
+            @drawable/marsyellow_list_selector_holo_light
+        </item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/marsyellow_activated_background_holo_light
+        </item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/customDialog.xml -->
     <eat-comment/>
     <style name="customDialogTheme" parent="@android:style/Theme.Panel">
-    <item name="android:windowBackground">@android:color/transparent</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
     <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/values/styles.xml -->
     <eat-comment/>

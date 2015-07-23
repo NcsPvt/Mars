@@ -31,7 +31,6 @@
     <string name="mr_user_route_category_name">Devices</string>
     <!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-dev/frameworks/support/v7/mediarouter/res/values/themes.xml -->
     <eat-comment />
-
     <style name="Theme.MediaRouter" parent="">
         <item name="mediaRouteButtonStyle">@style/Widget.MediaRouter.MediaRouteButton</item>
 
@@ -43,7 +42,6 @@
         <item name="mediaRoutePlayDrawable">@drawable/mr_ic_play_dark</item>
         <item name="mediaRoutePauseDrawable">@drawable/mr_ic_pause_dark</item>
     </style>
-
     <style name="Theme.MediaRouter.Light" parent="">
         <item name="mediaRouteButtonStyle">@style/Widget.MediaRouter.Light.MediaRouteButton</item>
 
@@ -58,7 +56,6 @@
     </style>
     <!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-dev/frameworks/support/v7/mediarouter/res/values/styles.xml -->
     <eat-comment />
-
     <style name="Widget.MediaRouter.Light.MediaRouteButton" parent="Widget.AppCompat.Light.ActionButton">
         <item name="android:minWidth">56dp</item>
         <item name="android:minHeight">48dp</item>
@@ -68,7 +65,6 @@
         </item>
         <item name="externalRouteEnabledDrawable">@drawable/mr_ic_media_route_mono_light</item>
     </style>
-
     <style name="Widget.MediaRouter.MediaRouteButton" parent="Widget.AppCompat.ActionButton">
         <item name="android:minWidth">56dp</item>
         <item name="android:minHeight">48dp</item>

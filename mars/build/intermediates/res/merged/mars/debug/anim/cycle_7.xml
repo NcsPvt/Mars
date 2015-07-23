@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,5 +13,6 @@
      limitations under the License.
 -->
 
-<cycleInterpolator xmlns:android="http://schemas.android.com/apk/res/android" android:cycles="7" />
+<cycleInterpolator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:cycles="7" />
 <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/anim/cycle_7.xml -->

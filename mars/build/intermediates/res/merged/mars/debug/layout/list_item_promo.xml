@@ -37,6 +37,6 @@
         android:textColor="@color/black"
         android:textSize="@dimen/size10"
         android:textStyle="italic"
-        android:typeface="serif"/>
+        android:typeface="serif" />
 
 </RelativeLayout><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/layout/list_item_promo.xml -->

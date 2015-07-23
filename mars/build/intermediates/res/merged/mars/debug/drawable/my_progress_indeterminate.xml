@@ -2,6 +2,5 @@
 <animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
     android:drawable="@drawable/progress"
     android:pivotX="50%"
-    android:pivotY="50%"
- />
+    android:pivotY="50%" />
 <!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/drawable/my_progress_indeterminate.xml -->

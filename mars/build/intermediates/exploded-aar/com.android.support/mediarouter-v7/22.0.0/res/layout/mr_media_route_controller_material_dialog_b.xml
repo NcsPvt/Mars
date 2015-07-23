@@ -14,14 +14,14 @@
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
@@ -39,9 +39,9 @@
 
         <ImageButton
             android:id="@+id/settings"
-            android:layout_width="48dip"
-            android:layout_height="48dip"
-            android:padding="12dip"
+                android:layout_width="48dip"
+                android:layout_height="48dip"
+                android:padding="12dip"
             android:layout_marginTop="12dip"
             android:layout_marginBottom="12dip"
             android:layout_marginRight="12dip"
@@ -59,13 +59,13 @@
         <RelativeLayout
             android:id="@+id/default_control_frame"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+                android:layout_height="wrap_content"
             android:background="?attr/colorPrimary">
 
             <ImageView
                 android:id="@+id/art"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                    android:layout_height="wrap_content"
                 android:maxHeight="@dimen/mr_media_route_controller_art_max_height"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop" />
@@ -85,7 +85,7 @@
             <LinearLayout
                 android:id="@+id/text_wrapper"
                 android:orientation="vertical"
-                android:layout_height="wrap_content"
+                    android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:minHeight="64dip"
                 android:layout_marginLeft="24dip"

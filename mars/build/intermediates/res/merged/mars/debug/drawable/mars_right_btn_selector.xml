@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:state_pressed="true" >
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
         <shape>
-        	<solid
-        		android:color="@color/mars_red" />
-            <stroke
-                android:width="5dp"
-                android:color="@color/mars_red" />
-            <corners
-                android:topLeftRadius="0dp"
-                android:bottomLeftRadius="0dp"
-                android:topRightRadius="11dp"
-                android:bottomRightRadius="11dp" />
+            <solid android:color="@color/mars_red" />
+            <stroke android:width="5dp" android:color="@color/mars_red" />
+            <corners android:topLeftRadius="0dp" android:bottomLeftRadius="0dp" android:topRightRadius="11dp" android:bottomRightRadius="11dp" />
         </shape>
     </item>
     <item>
         <shape>
-        	<solid
-        		android:color="@android:color/transparent" />
-            <stroke
-                android:width="5dp"
-                android:color="@android:color/transparent" />
-            <corners
-                android:topLeftRadius="0dp"
-                android:bottomLeftRadius="0dp"
-                android:topRightRadius="11dp"
-                android:bottomRightRadius="11dp" />
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="5dp" android:color="@android:color/transparent" />
+            <corners android:topLeftRadius="0dp" android:bottomLeftRadius="0dp" android:topRightRadius="11dp" android:bottomRightRadius="11dp" />
         </shape>
     </item>
 </selector><!-- From: file:/D:/Workspace_Android/Mars/mars/src/main/res/drawable/mars_right_btn_selector.xml -->

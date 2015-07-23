@@ -39,7 +39,7 @@
             android:layout_below="@id/feedback_line">
 
             <RadioButton
-                android:id="@+id/feedback_friend"
+                android:id="@+id/referredBy_friend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10sp"
@@ -49,7 +49,7 @@
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/feedback_company"
+                android:id="@+id/referredBy_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10sp"
@@ -58,12 +58,21 @@
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/feedback_driver"
+                android:id="@+id/referredBy_driver"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10sp"
                 android:layout_marginLeft="5sp"
                 android:text="@string/ReferedByDriver"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/referredBy_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:layout_marginLeft="5sp"
+                android:text="@string/ReferedByOther"
                 android:textColor="@color/black" />
         </RadioGroup>
 
@@ -78,34 +87,36 @@
             android:visibility="visible">
 
             <EditText
-                android:id="@+id/et_drivernumber"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/lightgray"
-                android:gravity="top"
-                android:hint="@string/drivernumber"
-                android:inputType="phone"
-                android:maxLength="30"
-                android:padding="5dp"
-                android:textColor="@color/black"
-                android:textSize="@dimen/size15"
-                android:visibility="gone"/>
-
-            <EditText
                 android:id="@+id/et_mobilenumber"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+
                 android:layout_weight="1"
                 android:background="@color/lightgray"
                 android:gravity="top"
                 android:hint="@string/mobileNumber"
-                android:inputType="phone"
-                android:maxLength="30"
+                android:inputType="number"
+                android:maxLength="11"
                 android:padding="5dp"
                 android:textColor="@color/black"
                 android:textSize="@dimen/size15"
                 android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/et_marsid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:background="@color/lightgray"
+                android:gravity="top"
+                android:hint="@string/userid"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size15"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/et_companywebsite"
@@ -134,7 +145,7 @@
             android:layout_marginRight="15sp"
             android:background="@color/lightgray"
             android:gravity="top"
-            android:hint="Provide additional comments here..."
+            android:hint="@string/feedback_msg_hint"
             android:inputType="textMultiLine"
             android:maxLength="300"
             android:padding="5dp"
@@ -160,7 +171,7 @@
                 android:layout_weight="1"
                 android:onClick="cancel_feedback"
                 android:text="@string/Skip"
-                android:textSize="@dimen/size18"></Button>
+                android:textSize="@dimen/size18"/>
 
             <Button
                 android:id="@+id/feedback_submitBtn"
@@ -168,9 +179,9 @@
                 android:layout_height="60sp"
                 android:layout_marginLeft="15sp"
                 android:layout_weight="1"
-                android:onClick="submit_feedback"
+                android:onClick="submit_ReferredBy"
                 android:text="@string/SUBMIT"
-                android:textSize="@dimen/size18"></Button>
+                android:textSize="@dimen/size18"/>
         </LinearLayout>
     </RelativeLayout>
 
