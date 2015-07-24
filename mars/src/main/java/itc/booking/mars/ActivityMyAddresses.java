@@ -2,7 +2,6 @@ package itc.booking.mars;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -119,10 +118,15 @@ public class ActivityMyAddresses extends Activity implements CallbackResponseLis
                 TextView caption = (TextView) currentView.findViewById(R.id.tv_fav_header);
                 TextView tv_fav_address = (TextView) currentView.findViewById(R.id.tv_fav_address);
                 final CheckBox cb_fav = (CheckBox) currentView.findViewById(R.id.cb_fav);
+
+                caption.setText(currentPlace.caption);
+                tv_fav_address.setText(currentPlace.address);
+
                 if (currentPlace.favId > 0)
                     cb_fav.setChecked(true);
                 else
                     cb_fav.setChecked(false);
+
                 cb_fav.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
                     @Override
@@ -135,9 +139,7 @@ public class ActivityMyAddresses extends Activity implements CallbackResponseLis
                     }
                 });
 
-                caption.setText(currentPlace.caption);
-                tv_fav_address.setText(currentPlace.address);
-
+/*
                 currentView.setOnClickListener(new OnClickListener() {
 
                     @Override
@@ -160,6 +162,7 @@ public class ActivityMyAddresses extends Activity implements CallbackResponseLis
                         ActivityMyAddresses.this.finish();
                     }
                 });
+*/
 
                 currentView.setTag(currentPlace.latlong);
             }

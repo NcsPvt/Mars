@@ -32,7 +32,10 @@ public class Addresses {
         Boolean res = false;
         if (obj instanceof Addresses) {
             Addresses fav = (Addresses) obj;
-            res = ((fav.latlong.equals(this.latlong) || this.favId > 0) && (fav.favId == this.favId));
+            if (this.favId > 0)
+                res = (fav.favId == this.favId);
+            else
+                res = fav.latlong.equals(this.latlong);
         }
         return res;
     }

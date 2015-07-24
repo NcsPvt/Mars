@@ -1,7 +1,6 @@
 package itc.booking.mars;
 
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -59,8 +58,6 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
          */
     private class DrawPathTask extends AsyncTask<LatLng, Void, ArrayList<LatLng>> {
 
-        private Polyline pathLine;
-
         @Override
         protected ArrayList<LatLng> doInBackground(LatLng... params) {
             return DrawPath(params[0], params[1]);
@@ -78,8 +75,10 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
                     boundsBuilder.include(directionPoint.get(i));
                 }
 
-                if (pathLine != null)
+                if (pathLine != null) {
                     pathLine.remove();
+                    pathLine = null;
+                }
 
                 pathLine = mapFragment.addPolyline(rectLine);
 
@@ -104,8 +103,8 @@ public class ActivityTrack extends FragmentActivity implements CallbackResponseL
 
     Boolean rateLater = false;
     Boolean autozoom = true;
-    ProgressDialog progress;
     GoogleMap mapFragment;
+    private Polyline pathLine;
     private GMapV2Direction mapDirections;
     private Document routeDoc;
     NearbyVehicle currVehicle;

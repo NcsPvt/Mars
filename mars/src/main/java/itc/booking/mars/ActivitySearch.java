@@ -16,8 +16,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -117,24 +115,28 @@ public class ActivitySearch extends Activity implements CallbackResponseListener
                 TextView caption = (TextView) currentView.findViewById(R.id.tv_fav_header);
                 TextView tv_fav_address = (TextView) currentView.findViewById(R.id.tv_fav_address);
                 final CheckBox cb_fav = (CheckBox) currentView.findViewById(R.id.cb_fav);
-                if (currentPlace.favId > 0)
+
+                int index = BookingApplication.favorites.indexOf(currentPlace);
+                if (index > -1) {
                     cb_fav.setChecked(true);
+                    currentPlace.favId = BookingApplication.favorites.get(index).favId;
+                }
                 else
                     cb_fav.setChecked(false);
-                cb_fav.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+                cb_fav.setOnClickListener(new OnClickListener() {
 
                     @Override
-                    public void onCheckedChanged(CompoundButton paramCompoundButton, boolean isChecked) {
-                        if (!isChecked) {
+                    public void onClick(View v) {
+                        if (((CheckBox) v).isChecked()) {
+                            showFavoriteDialog(currentPlace, R.string.Cancel, 0);
+                        } else {
                             if (currentPlace.favId > 0) {
-                                BookingApplication.removeFavorite(currentPlace, ActivitySearch.this);
-                                currentPlace.isRemoved = true;
-                                addressesList.remove(currentPlace);
-                                BookingApplication.favorites.remove(currentPlace);
-                            } else
-                                cb_fav.setChecked(false);
-                        } else if (!BookingApplication.favorites.contains(currentPlace) && !currentPlace.isRemoved)
-                            BookingApplication.addUpdateFavorite(currentPlace);
+                                showFavoriteDialog(currentPlace, R.string.Remove, 0);
+                                cb_fav.setChecked(true);
+                            }
+                        }
+
                     }
                 });
 
@@ -264,6 +266,61 @@ public class ActivitySearch extends Activity implements CallbackResponseListener
         BookingApplication.callerContext = this;
     }
 
+    /*------------------------------------------------ showFavoriteDialog ---------------------------------------------------------------------------------*/
+    public void showFavoriteDialog(final Addresses fav_address, final int cancelBtnCaption, final int callerViewId) {
+
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = inflater.inflate(R.layout.dialog_favorites, null);
+
+        final BookingApplication.CustomDialog bb = new BookingApplication.CustomDialog(this, layout);
+
+        //TextView title_text = (TextView) layout.findViewById(R.id.fav_dialog_title);
+        //title_text.setText(dialogTitle);
+
+        final EditText address_name = (EditText) layout.findViewById(R.id.fav_name);
+        TextView streetAddress = (TextView) layout.findViewById(R.id.fav_address);
+
+        address_name.setText(fav_address.caption);
+        streetAddress.setText(fav_address.address);
+
+        TextView btn_OK = (TextView) layout.findViewById(R.id.btnSAVE);
+        TextView btn_CANCEL = (TextView) layout.findViewById(R.id.btnCANCEL);
+        btn_CANCEL.setText(cancelBtnCaption);
+
+        btn_OK.setOnClickListener(new OnClickListener() {
+            Addresses adrs = fav_address;
+
+            @Override
+            public void onClick(View v) {
+                bb.dismiss();
+
+                adrs.caption = address_name.getText().toString();
+                BookingApplication.addUpdateFavorite(adrs);
+
+            }
+        });
+
+        btn_CANCEL.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                bb.dismiss();
+
+                if (cancelBtnCaption == R.string.Remove) {
+
+                    if (BookingApplication.favorites.contains(fav_address)) {
+                        //BookingApplication.db.delete("Favorites", "favId=?", new String[] { Integer.toString(currFav.favId) });
+                        BookingApplication.removeFavorite(fav_address, ActivitySearch.this);
+                        BookingApplication.favorites.remove(fav_address);
+                        favListAdaptor.notifyDataSetChanged();
+                    }
+                }
+            }
+        });
+
+        bb.show();
+    }
+
     /*----------------------------------------------------------- onWindowFocusChanged -------------------------------------------------------------------------------------*/
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
@@ -389,6 +446,7 @@ public class ActivitySearch extends Activity implements CallbackResponseListener
             switch (apiCalled) {
                 case APIs.REMOVEFAVORITE:
                     favListAdaptor.notifyDataSetChanged();
+                    recentListAdaptor.notifyDataSetChanged();
                     break;
             }
         } catch (Exception e) {

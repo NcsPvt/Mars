@@ -544,7 +544,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
     /*-----------------------------------------------------ShowSendNearest-----------------------------------------------------------------------------*/
     public void ShowSendNearest(View v) {
-        goToStep(4, false);
+        if (!timer_view.isShown())
+            goToStep(4, false);
     }
 
     /*--------------------------------------------------ShowVehicleSelection-----------------------------------------------------------------------------*/
@@ -907,22 +908,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 selecting_pickup = false;
                 selecting_drop = true;
             }
-        }
-    }
-
-    /*--------------------------------------------- Next_Clicked ---------------------------------------------------------------------------------------*/
-    public void Next_Clicked(View v) {
-        if (selecting_pickup) {
-            pointer.setImageResource(R.drawable.dopin);
-            tv_pick_drop.setText(R.string.dropme);
-            //instructions.setText(R.string.select_destination);
-            if (dropMarker != null)
-                mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(dropMarker.getPosition(), 18));
-            selecting_pickup = false;
-            selecting_drop = true;
-            ll_pn_pl.setVisibility(View.VISIBLE);
-            ll_FairCashCredit.setVisibility(View.GONE);
-        } else if (selecting_drop) {
         }
     }
 
@@ -1634,10 +1619,12 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
             @Override
             public void onClick(View v) {
+                isQuickBooking = false;
                 bb.dismiss();
             }
         });
 
+        bb.setCancelable(false);
         bb.show();
 
         //thisDialog.setView(layout);
@@ -1723,6 +1710,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             }
         });
 
+        bb.setCancelable(false);
         bb.show();
 
         BookingApplication.getUserPromoDetail(BookingApplication.CompanyID);
@@ -1854,7 +1842,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
     /*--------------------------------------------------showNowLater----------------------------------------------------------------------------------*/
     public void showNowLater(View v) {
-        goToStep(3, false);
+        if (!timer_view.isShown())
+            goToStep(3, false);
     }
 
     /*--------------------------------------------------goToStep----------------------------------------------------------------------------------*/
