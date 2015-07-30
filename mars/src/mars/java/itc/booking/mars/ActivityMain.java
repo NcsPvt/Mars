@@ -109,7 +109,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
     private GoogleApiClient.OnConnectionFailedListener connectionFailedListener;
     private LocationManager locationManager;
     private Location lastLocation;
-    private TextView tv_app_version, tv_promo_available, tv_timer, tv_pick_drop, tv_address, tv_pick_address, tv_drop_address, tv_sendme, tv_nearestcab, tv_selectedcab, tv_fare_estimate, tv_mile_estimate, menu_header, tv_refresh, tv_airport_note;
+    private TextView tv_app_version, tv_promo_available, tv_timer, tv_pick_drop, tv_address, tv_pick_address, tv_drop_address, tv_sendme, tv_nearestcab, tv_selectedcab, tv_fare_estimate, tv_mile_estimate, menu_header, tv_refresh, tv_airport_note, tv_payWithVoucher;
     private CheckBox cb_fav_pick, cb_fav_drop;
     private TextView tv_selected_time_title, tv_selected_time, tv_payWith, tv_endingWih;
     private EditText et_pickup_person_name, et_callback_number, et_driver_notes;
@@ -134,6 +134,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
     private boolean addressFound = false;
     private boolean pressed = false;
     private Timer requestStatustimer = new Timer();
+    private String ppvBalance = "0.0";
+
     /*----------------------------------------------------- onCreate -------------------------------------------------------------------------------*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -208,6 +210,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
         cancel_drop_seperator = findViewById(R.id.cancel_drop_seperator);
         cancel_drop = (ImageButton) findViewById(R.id.cancel_drop);
         //tv_skip = (TextView) findViewById(R.id.tv_skip);
+        tv_payWithVoucher = (TextView) findViewById(R.id.tv_payWithVoucher);
         btn_drop_notes = (Button) findViewById(R.id.btn_drop_notes);
         ll_selected_time = (LinearLayout) findViewById(R.id.ll_selected_time);
         ll_getting_nearby_progress = (LinearLayout) findViewById(R.id.ll_getting_nearby_progress);
@@ -486,7 +489,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
     /*--------------------------------------------------ShowPPV--------------------------------------------------------------------------------------*/
     public void ShowPPV(View v) {
-        BookingApplication.ShowPPV(ActivityMain.this);
+        BookingApplication.ShowPPV(BookingApplication.CompanyID, BookingApplication.SupportedPaymentMethod, ActivityMain.this);
     }
 
     /*--------------------------------------------------- picklater -------------------------------------------------------------------------------------*/
@@ -716,16 +719,19 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         BookingApplication.showCustomToast(R.string.Choose_Destination, "", false);
 
                 } else
-                    Toast.makeText(ActivityMain.this, getResources().getString(R.string.PaymentTypeNotSupported, "Credit Card"), Toast.LENGTH_LONG).show();
+                    BookingApplication.showCustomToast(0, getResources().getString(R.string.PaymentTypeNotSupported, "Credit Card"), true);
             } else if (v.getId() == R.id.tv_payWithVoucher) {
                 if (Integer.toString(trip_requested.supportedPaymentType).contains("3")) {
                     trip_requested.PaymentType = "3";
                     trip_requested.CreditCardID = "0";
                     trip_requested.signatureUrl = "";
                     //BookingApplication.makeReservation(trip_requested, ActivityMain.this, false);
+                    if (Float.valueOf(ppvBalance) < 1.0) {
+                        BookingApplication.ShowPPV(BookingApplication.CompanyID, Integer.toString(trip_requested.supportedPaymentType), ActivityMain.this);
+                    } else
                     goToStep(6, false);
                 } else
-                    Toast.makeText(ActivityMain.this, getResources().getString(R.string.PaymentTypeNotSupported, getResources().getString(R.string.PayingByVoucher)), Toast.LENGTH_LONG).show();
+                    BookingApplication.showCustomToast(0, getResources().getString(R.string.PaymentTypeNotSupported, getResources().getString(R.string.PrepaidAccount)), true);
             } else if (v.getId() == R.id.tv_payInCash)
                 if (Integer.toString(trip_requested.supportedPaymentType).contains("1")) {
                     trip_requested.PaymentType = "1";
@@ -734,7 +740,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     //BookingApplication.makeReservation(trip_requested, ActivityMain.this, false);
                     goToStep(6, false);
                 } else
-                    Toast.makeText(ActivityMain.this, getResources().getString(R.string.PaymentTypeNotSupported, getResources().getString(R.string.PayingInCab)), Toast.LENGTH_LONG).show();
+                    BookingApplication.showCustomToast(0, getResources().getString(R.string.PaymentTypeNotSupported, getResources().getString(R.string.PayingInCab)), true);
         } catch (Exception e) {
             Toast.makeText(ActivityMain.this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
@@ -2193,7 +2199,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                         trip_requested.companyName = BookingApplication.getAffiliateNameFromDB(ActivityMain.this, trip_requested.companyID);
                         trip_requested.supportedPaymentType = BookingApplication.getAffiliatePaymentType(ActivityMain.this, trip_requested.companyName);
                         tv_selectedcab.setText(getResources().getString(R.string.cabfrom, trip_requested.vehTypeName, BookingApplication.getAffiliateNameFromDB(ActivityMain.this, trip_requested.companyID)));
-
+                        ppvBalance = jsonResponse.getString("CustomerPPVBalance");
+                        tv_payWithVoucher.setText(getResources().getString(R.string.PayWithVoucher, trip_requested.currencySymbol + ppvBalance));
                     } else {
                         showCustomDialog(CODES.BOOKING_FAILED, R.string.Booking_Status, jsonResponse.getString("ReasonPhrase"), 0, false);
                         goToStep(3, false);

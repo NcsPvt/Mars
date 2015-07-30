@@ -38,7 +38,7 @@
     <string name="Call">Call</string>
     <string name="creditCards">Credit Card</string>
     <string name="PayInCab">I\'ll pay in cab</string>
-    <string name="PayWithVoucher">I\'ll pay by Prepaid Account</string>
+    <string name="PayWithVoucher">I\'ll pay by Prepaid Account   |   %s</string>
     <string name="Paywith">I\'ll pay by %s</string>
     <string name="PayingInCab">Paying in cab</string>
     <string name="Call_driver">Call driver</string>

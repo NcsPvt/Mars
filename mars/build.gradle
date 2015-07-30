@@ -78,6 +78,10 @@ android {
             resValue "string", "google_maps_api_key", "AIzaSyBRV_DCJrNN8l65dL8KfsRh0n8KGbWRZRo"
             resValue "string", "google_places_key", "AIzaSyARrZJY169UzIHNsYiKhj7MgalzyesqnO0"
         }
+        mco {
+            applicationId 'itcurves.mars'
+            manifestPlaceholders = [applicationLabel: "MCO"]
+        }
         memphis {
             applicationId 'itcurves.mars.memphis'
             manifestPlaceholders = [applicationLabel: "Yellow Cab of Memphis"]

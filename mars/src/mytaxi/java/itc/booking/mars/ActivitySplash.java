@@ -568,7 +568,7 @@ public class ActivitySplash extends Activity implements CallbackResponseListener
 
     /*--------------------------------------------------ShowPPV--------------------------------------------------------------------------------------*/
     public void ShowPPV(View v) {
-        BookingApplication.ShowPPV(ActivitySplash.this);
+        BookingApplication.ShowPPV(BookingApplication.CompanyID, BookingApplication.SupportedPaymentMethod, ActivitySplash.this);
     }
 
     /*-----------------------------------------------------about_Us--------------------------------------------------------------------------------------*/

@@ -147,7 +147,7 @@
     <string name="secret_question">Respuesta Secreta</string>
     <string name="Rate_ride">Precio del Viaje</string>
     <string name="Price_Chart">Grafico de Precios</string>
-    <string name="Hail">Hail</string>
+    <string name="Hail">Book</string>
     <string name="Sign_out">Desconectarse</string>
     <string name="Signing_in_ppp">ABRIR SESION#8230;</string>
     <string name="Booking_Success">Su reservación fue exitosa.\n Numero de Confirmación No: %s
@@ -308,7 +308,7 @@
     <string name="proceed"><![CDATA[Proceed >]]></string>
     <string name="approxFare">Approx. Fare</string>
     <string name="dropoff_required">Drop-off Required</string>
-    <string name="PayWithVoucher">Voy a pagar por cuenta del cliente</string>
+    <string name="PayWithVoucher">Voy a pagar por cuenta del cliente | %s</string>
     <string name="PayingByVoucher">El pago con vales</string>
     <string name="ContactSupport">Contact Support</string>
     <string name="choose">elegir</string>

@@ -489,7 +489,6 @@ public class BookingApplication extends Application implements GoogleApiClient.C
         bndle.putDouble("PULat", tripToTrack.PUlat);
         bndle.putDouble("PULng", tripToTrack.PUlong);
         bndle.putString("PUAddress", tripToTrack.PUaddress);
-
         bndle.putInt("iEtiquetteQuality", tripToTrack.etiquetteRating);
         bndle.putInt("iTaxiLate", tripToTrack.taxiLateRating);
         bndle.putInt("iCleanQuality", tripToTrack.cleanlinessRating);
@@ -507,11 +506,14 @@ public class BookingApplication extends Application implements GoogleApiClient.C
     }
 
     /*--------------------------------------------------ShowPPV--------------------------------------------------------------------------------------*/
-    public static void ShowPPV(Activity callingActivity) {
+    public static void ShowPPV(String tspID, String SupportedPaymentType, Activity callingActivity) {
         try {
-            if (SupportedPaymentMethod.contains("3")) {
-                Intent profile = new Intent(callingActivity, ActivityPPV.class);
-                callingActivity.startActivity(profile);
+            if (SupportedPaymentType.contains("3")) {
+                Intent ppv = new Intent(callingActivity, ActivityPPV.class);
+                Bundle bndle = new Bundle();
+                bndle.putString("tspID", tspID);
+                ppv.putExtras(bndle);
+                callingActivity.startActivity(ppv);
                 callingActivity.overridePendingTransition(R.anim.slide_in_right, 0);
             } else
                 showCustomToast(0, callingActivity.getString(R.string.PaymentTypeNotSupportedByApp, callingActivity.getString(R.string.PrepaidAccount)), false);

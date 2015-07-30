@@ -129,7 +129,7 @@
     <string name="secret_question">أضغط هنا لاختيار السؤال السري</string>
     <string name="Rate_ride">ركوب معدل</string>
     <string name="Price_Chart">جدول التكاليف</string>
-    <string name="Hail">حائل</string>
+    <string name="Hail">الحجز</string>
     <string name="Sign_out">تسجيل الخروج</string>
     <string name="Signing_in_ppp">Signing in#8230;</string>
     <string name="Booking_Success">تم حجز رحلتك بنجاح \r ن تأكيد لا.:%s</string>

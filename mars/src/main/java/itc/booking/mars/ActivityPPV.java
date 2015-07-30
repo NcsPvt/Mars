@@ -28,13 +28,16 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
     private LinearLayout ll_pageHeader;
     private TextView voucherHeader, creditHeader, availableBalance;
     private EditText voucherNumber, topUpAmount;
-    private static String topUPAmt = "";
-    private static boolean checkBal = false;
-
+    private static String topUPAmt = "", tspID = BookingApplication.CompanyID;
+    private Bundle extras;
+    private Boolean isCheckingBalance = false;
     @Override
     /*------------------------------------------------- onCreate ---------------------------------------------------------------------*/
     protected void onCreate(Bundle arg0) {
         BookingApplication.setMyTheme(ActivityPPV.this);
+
+        extras = getIntent().getExtras();
+        tspID = extras.getString("tspID");
 
         super.onCreate(arg0);
         setContentView(R.layout.activity_ppv);
@@ -64,19 +67,16 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
 
     /*---------------------------------------------- checkBalance -------------------------------------------------------------------------------------*/
     public void checkBalance() {
-        checkBal = true;
-        BookingApplication.topUpBalance("00000000000000", BookingApplication.phoneNumber, BookingApplication.CompanyID, this);
-
+        isCheckingBalance = true;
+        BookingApplication.topUpBalance("00000000000000", BookingApplication.phoneNumber, tspID, this);
     }
 
     /*---------------------------------------------- chargeByVoucher -------------------------------------------------------------------------------------*/
     public void chargeByVoucher(View v) {
         if (voucherNumber.getText().toString().length() == 14)
-            BookingApplication.topUpBalance(voucherNumber.getText().toString(), BookingApplication.phoneNumber, BookingApplication.CompanyID, this);
-        else {
+            BookingApplication.topUpBalance(voucherNumber.getText().toString(), BookingApplication.phoneNumber, tspID, this);
+        else
             voucherNumber.setError("Invalid Card Number");
-            Toast.makeText(ActivityPPV.this, "Invalid Card Number", Toast.LENGTH_SHORT).show();
-        }
     }
 
     /*---------------------------------------------- chargeByCC -------------------------------------------------------------------------------------*/
@@ -85,10 +85,8 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
             topUPAmt = topUpAmount.getText().toString();
             BookingApplication.showPaymentOptions("", "-1", "", false, ActivityPPV.this, BookingApplication.CODES.CC_ID_REQUIRED, false);
 
-        } else {
+        } else
             topUpAmount.setError("Enter Valid Amount");
-            Toast.makeText(ActivityPPV.this, "Enter Valid Amount", Toast.LENGTH_SHORT).show();
-        }
     }
 
     /*------------------------------------------------------ callbackResponseReceived -------------------------------------------------------------------------------------*/
@@ -99,21 +97,15 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
                 case APIs.TOPUPBALANCE:
                     if (success) {
                         if (jsonResponse.getInt("TopupAmount") != -1) {
-                            availableBalance.setText("Available Balance: " + jsonResponse.getString("UpdatedAmount"));
-                            BookingApplication.availableBalance = jsonResponse.getString("UpdatedAmount");
                             voucherNumber.setText("");
                             showCustomDialog(BookingApplication.CODES.PPV_RESPONSE, "PPV", "Topup Successfull by Voucher", 0, false);
-                        } else if (checkBal) {
-                            availableBalance.setText("Available Balance: " + jsonResponse.getString("UpdatedAmount"));
-                            checkBal = false;
-                        } else {
+                        } else if (!isCheckingBalance) {
                             voucherNumber.setError("Invalid Card Number");
-                            availableBalance.setText("Available Balance: " + jsonResponse.getString("UpdatedAmount"));
-                            BookingApplication.availableBalance = jsonResponse.getString("UpdatedAmount");
                             showCustomDialog(BookingApplication.CODES.PPV_RESPONSE, "PPV", "Invalid Card Number", 0, false);
-
                         }
-
+                        availableBalance.setText("Available Balance: " + jsonResponse.getString("UpdatedAmount"));
+                        BookingApplication.availableBalance = jsonResponse.getString("UpdatedAmount");
+                        isCheckingBalance = false;
                     }
                     break;
                 case APIs.TOPUPBALANCEBYCC:
@@ -143,7 +135,7 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == BookingApplication.CODES.CC_ID_REQUIRED) {
 
-            BookingApplication.topUpBalanceByCC(data.getExtras().getString("CardID"), BookingApplication.CompanyID, topUPAmt, this);
+            BookingApplication.topUpBalanceByCC(data.getExtras().getString("CardID"), tspID, topUPAmt, this);
         }
     }
 
@@ -201,9 +193,4 @@ public class ActivityPPV extends Activity implements CallbackResponseListener {
         thisDialog.show();
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        checkBal = false;
-    }
 }

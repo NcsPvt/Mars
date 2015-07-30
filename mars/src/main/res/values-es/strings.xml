@@ -249,7 +249,7 @@
     <string name="proceed"><![CDATA[Proceed >]]></string>
     <string name="approxFare">Approx. Fare</string>
     <string name="dropoff_required">Drop-off Required</string>
-    <string name="PayWithVoucher">Voy a pagar por cuenta del cliente</string>
+    <string name="PayWithVoucher">Voy a pagar por cuenta del cliente   |   %s</string>
     <string name="PayingByVoucher">El pago con vales</string>
     <string name="ContactSupport">Contact Support</string>
     <string name="choose">elegir</string>

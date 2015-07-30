@@ -69,7 +69,6 @@ import org.w3c.dom.Document;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Timer;
@@ -491,7 +490,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
     /*--------------------------------------------------ShowPPV--------------------------------------------------------------------------------------*/
     public void ShowPPV(View v) {
-        BookingApplication.ShowPPV(ActivityMain.this);
+        BookingApplication.ShowPPV(BookingApplication.CompanyID, BookingApplication.SupportedPaymentMethod, ActivityMain.this);
     }
 
     /*--------------------------------------------------- picklater -------------------------------------------------------------------------------------*/
@@ -552,7 +551,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
     /*-----------------------------------------------------ShowSendNearest-----------------------------------------------------------------------------*/
     public void ShowSendNearest(View v) {
-        goToStep(4, false);
+        if (!timer_view.isShown())
+            goToStep(4, false);
     }
 
     /*--------------------------------------------------ShowVehicleSelection-----------------------------------------------------------------------------*/
@@ -730,16 +730,13 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     trip_requested.CreditCardID = "0";
                     trip_requested.signatureUrl = "";
                     //BookingApplication.makeReservation(trip_requested, ActivityMain.this, false);
-                    if(Float.valueOf(ppvBalance) < 1.0
-                            ){
-                        Intent intent = new Intent(ActivityMain.this, ActivityPPV.class);
-                        finish();
-                        startActivity(intent);
+                    if(Float.valueOf(ppvBalance) < 1.0){
+                        BookingApplication.ShowPPV(BookingApplication.CompanyID, Integer.toString(trip_requested.supportedPaymentType), ActivityMain.this);
                     }
                     else
                         goToStep(6, false);
                 } else
-                    Toast.makeText(ActivityMain.this, getResources().getString(R.string.PaymentTypeNotSupported, getResources().getString(R.string.PayingByVoucher)), Toast.LENGTH_LONG).show();
+                    Toast.makeText(ActivityMain.this, getResources().getString(R.string.PaymentTypeNotSupported, getResources().getString(R.string.PrepaidAccount)), Toast.LENGTH_LONG).show();
             } else if (v.getId() == R.id.tv_payInCash)
                 if (Integer.toString(trip_requested.supportedPaymentType).contains("1")) {
                     trip_requested.PaymentType = "1";
@@ -930,24 +927,6 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 selecting_pickup = false;
                 selecting_drop = true;
             }
-        }
-    }
-
-    /*--------------------------------------------- Next_Clicked ---------------------------------------------------------------------------------------*/
-    public void Next_Clicked(View v) {
-        if (selecting_pickup) {
-            pointer.setImageResource(R.drawable.dopin);
-            SpannableString ss1=  new SpannableString(getResources().getString(R.string.dropme));
-            ss1.setSpan(new RelativeSizeSpan(1.0f), (getResources().getString(R.string.dropme)).indexOf("\n"), ss1.length(), 0); // set size
-            tv_pick_drop.setText(ss1);
-            //instructions.setText(R.string.select_destination);
-            if (dropMarker != null)
-                mapFragment.animateCamera(CameraUpdateFactory.newLatLngZoom(dropMarker.getPosition(), 18));
-            selecting_pickup = false;
-            selecting_drop = true;
-            ll_pn_pl.setVisibility(View.VISIBLE);
-            ll_FairCashCredit.setVisibility(View.GONE);
-        } else if (selecting_drop) {
         }
     }
 
@@ -1322,7 +1301,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 @Override
                 public boolean onMarkerClick(final Marker marker) {
                     try {
-                        if (marker.getTitle().equalsIgnoreCase("Vehicle")) {
+                        if (marker.getTitle().equalsIgnoreCase("Vehicle") && !timer_view.isShown()) {
 
                             currVehicle = BookingApplication.nearByVehicles.get(Integer.parseInt(marker.getSnippet()));
 
@@ -1417,7 +1396,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                             vehicle_balloon.setVisibility(View.VISIBLE);
                             return false;
 
-                        }
+                        } else
+                            return true;
 
                     } catch (Exception e) {
                         Toast.makeText(ActivityMain.this, e.toString(), Toast.LENGTH_LONG).show();
@@ -1697,6 +1677,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
             }
         });
 
+        bb.setCancelable(false);
         bb.show();
 
         BookingApplication.getUserPromoDetail(BookingApplication.CompanyID);
@@ -1828,7 +1809,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
 
     /*--------------------------------------------------showNowLater----------------------------------------------------------------------------------*/
     public void showNowLater(View v) {
-        goToStep(3, false);
+        if (!timer_view.isShown())
+            goToStep(3, false);
     }
 
     /*--------------------------------------------------goToStep----------------------------------------------------------------------------------*/
@@ -2683,6 +2665,8 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                     tripstatus.setImageResource(R.drawable.icondone);
                 else if (currentTrip.state.equalsIgnoreCase("CANCELLED"))
                     tripstatus.setImageResource(R.drawable.iconcancel);
+                else if (currentTrip.state.equalsIgnoreCase("NOSHOW"))
+                    tripstatus.setImageResource(R.drawable.noshow);
                 else if (currentTrip.state.equalsIgnoreCase("IRTPU"))
                     tripstatus.setImageResource(R.drawable.irtpu);
                 else if (currentTrip.state.equalsIgnoreCase("IRTDO") || currentTrip.state.equalsIgnoreCase("PICKEDUP"))
@@ -2698,8 +2682,7 @@ public class ActivityMain extends FragmentActivity implements LocationListener, 
                 time.setText(BookingApplication.timeFormat.format(currentTrip.PUDateTime.getTime()));
                 date.setText(BookingApplication.dateFormat.format(currentTrip.PUDateTime.getTime()));
                 pickup.setText(currentTrip.PUaddress);
-                if (currentTrip.DOlat > 0)
-                    drop.setText(currentTrip.DOaddress);
+                drop.setText((currentTrip.DOlat > 0) ? currentTrip.DOaddress : "");
                 bookingID.setText(currentTrip.ConfirmNumber);
 
                 currentView.setTag(currentTrip.ConfirmNumber);

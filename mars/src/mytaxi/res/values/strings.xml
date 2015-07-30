@@ -139,7 +139,7 @@
     <string name="Rate_ride">Rate ride</string>
     <string name="ShareExperience">Share Your Experience</string>
     <string name="Price_Chart">Price Chart</string>
-    <string name="Hail">Hail</string>
+    <string name="Hail">Book</string>
     <string name="Sign_out">Sign Out</string>
     <string name="Signing_in_ppp">Signing in#8230;</string>
     <string name="Booking_Success">Your Trip is booked Successfully.\n Confirmation No: %s</string>
